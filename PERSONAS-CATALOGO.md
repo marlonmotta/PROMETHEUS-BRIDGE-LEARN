@@ -42,6 +42,19 @@
 | 21 | 🍄 Mario | Super Mario | Fictional | 6-14 | Ultra animado, simples, otimista | [`mario.json`](personas/fictional/mario.json) |
 | 22 | 💚 Luigi | Super Mario / Luigi's Mansion | Fictional | 6-14 | Medroso-corajoso, ansioso, gentil | [`luigi.json`](personas/fictional/luigi.json) |
 | 23 | 🚀 Sergio Sacani | Vida Real / Space Today | Real | Todos | Empolgado, acessível, apaixonado | [`sergio-sacani.json`](personas/real/sergio-sacani.json) |
+| 24 | ⚔️ Geralt de Rívia | The Witcher | Fictional | 13-18 | 🟠16+ Seco, pragmático, sarcástico | [`geralt.json`](personas/fictional/geralt.json) |
+| 25 | 🌪️ Thrall | World of Warcraft | Fictional | 11-18 | 🟡13+ Calmo, sábio, elementar | [`thrall.json`](personas/fictional/thrall.json) |
+| 26 | 🔮 Vol'jin | World of Warcraft | Fictional | 13-18 | 🟡13+ Tribal, astuto, espiritual | [`voljin.json`](personas/fictional/voljin.json) |
+| 27 | ⚔️✨ Tyrael | Diablo | Fictional | 13-18 | 🟡13+ Épico, inspirador, justo | [`tyrael.json`](personas/fictional/tyrael.json) |
+| 28 | 📖 Deckard Cain | Diablo | Fictional | 11-18 | 🟡13+ Gentil, erudito, paciente | [`deckard-cain.json`](personas/fictional/deckard-cain.json) |
+| 29 | 🔫 Leon S. Kennedy | Resident Evil | Fictional | 13-18 | 🟠16+ Tático, calmo, sarcástico | [`leon-kennedy.json`](personas/fictional/leon-kennedy.json) |
+| 30 | ❤️ Claire Redfield | Resident Evil | Fictional | 13-18 | 🟠16+ Protetora, corajosa, calorosa | [`claire-redfield.json`](personas/fictional/claire-redfield.json) |
+| 31 | 💪 Chris Redfield | Resident Evil | Fictional | 13-18 | 🟠16+ Disciplinado, perseverante | [`chris-redfield.json`](personas/fictional/chris-redfield.json) |
+| 32 | 🔬 Rebecca Chambers | Resident Evil | Fictional | 13-18 | 🟡13+ Cientista, jovem, determinada | [`rebecca-chambers.json`](personas/fictional/rebecca-chambers.json) |
+| 33 | 👊 Tifa Lockhart | Final Fantasy VII | Fictional | 13-18 | 🟡13+ Calorosa, firme, motivadora | [`tifa.json`](personas/fictional/tifa.json) |
+| 34 | 🌸 Aerith Gainsborough | Final Fantasy VII | Fictional | Todos | 🟢LIVRE Gentil, poética, luminosa | [`aerith.json`](personas/fictional/aerith.json) |
+| 35 | ⚡ Ash Ketchum | Pokémon | Fictional | 6-14 | 🟢LIVRE Ultra animado, persistente | [`ash-ketchum.json`](personas/fictional/ash-ketchum.json) |
+| 36 | 🦁 Tai Kamiya | Digimon | Fictional | 6-14 | 🟢LIVRE Corajoso, líder, energético | [`tai-kamiya.json`](personas/fictional/tai-kamiya.json) |
 
 ---
 
@@ -49,11 +62,11 @@
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **23** |
-| Fictional | 21 |
+| Total de personas prontas | **36** |
+| Fictional | 34 |
 | Real | 2 |
-| Universos cobertos | 19 |
-| Backlog pendente | ~172 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
+| Universos cobertos | 27 |
+| Backlog pendente | ~159 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
 
 ---
 
@@ -78,6 +91,13 @@
 | Overlord | Albedo, Ainz Ooal Gown |
 | Shield Hero | Naofumi, Raphtalia |
 | Super Mario | Mario, Luigi |
+| The Witcher | Geralt de Rívia |
+| World of Warcraft | Thrall, Vol'jin |
+| Diablo | Tyrael, Deckard Cain |
+| Resident Evil | Leon, Claire, Chris, Rebecca |
+| Final Fantasy VII | Tifa, Aerith |
+| Pokémon | Ash Ketchum |
+| Digimon | Tai Kamiya |
 | Ciência Real | Albert Einstein |
 | Divulgação BR | Sergio Sacani |
 
@@ -87,29 +107,34 @@
 
 | Tom | Personas |
 |-----|----------|
-| Descontraído / Humorístico | Jiraiya, Spider-Man, Luffy, Jinx, Mario |
-| Sério / Estratégico | Batman, Kakashi, Kratos, Albedo |
-| Enérgico / Motivacional | Goku, Luffy, Sacani |
-| Calmo / Explorador | Link, Steve, Lara Croft |
+| Descontraído / Humorístico | Jiraiya, Spider-Man, Luffy, Jinx, Mario, Ash |
+| Sério / Estratégico | Batman, Kakashi, Kratos, Albedo, Leon |
+| Enérgico / Motivacional | Goku, Luffy, Sacani, Chris, Tai, Ash |
+| Calmo / Explorador | Link, Steve, Lara Croft, Thrall |
 | Provocador / Carismático | Gojo Satoru |
-| Analítico / Dedutivo | L, Batman, Ainz |
-| Gentil / Acolhedor | Tanjiro, Einstein, Raphtalia, Luigi |
-| Filosófico / Sábio | Ezio, Einstein |
+| Analítico / Dedutivo | L, Batman, Ainz, Geralt |
+| Gentil / Acolhedor | Tanjiro, Einstein, Raphtalia, Luigi, Aerith, Claire, Deckard Cain |
+| Filosófico / Sábio | Ezio, Einstein, Thrall, Vol'jin |
+| Épico / Inspirador | Tyrael |
 | Caótico / Criativo | Jinx |
-| Pragmático / Protetor | Naofumi |
-| Medroso-Corajoso | Luigi |
+| Pragmático / Protetor | Naofumi, Claire, Leon |
+| Medroso-Corajoso | Luigi, Tai |
 | Empolgado / Divulgador | Sacani |
+| Tático / Sarcástico | Geralt, Leon |
+| Científico / Juventude | Rebecca |
+| Força / Coração | Tifa, Chris |
 
 ---
 
-## 🏷️ Índice por Faixa Etária
+## 🏷️ Índice por Faixa Etária e Classificação
 
-| Faixa | Personas |
-|-------|----------|
-| 6-14 | Steve, Goku, Luffy, Link, Tanjiro, Mario, Luigi, Raphtalia |
-| 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft |
-| 13-18 | Gojo, L, Kratos, Ezio, Jinx, Albedo, Ainz, Naofumi |
-| Todos | Goku, Luffy, Link, Tanjiro, Raphtalia, Mario, Luigi, Sacani |
+| Classificação | Faixa | Personas |
+|--------------|-------|----------|
+| 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani |
+| 🔵 10+ | 10+ | (nenhuma ainda — faixa disponível) |
+| 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa |
+| 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain |
+| 🟠 16+ | 13-18 | Kratos, Ezio, Geralt, Leon, Claire, Chris |
 
 ---
 
@@ -117,19 +142,24 @@
 
 | Perfil do Aluno | Persona Recomendada |
 |----------------|-------------------|
-| Precisa de acolhimento | 🌊 Tanjiro, 🗡️ Raphtalia, 💚 Luigi |
-| Precisa de disciplina | 🪓 Kratos, 🦇 Batman, 👑 Albedo |
+| Precisa de acolhimento | 🌊 Tanjiro, 🗡️ Raphtalia, 💚 Luigi, 🌸 Aerith, ❤️ Claire |
+| Precisa de disciplina | 🪓 Kratos, 🦇 Batman, 👑 Albedo, 💪 Chris |
 | Precisa de provocação positiva | 😎 Gojo Satoru |
-| Perfil analítico/lógico | 🔍 L, 🦇 Batman, 💀 Ainz |
-| Perfil criativo/TDAH | 💥 Jinx, ⛏️ Steve |
-| Precisa de energia/motivação | 💥 Goku, 🏴‍☠️ Luffy, 🚀 Sacani |
+| Perfil analítico/lógico | 🔍 L, 🦇 Batman, 💀 Ainz, ⚔️ Geralt |
+| Perfil criativo/TDAH | 💥 Jinx, ⛏️ Steve, ⚡ Ash, 🦁 Tai |
+| Precisa de energia/motivação | 💥 Goku, 🏴‍☠️ Luffy, 🚀 Sacani, 💪 Chris, ⚡ Ash |
 | Gosta de puzzles | 🗡️ Link |
-| Gosta de história | 🗡️ Ezio, 🗺️ Lara Croft |
-| Gosta de ciência | 🧠 Einstein, 🕸️ Spider-Man, 🚀 Sacani |
-| Sofreu bullying/exclusão | 🛡️ Naofumi, 💚 Luigi |
-| Tem ansiedade | 💚 Luigi, 🗡️ Raphtalia |
-| Crianças (6-10) | 🍄 Mario, 💚 Luigi, ⛏️ Steve |
-| Gamer/Isekai | 💀 Ainz, 👑 Albedo, 🛡️ Naofumi |
+| Gosta de história | 🗡️ Ezio, 🗺️ Lara Croft, 🔮 Vol'jin, 📖 Deckard Cain |
+| Gosta de ciência | 🧠 Einstein, 🕸️ Spider-Man, 🚀 Sacani, 🔬 Rebecca |
+| Sofreu bullying/exclusão | 🛡️ Naofumi, 💚 Luigi, 🌪️ Thrall |
+| Tem ansiedade | 💚 Luigi, 🗡️ Raphtalia, 🌸 Aerith, 🌊 Tanjiro |
+| Crianças (6-10) | 🍄 Mario, 💚 Luigi, ⛏️ Steve, ⚡ Ash, 🦁 Tai, 🌸 Aerith |
+| Gamer/RPG/MMORPG | 💀 Ainz, 👑 Albedo, 🛡️ Naofumi, 🌪️ Thrall, 🔮 Vol'jin |
+| Gosta de tático/sobrevivência | 🔫 Leon, ❤️ Claire, 💪 Chris, ⚔️ Geralt |
+| Precisa de inspiração épica | ⚔️✨ Tyrael |
+| Gosta de luta/artes marciais | 👊 Tifa |
+| Persistência / Nunca desistir | ⚡ Ash, 💪 Chris, 🦁 Tai |
+| Baixa autoestima | 🛡️ Naofumi, 💚 Luigi, 🗡️ Raphtalia, 👊 Tifa |
 
 ---
 
