@@ -1,0 +1,137 @@
+{
+    "_schema": "PROMETHEUS-BRIDGE-LEARN Persona Template v1.0",
+    "_docs": "https://github.com/prometheus-bridge-learn/docs/como-usar.md",
+    "meta": {
+        "id": "",
+        "version": "1.0.0",
+        "name": "",
+        "display_name": "",
+        "author": "",
+        "license": "MIT",
+        "tags": [],
+        "category": "fictional | real | custom",
+        "target_age_range": "6-10 | 11-14 | 15-18 | 18+ | all",
+        "created": "",
+        "updated": "",
+        "_required": [
+            "id",
+            "version",
+            "name",
+            "display_name",
+            "author",
+            "category",
+            "created"
+        ]
+    },
+    "character": {
+        "universe": "",
+        "role": "",
+        "personality_traits": [],
+        "backstory_hook": "",
+        "visual_description": "",
+        "relationship_to_student": "",
+        "_comment": "relationship_to_student: como o personagem se posiciona com o aluno (sensei, amigo, mentor, rival amigável, etc.)",
+        "_required": [
+            "universe",
+            "role",
+            "personality_traits",
+            "backstory_hook",
+            "relationship_to_student"
+        ]
+    },
+    "voice": {
+        "tone": "",
+        "vocabulary_level": "simple | moderate | advanced",
+        "catchphrases": [],
+        "speaking_style": "",
+        "forbidden_words": [],
+        "language": "pt-br",
+        "humor_type": "none | light | sarcastic | playful",
+        "_comment": "forbidden_words: palavras que o personagem NUNCA usaria (quebra a imersão). speaking_style: ex: 'frases curtas e diretas' ou 'explicações longas com analogias'",
+        "_required": [
+            "tone",
+            "vocabulary_level",
+            "speaking_style",
+            "language"
+        ]
+    },
+    "pedagogy": {
+        "teaching_strategy": "",
+        "explanation_style": "",
+        "difficulty_levels": {
+            "simple": "",
+            "moderate": "",
+            "advanced": ""
+        },
+        "motivation_style": "",
+        "error_handling": "",
+        "praise_style": "",
+        "subject_adaptations": {
+            "_comment": "Mapeamento de como a persona adapta disciplinas específicas",
+            "math": "",
+            "portuguese": "",
+            "science": "",
+            "history": "",
+            "geography": ""
+        },
+        "_comment": "error_handling: como a persona reage quando o aluno erra. praise_style: como celebra acertos.",
+        "_required": [
+            "teaching_strategy",
+            "explanation_style",
+            "motivation_style",
+            "error_handling",
+            "praise_style"
+        ]
+    },
+    "cognitive_bridge": {
+        "_comment": "O DIFERENCIAL do PBL — mapeamento explícito de conteúdo escolar para o universo do aluno",
+        "target_interests": [],
+        "metaphor_map": [
+            {
+                "school_concept": "",
+                "persona_equivalent": "",
+                "example": ""
+            }
+        ],
+        "world_rules": [],
+        "immersion_triggers": [],
+        "_required": [
+            "target_interests",
+            "metaphor_map",
+            "world_rules"
+        ]
+    },
+    "prompts": {
+        "system_prompt": "",
+        "rewrite_instruction": "",
+        "greeting": "",
+        "farewell": "",
+        "_comment": "system_prompt: prompt completo para injetar como system/context na LLM. rewrite_instruction: instrução para reescrever conteúdo escolar no universo da persona.",
+        "_required": [
+            "system_prompt",
+            "rewrite_instruction",
+            "greeting"
+        ]
+    },
+    "examples": {
+        "before_after": [
+            {
+                "subject": "",
+                "original": "",
+                "rewritten": "",
+                "grade_level": ""
+            }
+        ],
+        "_comment": "Exemplos concretos de como a persona reescreve conteúdo. Quanto mais exemplos, melhor a IA entende o padrão.",
+        "_required": [
+            "before_after"
+        ]
+    },
+    "validation": {
+        "tested_with_llms": [],
+        "effectiveness_notes": "",
+        "known_limitations": [],
+        "suggested_improvements": [],
+        "_required": []
+    }
+}
