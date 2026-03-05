@@ -191,7 +191,7 @@ persona.json
 ```
 PROMETHEUS-BRIDGE-LEARN/
 ├── personas/
-│   ├── custom/
+│   ├── templates/
 │   │   └── template.json             ← 🧩 Schema base de toda persona
 │   ├── fictional/
 │   │   └── jiraiya-sensei.json       ← 🐸 1ª persona (caso real validado)
@@ -235,7 +235,7 @@ O aluno recebe o mesmo conteúdo — mas pelo canal que ele entende.
 
 ## 🤝 Como Contribuir
 
-Quer criar uma persona? Copie o `personas/custom/template.json`, preencha e abra um Pull Request!
+Quer criar uma persona? Copie o `personas/templates/template.json`, preencha e abra um Pull Request!
 
 **Personas que precisamos:**
 
