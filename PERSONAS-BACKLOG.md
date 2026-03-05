@@ -113,7 +113,7 @@
 |---|---------|----------|--------|
 | 71 | Master Chief | Halo | ⬜ |
 | 72 | Kratos | God of War | ✅ |
-| 73 | Geralt de Rívia | The Witcher | ⬜ |
+| 73 | Geralt de Rívia | The Witcher | ✅ |
 | 74 | Arthur Morgan | Red Dead Redemption 2 | ⬜ |
 | 75 | Joel | The Last of Us | ⬜ |
 | 76 | Ellie | The Last of Us | ⬜ |
@@ -133,7 +133,7 @@
 | 90 | Chell | Portal | ⬜ |
 | 91 | Samus Aran | Metroid | ⬜ |
 | 92 | Dante | Devil May Cry | ⬜ |
-| 93 | Leon Kennedy | Resident Evil | ⬜ |
+| 93 | Leon Kennedy | Resident Evil | ✅ |
 | 94 | Nathan Drake | Uncharted | ⬜ |
 | 95 | Lara Croft | Tomb Raider | ✅ |
 | 96 | Marcus Fenix | Gears of War | ⬜ |
@@ -149,6 +149,17 @@
 | 106 | Agent 47 | Hitman | ⬜ |
 | 107 | Max Payne | Max Payne | ⬜ |
 | 108 | Steve | Minecraft | ✅ |
+| 109-a | Thrall | World of Warcraft | ✅ |
+| 109-b | Vol'jin | World of Warcraft | ✅ |
+| 109-c | Tyrael | Diablo | ✅ |
+| 109-d | Deckard Cain | Diablo | ✅ |
+| 109-e | Claire Redfield | Resident Evil | ✅ |
+| 109-f | Chris Redfield | Resident Evil | ✅ |
+| 109-g | Rebecca Chambers | Resident Evil | ✅ |
+| 109-h | Tifa Lockhart | Final Fantasy VII | ✅ |
+| 109-i | Aerith Gainsborough | Final Fantasy VII | ✅ |
+| 109-j | Ash Ketchum | Pokémon | ✅ |
+| 109-k | Tai Kamiya | Digimon | ✅ |
 
 ---
 
@@ -286,9 +297,10 @@
 | Cinema & Séries | 44 |
 | Famosos Reais | 21 |
 | Extras Games & Nerd | 16 |
-| **Total** | **195** |
-| **Já criadas** | **23** |
-| **Pendentes** | **172** |
+| Lote 5 (adições) | 11 |
+| **Total** | **206** |
+| **Já criadas** | **36** |
+| **Pendentes** | **170** |
 
 ---
 
