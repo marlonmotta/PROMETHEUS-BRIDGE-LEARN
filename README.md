@@ -274,9 +274,18 @@ MIT — Use, modifique, distribua. Só não esqueça de dar os créditos.
 
 ## 💬 Sobre
 
-Criado por **Marlon Motta** — professor, desenvolvedor e entusiasta de IA aplicada à educação.
+### **Marlon Motta**
 
-> *"Se a escola não fala a língua do aluno, a tecnologia pode traduzir."*
+> *Just a human trying to help other humans learn better.*
+> *Apenas um humano tentando ajudar outros humanos a aprender melhor.*
+
+> *Not a guru. Not a genius.*
+> *Someone who learned the hard way —*
+> *and wants to make it easier for you.*
+
+> *Não sou guru. Não sou gênio.*
+> *Sou alguém que aprendeu do jeito difícil —*
+> *e quer tornar isso mais fácil pra você.*
 
 ---
 
