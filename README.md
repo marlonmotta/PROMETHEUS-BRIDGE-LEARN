@@ -9,7 +9,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![PT-BR](https://img.shields.io/badge/idioma-PT--BR-green.svg)](#)
-[![Quality Score](https://img.shields.io/badge/Quality_Score-68%2F100-orange.svg)](#-auditoria-de-qualidade)
 [![Tauri v2](https://img.shields.io/badge/Tauri-v2-blue.svg)](https://v2.tauri.app)
 [![React](https://img.shields.io/badge/React-18-61DAFB.svg)](https://reactjs.org)
 [![Rust](https://img.shields.io/badge/Rust-orange.svg)](https://www.rust-lang.org)
