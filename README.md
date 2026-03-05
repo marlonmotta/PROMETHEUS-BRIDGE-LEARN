@@ -1,89 +1,95 @@
 <div align="center">
 
-# 🔱 P.R.O.M.E.T.H.E.U.S · B.R.I.D.G.E · L.E.A.R.N
+# 🔱 PROMETHEUS · BRIDGE · LEARN
 
 ### Sistema Educacional Adaptativo com IA
 
 > **A IA veste a máscara do universo que o aluno ama — e reescreve a educação pelo canal dele.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![PT-BR](https://img.shields.io/badge/idioma-PT--BR-green.svg)](#)
-[![Status](https://img.shields.io/badge/status-em_desenvolvimento-blue.svg)](#-roadmap)
+[![Tauri v2](https://img.shields.io/badge/Tauri-v2-blue.svg)](https://v2.tauri.app)
+[![React](https://img.shields.io/badge/React-18-61DAFB.svg)](https://reactjs.org)
+[![Rust](https://img.shields.io/badge/Rust-orange.svg)](https://www.rust-lang.org)
 
 </div>
 
 ---
 
-<div align="center">
+## 📑 Índice
 
-### 🔥 P.R.O.M.E.T.H.E.U.S
-
-*"Um sistema adaptável que reescreve a educação, centrado no humano, para todo aluno entender de verdade"*
-
-| | | | | | | | | | |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **P** | **R** | **O** | **M** | **E** | **T** | **H** | **E** | **U** | **S** |
-| Protean | Rewriting | Output | Mind | Education | Teaching | Human | Every | Understanding | System |
-| *Adaptável* | *Reescrevendo* | *Focado em* | *Centrado na* | *Educação* | *Ensino* | *Humano* | *Todo* | *Compreensão* | *Sistema* |
-| *multiforme* | *as regras* | *resultado* | *mente* | *como base* | *transformado* | *primeiro* | *aluno* | *profunda* | *completo* |
-
----
-
-### 🌉 B.R.I.D.G.E
-
-*"Construindo conexões reais, inteligentes e dinâmicas para o crescimento através de experiências"*
-
-| | | | | | |
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| **B** | **R** | **I** | **D** | **G** | **E** |
-| Building | Real | Intelligent | Dynamic | Growth | Experiences |
-| *Construindo* | *Conexões reais* | *Inteligentes* | *Dinâmicas* | *Crescimento* | *Experiências* |
+- [Visão Geral](#-visão-geral)
+- [Como Funciona](#-como-funciona)
+- [Caso Real Validado](#-caso-real-validado)
+- [Exemplo Prático: Jiraiya Sensei](#-exemplo-prático-jiraiya-sensei)
+- [Arquitetura e Estrutura de Pastas](#-arquitetura-e-estrutura-de-pastas)
+- [Pré-requisitos e Tecnologias](#-pré-requisitos-e-tecnologias)
+- [Guia de Instalação e Execução](#-guia-de-instalação-e-execução)
+- [Personas](#-personas)
+- [Como Contribuir](#-como-contribuir)
+- [Roadmap](#-roadmap)
+- [Licença](#-licença)
+- [Sobre](#-sobre)
 
 ---
 
-### 📖 L.E.A.R.N
+## 🧠 Visão Geral
 
-*"Alavancando cada caminho adaptativo de aprendizado, naturalmente"*
-
-| | | | | |
-|:---:|:---:|:---:|:---:|:---:|
-| **L** | **E** | **A** | **R** | **N** |
-| Leveraging | Each | Adaptive | Route | Naturally |
-| *Alavancando* | *Cada* | *Caminho adaptativo* | *De aprendizado* | *Naturalmente* |
-
-</div>
-
----
-
-## 🧠 O Que É o PBL
-
-O **PROMETHEUS · BRIDGE · LEARN** é um **sistema educacional adaptativo** que usa inteligência artificial para transformar a forma como cada aluno aprende.
-
-O sistema funciona em **3 camadas**:
-
-| Camada | O que faz |
-|--------|-----------|
-| 🧩 **Personas** | Arquivos JSON que fazem a IA "vestir a máscara" de um personagem que o aluno ama |
-| 🖥️ **Interface** | Aplicação leve para professores gerenciarem alunos, provas e personas |
-| 🔗 **Ponte** | Conexão entre professor → IA → aluno, adaptando conteúdo ao universo de cada um |
+O **PROMETHEUS · BRIDGE · LEARN (PBL)** é um sistema educacional adaptativo que usa inteligência artificial para transformar a forma como cada aluno aprende. O professor sobe uma prova ou conteúdo, a IA reescreve no universo de hiperfoco do aluno (Naruto, Batman, Minecraft, futebol...) e o aluno recebe o **mesmo conteúdo pedagógico** — mas pelo canal que ele naturalmente compreende.
 
 **Não é gamificação superficial — é adaptação cognitiva real mediada por IA.**
 
-> O professor sobe a prova. A IA reescreve no universo do aluno. O aluno aprende pelo canal dele.
-> Mesmo conteúdo pedagógico. Canal diferente. Resultado real.
+O sistema funciona em **3 camadas**:
+
+| Camada                | O que faz                                                                              |
+| --------------------- | -------------------------------------------------------------------------------------- |
+| 🧩 **Personas**       | Arquivos JSON que fazem a IA "vestir a máscara" de um personagem que o aluno ama       |
+| 🖥️ **Interface**      | Aplicação desktop nativa para professores gerenciarem personas, conteúdo e exportações |
+| 🔗 **Ponte (Bridge)** | Conexão professor → IA → aluno, adaptando conteúdo ao universo de cada um              |
 
 ---
 
-## 🎯 Para TODOS os Alunos
+## ⚙️ Como Funciona
 
-| Perfil | Exemplo |
-|--------|---------|
-| 🧩 Neurodivergentes | TDAH, autismo, hiperfoco, DI — a persona fala na frequência do aluno |
-| 🦸 Alunos "padrão" | Gosta de Batman? A prova vem no universo do Batman. Sem diagnóstico, sem estigma |
-| 👨‍🏫 Professores | Upload de prova → seleciona persona → baixa prova adaptada. Simples assim |
+### Fluxo na Interface
 
-**20 provas diferentes. Mesmo conteúdo. Cada uma no universo do aluno.**
+```
+ ❶ Professor abre o PBL
+    │
+ ❷ Seleciona uma persona (ex: Jiraiya Sensei)
+    │
+ ❸ Cola o conteúdo original da prova/aula
+    │
+ ❹ Escolhe disciplina + nível de dificuldade
+     │
+ ❺ Escolhe formato de saída (prova, resumo, exercícios, plano de aula)
+     │
+ ❻ Clica em "Gerar" → IA adapta o conteúdo
+     │
+ ❼ Resultado aparece na tela
+     │
+ ❽ Professor exporta como DOCX, TXT, MD ou HTML
+```
+
+### Fluxo de dados (por baixo dos panos)
+
+```
+┌────────────┐     ┌───────────────┐     ┌────────────────┐
+│  Frontend  │     │  Backend Rust │     │   Provedor IA  │
+│  React/TS  │────►│    (Tauri)    │────►│ Ollama/OpenAI/ │
+│            │◄────│              │◄────│ Gemini/Claude  │
+└────────────┘     └───────────────┘     └────────────────┘
+      │                    │
+      ▼                    ▼
+  localStorage        Secure Store
+  (settings)          (API keys)
+```
+
+1. O **frontend** monta o prompt usando `promptBuilder.ts` (persona + conteúdo + disciplina + dificuldade + formato + idioma)
+2. Chama o **backend Rust** via `invoke("invoke_ai")` do Tauri
+3. O backend faz a requisição HTTP ao provedor de IA escolhido
+4. A resposta volta pelo mesmo caminho e é renderizada como Markdown na tela
 
 ---
 
@@ -91,11 +97,11 @@ O sistema funciona em **3 camadas**:
 
 <div align="center">
 
-| | Antes | Depois |
-|---|:---:|:---:|
-| **Aluno** | 18 anos, DI, idade mental ~11 | Hiperfoco: **Naruto / Jiraiya** |
-| **Notas** | **0 a 3** | **8 a 9** |
-| **Engajamento** | Zero | Real e mensurável |
+|                 |             Antes             |             Depois              |
+| --------------- | :---------------------------: | :-----------------------------: |
+| **Aluno**       | 18 anos, DI, idade mental ~11 | Hiperfoco: **Naruto / Jiraiya** |
+| **Notas**       |           **0 a 3**           |            **8 a 9**            |
+| **Engajamento** |             Zero              |        Real e mensurável        |
 
 </div>
 
@@ -104,48 +110,21 @@ O sistema funciona em **3 camadas**:
 
 ---
 
-## ⚙️ Como o Sistema Funciona
-
-```
-┌──────────────────────────────────────────────────────────┐
-│                                                          │
-│   1. 👨‍🏫 PROFESSOR                                        │
-│      └── Sobe prova/tarefa na interface                  │
-│                                                          │
-│   2. 🧠 PERFIL DO ALUNO                                  │
-│      └── Identifica interesse/hiperfoco                  │
-│      └── (Naruto? Batman? Minecraft? Futebol?)           │
-│                                                          │
-│   3. 🎭 PERSONA                                          │
-│      └── IA carrega persona.json do personagem           │
-│      └── "Veste a máscara" do universo do aluno          │
-│                                                          │
-│   4. ✍️  REESCRITA                                        │
-│      └── IA reescreve prova/tarefa naquele universo      │
-│      └── Mesmo conteúdo pedagógico, canal diferente      │
-│                                                          │
-│   5. 📈 RESULTADO                                        │
-│      └── Aprendizado real pelo canal do aluno            │
-│      └── Professor avalia e refina                       │
-│                                                          │
-└──────────────────────────────────────────────────────────┘
-```
-
----
-
-## 🐸 Exemplo: Jiraiya Sensei em Ação
+## 🐸 Exemplo Prático: Jiraiya Sensei
 
 <table>
 <tr>
 <td width="50%">
 
 ### ❌ Prova Original
-> *"Calcule 3/4 + 1/2. Para somar frações com denominadores diferentes, primeiro encontre o MMC dos denominadores."*
+
+> _"Calcule 3/4 + 1/2. Para somar frações com denominadores diferentes, primeiro encontre o MMC dos denominadores."_
 
 </td>
 <td width="50%">
 
 ### ✅ Prova com Persona Jiraiya
+
 > 🐸 **MISSÃO RANK C — Jutsu de Combinação de Chakra!**
 >
 > E aí moleque! Imagina que você tem 3/4 do seu chakra num braço e 1/2 no outro. Pra soltar um Rasengan completo, os chakras precisam estar no mesmo fluxo!
@@ -156,7 +135,7 @@ O sistema funciona em **3 camadas**:
 >
 > **Passo 3** — 3/4 + 2/4 = **5/4** 💥
 >
-> *Yosh! Jutsu completo!*
+> _Yosh! Jutsu completo!_
 
 </td>
 </tr>
@@ -166,101 +145,245 @@ O sistema funciona em **3 camadas**:
 
 ---
 
-## 🧩 Anatomia de uma Persona
-
-Cada persona é um arquivo `.json` com **8 blocos** estruturados:
-
-```
-persona.json
-├── meta              → id, versão, autor, tags, categoria
-├── character         → universo, papel, personalidade, relação com aluno
-├── voice             → tom, vocabulário, bordões, palavras proibidas
-├── pedagogy          → estratégia de ensino, níveis, tratamento de erros/acertos
-├── cognitive_bridge  → 🔥 mapeamento conteúdo escolar → universo do aluno
-├── prompts           → system prompt + instrução de reescrita prontos pra LLM
-├── examples          → antes/depois (prova original → prova reescrita)
-└── validation        → LLMs testadas, limitações, melhorias sugeridas
-```
-
-> O bloco **`cognitive_bridge`** é o diferencial — é o mapeamento explícito de como "estudar vira treinar jutsu", "prova vira missão ninja", "nota vira rank".
-
----
-
-## 📁 Estrutura do Repositório
+## 📁 Arquitetura e Estrutura de Pastas
 
 ```
 PROMETHEUS-BRIDGE-LEARN/
-├── personas/
-│   ├── templates/
-│   │   └── template.json             ← 🧩 Schema base de toda persona
-│   ├── fictional/
-│   │   └── jiraiya-sensei.json       ← 🐸 1ª persona (caso real validado)
-│   └── real/                         ← Personas de pessoas reais
-├── profiles/                         ← Perfis cognitivos (em breve)
-├── questionnaires/                   ← Questionários de mapeamento (em breve)
-├── prompts/                          ← Prompts de injeção para LLMs (em breve)
-└── README.md
+│
+├── personas/                         # 🧩 Catálogo de personas de IA
+│   ├── manifest.json                 #    Índice de personas (usado pelo auto-update)
+│   ├── fictional/                    #    21 personas de personagens fictícios
+│   │   ├── goku.json
+│   │   ├── jiraiya-sensei.json
+│   │   ├── batman.json
+│   │   └── ...
+│   ├── real/                         #    2 personas de personalidades reais
+│   │   ├── albert-einstein.json
+│   │   └── sergio-sacani.json
+│   └── templates/                    #    Template base para criar novas personas
+│       └── template.json
+│
+├── profiles/                         # 👤 Perfis cognitivos (expansão futura)
+├── prompts/                          # 📝 Prompts customizados (expansão futura)
+├── questionnaires/                   # 📋 Questionários (expansão futura)
+│
+├── docs/                             # 📚 Documentação complementar
+│   ├── CONTENT-POLICY.md             #    Política de conteúdo das personas
+│   ├── PERSONAS-BACKLOG.md           #    Backlog de personas futuras
+│   └── PERSONAS-CATALOGO.md          #    Catálogo detalhado de personas existentes
+│
+├── interface/                        # 🖥️ Aplicação Tauri (frontend + backend)
+│   ├── src/                          #    Código-fonte do frontend
+│   │   ├── App.tsx                   #    Componente raiz (estado global)
+│   │   ├── main.tsx                  #    Entry point (ErrorBoundary + StrictMode)
+│   │   ├── index.css                 #    Design system CSS (Tailwind + custom)
+│   │   ├── lib/                      #    Módulos utilitários
+│   │   │   ├── constants.ts          #    Tipos, disciplinas, modelos, configurações
+│   │   │   ├── promptBuilder.ts      #    Montagem de prompts (formato + idioma + persona)
+│   │   │   ├── tauri.ts              #    Wrapper seguro para invoke() do Tauri
+│   │   │   └── __tests__/            #    Testes unitários dos módulos
+│   │   ├── components/               #    Componentes React da interface
+│   │   │   ├── Sidebar.tsx           #    Navegação lateral com status Ollama
+│   │   │   ├── HomeView.tsx          #    Tela inicial com histórico recente
+│   │   │   ├── PersonasView.tsx      #    Catálogo de personas (busca + filtro)
+│   │   │   ├── ContentView.tsx       #    Input + formato de saída + idioma
+│   │   │   ├── ResultView.tsx        #    Resultado da IA + exportação + template PDF
+│   │   │   ├── ManagerView.tsx       #    Importação/gestão de personas
+│   │   │   ├── SettingsView.tsx      #    Configurações (IA, provedor, modelo)
+│   │   │   ├── ErrorBoundary.tsx     #    Captura global de erros React
+│   │   │   ├── Toast.tsx             #    Sistema de notificações toast
+│   │   │   ├── UpdateChecker.tsx     #    Auto-update via GitHub Releases
+│   │   │   ├── Icon.tsx              #    Ícones SVG reutilizáveis
+│   │   │   └── __tests__/            #    Testes de componentes
+│   │   └── test/
+│   │       └── setup.ts              #    Setup global (mocks Tauri)
+│   │
+│   ├── src-tauri/                    #    Backend Rust (Tauri v2)
+│   │   ├── src/
+│   │   │   ├── lib.rs                #    Entry point + 23 personas embutidas
+│   │   │   ├── main.rs               #    Bootstrap do processo
+│   │   │   ├── personas.rs           #    CRUD de personas + sanitização anti-traversal
+│   │   │   ├── ai.rs                 #    Bridge para 6 provedores de IA
+│   │   │   ├── export.rs             #    Exportação DOCX/TXT/MD/HTML + validação de path
+│   │   │   └── secure_store.rs       #    Armazenamento seguro de API keys
+│   │   ├── Cargo.toml                #    Dependências Rust
+│   │   └── capabilities/
+│   │       └── default.json          #    Permissões do Tauri (CSP, ACL)
+│   │
+│   ├── vitest.config.ts              #    Configuração de testes
+│   ├── vite.config.ts                #    Configuração do Vite (dev server)
+│   ├── tsconfig.json                 #    Configuração TypeScript
+│   ├── eslint.config.js              #    Linting (ESLint + Prettier)
+│   ├── tailwind.config.cjs           #    Design system (tokens semânticos)
+│   └── package.json                  #    Dependências e scripts
+│
+├── CONTRIBUTING.md                   # 🤝 Guia de contribuição
+├── README.md                         # 📖 Este arquivo
+└── .gitignore
 ```
 
+### Módulos-chave do Backend Rust
+
+| Módulo            | Responsabilidade                                                                                                          |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `personas.rs`     | Carrega personas (embutidas + locais), download do GitHub, importação, exclusão, sanitização de IDs contra path traversal |
+| `ai.rs`           | Bridge unificado para 6 provedores (Ollama, OpenAI, Anthropic, Gemini, OpenRouter, Groq)                                  |
+| `export.rs`       | Exportação multi-formato com DOCX nativo + validação de path contra gravação arbitrária                                   |
+| `secure_store.rs` | Persistência segura de API keys via `tauri-plugin-store` (separada do localStorage)                                       |
+
+### Módulos-chave do Frontend
+
+| Módulo             | Responsabilidade                                                                                  |
+| ------------------ | ------------------------------------------------------------------------------------------------- |
+| `promptBuilder.ts` | Função pura que monta o prompt (persona + conteúdo + disciplina + dificuldade + formato + idioma) |
+| `constants.ts`     | Source of truth para disciplinas, modelos, configurações e tipos TypeScript                       |
+| `tauri.ts`         | Wrapper para `invoke()` com fallback seguro quando Tauri não está disponível                      |
+
 ---
 
-## 🚀 Como Usar (Hoje)
+## 🛠️ Pré-requisitos e Tecnologias
 
-### 1. Escolha uma persona
-Navegue em `personas/fictional/` ou `personas/real/`.
+### Tecnologias do Projeto
 
-### 2. Injete na IA
-Copie o campo `prompts.system_prompt` da persona e cole como **System Prompt** na IA de sua escolha (ChatGPT, Claude, Gemini, etc.).
+| Camada       | Tecnologia                                  | Versão |
+| ------------ | ------------------------------------------- | ------ |
+| **Frontend** | React + TypeScript                          | 18.x   |
+| **Styling**  | Tailwind CSS                                | 3.x    |
+| **Build**    | Vite                                        | 6.x    |
+| **Testes**   | Vitest + React Testing Library              | —      |
+| **Desktop**  | Tauri                                       | 2.x    |
+| **Backend**  | Rust                                        | 1.70+  |
+| **IA Local** | Ollama (opcional)                           | —      |
+| **IA Cloud** | OpenAI, Anthropic, Gemini, Groq, OpenRouter | —      |
 
-### 3. Reescreva o conteúdo
-Use o campo `prompts.rewrite_instruction` seguido da prova/tarefa que quer adaptar.
+### Pré-requisitos na Máquina
 
-### 4. Aplique e observe
-O aluno recebe o mesmo conteúdo — mas pelo canal que ele entende.
+| Ferramenta    | Versão mínima | Comando de verificação  |
+| ------------- | ------------- | ----------------------- |
+| **Node.js**   | 18.x          | `node --version`        |
+| **npm**       | 9.x           | `npm --version`         |
+| **Rust**      | 1.70+         | `rustc --version`       |
+| **Tauri CLI** | 2.x           | `cargo tauri --version` |
+
+> **Windows:** Instale o [Visual Studio Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) com a carga de trabalho "Desenvolvimento desktop com C++".
+>
+> **Ollama (opcional):** Apenas necessário para modo offline. [Baixe aqui](https://ollama.com).
 
 ---
 
-## 🗺️ Roadmap
+## 🚀 Guia de Instalação e Execução
 
-| Fase | Status | Descrição |
-|------|--------|-----------|
-| **1. Fundação** | ✅ Concluída | Nome, estrutura, conceito, decisões |
-| **2. Core** | ✅ Concluída | Schema `template.json` + persona Jiraiya Sensei |
-| **3. Expansão** | 🔜 Próxima | 5-10 personas, perfis cognitivos, questionários |
-| **4. Interface** | 🔜 Planejada | App leve para professores (HTML/Electron) — upload de prova, gestão de alunos, integração com IA |
-| **5. Comunidade** | 🔮 Futuro | Guia de contribuição, validação com psicólogos e professores |
-| **6. Rede** | 🔮 Futuro | Integração professor ↔ aluno, código de turma, teste vocacional |
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/marlonmotta/PROMETHEUS-BRIDGE-LEARN.git
+cd PROMETHEUS-BRIDGE-LEARN
+```
+
+### 2. Instale as dependências do frontend
+
+```bash
+cd interface
+npm install
+```
+
+### 3. Rode em modo de desenvolvimento
+
+```bash
+npm run tauri dev
+```
+
+> Na primeira execução, o Cargo baixa e compila as dependências Rust (~2 minutos).
+> Após isso, o hot-reload é instantâneo para alterações no frontend.
+
+### 4. Configure a IA (pela interface)
+
+1. Abra as **Configurações** (ícone de engrenagem na sidebar)
+2. Escolha o **modo de IA**:
+   - **Offline**: usa Ollama local (precisa estar rodando)
+   - **Online**: usa um provedor cloud (requer API key)
+   - **Manual**: apenas gera o prompt para copiar/colar
+3. Se escolheu Online, selecione o provedor e insira sua API key
+4. Pronto! Selecione uma persona e gere uma adaptação
+
+### 5. Rode os testes
+
+```bash
+# Testes do frontend (Vitest)
+npm test
+
+# Testes do backend (Rust)
+cd src-tauri && cargo test
+```
+
+### 6. Build de produção (opcional)
+
+```bash
+npm run tauri build
+```
+
+O executável será gerado em `src-tauri/target/release/`.
+
+---
+
+## 🧩 Personas
+
+O PBL vem com **23 personas embutidas** prontas para uso:
+
+### Fictícias (21)
+
+| Persona        | Universo         | Persona        | Universo       |
+| -------------- | ---------------- | -------------- | -------------- |
+| Goku           | Dragon Ball      | Jiraiya Sensei | Naruto         |
+| Kakashi        | Naruto           | Gojo Satoru    | Jujutsu Kaisen |
+| Tanjiro        | Demon Slayer     | Luffy          | One Piece      |
+| Batman         | DC Comics        | Spider-Man     | Marvel         |
+| Ezio Auditore  | Assassin's Creed | Kratos         | God of War     |
+| Link           | Zelda            | Lara Croft     | Tomb Raider    |
+| Mario          | Super Mario      | Luigi          | Super Mario    |
+| Steve          | Minecraft        | Jinx           | Arcane/LoL     |
+| Ainz Ooal Gown | Overlord         | Albedo         | Overlord       |
+| L Lawliet      | Death Note       | Naofumi        | Shield Hero    |
+| Raphtalia      | Shield Hero      |                |                |
+
+### Reais (2)
+
+| Persona         | Área                               |
+| --------------- | ---------------------------------- |
+| Albert Einstein | Física / Ciências                  |
+| Sérgio Sacani   | Astronomia / Divulgação científica |
+
+> **Quer criar uma persona?** Consulte o template em `personas/templates/template.json` e o guia em `docs/PERSONAS-CATALOGO.md`.
 
 ---
 
 ## 🤝 Como Contribuir
 
-Quer criar uma persona? Copie o `personas/templates/template.json`, preencha e abra um Pull Request!
+Contribuições são muito bem-vindas! O PBL é um projeto que depende da comunidade para crescer — especialmente na criação de novas personas.
 
-**Personas que precisamos:**
+### Passos rápidos:
 
-| Persona | Universo | Estilo |
-|---------|----------|--------|
-| 🦇 Batman / Alfred | DC Comics | Mentor sério e estratégico |
-| ⛏️ Minecraft Guide | Minecraft | Crafting como aprendizado |
-| ⚽ Narrador de Futebol | Esportes | Conteúdo como jogo/partida |
-| 🧙 Hermione Granger | Harry Potter | Estudo como magia |
-| 🎮 Guia de RPG | Games | Quests, XP, level up |
-| 🧪 Einstein Simplificado | Ciência | Curiosidade e descoberta |
+1. Faça um **fork** do repositório
+2. Crie uma **branch** descritiva (`feat/nova-persona-hermione`)
+3. Faça suas alterações seguindo o [guia de contribuição](CONTRIBUTING.md)
+4. Use **Conventional Commits** (`feat:`, `fix:`, `docs:`)
+5. Abra um **Pull Request** com descrição clara
+
+Consulte o [CONTRIBUTING.md](CONTRIBUTING.md) para instruções detalhadas.
 
 ---
 
-## 🌍 Compatibilidade
+## 🗺️ Roadmap
 
-O PBL é **agnóstico de LLM** — funciona com qualquer modelo:
-
-| LLM | Status |
-|-----|--------|
-| ChatGPT (GPT-4) | ✅ Testado |
-| Claude (Sonnet) | ✅ Testado |
-| Gemini | 🔜 Em breve |
-| Llama | 🔜 Em breve |
-| Qualquer LLM com system prompt | ✅ Compatível |
+| Fase              | Status       | Descrição                                                                      |
+| ----------------- | ------------ | ------------------------------------------------------------------------------ |
+| **1. Fundação**   | ✅ Concluída | Nome, estrutura, conceito, decisões arquiteturais                              |
+| **2. Core**       | ✅ Concluída | Schema de personas + Jiraiya Sensei (caso validado)                            |
+| **3. Interface**  | ✅ Concluída | App Tauri com React, 6 provedores de IA, exportação multi-formato              |
+| **4. Qualidade**  | ✅ Concluída | Testes automatizados, segurança (CSP, XSS, path traversal), modularização Rust |
+| **5. Expansão**   | 🔜 Próxima   | Mais personas, perfis cognitivos, CI/CD com GitHub Actions                     |
+| **6. Comunidade** | 🔮 Futuro    | Validação com psicólogos, guia pedagógico, tema claro/escuro                   |
+| **7. Rede**       | 🔮 Futuro    | Integração professor ↔ aluno, código de turma, i18n                            |
 
 ---
 
@@ -276,21 +399,9 @@ MIT — Use, modifique, distribua. Só não esqueça de dar os créditos.
 
 ### **Marlon Motta**
 
-*Just a human trying to help other humans learn better.*
+_Just a human trying to help other humans learn better._
 <br>
-*Apenas um humano tentando ajudar outros humanos a aprender melhor.*
-
----
-
-*Not a guru. Not a genius.*
-<br>
-*Someone who learned the hard way — and wants to make it easier for you.*
-
-<br>
-
-*Não sou guru. Não sou gênio.*
-<br>
-*Sou alguém que aprendeu do jeito difícil — e quer tornar isso mais fácil pra você.*
+_Apenas um humano tentando ajudar outros humanos a aprender melhor._
 
 ---
 

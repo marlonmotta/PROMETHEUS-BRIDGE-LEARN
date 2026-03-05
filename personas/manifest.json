@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "personas": [
+    "fictional/ainz-ooal-gown.json",
+    "fictional/albedo.json",
+    "fictional/batman.json",
+    "fictional/ezio-auditore.json",
+    "fictional/gojo-satoru.json",
+    "fictional/goku.json",
+    "fictional/jiraiya-sensei.json",
+    "fictional/jinx.json",
+    "fictional/kakashi.json",
+    "fictional/kratos.json",
+    "fictional/l-lawliet.json",
+    "fictional/lara-croft.json",
+    "fictional/link.json",
+    "fictional/luigi.json",
+    "fictional/luffy.json",
+    "fictional/mario.json",
+    "fictional/naofumi.json",
+    "fictional/raphtalia.json",
+    "fictional/spider-man.json",
+    "fictional/steve-minecraft.json",
+    "fictional/tanjiro.json",
+    "real/albert-einstein.json",
+    "real/sergio-sacani.json"
+  ]
+}

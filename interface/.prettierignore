@@ -1,0 +1,8 @@
+dist
+node_modules
+src-tauri
+src-alpine-backup
+*.ico
+*.png
+*.woff2
+package-lock.json

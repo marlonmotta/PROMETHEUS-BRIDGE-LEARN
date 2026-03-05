@@ -24,6 +24,10 @@ desktop.ini
 dist/
 build/
 out/
+target/
 
 # Logs
 *.log
+
+# Antigravity / Gemini (ferramentas de IA)
+.gemini/
