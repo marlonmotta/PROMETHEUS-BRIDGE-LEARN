@@ -35,6 +35,13 @@
 | 14 | 🗡️ Ezio Auditore | Assassin's Creed | Fictional | 13-18 | Sábio, filosófico, carismático | [`ezio-auditore.json`](personas/fictional/ezio-auditore.json) |
 | 15 | 🗺️ Lara Croft | Tomb Raider | Fictional | 11-18 | Curiosa, pesquisadora, aventureira | [`lara-croft.json`](personas/fictional/lara-croft.json) |
 | 16 | 💥 Jinx | LoL / Arcane | Fictional | 13-18 | Caótica, genial, criativa | [`jinx.json`](personas/fictional/jinx.json) |
+| 17 | 👑 Albedo | Overlord | Fictional | 13-18 | Elegante, exigente, gestora | [`albedo.json`](personas/fictional/albedo.json) |
+| 18 | 💀 Ainz Ooal Gown | Overlord | Fictional | 13-18 | Régio, estratégico, gamer | [`ainz-ooal-gown.json`](personas/fictional/ainz-ooal-gown.json) |
+| 19 | 🛡️ Naofumi (Herói do Escudo) | Shield Hero | Fictional | 13-18 | Pragmático, protetor, resiliente | [`naofumi.json`](personas/fictional/naofumi.json) |
+| 20 | 🗡️ Raphtalia | Shield Hero | Fictional | Todos | Calorosa, encorajadora, leal | [`raphtalia.json`](personas/fictional/raphtalia.json) |
+| 21 | 🍄 Mario | Super Mario | Fictional | 6-14 | Ultra animado, simples, otimista | [`mario.json`](personas/fictional/mario.json) |
+| 22 | 💚 Luigi | Super Mario / Luigi's Mansion | Fictional | 6-14 | Medroso-corajoso, ansioso, gentil | [`luigi.json`](personas/fictional/luigi.json) |
+| 23 | 🚀 Sergio Sacani | Vida Real / Space Today | Real | Todos | Empolgado, acessível, apaixonado | [`sergio-sacani.json`](personas/real/sergio-sacani.json) |
 
 ---
 
@@ -42,11 +49,11 @@
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **16** |
-| Fictional | 15 |
-| Real | 1 |
-| Universos cobertos | 14 |
-| Backlog pendente | ~180+ (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
+| Total de personas prontas | **23** |
+| Fictional | 21 |
+| Real | 2 |
+| Universos cobertos | 19 |
+| Backlog pendente | ~172 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
 
 ---
 
@@ -68,7 +75,11 @@
 | Assassin's Creed | Ezio Auditore |
 | Tomb Raider | Lara Croft |
 | LoL / Arcane | Jinx |
+| Overlord | Albedo, Ainz Ooal Gown |
+| Shield Hero | Naofumi, Raphtalia |
+| Super Mario | Mario, Luigi |
 | Ciência Real | Albert Einstein |
+| Divulgação BR | Sergio Sacani |
 
 ---
 
@@ -76,15 +87,18 @@
 
 | Tom | Personas |
 |-----|----------|
-| Descontraído / Humorístico | Jiraiya, Spider-Man, Luffy, Jinx |
-| Sério / Estratégico | Batman, Kakashi, Kratos |
-| Enérgico / Motivacional | Goku, Luffy |
+| Descontraído / Humorístico | Jiraiya, Spider-Man, Luffy, Jinx, Mario |
+| Sério / Estratégico | Batman, Kakashi, Kratos, Albedo |
+| Enérgico / Motivacional | Goku, Luffy, Sacani |
 | Calmo / Explorador | Link, Steve, Lara Croft |
 | Provocador / Carismático | Gojo Satoru |
-| Analítico / Dedutivo | L, Batman |
-| Gentil / Acolhedor | Tanjiro, Einstein |
+| Analítico / Dedutivo | L, Batman, Ainz |
+| Gentil / Acolhedor | Tanjiro, Einstein, Raphtalia, Luigi |
 | Filosófico / Sábio | Ezio, Einstein |
 | Caótico / Criativo | Jinx |
+| Pragmático / Protetor | Naofumi |
+| Medroso-Corajoso | Luigi |
+| Empolgado / Divulgador | Sacani |
 
 ---
 
@@ -92,9 +106,10 @@
 
 | Faixa | Personas |
 |-------|----------|
-| 6-14 | Steve (Minecraft), Goku, Luffy, Link, Tanjiro |
+| 6-14 | Steve, Goku, Luffy, Link, Tanjiro, Mario, Luigi, Raphtalia |
 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft |
-| 13-18 | Gojo, L, Kratos, Ezio, Jinx |
+| 13-18 | Gojo, L, Kratos, Ezio, Jinx, Albedo, Ainz, Naofumi |
+| Todos | Goku, Luffy, Link, Tanjiro, Raphtalia, Mario, Luigi, Sacani |
 
 ---
 
@@ -102,15 +117,19 @@
 
 | Perfil do Aluno | Persona Recomendada |
 |----------------|-------------------|
-| Precisa de acolhimento | 🌊 Tanjiro |
-| Precisa de disciplina | 🪓 Kratos, 🦇 Batman |
+| Precisa de acolhimento | 🌊 Tanjiro, 🗡️ Raphtalia, 💚 Luigi |
+| Precisa de disciplina | 🪓 Kratos, 🦇 Batman, 👑 Albedo |
 | Precisa de provocação positiva | 😎 Gojo Satoru |
-| Perfil analítico/lógico | 🔍 L, 🦇 Batman |
+| Perfil analítico/lógico | 🔍 L, 🦇 Batman, 💀 Ainz |
 | Perfil criativo/TDAH | 💥 Jinx, ⛏️ Steve |
-| Precisa de energia/motivação | 💥 Goku, 🏴‍☠️ Luffy |
+| Precisa de energia/motivação | 💥 Goku, 🏴‍☠️ Luffy, 🚀 Sacani |
 | Gosta de puzzles | 🗡️ Link |
 | Gosta de história | 🗡️ Ezio, 🗺️ Lara Croft |
-| Gosta de ciência | 🧠 Einstein, 🕸️ Spider-Man |
+| Gosta de ciência | 🧠 Einstein, 🕸️ Spider-Man, 🚀 Sacani |
+| Sofreu bullying/exclusão | 🛡️ Naofumi, 💚 Luigi |
+| Tem ansiedade | 💚 Luigi, 🗡️ Raphtalia |
+| Crianças (6-10) | 🍄 Mario, 💚 Luigi, ⛏️ Steve |
+| Gamer/Isekai | 💀 Ainz, 👑 Albedo, 🛡️ Naofumi |
 
 ---
 

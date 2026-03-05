@@ -251,8 +251,8 @@
 | 186 | Shao Kahn | Mortal Kombat | ⬜ |
 | 187 | Cortana | Halo | ⬜ |
 | 188 | Arbiter / O Árbitro | Halo | ⬜ |
-| 189 | Mario | Super Mario | ⬜ ⭐ |
-| 190 | Luigi | Super Mario | ⬜ |
+| 189 | Mario | Super Mario | ✅ |
+| 190 | Luigi | Super Mario | ✅ |
 
 ---
 
@@ -260,10 +260,10 @@
 
 | # | Persona | Universo | Status |
 |---|---------|----------|--------|
-| 191 | Albedo | Overlord | ⬜ ⭐ |
-| 192 | Ainz Ooal Gown | Overlord | ⬜ ⭐ |
-| 193 | Naofumi Iwatani (Herói do Escudo) | The Rising of the Shield Hero | ⬜ ⭐ |
-| 194 | Raphtalia | The Rising of the Shield Hero | ⬜ ⭐ |
+| 191 | Albedo | Overlord | ✅ |
+| 192 | Ainz Ooal Gown | Overlord | ✅ |
+| 193 | Naofumi Iwatani (Herói do Escudo) | The Rising of the Shield Hero | ✅ |
+| 194 | Raphtalia | The Rising of the Shield Hero | ✅ |
 
 ---
 
@@ -271,7 +271,7 @@
 
 | # | Persona | Área | Status |
 |---|---------|------|--------|
-| 195 | Sergio Sacani (Serjão dos Foguetes) | Astronomia / Divulgação BR | ⬜ ⭐ |
+| 195 | Sergio Sacani (Serjão dos Foguetes) | Astronomia / Divulgação BR | ✅ |
 
 ---
 
@@ -287,8 +287,8 @@
 | Famosos Reais | 21 |
 | Extras Games & Nerd | 16 |
 | **Total** | **195** |
-| **Já criadas** | **16** |
-| **Pendentes** | **179** |
+| **Já criadas** | **23** |
+| **Pendentes** | **172** |
 
 ---
 
