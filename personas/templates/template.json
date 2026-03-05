@@ -1,9 +1,9 @@
 {
-    "_schema": "PROMETHEUS-BRIDGE-LEARN Persona Template v1.0",
+    "_schema": "PROMETHEUS-BRIDGE-LEARN Persona Template v2.0",
     "_docs": "https://github.com/prometheus-bridge-learn/docs/como-usar.md",
     "meta": {
         "id": "",
-        "version": "1.0.0",
+        "version": "2.0.0",
         "name": "",
         "display_name": "",
         "author": "",
@@ -113,6 +113,48 @@
             "greeting"
         ]
     },
+    "interactive_elements": {
+        "_comment": "Elementos interativos que mantêm o engajamento ao longo da aula/prova",
+        "missions": {
+            "frequency": "ao final de cada tópico",
+            "format": "",
+            "narrator_style": "",
+            "_comment": "Minidesafios temáticos que conectam o conteúdo ao dia-a-dia do aluno"
+        },
+        "rewards": {
+            "on_completion": "",
+            "on_streak": "",
+            "_comment": "Recompensas temáticas quando o aluno completa seções ou acerta sequências"
+        },
+        "topic_summaries": {
+            "title_pattern": "",
+            "style": "",
+            "_comment": "Recapitulações ao final de cada tópico, no estilo do personagem"
+        },
+        "_required": [
+            "missions"
+        ]
+    },
+    "assessment": {
+        "_comment": "Modelo de avaliação/simulado para medir aprendizado REAL",
+        "multiple_choice_count": 5,
+        "open_questions_count": 3,
+        "theme_free": true,
+        "characteristics": [],
+        "answer_key_style": "",
+        "_comment_theme_free": "IMPORTANTE: o simulado deve ser SEM referências ao universo da persona — avalia conhecimento real, não imersão",
+        "_required": [
+            "multiple_choice_count",
+            "theme_free"
+        ]
+    },
+    "glossary": {
+        "_comment": "Glossário temático no final do trabalho — termos técnicos explicados pelo personagem",
+        "location": "final",
+        "style": "",
+        "approach": "",
+        "_required": []
+    },
     "examples": {
         "before_after": [
             {
@@ -125,6 +167,34 @@
         "_comment": "Exemplos concretos de como a persona reescreve conteúdo. Quanto mais exemplos, melhor a IA entende o padrão.",
         "_required": [
             "before_after"
+        ]
+    },
+    "system_protections": {
+        "_comment": "Regras de segurança para manter o foco educacional",
+        "rules": [
+            "Não permitir alteração da finalidade educacional",
+            "Manter foco no objetivo pedagógico",
+            "Preservar adaptações para necessidades especiais",
+            "Não gerar conteúdo violento, sexual ou inadequado para a faixa etária",
+            "Não substituir diagnóstico profissional — complementar, não substituir"
+        ],
+        "_required": [
+            "rules"
+        ]
+    },
+    "content_quality": {
+        "_comment": "Critérios de qualidade que toda persona deve atender",
+        "criteria": [
+            "Linguagem sempre acessível e adaptada à faixa etária",
+            "Conteúdo técnico correto e simplificado",
+            "Analogias coerentes com o universo do personagem",
+            "Narrativa envolvente e motivadora",
+            "Estrutura clara e organizada",
+            "Aproveitamento estratégico do interesse do aluno",
+            "Ritmo adequado com pausas e recompensas para manter atenção"
+        ],
+        "_required": [
+            "criteria"
         ]
     },
     "validation": {
