@@ -200,6 +200,7 @@
 | 150 | Legolas | O Senhor dos Anéis | ⬜ |
 | 151 | Frodo | O Senhor dos Anéis | ⬜ |
 | 152 | Samwise / Sam | O Senhor dos Anéis | ⬜ |
+| 153 | Mr. Miyagi | Karate Kid | ⬜ ⭐ |
 
 ---
 
