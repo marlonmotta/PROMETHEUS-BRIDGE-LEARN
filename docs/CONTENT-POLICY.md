@@ -2,7 +2,7 @@
 
 > **P.R.O.M.E.T.H.E.U.S · B.R.I.D.G.E · L.E.A.R.N**
 > Documento oficial de regras para criação, aprovação e uso de personas educacionais.
-> **Versão**: 1.1.0 | **Última atualização**: 2026-03-05
+> **Versão**: 1.2.0 | **Última atualização**: 2026-03-05
 
 ---
 
@@ -14,6 +14,42 @@
 - **NÃO existe** conteúdo sexual, pornográfico ou de apologia a crimes — pra NINGUÉM.
 - Mesmo que adultos usem as personas, o conteúdo gerado é sempre pedagógico e limpo.
 - Pornografia, violência explícita e apologia a crimes **NÃO ajudam ninguém a aprender** e não fazem parte deste projeto.
+
+---
+
+## ✅ Bom Uso — Como Este Projeto DEVE Ser Usado
+
+### 🎯 Uso Recomendado
+
+| Uso | Descrição | Exemplo |
+|-----|-----------|--------|
+| **Reforço escolar** | Persona explica matéria do currículo usando universo favorito do aluno | Goku ensina física (força, gravidade, energia) |
+| **Motivação e engajamento** | Aluno desmotivado se conecta via personagem que admira | Luigi ajuda com ansiedade antes de prova |
+| **Inclusão cognitiva** | Adaptar abordagem para perfis neurodivergentes | Steve (Minecraft) com linguagem visual pra dislexia |
+| **Exercícios temáticos** | Simulados e atividades com tema do universo do personagem | Deckard Cain cria questionário de história como "identificação de artefatos" |
+| **Apoio ao professor** | Professor usa persona pra tornar aula mais dinâmica | Einstein complementa aula de ciências com humor |
+| **Estudo autônomo** | Aluno estuda sozinho com persona como tutor | Kakashi como tutor de português |
+
+### ⚠️ Uso NÃO Recomendado (mas não proibido)
+
+| Uso | Por quê |
+|-----|--------|
+| Substituir aula presencial integralmente | Personas complementam, NÃO substituem o professor |
+| Usar apenas uma persona pra tudo | Cada persona tem forças diferentes — diversifique |
+| Ignorar classificação etária | Persona 16+ com criança de 8 anos não é ideal |
+| Criar dependência emocional | Persona é ferramenta, não amigo real nem terapeuta |
+
+### 🚫 Uso PROIBIDO
+
+| Uso | Motivo | Consequência |
+|-----|--------|-------------|
+| **Debates políticos / propaganda** | Projeto é EDUCACIONAL, não ideológico | Remoção imediata |
+| **Promover partidos ou políticos** | Neutralidade é obrigatória | Remoção + block |
+| **Bullying ou assédio** | Violação do ECA e LGPD | Denúncia + remoção |
+| **Diagnóstico clínico** | Personas NÃO são profissionais de saúde | Descumprimento de proteção |
+| **Coleta de dados pessoais** | Violação da LGPD | Consequências legais |
+| **Uso comercial sem atribuição** | Licença MIT exige atribuição | Violação de licença |
+| **Manipulação emocional** | Explorar vulnerabilidade do aluno | Remoção + denúncia |
 
 ---
 
@@ -84,6 +120,8 @@ As seguintes categorias de personas são **PROIBIDAS** sob qualquer circunstânc
 | **Figuras de ódio racial/étnico** | Líderes supremacistas, figuras KKK | Racismo é crime inafiançável no Brasil |
 | **Abusadores condenados** | Pedófilos condenados, abusadores comprovados | Proteção de menores (ECA) |
 | **Figuras que promovem suicídio/automutilação** | Personagens cujo arco CENTRAL é suicídio/automutilação | ECA Digital proíbe explicitamente |
+| **Políticos (QUALQUER espectro)** | Qualquer político vivo ou recente, de esquerda, direita, centro | Projeto é NEUTRO — política partidária é VETADA |
+| **Figuras religiosas controversas** | Líderes de seitas, figuras que dividem opiniões religiosas | Evitar conflitos religiosos em ambiente escolar |
 
 ### Categoria B — Proibição Parcial (Requer Análise Especial)
 
@@ -91,7 +129,7 @@ As seguintes categorias de personas são **PROIBIDAS** sob qualquer circunstânc
 |------|-------|---------|
 | **Vilões "carismáticos"** | Permitido SE usado como **exemplo negativo pedagógico** e NUNCA como modelo | Joker: ok como análise de transtorno, NUNCA como "seja como ele" |
 | **Figuras históricas controversas** | Caso a caso, APENAS se o valor educacional superar o risco | Napoleão: ok pra ensinar história. Stalin: análise histórica com muitas ressalvas |
-| **Personagens de ficção com temas adultos** | Permitido com classificação adequada (16+ ou 18+) e filtragem | Guts (Berserk): ok como 16+ com violência filtrada |
+| **Personagens de ficção com temas adultos** | Permitido com classificação adequada (16+) e filtragem. Teto máximo = 16+ | Guts (Berserk): ok como 16+ com violência filtrada |
 
 ### Processo de Análise (Categoria B)
 
@@ -197,7 +235,7 @@ Personas baseadas em **pessoas reais** (vivas ou mortas) têm regras adicionais:
 - [ ] `system_protections` contém TODAS as regras obrigatórias
 - [ ] `content_rating` está presente no `meta`
 - [ ] Se pessoa real: disclaimer presente no `system_prompt`
-- [ ] Se 16+/18+: justificativa educacional clara
+- [ ] Se 16+: justificativa educacional clara
 - [ ] Conteúdo não contém apologia, discriminação ou conteúdo ilegal
 - [ ] Exemplo `before_after` é pedagogicamente correto
 
@@ -235,4 +273,4 @@ Personas baseadas em **pessoas reais** (vivas ou mortas) têm regras adicionais:
 ---
 
 > 🛡️ *"O melhor escudo de um projeto educacional é a transparência das suas regras."*
-> — Política de Conteúdo PBL v1.0
+> — Política de Conteúdo PBL v1.2
