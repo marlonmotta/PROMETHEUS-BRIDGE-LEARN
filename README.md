@@ -276,16 +276,21 @@ MIT — Use, modifique, distribua. Só não esqueça de dar os créditos.
 
 ### **Marlon Motta**
 
-> *Just a human trying to help other humans learn better.*
-> *Apenas um humano tentando ajudar outros humanos a aprender melhor.*
+*Just a human trying to help other humans learn better.*
+<br>
+*Apenas um humano tentando ajudar outros humanos a aprender melhor.*
 
-> *Not a guru. Not a genius.*
-> *Someone who learned the hard way —*
-> *and wants to make it easier for you.*
+---
 
-> *Não sou guru. Não sou gênio.*
-> *Sou alguém que aprendeu do jeito difícil —*
-> *e quer tornar isso mais fácil pra você.*
+*Not a guru. Not a genius.*
+<br>
+*Someone who learned the hard way — and wants to make it easier for you.*
+
+<br>
+
+*Não sou guru. Não sou gênio.*
+<br>
+*Sou alguém que aprendeu do jeito difícil — e quer tornar isso mais fácil pra você.*
 
 ---
 
