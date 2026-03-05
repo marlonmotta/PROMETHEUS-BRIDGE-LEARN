@@ -20,7 +20,7 @@
 
 | # | Persona | Universo | Status |
 |---|---------|----------|--------|
-| 1 | Spider-Man / Homem-Aranha | Marvel | ⬜ ⭐ |
+| 1 | Spider-Man / Homem-Aranha | Marvel | ✅ |
 | 2 | Iron Man / Homem de Ferro | Marvel | ⬜ ⭐ |
 | 3 | Captain America / Capitão América | Marvel | ⬜ |
 | 4 | Black Panther / Pantera Negra | Marvel | ⬜ |
@@ -47,7 +47,7 @@
 
 | # | Persona | Universo | Status |
 |---|---------|----------|--------|
-| 21 | Batman / Homem-Morcego | DC | ⬜ ⭐ |
+| 21 | Batman / Homem-Morcego | DC | ✅ |
 | 22 | Superman / Super-Homem | DC | ⬜ |
 | 23 | Wonder Woman / Mulher-Maravilha | DC | ⬜ |
 | 24 | The Flash / Flash | DC | ⬜ |
@@ -72,25 +72,25 @@
 
 | # | Persona | Universo | Status |
 |---|---------|----------|--------|
-| 39 | Goku | Dragon Ball | ⬜ ⭐ |
+| 39 | Goku | Dragon Ball | ✅ |
 | 40 | Vegeta | Dragon Ball | ⬜ |
 | 41 | Naruto | Naruto | ⬜ |
 | 42 | Sasuke | Naruto | ⬜ |
-| 43 | Kakashi | Naruto | ⬜ ⭐ |
+| 43 | Kakashi | Naruto | ✅ |
 | 44 | Light Yagami | Death Note | ⬜ |
-| 45 | L | Death Note | ⬜ ⭐ |
+| 45 | L | Death Note | ✅ |
 | 46 | Lelouch | Code Geass | ⬜ |
 | 47 | Edward Elric | FMA | ⬜ |
 | 48 | Roy Mustang | FMA | ⬜ |
 | 49 | Levi Ackerman | Attack on Titan | ⬜ |
 | 50 | Eren Yeager | Attack on Titan | ⬜ |
-| 51 | Luffy | One Piece | ⬜ ⭐ |
+| 51 | Luffy | One Piece | ✅ |
 | 52 | Zoro | One Piece | ⬜ |
 | 53 | Sanji | One Piece | ⬜ |
 | 54 | Nami | One Piece | ⬜ |
-| 55 | Gojo Satoru | Jujutsu Kaisen | ⬜ ⭐ |
+| 55 | Gojo Satoru | Jujutsu Kaisen | ✅ |
 | 56 | Itadori Yuji | Jujutsu Kaisen | ⬜ |
-| 57 | Tanjiro | Demon Slayer | ⬜ |
+| 57 | Tanjiro | Demon Slayer | ✅ |
 | 58 | Nezuko | Demon Slayer | ⬜ |
 | 59 | Guts | Berserk | ⬜ |
 | 60 | Griffith | Berserk | ⬜ |
@@ -112,16 +112,16 @@
 | # | Persona | Universo | Status |
 |---|---------|----------|--------|
 | 71 | Master Chief | Halo | ⬜ |
-| 72 | Kratos | God of War | ⬜ ⭐ |
+| 72 | Kratos | God of War | ✅ |
 | 73 | Geralt de Rívia | The Witcher | ⬜ |
 | 74 | Arthur Morgan | Red Dead Redemption 2 | ⬜ |
 | 75 | Joel | The Last of Us | ⬜ |
 | 76 | Ellie | The Last of Us | ⬜ |
 | 77 | Aloy | Horizon | ⬜ |
-| 78 | Link | Zelda | ⬜ ⭐ |
+| 78 | Link | Zelda | ✅ |
 | 79 | Cloud Strife | Final Fantasy VII | ⬜ |
 | 80 | Solid Snake | Metal Gear | ⬜ |
-| 81 | Ezio Auditore | Assassin's Creed | ⬜ |
+| 81 | Ezio Auditore | Assassin's Creed | ✅ |
 | 82 | Commander Shepard | Mass Effect | ⬜ |
 | 83 | Garrus Vakarian | Mass Effect | ⬜ |
 | 84 | 2B | NieR: Automata | ⬜ |
@@ -135,10 +135,10 @@
 | 92 | Dante | Devil May Cry | ⬜ |
 | 93 | Leon Kennedy | Resident Evil | ⬜ |
 | 94 | Nathan Drake | Uncharted | ⬜ |
-| 95 | Lara Croft | Tomb Raider | ⬜ |
+| 95 | Lara Croft | Tomb Raider | ✅ |
 | 96 | Marcus Fenix | Gears of War | ⬜ |
 | 97 | Master Yi | League of Legends | ⬜ |
-| 98 | Jinx | League of Legends | ⬜ |
+| 98 | Jinx | League of Legends | ✅ |
 | 99 | Thresh | League of Legends | ⬜ |
 | 100 | Yasuo | League of Legends | ⬜ |
 | 101 | Sekiro | Sekiro | ⬜ |
@@ -148,7 +148,7 @@
 | 105 | Sam Fisher | Splinter Cell | ⬜ |
 | 106 | Agent 47 | Hitman | ⬜ |
 | 107 | Max Payne | Max Payne | ⬜ |
-| 108 | Steve | Minecraft | ⬜ ⭐ |
+| 108 | Steve | Minecraft | ✅ |
 
 ---
 
@@ -218,7 +218,7 @@
 | 160 | Kevin Mitnick | Hacking / Segurança | ⬜ |
 | 161 | Ada Lovelace | Computação / Matemática | ⬜ ⭐ |
 | 162 | Grace Hopper | Computação / Engenharia | ⬜ |
-| 163 | Albert Einstein | Física | ⬜ ⭐ |
+| 163 | Albert Einstein | Física | ✅ |
 | 164 | Stephen Hawking | Física / Cosmologia | ⬜ |
 | 165 | Neil deGrasse Tyson | Astrofísica / Divulgação | ⬜ |
 | 166 | Noam Chomsky | Linguística / Filosofia | ⬜ |
@@ -251,6 +251,27 @@
 | 186 | Shao Kahn | Mortal Kombat | ⬜ |
 | 187 | Cortana | Halo | ⬜ |
 | 188 | Arbiter / O Árbitro | Halo | ⬜ |
+| 189 | Mario | Super Mario | ⬜ ⭐ |
+| 190 | Luigi | Super Mario | ⬜ |
+
+---
+
+## ⚔️ Manga / Anime — Adições
+
+| # | Persona | Universo | Status |
+|---|---------|----------|--------|
+| 191 | Albedo | Overlord | ⬜ ⭐ |
+| 192 | Ainz Ooal Gown | Overlord | ⬜ ⭐ |
+| 193 | Naofumi Iwatani (Herói do Escudo) | The Rising of the Shield Hero | ⬜ ⭐ |
+| 194 | Raphtalia | The Rising of the Shield Hero | ⬜ ⭐ |
+
+---
+
+## 🧠 Famosos Reais — Adições
+
+| # | Persona | Área | Status |
+|---|---------|------|--------|
+| 195 | Sergio Sacani (Serjão dos Foguetes) | Astronomia / Divulgação BR | ⬜ ⭐ |
 
 ---
 
@@ -260,14 +281,14 @@
 |-----------|-----------|
 | HQ / Marvel | 20 |
 | HQ / DC | 18 |
-| Manga / Anime | 32 |
-| Games | 38 |
+| Manga / Anime | 36 |
+| Games | 40 |
 | Cinema & Séries | 44 |
-| Famosos Reais | 20 |
+| Famosos Reais | 21 |
 | Extras Games & Nerd | 16 |
-| **Total** | **188** |
-| **Já criadas** | **1** (Jiraiya Sensei) |
-| **Pendentes** | **187** |
+| **Total** | **195** |
+| **Já criadas** | **16** |
+| **Pendentes** | **179** |
 
 ---
 
