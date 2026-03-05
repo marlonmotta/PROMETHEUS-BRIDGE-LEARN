@@ -152,7 +152,7 @@ v2          (sem contexto)
 gh pr create \
   --title "🎭 feat: persona Gandalf (LOTR)" \
   --body "Nova persona com classificação 13+. Checklist completo." \
-  --label "enhancement,personas"
+  --label "enhancement"
 
 # Via GitHub (alternativa)
 # Acesse: github.com/marlonmotta/PROMETHEUS-BRIDGE-LEARN/pulls
@@ -174,7 +174,7 @@ gh pr create \
 - [x] Catálogo e backlog atualizados
 
 ## Labels
-enhancement, personas, documentation
+enhancement, documentation
 ```
 
 ### Labels Disponíveis
@@ -187,8 +187,6 @@ enhancement, personas, documentation
 | `good first issue` | Fácil pra primeira contribuição |
 | `help wanted` | Precisa de ajuda |
 | `question` | Dúvida |
-| `invalid` | Não se aplica |
-| `wontfix` | Não será feito |
 
 ### Regras de Review
 
@@ -207,29 +205,18 @@ enhancement, personas, documentation
 
 Baseado no [SemVer 2.0.0](https://semver.org/lang/pt-BR/).
 
-### Formato
-
-```
-vMAJOR.MINOR.PATCH
-```
+### Formato: `vMAJOR.MINOR.PATCH`
 
 | Parte | Quando incrementar | Exemplo |
 |-------|-------------------|---------|
-| **MAJOR** | Mudança incompatível (ex: novo schema que quebra o antigo) | v1.0.0 → v2.0.0 |
-| **MINOR** | Nova funcionalidade retrocompatível (ex: lote de personas) | v0.2.0 → v0.3.0 |
+| **MAJOR** | Mudança incompatível (ex: novo schema) | v1.0.0 → v2.0.0 |
+| **MINOR** | Nova funcionalidade retrocompatível | v0.2.0 → v0.3.0 |
 | **PATCH** | Correção de bug ou typo | v0.2.0 → v0.2.1 |
-
-### Tags Existentes
-
-| Tag | Marco |
-|-----|-------|
-| `v0.1.0` | Template + primeiras personas (Lote 1-3) |
-| `v0.2.0` | 36 personas + CONTENT-POLICY v1.2 |
 
 ### Como Criar Tag
 
 ```bash
-git tag -a v0.3.0 -m "🏷️ release: v0.3.0 — sistema de adaptação cognitiva"
+git tag -a v0.3.0 -m "🏷️ release: v0.3.0 — descrição do marco"
 git push origin v0.3.0
 ```
 
@@ -249,13 +236,8 @@ GIT/
 └── personas/
     ├── templates/
     │   └── template.json     # Template base v2.0
-    ├── fictional/
-    │   ├── jiraiya-sensei.json
-    │   ├── batman.json
-    │   └── ...
-    └── real/
-        ├── albert-einstein.json
-        └── sergio-sacani.json
+    ├── fictional/            # Personas de ficção
+    └── real/                 # Personas de pessoas reais
 ```
 
 ---
