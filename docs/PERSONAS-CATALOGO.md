@@ -55,6 +55,8 @@
 | 34 | 🌸 Aerith Gainsborough | Final Fantasy VII | Fictional | Todos | 🟢LIVRE Gentil, poética, luminosa | [`aerith.json`](personas/fictional/aerith.json) |
 | 35 | ⚡ Ash Ketchum | Pokémon | Fictional | 6-14 | 🟢LIVRE Ultra animado, persistente | [`ash-ketchum.json`](personas/fictional/ash-ketchum.json) |
 | 36 | 🦁 Tai Kamiya | Digimon | Fictional | 6-14 | 🟢LIVRE Corajoso, líder, energético | [`tai-kamiya.json`](personas/fictional/tai-kamiya.json) |
+| 37 | 🦸 Superman | DC Comics | Fictional | Todos | 🟢LIVRE Inspirador, esperançoso, protetor | [`superman.json`](personas/fictional/superman.json) |
+| 38 | 🔴🟡 Iron Man | Marvel / MCU | Fictional | 11-14 | 🟢LIVRE Confiante, espirituoso, mentor tech | [`iron-man.json`](personas/fictional/iron-man.json) |
 
 ---
 
@@ -62,11 +64,11 @@
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **36** |
-| Fictional | 34 |
+| Total de personas prontas | **38** |
+| Fictional | 36 |
 | Real | 2 |
 | Universos cobertos | 27 |
-| Backlog pendente | ~159 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
+| Backlog pendente | ~172 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
 
 ---
 
@@ -75,8 +77,8 @@
 | Universo | Personas Disponíveis |
 |----------|---------------------|
 | Naruto | Jiraiya Sensei, Kakashi |
-| Marvel / MCU | Spider-Man |
-| DC Comics | Batman |
+| Marvel / MCU | Spider-Man, Iron Man |
+| DC Comics | Batman, Superman |
 | Dragon Ball | Goku |
 | Minecraft | Steve |
 | One Piece | Luffy |
@@ -107,9 +109,9 @@
 
 | Tom | Personas |
 |-----|----------|
-| Descontraído / Humorístico | Jiraiya, Spider-Man, Luffy, Jinx, Mario, Ash |
+| Descontraído / Humorístico | Jiraiya, Spider-Man, Luffy, Jinx, Mario, Ash, Iron Man |
 | Sério / Estratégico | Batman, Kakashi, Kratos, Albedo, Leon |
-| Enérgico / Motivacional | Goku, Luffy, Sacani, Chris, Tai, Ash |
+| Enérgico / Motivacional | Goku, Luffy, Sacani, Chris, Tai, Ash, Superman |
 | Calmo / Explorador | Link, Steve, Lara Croft, Thrall |
 | Provocador / Carismático | Gojo Satoru |
 | Analítico / Dedutivo | L, Batman, Ainz, Geralt |
@@ -130,7 +132,7 @@
 
 | Classificação | Faixa | Personas |
 |--------------|-------|----------|
-| 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani |
+| 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani, Superman, Iron Man |
 | 🔵 10+ | 10+ | (nenhuma ainda — faixa disponível) |
 | 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa |
 | 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain |
@@ -147,10 +149,11 @@
 | Precisa de provocação positiva | 😎 Gojo Satoru |
 | Perfil analítico/lógico | 🔍 L, 🦇 Batman, 💀 Ainz, ⚔️ Geralt |
 | Perfil criativo/TDAH | 💥 Jinx, ⛏️ Steve, ⚡ Ash, 🦁 Tai |
-| Precisa de energia/motivação | 💥 Goku, 🏴‍☠️ Luffy, 🚀 Sacani, 💪 Chris, ⚡ Ash |
+| Precisa de energia/motivação | 💥 Goku, 🏴‍☠️ Luffy, 🚀 Sacani, 💪 Chris, ⚡ Ash, 🦸 Superman |
+| Gosta de tecnologia/STEM | 🔴🟡 Iron Man, 🕸️ Spider-Man, 🧠 Einstein, 🔬 Rebecca |
 | Gosta de puzzles | 🗡️ Link |
 | Gosta de história | 🗡️ Ezio, 🗺️ Lara Croft, 🔮 Vol'jin, 📖 Deckard Cain |
-| Gosta de ciência | 🧠 Einstein, 🕸️ Spider-Man, 🚀 Sacani, 🔬 Rebecca |
+| Gosta de ciência | 🧠 Einstein, 🕸️ Spider-Man, 🚀 Sacani, 🔬 Rebecca, 🔴🟡 Iron Man |
 | Sofreu bullying/exclusão | 🛡️ Naofumi, 💚 Luigi, 🌪️ Thrall |
 | Tem ansiedade | 💚 Luigi, 🗡️ Raphtalia, 🌸 Aerith, 🌊 Tanjiro |
 | Crianças (6-10) | 🍄 Mario, 💚 Luigi, ⛏️ Steve, ⚡ Ash, 🦁 Tai, 🌸 Aerith |

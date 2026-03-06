@@ -21,7 +21,7 @@
 | # | Persona | Universo | Status |
 |---|---------|----------|--------|
 | 1 | Spider-Man / Homem-Aranha | Marvel | ✅ |
-| 2 | Iron Man / Homem de Ferro | Marvel | ⬜ ⭐ |
+| 2 | Iron Man / Homem de Ferro | Marvel | ✅ |
 | 3 | Captain America / Capitão América | Marvel | ⬜ |
 | 4 | Black Panther / Pantera Negra | Marvel | ⬜ |
 | 5 | Doctor Strange / Doutor Estranho | Marvel | ⬜ |
