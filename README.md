@@ -469,16 +469,27 @@ MIT — Use, modifique, distribua. Só não esqueça de dar os créditos.
 
 ### **Marlon Motta**
 
-Professor, desenvolvedor e entusiasta de IA aplicada à educação.
+_Just a human trying to help other humans learn better._
+<br>
+_Apenas um humano tentando ajudar outros humanos a aprender melhor._
 
-O PBL nasceu de um caso real: um aluno de 18 anos com deficiência intelectual que tirava notas entre 0 e 3. Quando a IA vestiu a máscara do Jiraiya (Naruto), ele começou a tirar 8 e 9. Não porque a prova ficou mais fácil — porque finalmente falou a língua dele.
+</div>
+
+Quando eu era aluno, eu era daqueles que **não aprendia do jeito tradicional**. A matéria simplesmente não entrava — não porque eu não me esforçava, mas porque o formato não falava a minha língua. Eu sabia que o problema não era comigo. Mas ninguém me deu uma alternativa.
+
+Aos 18, 19 anos, comecei a dar aulas. E encontrei os mesmos problemas do outro lado — alunos brilhantes que travavam diante de uma prova genérica. Eu via o potencial, mas não tinha ferramentas pra alcançar eles. Então comecei a rabiscar ideias, anotar métodos, imaginar um jeito de **traduzir o conteúdo pro universo de cada aluno**. Mas na época, eu não tinha capacidade técnica pra construir o que imaginava. Guardei as anotações e segui em frente.
+
+Anos depois, em 2023, uma professora me procurou com um caso que mudou tudo: um aluno de 18 anos com deficiência intelectual, idade mental por volta de 11 anos. Notas entre **0 e 3**. Zero engajamento. Juntos, criamos um método simples — usando webchat e IA generativa, fizemos a IA "vestir" personagens que o aluno amava. Jiraiya (Naruto), Batman, personagens que faziam sentido pro mundo dele. O resultado? Notas de **8 e 9**. Não porque a prova ficou mais fácil — porque finalmente **falou a língua dele**.
+
+Aquelas anotações que eu guardei por anos tinham virado realidade.
+
+Depois disso, amigos se juntaram ao projeto com a mesma visão. Hoje o PBL é um esforço coletivo — desenvolvedores, educadores e entusiastas trabalhando juntos pra tornar a educação mais humana, mais adaptativa e mais acessível. Estamos fazendo o melhor possível, um passo de cada vez.
 
 Esse projeto existe porque **nenhum aluno deveria ser invisível**.
 
-> *"Se a escola não fala a língua do aluno, a tecnologia pode traduzir."*
+<div align="center">
 
-> *Just a human trying to help other humans learn better.*
-> *Apenas um humano tentando ajudar outros humanos a aprender melhor.*
+> *"Se a escola não fala a língua do aluno, a tecnologia pode traduzir."*
 
 > *Not a guru. Not a genius.*
 > *Someone who learned the hard way —*
@@ -494,4 +505,5 @@ Esse projeto existe porque **nenhum aluno deveria ser invisível**.
 **Ajuda a alcançar mais professores e mais alunos.**
 
 </div>
+
 
