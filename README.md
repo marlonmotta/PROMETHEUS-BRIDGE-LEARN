@@ -477,9 +477,16 @@ Esse projeto existe porque **nenhum aluno deveria ser invisível**.
 
 > *"Se a escola não fala a língua do aluno, a tecnologia pode traduzir."*
 
-_Just a human trying to help other humans learn better._
-<br>
-_Apenas um humano tentando ajudar outros humanos a aprender melhor._
+> *Just a human trying to help other humans learn better.*
+> *Apenas um humano tentando ajudar outros humanos a aprender melhor.*
+
+> *Not a guru. Not a genius.*
+> *Someone who learned the hard way —*
+> *and wants to make it easier for you.*
+
+> *Não sou guru. Não sou gênio.*
+> *Sou alguém que aprendeu do jeito difícil —*
+> *e quer tornar isso mais fácil pra você.*
 
 ---
 
@@ -487,3 +494,4 @@ _Apenas um humano tentando ajudar outros humanos a aprender melhor._
 **Ajuda a alcançar mais professores e mais alunos.**
 
 </div>
+
