@@ -58,18 +58,25 @@
 | 37 | 🦸 Superman | DC Comics | Fictional | Todos | 🟢LIVRE Inspirador, esperançoso, protetor | [`superman.json`](personas/fictional/superman.json) |
 | 38 | 🔴🟡 Iron Man | Marvel / MCU | Fictional | 11-14 | 🟢LIVRE Confiante, espirituoso, mentor tech | [`iron-man.json`](personas/fictional/iron-man.json) |
 | 39 | 🚀 Elon Musk | Mundo Real / Tecnologia | Real | 11-18 | Direto, intenso, motivador | [`elon-musk.json`](personas/real/elon-musk.json) |
-
+| 40 | 🎤 Rumi | Guerreiras do K-Pop (HUNTR/X) | Fictional | 10-16 | Inspiradora, musical, líder | [`rumi.json`](personas/fictional/rumi.json) |
+| 41 | 💃 Mira | Guerreiras do K-Pop (HUNTR/X) | Fictional | 10-16 | Elegante, precisa, estratégica | [`mira.json`](personas/fictional/mira.json) |
+| 42 | 🎤 Zoey | Guerreiras do K-Pop (HUNTR/X) | Fictional | 10-16 | Energética, criativa, rapper | [`zoey.json`](personas/fictional/zoey.json) |
+| 43 | 🌍 Pilar | Diário de Pilar | Fictional | 6-12 | Curiosa, aventureira, empática | [`pilar.json`](personas/fictional/pilar.json) |
+| 44 | 🎯 Breno | Diário de Pilar | Fictional | 6-12 | Prático, leal, organizado | [`breno.json`](personas/fictional/breno.json) |
+| 45 | 🐱 Samba (gato) | Diário de Pilar | Fictional | 6-10 | Fofo, silencioso, companheiro | [`samba.json`](personas/fictional/samba.json) |
+| 46 | 💛 Noob | Roblox | Fictional | 6-12 | Humilde, persistente, gamer | [`noob-roblox.json`](personas/fictional/noob-roblox.json) |
+| 47 | 🧑 Bacon Hair | Roblox | Fictional | 6-12 | Criativo, construtor, resiliente | [`bacon-hair.json`](personas/fictional/bacon-hair.json) |
 ---
 
 ## 📊 Estatísticas
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **39** |
-| Fictional | 36 |
+| Total de personas prontas | **47** |
+| Fictional | 44 |
 | Real | 3 |
-| Universos cobertos | 28 |
-| Backlog pendente | ~171 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
+| Universos cobertos | 31 |
+| Backlog pendente | ~173 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
 
 ---
 
@@ -101,6 +108,9 @@
 | Final Fantasy VII | Tifa, Aerith |
 | Pokémon | Ash Ketchum |
 | Digimon | Tai Kamiya |
+| Guerreiras do K-Pop (HUNTR/X) | Rumi, Mira, Zoey |
+| Diário de Pilar | Pilar, Breno, Samba |
+| Roblox | Noob, Bacon Hair |
 | Ciência Real | Albert Einstein |
 | Tecnologia / Engenharia | Elon Musk |
 | Divulgação BR | Sergio Sacani |
@@ -128,6 +138,14 @@
 | Tático / Sarcástico | Geralt, Leon |
 | Científico / Juventude | Rebecca |
 | Força / Coração | Tifa, Chris |
+| Musical / Inspiradora | Rumi |
+| Elegante / Precisa | Mira |
+| Energética / Criativa / Rapper | Zoey |
+| Aventureira / Curiosa | Pilar |
+| Prático / Leal | Breno |
+| Fofo / Companheiro | Samba (gato) |
+| Humilde / Aprendiz | Noob |
+| Construtor / Criativo | Bacon Hair |
 
 ---
 
@@ -135,8 +153,8 @@
 
 | Classificação | Faixa | Personas |
 |--------------|-------|----------|
-| 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani, Superman, Iron Man |
-| 🔵 10+ | 10+ | (nenhuma ainda — faixa disponível) |
+| 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani, Superman, Iron Man, Pilar, Breno, Samba, Noob, Bacon Hair |
+| 🔵 10+ | 10-16 | Rumi, Mira, Zoey |
 | 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa |
 | 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk |
 | 🟠 16+ | 13-18 | Kratos, Ezio, Geralt, Leon, Claire, Chris |
@@ -160,13 +178,16 @@
 | Gosta de tecnologia/engenharia | 🚀 Elon Musk, 🔴🟡 Iron Man |
 | Sofreu bullying/exclusão | 🛡️ Naofumi, 💚 Luigi, 🌪️ Thrall |
 | Tem ansiedade | 💚 Luigi, 🗡️ Raphtalia, 🌸 Aerith, 🌊 Tanjiro |
-| Crianças (6-10) | 🍄 Mario, 💚 Luigi, ⛏️ Steve, ⚡ Ash, 🦁 Tai, 🌸 Aerith |
+| Crianças (6-10) | 🍄 Mario, 💚 Luigi, ⛏️ Steve, ⚡ Ash, 🦁 Tai, 🌸 Aerith, 🌍 Pilar, 🎯 Breno, 🐱 Samba, 💛 Noob, 🧑 Bacon Hair |
 | Gamer/RPG/MMORPG | 💀 Ainz, 👑 Albedo, 🛡️ Naofumi, 🌪️ Thrall, 🔮 Vol'jin |
 | Gosta de tático/sobrevivência | 🔫 Leon, ❤️ Claire, 💪 Chris, ⚔️ Geralt |
 | Precisa de inspiração épica | ⚔️✨ Tyrael |
 | Gosta de luta/artes marciais | 👊 Tifa |
 | Persistência / Nunca desistir | ⚡ Ash, 💪 Chris, 🦁 Tai, 🚀 Elon Musk |
 | Baixa autoestima | 🛡️ Naofumi, 💚 Luigi, 🗡️ Raphtalia, 👊 Tifa |
+| Gosta de K-Pop/música/dança | 🎤 Rumi, 💃 Mira, 🎤 Zoey |
+| Gosta de aventura/viagem/culturas | 🌍 Pilar, 🎯 Breno, 🐱 Samba |
+| Gosta de Roblox/construção | 💛 Noob, 🧑 Bacon Hair |
 
 ---
 

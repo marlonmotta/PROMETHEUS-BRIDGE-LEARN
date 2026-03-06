@@ -163,6 +163,35 @@
 
 ---
 
+## 🎤 K-Pop / Animação Netflix
+
+| # | Persona | Universo | Status |
+|---|---------|----------|--------|
+| 109-l | Rumi | Guerreiras do K-Pop (HUNTR/X) | ✅ |
+| 109-m | Mira | Guerreiras do K-Pop (HUNTR/X) | ✅ |
+| 109-n | Zoey | Guerreiras do K-Pop (HUNTR/X) | ✅ |
+
+---
+
+## 📚 Literatura Infantil BR
+
+| # | Persona | Universo | Status |
+|---|---------|----------|--------|
+| 109-o | Pilar | Diário de Pilar | ✅ |
+| 109-p | Breno | Diário de Pilar | ✅ |
+| 109-q | Samba (gato) | Diário de Pilar | ✅ |
+
+---
+
+## 🎮 Roblox
+
+| # | Persona | Universo | Status |
+|---|---------|----------|--------|
+| 109-r | Noob | Roblox | ✅ |
+| 109-s | Bacon Hair | Roblox | ✅ |
+
+---
+
 ## 🎬 Cinema & Séries
 
 | # | Persona | Universo | Status |
@@ -302,8 +331,11 @@
 | Famosos Reais | 21 |
 | Extras Games & Nerd | 16 |
 | Lote 5 (adições) | 11 |
-| **Total** | **210** |
-| **Já criadas** | **37** |
+| Lote 6 — K-Pop Warriors | 3 |
+| Lote 6 — Diário de Pilar | 3 |
+| Lote 6 — Roblox | 2 |
+| **Total** | **218** |
+| **Já criadas** | **45** |
 | **Pendentes** | **173** |
 
 ---

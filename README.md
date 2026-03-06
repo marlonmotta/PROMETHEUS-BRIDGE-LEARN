@@ -181,7 +181,7 @@ PROMETHEUS-BRIDGE-LEARN/
 │
 ├── personas/                         # 🧩 Catálogo de personas de IA
 │   ├── manifest.json                 #    Índice de personas (usado pelo auto-update)
-│   ├── fictional/                    #    36 personas de personagens fictícios
+│   ├── fictional/                    #    44 personas de personagens fictícios
 │   │   ├── goku.json
 │   │   ├── jiraiya-sensei.json
 │   │   ├── batman.json
@@ -358,9 +358,9 @@ O executável será gerado em `src-tauri/target/release/`.
 
 ## 🧩 Personas
 
-O PBL vem com **38 personas embutidas** prontas para uso:
+O PBL vem com **47 personas embutidas** prontas para uso:
 
-### Fictícias (36)
+### Fictícias (44)
 
 | Persona        | Universo         | Persona           | Universo           |
 | -------------- | ---------------- | ----------------- | ------------------ |
