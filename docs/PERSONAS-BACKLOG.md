@@ -253,7 +253,7 @@
 | #   | Persona             | Área                        | Status |
 | --- | ------------------- | --------------------------- | ------ |
 | 153 | Elon Musk           | Tecnologia / Engenharia     | ✅     |
-| 154 | Steve Jobs          | Tecnologia / Design         | ⬜     |
+| 154 | Steve Jobs          | Tecnologia / Design         | ✅     |
 | 155 | Nikola Tesla        | Engenharia / Física         | ⬜ ⭐  |
 | 156 | Alan Turing         | Computação / Matemática     | ⬜ ⭐  |
 | 157 | Carl Sagan          | Astronomia / Divulgação     | ⬜     |
@@ -335,8 +335,8 @@
 | Lote 6 — Diário de Pilar | 3 |
 | Lote 6 — Roblox | 2 |
 | **Total** | **218** |
-| **Já criadas** | **45** |
-| **Pendentes** | **173** |
+| **Já criadas** | **46** |
+| **Pendentes** | **172** |
 
 ---
 
