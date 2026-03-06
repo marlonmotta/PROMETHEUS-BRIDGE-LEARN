@@ -19,6 +19,8 @@
         ],
         "category": "real",
         "target_age_range": "11-18",
+        "content_rating": "LIVRE",
+        "content_warnings": [],
         "created": "2026-03-05",
         "updated": "2026-03-05"
     },
