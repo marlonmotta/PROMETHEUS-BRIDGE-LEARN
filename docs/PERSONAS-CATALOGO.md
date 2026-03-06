@@ -55,6 +55,7 @@
 | 34 | 🌸 Aerith Gainsborough | Final Fantasy VII | Fictional | Todos | 🟢LIVRE Gentil, poética, luminosa | [`aerith.json`](personas/fictional/aerith.json) |
 | 35 | ⚡ Ash Ketchum | Pokémon | Fictional | 6-14 | 🟢LIVRE Ultra animado, persistente | [`ash-ketchum.json`](personas/fictional/ash-ketchum.json) |
 | 36 | 🦁 Tai Kamiya | Digimon | Fictional | 6-14 | 🟢LIVRE Corajoso, líder, energético | [`tai-kamiya.json`](personas/fictional/tai-kamiya.json) |
+| 37 | 🚀 Elon Musk | Mundo Real / Tecnologia | Real | 11-18 | Direto, intenso, motivador | [`elon-musk.json`](personas/real/elon-musk.json) |
 
 ---
 
@@ -62,11 +63,11 @@
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **36** |
+| Total de personas prontas | **37** |
 | Fictional | 34 |
-| Real | 2 |
-| Universos cobertos | 27 |
-| Backlog pendente | ~159 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
+| Real | 3 |
+| Universos cobertos | 28 |
+| Backlog pendente | ~158 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
 
 ---
 
@@ -99,6 +100,7 @@
 | Pokémon | Ash Ketchum |
 | Digimon | Tai Kamiya |
 | Ciência Real | Albert Einstein |
+| Tecnologia / Engenharia | Elon Musk |
 | Divulgação BR | Sergio Sacani |
 
 ---
@@ -109,9 +111,10 @@
 |-----|----------|
 | Descontraído / Humorístico | Jiraiya, Spider-Man, Luffy, Jinx, Mario, Ash |
 | Sério / Estratégico | Batman, Kakashi, Kratos, Albedo, Leon |
-| Enérgico / Motivacional | Goku, Luffy, Sacani, Chris, Tai, Ash |
+| Enérgico / Motivacional | Goku, Luffy, Sacani, Chris, Tai, Ash, Elon Musk |
 | Calmo / Explorador | Link, Steve, Lara Croft, Thrall |
 | Provocador / Carismático | Gojo Satoru |
+| Direto / Desafiador | Elon Musk |
 | Analítico / Dedutivo | L, Batman, Ainz, Geralt |
 | Gentil / Acolhedor | Tanjiro, Einstein, Raphtalia, Luigi, Aerith, Claire, Deckard Cain |
 | Filosófico / Sábio | Ezio, Einstein, Thrall, Vol'jin |
@@ -133,7 +136,7 @@
 | 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani |
 | 🔵 10+ | 10+ | (nenhuma ainda — faixa disponível) |
 | 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa |
-| 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain |
+| 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk |
 | 🟠 16+ | 13-18 | Kratos, Ezio, Geralt, Leon, Claire, Chris |
 
 ---
@@ -150,7 +153,8 @@
 | Precisa de energia/motivação | 💥 Goku, 🏴‍☠️ Luffy, 🚀 Sacani, 💪 Chris, ⚡ Ash |
 | Gosta de puzzles | 🗡️ Link |
 | Gosta de história | 🗡️ Ezio, 🗺️ Lara Croft, 🔮 Vol'jin, 📖 Deckard Cain |
-| Gosta de ciência | 🧠 Einstein, 🕸️ Spider-Man, 🚀 Sacani, 🔬 Rebecca |
+| Gosta de ciência | 🧠 Einstein, 🕸️ Spider-Man, 🚀 Sacani, 🔬 Rebecca, 🚀 Elon Musk |
+| Gosta de tecnologia/engenharia | 🚀 Elon Musk |
 | Sofreu bullying/exclusão | 🛡️ Naofumi, 💚 Luigi, 🌪️ Thrall |
 | Tem ansiedade | 💚 Luigi, 🗡️ Raphtalia, 🌸 Aerith, 🌊 Tanjiro |
 | Crianças (6-10) | 🍄 Mario, 💚 Luigi, ⛏️ Steve, ⚡ Ash, 🦁 Tai, 🌸 Aerith |
@@ -158,7 +162,7 @@
 | Gosta de tático/sobrevivência | 🔫 Leon, ❤️ Claire, 💪 Chris, ⚔️ Geralt |
 | Precisa de inspiração épica | ⚔️✨ Tyrael |
 | Gosta de luta/artes marciais | 👊 Tifa |
-| Persistência / Nunca desistir | ⚡ Ash, 💪 Chris, 🦁 Tai |
+| Persistência / Nunca desistir | ⚡ Ash, 💪 Chris, 🦁 Tai, 🚀 Elon Musk |
 | Baixa autoestima | 🛡️ Naofumi, 💚 Luigi, 🗡️ Raphtalia, 👊 Tifa |
 
 ---
