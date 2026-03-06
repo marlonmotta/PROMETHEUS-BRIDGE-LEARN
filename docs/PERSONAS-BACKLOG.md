@@ -212,7 +212,7 @@
 
 | #   | Persona             | Área                        | Status |
 | --- | ------------------- | --------------------------- | ------ |
-| 153 | Elon Musk           | Tecnologia / Engenharia     | ⬜     |
+| 153 | Elon Musk           | Tecnologia / Engenharia     | ✅     |
 | 154 | Steve Jobs          | Tecnologia / Design         | ⬜     |
 | 155 | Nikola Tesla        | Engenharia / Física         | ⬜ ⭐  |
 | 156 | Alan Turing         | Computação / Matemática     | ⬜ ⭐  |
