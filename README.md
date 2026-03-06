@@ -152,10 +152,11 @@ PROMETHEUS-BRIDGE-LEARN/
 │
 ├── personas/                         # 🧩 Catálogo de personas de IA
 │   ├── manifest.json                 #    Índice de personas (usado pelo auto-update)
-│   ├── fictional/                    #    21 personas de personagens fictícios
+│   ├── fictional/                    #    36 personas de personagens fictícios
 │   │   ├── goku.json
 │   │   ├── jiraiya-sensei.json
 │   │   ├── batman.json
+│   │   ├── iron-man.json
 │   │   └── ...
 │   ├── real/                         #    2 personas de personalidades reais
 │   │   ├── albert-einstein.json
@@ -328,23 +329,30 @@ O executável será gerado em `src-tauri/target/release/`.
 
 ## 🧩 Personas
 
-O PBL vem com **23 personas embutidas** prontas para uso:
+O PBL vem com **38 personas embutidas** prontas para uso:
 
-### Fictícias (21)
+### Fictícias (36)
 
-| Persona        | Universo         | Persona        | Universo       |
-| -------------- | ---------------- | -------------- | -------------- |
-| Goku           | Dragon Ball      | Jiraiya Sensei | Naruto         |
-| Kakashi        | Naruto           | Gojo Satoru    | Jujutsu Kaisen |
-| Tanjiro        | Demon Slayer     | Luffy          | One Piece      |
-| Batman         | DC Comics        | Spider-Man     | Marvel         |
-| Ezio Auditore  | Assassin's Creed | Kratos         | God of War     |
-| Link           | Zelda            | Lara Croft     | Tomb Raider    |
-| Mario          | Super Mario      | Luigi          | Super Mario    |
-| Steve          | Minecraft        | Jinx           | Arcane/LoL     |
-| Ainz Ooal Gown | Overlord         | Albedo         | Overlord       |
-| L Lawliet      | Death Note       | Naofumi        | Shield Hero    |
-| Raphtalia      | Shield Hero      |                |                |
+| Persona        | Universo         | Persona           | Universo           |
+| -------------- | ---------------- | ----------------- | ------------------ |
+| Goku           | Dragon Ball      | Jiraiya Sensei    | Naruto             |
+| Kakashi        | Naruto           | Gojo Satoru       | Jujutsu Kaisen     |
+| Tanjiro        | Demon Slayer     | Luffy             | One Piece          |
+| Batman         | DC Comics        | Superman          | DC Comics          |
+| Spider-Man     | Marvel           | Iron Man          | Marvel / MCU       |
+| Ezio Auditore  | Assassin's Creed | Kratos            | God of War         |
+| Link           | Zelda            | Lara Croft        | Tomb Raider        |
+| Mario          | Super Mario      | Luigi             | Super Mario        |
+| Steve          | Minecraft        | Jinx              | Arcane/LoL         |
+| Ainz Ooal Gown | Overlord         | Albedo            | Overlord           |
+| L Lawliet      | Death Note       | Naofumi           | Shield Hero        |
+| Raphtalia      | Shield Hero      | Geralt            | The Witcher        |
+| Thrall         | World of Warcraft| Vol'jin           | World of Warcraft  |
+| Tyrael         | Diablo           | Deckard Cain      | Diablo             |
+| Leon Kennedy   | Resident Evil    | Claire Redfield   | Resident Evil      |
+| Chris Redfield | Resident Evil    | Rebecca Chambers  | Resident Evil      |
+| Tifa Lockhart  | Final Fantasy VII| Aerith            | Final Fantasy VII  |
+| Ash Ketchum    | Pokémon          | Tai Kamiya        | Digimon            |
 
 ### Reais (2)
 
