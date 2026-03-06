@@ -221,28 +221,28 @@
 
 ## 🧠 Famosos Reais
 
-| # | Persona | Área | Status |
-|---|---------|------|--------|
-| 153 | Elon Musk | Tecnologia / Engenharia | ⬜ |
-| 154 | Steve Jobs | Tecnologia / Design | ⬜ |
-| 155 | Nikola Tesla | Engenharia / Física | ⬜ ⭐ |
-| 156 | Alan Turing | Computação / Matemática | ⬜ ⭐ |
-| 157 | Carl Sagan | Astronomia / Divulgação | ⬜ |
-| 158 | Richard Feynman | Física / Ensino | ⬜ ⭐ |
-| 159 | Linus Torvalds | Computação / Open Source | ⬜ |
-| 160 | Kevin Mitnick | Hacking / Segurança | ⬜ |
-| 161 | Ada Lovelace | Computação / Matemática | ⬜ ⭐ |
-| 162 | Grace Hopper | Computação / Engenharia | ⬜ |
-| 163 | Albert Einstein | Física | ✅ |
-| 164 | Stephen Hawking | Física / Cosmologia | ⬜ |
-| 165 | Neil deGrasse Tyson | Astrofísica / Divulgação | ⬜ |
-| 166 | Noam Chomsky | Linguística / Filosofia | ⬜ |
-| 167 | Buckminster Fuller | Arquitetura / Design | ⬜ |
-| 168 | Leonardo da Vinci | Arte / Ciência / Engenharia | ⬜ ⭐ |
-| 169 | Galileu Galilei | Astronomia / Física | ⬜ |
-| 170 | Isaac Newton | Física / Matemática | ⬜ |
-| 171 | Charles Darwin | Biologia / Evolução | ⬜ |
-| 172 | Marie Curie | Física / Química | ⬜ ⭐ |
+| #   | Persona             | Área                        | Status |
+| --- | ------------------- | --------------------------- | ------ |
+| 153 | Elon Musk           | Tecnologia / Engenharia     | ✅     |
+| 154 | Steve Jobs          | Tecnologia / Design         | ⬜     |
+| 155 | Nikola Tesla        | Engenharia / Física         | ⬜ ⭐  |
+| 156 | Alan Turing         | Computação / Matemática     | ⬜ ⭐  |
+| 157 | Carl Sagan          | Astronomia / Divulgação     | ⬜     |
+| 158 | Richard Feynman     | Física / Ensino             | ⬜ ⭐  |
+| 159 | Linus Torvalds      | Computação / Open Source    | ⬜     |
+| 160 | Kevin Mitnick       | Hacking / Segurança         | ⬜     |
+| 161 | Ada Lovelace        | Computação / Matemática     | ⬜ ⭐  |
+| 162 | Grace Hopper        | Computação / Engenharia     | ⬜     |
+| 163 | Albert Einstein     | Física                      | ✅     |
+| 164 | Stephen Hawking     | Física / Cosmologia         | ⬜     |
+| 165 | Neil deGrasse Tyson | Astrofísica / Divulgação    | ⬜     |
+| 166 | Noam Chomsky        | Linguística / Filosofia     | ⬜     |
+| 167 | Buckminster Fuller  | Arquitetura / Design        | ⬜     |
+| 168 | Leonardo da Vinci   | Arte / Ciência / Engenharia | ⬜ ⭐  |
+| 169 | Galileu Galilei     | Astronomia / Física         | ⬜     |
+| 170 | Isaac Newton        | Física / Matemática         | ⬜     |
+| 171 | Charles Darwin      | Biologia / Evolução         | ⬜     |
+| 172 | Marie Curie         | Física / Química            | ⬜ ⭐  |
 
 ---
 
