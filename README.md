@@ -48,6 +48,16 @@ O sistema funciona em **3 camadas**:
 | 🖥️ **Interface**      | Aplicação desktop nativa para professores gerenciarem personas, conteúdo e exportações |
 | 🔗 **Ponte (Bridge)** | Conexão professor → IA → aluno, adaptando conteúdo ao universo de cada um              |
 
+### 🧩 Para TODOS os alunos
+
+O PBL não foi criado apenas para alunos neurodivergentes — foi criado para **todos**.
+
+- 🧠 **Neurodivergentes** (TDAH, autismo, hiperfoco, deficiência intelectual) — alunos que aprendem por caminhos diferentes e precisam de um canal que respeite o modo como seus cérebros funcionam
+- 🦸 **Alunos "padrão"** que simplesmente gostam de Batman, Minecraft, futebol ou K-pop — e aprendem melhor quando o conteúdo fala a língua deles
+- 🎯 **Sem estigma** — a mesma ferramenta serve todos. 30 alunos, 30 personas diferentes, mesmo conteúdo pedagógico. Ninguém é "diferente" — todos recebem o conteúdo pelo canal que funciona
+
+> 💡 A IA não substitui o professor. Ela **traduz** o conteúdo para o universo que o aluno já entende — e o professor continua sendo o coração do processo.
+
 ---
 
 ## ⚙️ Como Funciona
@@ -142,6 +152,25 @@ O sistema funciona em **3 camadas**:
 </table>
 
 **O aluno aprendeu frações. A IA só mudou o canal.**
+
+---
+
+## 🧩 Anatomia de uma Persona (template.json)
+
+Cada persona é um arquivo JSON com **8 blocos principais** que definem completamente como a IA se comporta:
+
+| Bloco | O que define |
+|-------|-------------|
+| `meta` | Identificação — id, versão, autor, tags, categoria, classificação etária |
+| `character` | Quem é — universo, papel, personalidade, relação com o aluno |
+| `voice` | Como fala — tom, vocabulário, bordões, palavras proibidas |
+| `pedagogy` | Como ensina — estratégia, níveis de dificuldade, tratamento de erros/acertos |
+| `cognitive_bridge` | 🔥 **O diferencial do PBL** — mapeamento explícito: conteúdo escolar → universo do aluno |
+| `prompts` | System prompt + instrução de reescrita prontos pra qualquer LLM |
+| `examples` | Antes/depois de reescrita (prova original → prova adaptada) |
+| `validation` | LLMs testadas, limitações, melhorias sugeridas |
+
+> O `cognitive_bridge` é o coração do PBL — é ele que transforma "calcule 3/4 + 1/2" em "combine o chakra dos dois braços pra soltar o Rasengan". Sem ele, seria só cosplay de IA.
 
 ---
 
@@ -381,7 +410,40 @@ Consulte o [CONTRIBUTING.md](CONTRIBUTING.md) para instruções detalhadas.
 
 ---
 
-## 🗺️ Roadmap
+## � O Nome
+
+### P.R.O.M.E.T.H.E.U.S
+
+*"Um sistema adaptável que reescreve a educação, centrado no humano, para todo aluno entender de verdade"*
+
+```
+P = Protean          → Adaptável, multiforme
+R = Rewriting        → Reescrevendo as regras do ensino
+O = Output-focused   → Focado em resultado real
+M = Mind-centered    → Centrado na mente do aluno
+E = Education        → Educação como base
+T = Teaching         → O ato de ensinar transformado
+H = Human-first      → Humano antes da tecnologia
+E = Every student    → Todo aluno, sem exceção
+U = Understanding    → Compreensão profunda, não memorização
+S = System           → Um sistema completo, não uma ferramenta
+```
+
+### B.R.I.D.G.E
+
+*"Building Real, Intelligent, and Dynamic connections for Growth through Experiences"*
+
+*Construindo conexões reais, inteligentes e dinâmicas para o crescimento através de experiências.*
+
+### L.E.A.R.N
+
+*"Leveraging Every Adaptive and Responsive pathway, Naturally"*
+
+*Alavancando cada caminho adaptativo e responsivo de aprendizado, naturalmente.*
+
+---
+
+## �🗺️ Roadmap
 
 | Fase              | Status       | Descrição                                                                      |
 | ----------------- | ------------ | ------------------------------------------------------------------------------ |
@@ -407,9 +469,24 @@ MIT — Use, modifique, distribua. Só não esqueça de dar os créditos.
 
 ### **Marlon Motta**
 
-_Just a human trying to help other humans learn better._
-<br>
-_Apenas um humano tentando ajudar outros humanos a aprender melhor._
+Professor, desenvolvedor e entusiasta de IA aplicada à educação.
+
+O PBL nasceu de um caso real: um aluno de 18 anos com deficiência intelectual que tirava notas entre 0 e 3. Quando a IA vestiu a máscara do Jiraiya (Naruto), ele começou a tirar 8 e 9. Não porque a prova ficou mais fácil — porque finalmente falou a língua dele.
+
+Esse projeto existe porque **nenhum aluno deveria ser invisível**.
+
+> *"Se a escola não fala a língua do aluno, a tecnologia pode traduzir."*
+
+> *Just a human trying to help other humans learn better.*
+> *Apenas um humano tentando ajudar outros humanos a aprender melhor.*
+
+> *Not a guru. Not a genius.*
+> *Someone who learned the hard way —*
+> *and wants to make it easier for you.*
+
+> *Não sou guru. Não sou gênio.*
+> *Sou alguém que aprendeu do jeito difícil —*
+> *e quer tornar isso mais fácil pra você.*
 
 ---
 
@@ -417,3 +494,4 @@ _Apenas um humano tentando ajudar outros humanos a aprender melhor._
 **Ajuda a alcançar mais professores e mais alunos.**
 
 </div>
+
