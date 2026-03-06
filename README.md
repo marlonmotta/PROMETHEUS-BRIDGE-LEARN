@@ -1,6 +1,6 @@
 <div align="center">
 
-# � PROMETHEUS · BRIDGE · LEARN
+# 🔱 PROMETHEUS · BRIDGE · LEARN
 
 ### Sistema Educacional Adaptativo com IA
 
