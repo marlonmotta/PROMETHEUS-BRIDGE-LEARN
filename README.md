@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🔱 PROMETHEUS · BRIDGE · LEARN
+# � PROMETHEUS · BRIDGE · LEARN
 
 ### Sistema Educacional Adaptativo com IA
 
@@ -410,40 +410,54 @@ Consulte o [CONTRIBUTING.md](CONTRIBUTING.md) para instruções detalhadas.
 
 ---
 
-## � O Nome
+## 🔥 O Nome
 
-### P.R.O.M.E.T.H.E.U.S
+<div align="center">
+
+### 🔥 P.R.O.M.E.T.H.E.U.S
 
 *"Um sistema adaptável que reescreve a educação, centrado no humano, para todo aluno entender de verdade"*
 
-```
-P = Protean          → Adaptável, multiforme
-R = Rewriting        → Reescrevendo as regras do ensino
-O = Output-focused   → Focado em resultado real
-M = Mind-centered    → Centrado na mente do aluno
-E = Education        → Educação como base
-T = Teaching         → O ato de ensinar transformado
-H = Human-first      → Humano antes da tecnologia
-E = Every student    → Todo aluno, sem exceção
-U = Understanding    → Compreensão profunda, não memorização
-S = System           → Um sistema completo, não uma ferramenta
-```
+| | | | | | | | | | |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **P** | **R** | **O** | **M** | **E** | **T** | **H** | **E** | **U** | **S** |
+| Protean | Rewriting | Output | Mind | Education | Teaching | Human | Every | Understanding | System |
+| *Adaptável* | *Reescrevendo* | *Focado em* | *Centrado na* | *Educação* | *Ensino* | *Humano* | *Todo* | *Compreensão* | *Sistema* |
+| *multiforme* | *as regras* | *resultado* | *mente* | *como base* | *transformado* | *primeiro* | *aluno* | *profunda* | *completo* |
 
-### B.R.I.D.G.E
+---
+
+### 🌉 B.R.I.D.G.E
 
 *"Building Real, Intelligent, and Dynamic connections for Growth through Experiences"*
 
 *Construindo conexões reais, inteligentes e dinâmicas para o crescimento através de experiências.*
 
-### L.E.A.R.N
+| | | | | | |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| **B** | **R** | **I** | **D** | **G** | **E** |
+| Building | Real | Intelligent | Dynamic | Growth | Experiences |
+| *Construindo* | *Conexões reais* | *Inteligentes* | *Dinâmicas* | *Crescimento* | *Experiências* |
+
+---
+
+### 📖 L.E.A.R.N
 
 *"Leveraging Every Adaptive and Responsive pathway, Naturally"*
 
 *Alavancando cada caminho adaptativo e responsivo de aprendizado, naturalmente.*
 
+| | | | | |
+|:---:|:---:|:---:|:---:|:---:|
+| **L** | **E** | **A** | **R** | **N** |
+| Leveraging | Each | Adaptive | Route | Naturally |
+| *Alavancando* | *Cada* | *Caminho adaptativo* | *De aprendizado* | *Naturalmente* |
+
+</div>
+
 ---
 
-## �🗺️ Roadmap
+## 🗺️ Roadmap
 
 | Fase              | Status       | Descrição                                                                      |
 | ----------------- | ------------ | ------------------------------------------------------------------------------ |
