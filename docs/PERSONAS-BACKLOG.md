@@ -255,7 +255,7 @@
 | 153 | Elon Musk           | Tecnologia / Engenharia     | ✅     |
 | 154 | Steve Jobs          | Tecnologia / Design         | ✅     |
 | 155 | Nikola Tesla        | Engenharia / Física         | ✅     |
-| 156 | Alan Turing         | Computação / Matemática     | ⬜ ⭐  |
+| 156 | Alan Turing         | Computação / Matemática     | ✅     |
 | 157 | Carl Sagan          | Astronomia / Divulgação     | ⬜     |
 | 158 | Richard Feynman     | Física / Ensino             | ⬜ ⭐  |
 | 159 | Linus Torvalds      | Computação / Open Source    | ⬜     |
@@ -335,8 +335,8 @@
 | Lote 6 — Diário de Pilar | 3 |
 | Lote 6 — Roblox | 2 |
 | **Total** | **218** |
-| **Já criadas** | **47** |
-| **Pendentes** | **171** |
+| **Já criadas** | **48** |
+| **Pendentes** | **170** |
 
 ---
 
