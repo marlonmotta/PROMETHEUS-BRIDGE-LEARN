@@ -58,7 +58,6 @@
 | 37 | 🦸 Superman | DC Comics | Fictional | Todos | 🟢LIVRE Inspirador, esperançoso, protetor | [`superman.json`](personas/fictional/superman.json) |
 | 38 | 🔴🟡 Iron Man | Marvel / MCU | Fictional | 11-14 | 🟢LIVRE Confiante, espirituoso, mentor tech | [`iron-man.json`](personas/fictional/iron-man.json) |
 | 39 | 🚀 Elon Musk | Mundo Real / Tecnologia | Real | 11-18 | Direto, intenso, motivador | [`elon-musk.json`](personas/real/elon-musk.json) |
-| 48 | 🍎 Steve Jobs | Mundo Real / Tecnologia e Design | Real | 11-18 | 🟢LIVRE Exigente, visionário, perfeccionista | [`steve-jobs.json`](personas/real/steve-jobs.json) |
 | 40 | 🎤 Rumi | Guerreiras do K-Pop (HUNTR/X) | Fictional | 10-16 | Inspiradora, musical, líder | [`rumi.json`](personas/fictional/rumi.json) |
 | 41 | 💃 Mira | Guerreiras do K-Pop (HUNTR/X) | Fictional | 10-16 | Elegante, precisa, estratégica | [`mira.json`](personas/fictional/mira.json) |
 | 42 | 🎤 Zoey | Guerreiras do K-Pop (HUNTR/X) | Fictional | 10-16 | Energética, criativa, rapper | [`zoey.json`](personas/fictional/zoey.json) |
@@ -67,17 +66,26 @@
 | 45 | 🐱 Samba (gato) | Diário de Pilar | Fictional | 6-10 | Fofo, silencioso, companheiro | [`samba.json`](personas/fictional/samba.json) |
 | 46 | 💛 Noob | Roblox | Fictional | 6-12 | Humilde, persistente, gamer | [`noob-roblox.json`](personas/fictional/noob-roblox.json) |
 | 47 | 🧑 Bacon Hair | Roblox | Fictional | 6-12 | Criativo, construtor, resiliente | [`bacon-hair.json`](personas/fictional/bacon-hair.json) |
+| 48 | 🍎 Steve Jobs | Mundo Real / Tecnologia e Design | Real | 11-18 | 🟢LIVRE Exigente, visionário, perfeccionista | [`steve-jobs.json`](personas/real/steve-jobs.json) |
+| 49 | ⚡ Nikola Tesla | Mundo Real / Engenharia e Física | Real | 11-18 | 🟢LIVRE Apaixonado, visionário, incompreendido | [`nikola-tesla.json`](personas/real/nikola-tesla.json) |
+| 50 | 💻 Alan Turing | Mundo Real / Computação e Matemática | Real | 11-18 | 🟢LIVRE Lógico, preciso, colega de laboratório | [`alan-turing.json`](personas/real/alan-turing.json) |
+| 51 | 🔭 Carl Sagan | Mundo Real / Astronomia e Divulgação | Real | 11-18 | 🟢LIVRE Contemplativo, poético, maravilhado | [`carl-sagan.json`](personas/real/carl-sagan.json) |
+| 52 | ⚛️ Richard Feynman | Mundo Real / Física e Ensino | Real | 11-18 | 🟢LIVRE Direto, irreverente, primeiros princípios | [`richard-feynman.json`](personas/real/richard-feynman.json) |
+| 53 | 🐧 Linus Torvalds | Mundo Real / Computação e Open Source | Real | 13-18 | 🟢LIVRE Seco, pragmático, mostre o código | [`linus-torvalds.json`](personas/real/linus-torvalds.json) |
+| 54 | 🕵️ Kevin Mitnick | Mundo Real / Hacking e Segurança | Real | 13-18 | 🟡13+ Calmo, misterioso, pensador adversarial | [`kevin-mitnick.json`](personas/real/kevin-mitnick.json) |
+| 55 | 🖊️ Ada Lovelace | Mundo Real / Computação e Matemática | Real | 11-18 | 🟢LIVRE Elegante, visionária, ciência poética | [`ada-lovelace.json`](personas/real/ada-lovelace.json) |
+| 56 | ⚓ Grace Hopper | Mundo Real / Computação e Engenharia | Real | 11-18 | 🟢LIVRE Prática, direta, debug como método | [`grace-hopper.json`](personas/real/grace-hopper.json) |
 ---
 
 ## 📊 Estatísticas
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **48** |
+| Total de personas prontas | **56** |
 | Fictional | 44 |
-| Real | 4 |
-| Universos cobertos | 31 |
-| Backlog pendente | ~173 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
+| Real | 12 |
+| Universos cobertos | 36 |
+| Backlog pendente | ~169 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
 
 ---
 
@@ -115,6 +123,13 @@
 | Ciência Real | Albert Einstein |
 | Tecnologia / Engenharia | Elon Musk |
 | Tecnologia e Design | Steve Jobs |
+| Engenharia e Física | Nikola Tesla |
+| Computação e Matemática | Alan Turing, Ada Lovelace |
+| Astronomia e Divulgação | Carl Sagan |
+| Física e Ensino | Richard Feynman |
+| Computação e Open Source | Linus Torvalds |
+| Hacking e Segurança | Kevin Mitnick |
+| Computação e Engenharia | Grace Hopper |
 | Divulgação BR | Sergio Sacani |
 
 ---
@@ -130,6 +145,14 @@
 | Provocador / Carismático | Gojo Satoru |
 | Direto / Desafiador | Elon Musk |
 | Exigente / Visionário | Steve Jobs |
+| Apaixonado / Visionário | Nikola Tesla |
+| Lógico / Preciso | Alan Turing |
+| Contemplativo / Poético | Carl Sagan |
+| Direto / Primeiros Princípios | Richard Feynman |
+| Seco / Pragmático | Linus Torvalds |
+| Calmo / Misterioso / Investigativo | Kevin Mitnick |
+| Elegante / Visionária / Poética | Ada Lovelace |
+| Prático / Pioneiro / Encorajador | Grace Hopper |
 | Analítico / Dedutivo | L, Batman, Ainz, Geralt |
 | Gentil / Acolhedor | Tanjiro, Einstein, Raphtalia, Luigi, Aerith, Claire, Deckard Cain |
 | Filosófico / Sábio | Ezio, Einstein, Thrall, Vol'jin |
@@ -159,7 +182,8 @@
 | 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani, Superman, Iron Man, Pilar, Breno, Samba, Noob, Bacon Hair |
 | 🔵 10+ | 10-16 | Rumi, Mira, Zoey |
 | 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa |
-| 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs |
+| 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing, Carl Sagan, Richard Feynman, Ada Lovelace, Grace Hopper |
+| 🟡 13-18 | 13-18 | Linus Torvalds, Kevin Mitnick |
 | 🟠 16+ | 13-18 | Kratos, Ezio, Geralt, Leon, Claire, Chris |
 
 ---
@@ -171,15 +195,15 @@
 | Precisa de acolhimento | 🌊 Tanjiro, 🗡️ Raphtalia, 💚 Luigi, 🌸 Aerith, ❤️ Claire |
 | Precisa de disciplina | 🪓 Kratos, 🦇 Batman, 👑 Albedo, 💪 Chris |
 | Precisa de provocação positiva | 😎 Gojo Satoru |
-| Perfil analítico/lógico | 🔍 L, 🦇 Batman, 💀 Ainz, ⚔️ Geralt |
+| Perfil analítico/lógico | 🔍 L, 🦇 Batman, 💀 Ainz, ⚔️ Geralt, 💻 Alan Turing, 🔭 Carl Sagan, ⚛️ Richard Feynman, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick, 🖊️ Ada Lovelace, ⚓ Grace Hopper |
 | Perfil criativo/TDAH | 💥 Jinx, ⛏️ Steve, ⚡ Ash, 🦁 Tai |
-| Precisa de energia/motivação | 💥 Goku, 🏴‍☠️ Luffy, 🚀 Sacani, 💪 Chris, ⚡ Ash, 🦸 Superman |
-| Gosta de tecnologia/STEM | 🔴🟡 Iron Man, 🕸️ Spider-Man, 🧠 Einstein, 🔬 Rebecca |
+| Precisa de energia/motivação | 💥 Goku, 🏴‍☠️ Luffy, 🚀 Sacani, 💪 Chris, ⚡ Ash, 🦸 Superman, 🔭 Carl Sagan |
+| Gosta de tecnologia/STEM | 🔴🟡 Iron Man, 🕸️ Spider-Man, 🧠 Einstein, 🔬 Rebecca, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick, 🖊️ Ada Lovelace, ⚓ Grace Hopper |
 | Gosta de puzzles | 🗡️ Link |
 | Gosta de história | 🗡️ Ezio, 🗺️ Lara Croft, 🔮 Vol'jin, 📖 Deckard Cain |
-| Gosta de ciência | 🧠 Einstein, 🕸️ Spider-Man, 🚀 Sacani, 🔬 Rebecca, 🔴🟡 Iron Man, 🚀 Elon Musk |
+| Gosta de ciência | 🧠 Einstein, 🕸️ Spider-Man, 🚀 Sacani, 🔬 Rebecca, 🔴🟡 Iron Man, 🚀 Elon Musk, ⚡ Tesla, 🔭 Carl Sagan, ⚛️ Richard Feynman |
 | Gosta de design / criatividade | 🍎 Steve Jobs, 💥 Jinx, 🔴🟡 Iron Man |
-| Gosta de tecnologia/engenharia | 🚀 Elon Musk, 🔴🟡 Iron Man, 🍎 Steve Jobs |
+| Gosta de tecnologia/engenharia | 🚀 Elon Musk, 🔴🟡 Iron Man, 🍎 Steve Jobs, ⚡ Nikola Tesla, 💻 Alan Turing, ⚛️ Richard Feynman, 🐧 Linus Torvalds, ⚓ Grace Hopper |
 | Sofreu bullying/exclusão | 🛡️ Naofumi, 💚 Luigi, 🌪️ Thrall |
 | Tem ansiedade | 💚 Luigi, 🗡️ Raphtalia, 🌸 Aerith, 🌊 Tanjiro |
 | Crianças (6-10) | 🍄 Mario, 💚 Luigi, ⛏️ Steve, ⚡ Ash, 🦁 Tai, 🌸 Aerith, 🌍 Pilar, 🎯 Breno, 🐱 Samba, 💛 Noob, 🧑 Bacon Hair |
@@ -187,11 +211,12 @@
 | Gosta de tático/sobrevivência | 🔫 Leon, ❤️ Claire, 💪 Chris, ⚔️ Geralt |
 | Precisa de inspiração épica | ⚔️✨ Tyrael |
 | Gosta de luta/artes marciais | 👊 Tifa |
-| Persistência / Nunca desistir | ⚡ Ash, 💪 Chris, 🦁 Tai, 🚀 Elon Musk |
+| Persistência / Nunca desistir | ⚡ Ash, 💪 Chris, 🦁 Tai, 🚀 Elon Musk, ⚓ Grace Hopper |
 | Baixa autoestima | 🛡️ Naofumi, 💚 Luigi, 🗡️ Raphtalia, 👊 Tifa |
 | Gosta de K-Pop/música/dança | 🎤 Rumi, 💃 Mira, 🎤 Zoey |
 | Gosta de aventura/viagem/culturas | 🌍 Pilar, 🎯 Breno, 🐱 Samba |
 | Gosta de Roblox/construção | 💛 Noob, 🧑 Bacon Hair |
+| Gosta de cibersegurança / privacidade digital | 🕵️ Kevin Mitnick |
 
 ---
 
