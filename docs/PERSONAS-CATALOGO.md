@@ -58,9 +58,6 @@
 | 37 | 🦸 Superman | DC Comics | Fictional | Todos | 🟢LIVRE Inspirador, esperançoso, protetor | [`superman.json`](personas/fictional/superman.json) |
 | 38 | 🔴🟡 Iron Man | Marvel / MCU | Fictional | 11-14 | 🟢LIVRE Confiante, espirituoso, mentor tech | [`iron-man.json`](personas/fictional/iron-man.json) |
 | 39 | 🚀 Elon Musk | Mundo Real / Tecnologia | Real | 11-18 | Direto, intenso, motivador | [`elon-musk.json`](personas/real/elon-musk.json) |
-| 48 | 🍎 Steve Jobs | Mundo Real / Tecnologia e Design | Real | 11-18 | 🟢LIVRE Exigente, visionário, perfeccionista | [`steve-jobs.json`](personas/real/steve-jobs.json) |
-| 49 | ⚡ Nikola Tesla | Mundo Real / Engenharia e Física | Real | 11-18 | 🟢LIVRE Apaixonado, visionário, incompreendido | [`nikola-tesla.json`](personas/real/nikola-tesla.json) |
-| 50 | 💻 Alan Turing | Mundo Real / Computação e Matemática | Real | 11-18 | 🟢LIVRE Lógico, preciso, colega de laboratório | [`alan-turing.json`](personas/real/alan-turing.json) |
 | 40 | 🎤 Rumi | Guerreiras do K-Pop (HUNTR/X) | Fictional | 10-16 | Inspiradora, musical, líder | [`rumi.json`](personas/fictional/rumi.json) |
 | 41 | 💃 Mira | Guerreiras do K-Pop (HUNTR/X) | Fictional | 10-16 | Elegante, precisa, estratégica | [`mira.json`](personas/fictional/mira.json) |
 | 42 | 🎤 Zoey | Guerreiras do K-Pop (HUNTR/X) | Fictional | 10-16 | Energética, criativa, rapper | [`zoey.json`](personas/fictional/zoey.json) |
@@ -69,17 +66,21 @@
 | 45 | 🐱 Samba (gato) | Diário de Pilar | Fictional | 6-10 | Fofo, silencioso, companheiro | [`samba.json`](personas/fictional/samba.json) |
 | 46 | 💛 Noob | Roblox | Fictional | 6-12 | Humilde, persistente, gamer | [`noob-roblox.json`](personas/fictional/noob-roblox.json) |
 | 47 | 🧑 Bacon Hair | Roblox | Fictional | 6-12 | Criativo, construtor, resiliente | [`bacon-hair.json`](personas/fictional/bacon-hair.json) |
+| 48 | 🍎 Steve Jobs | Mundo Real / Tecnologia e Design | Real | 11-18 | 🟢LIVRE Exigente, visionário, perfeccionista | [`steve-jobs.json`](personas/real/steve-jobs.json) |
+| 49 | ⚡ Nikola Tesla | Mundo Real / Engenharia e Física | Real | 11-18 | 🟢LIVRE Apaixonado, visionário, incompreendido | [`nikola-tesla.json`](personas/real/nikola-tesla.json) |
+| 50 | 💻 Alan Turing | Mundo Real / Computação e Matemática | Real | 11-18 | 🟢LIVRE Lógico, preciso, colega de laboratório | [`alan-turing.json`](personas/real/alan-turing.json) |
+| 51 | 🔭 Carl Sagan | Mundo Real / Astronomia e Divulgação | Real | 11-18 | 🟢LIVRE Contemplativo, poético, maravilhado | [`carl-sagan.json`](personas/real/carl-sagan.json) |
 ---
 
 ## 📊 Estatísticas
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **50** |
+| Total de personas prontas | **51** |
 | Fictional | 44 |
-| Real | 6 |
-| Universos cobertos | 31 |
-| Backlog pendente | ~173 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
+| Real | 7 |
+| Universos cobertos | 32 |
+| Backlog pendente | ~169 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
 
 ---
 
@@ -119,6 +120,7 @@
 | Tecnologia e Design | Steve Jobs |
 | Engenharia e Física | Nikola Tesla |
 | Computação e Matemática | Alan Turing |
+| Astronomia e Divulgação | Carl Sagan |
 | Divulgação BR | Sergio Sacani |
 
 ---
@@ -136,6 +138,7 @@
 | Exigente / Visionário | Steve Jobs |
 | Apaixonado / Visionário | Nikola Tesla |
 | Lógico / Preciso | Alan Turing |
+| Contemplativo / Poético | Carl Sagan |
 | Analítico / Dedutivo | L, Batman, Ainz, Geralt |
 | Gentil / Acolhedor | Tanjiro, Einstein, Raphtalia, Luigi, Aerith, Claire, Deckard Cain |
 | Filosófico / Sábio | Ezio, Einstein, Thrall, Vol'jin |
@@ -165,7 +168,7 @@
 | 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani, Superman, Iron Man, Pilar, Breno, Samba, Noob, Bacon Hair |
 | 🔵 10+ | 10-16 | Rumi, Mira, Zoey |
 | 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa |
-| 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing |
+| 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing, Carl Sagan |
 | 🟠 16+ | 13-18 | Kratos, Ezio, Geralt, Leon, Claire, Chris |
 
 ---
@@ -177,13 +180,13 @@
 | Precisa de acolhimento | 🌊 Tanjiro, 🗡️ Raphtalia, 💚 Luigi, 🌸 Aerith, ❤️ Claire |
 | Precisa de disciplina | 🪓 Kratos, 🦇 Batman, 👑 Albedo, 💪 Chris |
 | Precisa de provocação positiva | 😎 Gojo Satoru |
-| Perfil analítico/lógico | 🔍 L, 🦇 Batman, 💀 Ainz, ⚔️ Geralt, 💻 Alan Turing |
+| Perfil analítico/lógico | 🔍 L, 🦇 Batman, 💀 Ainz, ⚔️ Geralt, 💻 Alan Turing, 🔭 Carl Sagan |
 | Perfil criativo/TDAH | 💥 Jinx, ⛏️ Steve, ⚡ Ash, 🦁 Tai |
-| Precisa de energia/motivação | 💥 Goku, 🏴‍☠️ Luffy, 🚀 Sacani, 💪 Chris, ⚡ Ash, 🦸 Superman |
+| Precisa de energia/motivação | 💥 Goku, 🏴‍☠️ Luffy, 🚀 Sacani, 💪 Chris, ⚡ Ash, 🦸 Superman, 🔭 Carl Sagan |
 | Gosta de tecnologia/STEM | 🔴🟡 Iron Man, 🕸️ Spider-Man, 🧠 Einstein, 🔬 Rebecca |
 | Gosta de puzzles | 🗡️ Link |
 | Gosta de história | 🗡️ Ezio, 🗺️ Lara Croft, 🔮 Vol'jin, 📖 Deckard Cain |
-| Gosta de ciência | 🧠 Einstein, 🕸️ Spider-Man, 🚀 Sacani, 🔬 Rebecca, 🔴🟡 Iron Man, 🚀 Elon Musk, ⚡ Tesla |
+| Gosta de ciência | 🧠 Einstein, 🕸️ Spider-Man, 🚀 Sacani, 🔬 Rebecca, 🔴🟡 Iron Man, 🚀 Elon Musk, ⚡ Tesla, 🔭 Carl Sagan |
 | Gosta de design / criatividade | 🍎 Steve Jobs, 💥 Jinx, 🔴🟡 Iron Man |
 | Gosta de tecnologia/engenharia | 🚀 Elon Musk, 🔴🟡 Iron Man, 🍎 Steve Jobs, ⚡ Nikola Tesla, 💻 Alan Turing |
 | Sofreu bullying/exclusão | 🛡️ Naofumi, 💚 Luigi, 🌪️ Thrall |
