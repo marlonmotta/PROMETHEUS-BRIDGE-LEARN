@@ -259,7 +259,7 @@
 | 157 | Carl Sagan          | Astronomia / Divulgação     | ✅     |
 | 158 | Richard Feynman     | Física / Ensino             | ✅     |
 | 159 | Linus Torvalds      | Computação / Open Source    | ✅     |
-| 160 | Kevin Mitnick       | Hacking / Segurança         | ⬜     |
+| 160 | Kevin Mitnick       | Hacking / Segurança         | ✅     |
 | 161 | Ada Lovelace        | Computação / Matemática     | ⬜ ⭐  |
 | 162 | Grace Hopper        | Computação / Engenharia     | ⬜     |
 | 163 | Albert Einstein     | Física                      | ✅     |
@@ -335,8 +335,8 @@
 | Lote 6 — Diário de Pilar | 3 |
 | Lote 6 — Roblox | 2 |
 | **Total** | **218** |
-| **Já criadas** | **51** |
-| **Pendentes** | **167** |
+| **Já criadas** | **52** |
+| **Pendentes** | **166** |
 
 ---
 

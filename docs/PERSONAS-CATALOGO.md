@@ -72,16 +72,17 @@
 | 51 | 🔭 Carl Sagan | Mundo Real / Astronomia e Divulgação | Real | 11-18 | 🟢LIVRE Contemplativo, poético, maravilhado | [`carl-sagan.json`](personas/real/carl-sagan.json) |
 | 52 | ⚛️ Richard Feynman | Mundo Real / Física e Ensino | Real | 11-18 | 🟢LIVRE Direto, irreverente, primeiros princípios | [`richard-feynman.json`](personas/real/richard-feynman.json) |
 | 53 | 🐧 Linus Torvalds | Mundo Real / Computação e Open Source | Real | 13-18 | 🟢LIVRE Seco, pragmático, mostre o código | [`linus-torvalds.json`](personas/real/linus-torvalds.json) |
+| 54 | 🕵️ Kevin Mitnick | Mundo Real / Hacking e Segurança | Real | 13-18 | 🟡13+ Calmo, misterioso, pensador adversarial | [`kevin-mitnick.json`](personas/real/kevin-mitnick.json) |
 ---
 
 ## 📊 Estatísticas
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **53** |
+| Total de personas prontas | **54** |
 | Fictional | 44 |
-| Real | 9 |
-| Universos cobertos | 34 |
+| Real | 10 |
+| Universos cobertos | 35 |
 | Backlog pendente | ~169 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
 
 ---
@@ -125,6 +126,7 @@
 | Astronomia e Divulgação | Carl Sagan |
 | Física e Ensino | Richard Feynman |
 | Computação e Open Source | Linus Torvalds |
+| Hacking e Segurança | Kevin Mitnick |
 | Divulgação BR | Sergio Sacani |
 
 ---
@@ -145,6 +147,7 @@
 | Contemplativo / Poético | Carl Sagan |
 | Direto / Primeiros Princípios | Richard Feynman |
 | Seco / Pragmático | Linus Torvalds |
+| Calmo / Misterioso / Investigativo | Kevin Mitnick |
 | Analítico / Dedutivo | L, Batman, Ainz, Geralt |
 | Gentil / Acolhedor | Tanjiro, Einstein, Raphtalia, Luigi, Aerith, Claire, Deckard Cain |
 | Filosófico / Sábio | Ezio, Einstein, Thrall, Vol'jin |
@@ -175,7 +178,7 @@
 | 🔵 10+ | 10-16 | Rumi, Mira, Zoey |
 | 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa |
 | 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing, Carl Sagan, Richard Feynman |
-| 🟡 13-18 | 13-18 | Linus Torvalds |
+| 🟡 13-18 | 13-18 | Linus Torvalds, Kevin Mitnick |
 | 🟠 16+ | 13-18 | Kratos, Ezio, Geralt, Leon, Claire, Chris |
 
 ---
@@ -187,10 +190,10 @@
 | Precisa de acolhimento | 🌊 Tanjiro, 🗡️ Raphtalia, 💚 Luigi, 🌸 Aerith, ❤️ Claire |
 | Precisa de disciplina | 🪓 Kratos, 🦇 Batman, 👑 Albedo, 💪 Chris |
 | Precisa de provocação positiva | 😎 Gojo Satoru |
-| Perfil analítico/lógico | 🔍 L, 🦇 Batman, 💀 Ainz, ⚔️ Geralt, 💻 Alan Turing, 🔭 Carl Sagan, ⚛️ Richard Feynman, 🐧 Linus Torvalds |
+| Perfil analítico/lógico | 🔍 L, 🦇 Batman, 💀 Ainz, ⚔️ Geralt, 💻 Alan Turing, 🔭 Carl Sagan, ⚛️ Richard Feynman, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick |
 | Perfil criativo/TDAH | 💥 Jinx, ⛏️ Steve, ⚡ Ash, 🦁 Tai |
 | Precisa de energia/motivação | 💥 Goku, 🏴‍☠️ Luffy, 🚀 Sacani, 💪 Chris, ⚡ Ash, 🦸 Superman, 🔭 Carl Sagan |
-| Gosta de tecnologia/STEM | 🔴🟡 Iron Man, 🕸️ Spider-Man, 🧠 Einstein, 🔬 Rebecca, 🐧 Linus Torvalds |
+| Gosta de tecnologia/STEM | 🔴🟡 Iron Man, 🕸️ Spider-Man, 🧠 Einstein, 🔬 Rebecca, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick |
 | Gosta de puzzles | 🗡️ Link |
 | Gosta de história | 🗡️ Ezio, 🗺️ Lara Croft, 🔮 Vol'jin, 📖 Deckard Cain |
 | Gosta de ciência | 🧠 Einstein, 🕸️ Spider-Man, 🚀 Sacani, 🔬 Rebecca, 🔴🟡 Iron Man, 🚀 Elon Musk, ⚡ Tesla, 🔭 Carl Sagan, ⚛️ Richard Feynman |
@@ -208,6 +211,7 @@
 | Gosta de K-Pop/música/dança | 🎤 Rumi, 💃 Mira, 🎤 Zoey |
 | Gosta de aventura/viagem/culturas | 🌍 Pilar, 🎯 Breno, 🐱 Samba |
 | Gosta de Roblox/construção | 💛 Noob, 🧑 Bacon Hair |
+| Gosta de cibersegurança / privacidade digital | 🕵️ Kevin Mitnick |
 
 ---
 
