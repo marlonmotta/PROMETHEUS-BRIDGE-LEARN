@@ -73,15 +73,16 @@
 | 52 | ⚛️ Richard Feynman | Mundo Real / Física e Ensino | Real | 11-18 | 🟢LIVRE Direto, irreverente, primeiros princípios | [`richard-feynman.json`](personas/real/richard-feynman.json) |
 | 53 | 🐧 Linus Torvalds | Mundo Real / Computação e Open Source | Real | 13-18 | 🟢LIVRE Seco, pragmático, mostre o código | [`linus-torvalds.json`](personas/real/linus-torvalds.json) |
 | 54 | 🕵️ Kevin Mitnick | Mundo Real / Hacking e Segurança | Real | 13-18 | 🟡13+ Calmo, misterioso, pensador adversarial | [`kevin-mitnick.json`](personas/real/kevin-mitnick.json) |
+| 55 | 🖊️ Ada Lovelace | Mundo Real / Computação e Matemática | Real | 11-18 | 🟢LIVRE Elegante, visionária, ciência poética | [`ada-lovelace.json`](personas/real/ada-lovelace.json) |
 ---
 
 ## 📊 Estatísticas
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **54** |
+| Total de personas prontas | **55** |
 | Fictional | 44 |
-| Real | 10 |
+| Real | 11 |
 | Universos cobertos | 35 |
 | Backlog pendente | ~169 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
 
@@ -122,7 +123,7 @@
 | Tecnologia / Engenharia | Elon Musk |
 | Tecnologia e Design | Steve Jobs |
 | Engenharia e Física | Nikola Tesla |
-| Computação e Matemática | Alan Turing |
+| Computação e Matemática | Alan Turing, Ada Lovelace |
 | Astronomia e Divulgação | Carl Sagan |
 | Física e Ensino | Richard Feynman |
 | Computação e Open Source | Linus Torvalds |
@@ -148,6 +149,7 @@
 | Direto / Primeiros Princípios | Richard Feynman |
 | Seco / Pragmático | Linus Torvalds |
 | Calmo / Misterioso / Investigativo | Kevin Mitnick |
+| Elegante / Visionária / Poética | Ada Lovelace |
 | Analítico / Dedutivo | L, Batman, Ainz, Geralt |
 | Gentil / Acolhedor | Tanjiro, Einstein, Raphtalia, Luigi, Aerith, Claire, Deckard Cain |
 | Filosófico / Sábio | Ezio, Einstein, Thrall, Vol'jin |
@@ -177,7 +179,7 @@
 | 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani, Superman, Iron Man, Pilar, Breno, Samba, Noob, Bacon Hair |
 | 🔵 10+ | 10-16 | Rumi, Mira, Zoey |
 | 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa |
-| 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing, Carl Sagan, Richard Feynman |
+| 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing, Carl Sagan, Richard Feynman, Ada Lovelace |
 | 🟡 13-18 | 13-18 | Linus Torvalds, Kevin Mitnick |
 | 🟠 16+ | 13-18 | Kratos, Ezio, Geralt, Leon, Claire, Chris |
 
@@ -190,10 +192,10 @@
 | Precisa de acolhimento | 🌊 Tanjiro, 🗡️ Raphtalia, 💚 Luigi, 🌸 Aerith, ❤️ Claire |
 | Precisa de disciplina | 🪓 Kratos, 🦇 Batman, 👑 Albedo, 💪 Chris |
 | Precisa de provocação positiva | 😎 Gojo Satoru |
-| Perfil analítico/lógico | 🔍 L, 🦇 Batman, 💀 Ainz, ⚔️ Geralt, 💻 Alan Turing, 🔭 Carl Sagan, ⚛️ Richard Feynman, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick |
+| Perfil analítico/lógico | 🔍 L, 🦇 Batman, 💀 Ainz, ⚔️ Geralt, 💻 Alan Turing, 🔭 Carl Sagan, ⚛️ Richard Feynman, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick, 🖊️ Ada Lovelace |
 | Perfil criativo/TDAH | 💥 Jinx, ⛏️ Steve, ⚡ Ash, 🦁 Tai |
 | Precisa de energia/motivação | 💥 Goku, 🏴‍☠️ Luffy, 🚀 Sacani, 💪 Chris, ⚡ Ash, 🦸 Superman, 🔭 Carl Sagan |
-| Gosta de tecnologia/STEM | 🔴🟡 Iron Man, 🕸️ Spider-Man, 🧠 Einstein, 🔬 Rebecca, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick |
+| Gosta de tecnologia/STEM | 🔴🟡 Iron Man, 🕸️ Spider-Man, 🧠 Einstein, 🔬 Rebecca, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick, 🖊️ Ada Lovelace |
 | Gosta de puzzles | 🗡️ Link |
 | Gosta de história | 🗡️ Ezio, 🗺️ Lara Croft, 🔮 Vol'jin, 📖 Deckard Cain |
 | Gosta de ciência | 🧠 Einstein, 🕸️ Spider-Man, 🚀 Sacani, 🔬 Rebecca, 🔴🟡 Iron Man, 🚀 Elon Musk, ⚡ Tesla, 🔭 Carl Sagan, ⚛️ Richard Feynman |
