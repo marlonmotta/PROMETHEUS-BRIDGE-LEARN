@@ -59,6 +59,7 @@
 | 38 | 🔴🟡 Iron Man | Marvel / MCU | Fictional | 11-14 | 🟢LIVRE Confiante, espirituoso, mentor tech | [`iron-man.json`](personas/fictional/iron-man.json) |
 | 39 | 🚀 Elon Musk | Mundo Real / Tecnologia | Real | 11-18 | Direto, intenso, motivador | [`elon-musk.json`](personas/real/elon-musk.json) |
 | 48 | 🍎 Steve Jobs | Mundo Real / Tecnologia e Design | Real | 11-18 | 🟢LIVRE Exigente, visionário, perfeccionista | [`steve-jobs.json`](personas/real/steve-jobs.json) |
+| 49 | ⚡ Nikola Tesla | Mundo Real / Engenharia e Física | Real | 11-18 | 🟢LIVRE Apaixonado, visionário, incompreendido | [`nikola-tesla.json`](personas/real/nikola-tesla.json) |
 | 40 | 🎤 Rumi | Guerreiras do K-Pop (HUNTR/X) | Fictional | 10-16 | Inspiradora, musical, líder | [`rumi.json`](personas/fictional/rumi.json) |
 | 41 | 💃 Mira | Guerreiras do K-Pop (HUNTR/X) | Fictional | 10-16 | Elegante, precisa, estratégica | [`mira.json`](personas/fictional/mira.json) |
 | 42 | 🎤 Zoey | Guerreiras do K-Pop (HUNTR/X) | Fictional | 10-16 | Energética, criativa, rapper | [`zoey.json`](personas/fictional/zoey.json) |
@@ -73,9 +74,9 @@
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **48** |
+| Total de personas prontas | **49** |
 | Fictional | 44 |
-| Real | 4 |
+| Real | 5 |
 | Universos cobertos | 31 |
 | Backlog pendente | ~173 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
 
@@ -115,6 +116,7 @@
 | Ciência Real | Albert Einstein |
 | Tecnologia / Engenharia | Elon Musk |
 | Tecnologia e Design | Steve Jobs |
+| Engenharia e Física | Nikola Tesla |
 | Divulgação BR | Sergio Sacani |
 
 ---
@@ -130,6 +132,7 @@
 | Provocador / Carismático | Gojo Satoru |
 | Direto / Desafiador | Elon Musk |
 | Exigente / Visionário | Steve Jobs |
+| Apaixonado / Visionário | Nikola Tesla |
 | Analítico / Dedutivo | L, Batman, Ainz, Geralt |
 | Gentil / Acolhedor | Tanjiro, Einstein, Raphtalia, Luigi, Aerith, Claire, Deckard Cain |
 | Filosófico / Sábio | Ezio, Einstein, Thrall, Vol'jin |
@@ -159,7 +162,7 @@
 | 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani, Superman, Iron Man, Pilar, Breno, Samba, Noob, Bacon Hair |
 | 🔵 10+ | 10-16 | Rumi, Mira, Zoey |
 | 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa |
-| 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs |
+| 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla |
 | 🟠 16+ | 13-18 | Kratos, Ezio, Geralt, Leon, Claire, Chris |
 
 ---
@@ -177,9 +180,9 @@
 | Gosta de tecnologia/STEM | 🔴🟡 Iron Man, 🕸️ Spider-Man, 🧠 Einstein, 🔬 Rebecca |
 | Gosta de puzzles | 🗡️ Link |
 | Gosta de história | 🗡️ Ezio, 🗺️ Lara Croft, 🔮 Vol'jin, 📖 Deckard Cain |
-| Gosta de ciência | 🧠 Einstein, 🕸️ Spider-Man, 🚀 Sacani, 🔬 Rebecca, 🔴🟡 Iron Man, 🚀 Elon Musk |
+| Gosta de ciência | 🧠 Einstein, 🕸️ Spider-Man, 🚀 Sacani, 🔬 Rebecca, 🔴🟡 Iron Man, 🚀 Elon Musk, ⚡ Tesla |
 | Gosta de design / criatividade | 🍎 Steve Jobs, 💥 Jinx, 🔴🟡 Iron Man |
-| Gosta de tecnologia/engenharia | 🚀 Elon Musk, 🔴🟡 Iron Man, 🍎 Steve Jobs |
+| Gosta de tecnologia/engenharia | 🚀 Elon Musk, 🔴🟡 Iron Man, 🍎 Steve Jobs, ⚡ Nikola Tesla |
 | Sofreu bullying/exclusão | 🛡️ Naofumi, 💚 Luigi, 🌪️ Thrall |
 | Tem ansiedade | 💚 Luigi, 🗡️ Raphtalia, 🌸 Aerith, 🌊 Tanjiro |
 | Crianças (6-10) | 🍄 Mario, 💚 Luigi, ⛏️ Steve, ⚡ Ash, 🦁 Tai, 🌸 Aerith, 🌍 Pilar, 🎯 Breno, 🐱 Samba, 💛 Noob, 🧑 Bacon Hair |
