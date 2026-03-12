@@ -270,7 +270,7 @@
 | 168 | Leonardo da Vinci   | Arte / Ciência / Engenharia | ✅     |
 | 169 | Galileu Galilei     | Astronomia / Física         | ✅     |
 | 170 | Isaac Newton        | Física / Matemática         | ✅     |
-| 171 | Charles Darwin      | Biologia / Evolução         | ⬜     |
+| 171 | Charles Darwin      | Biologia / Evolução         | ✅     |
 | 172 | Marie Curie         | Física / Química            | ⬜ ⭐  |
 
 ---
@@ -335,8 +335,8 @@
 | Lote 6 — Diário de Pilar | 3 |
 | Lote 6 — Roblox | 2 |
 | **Total** | **218** |
-| **Já criadas** | **61** |
-| **Pendentes** | **157** |
+| **Já criadas** | **62** |
+| **Pendentes** | **156** |
 
 ---
 
