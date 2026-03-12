@@ -69,6 +69,7 @@ pub const PERSONAS_EMBEDDED: &[(&str, &str)] = &[
     ("kevin-mitnick",    include_str!("../../../personas/real/kevin-mitnick.json")),
     ("leonardo-da-vinci", include_str!("../../../personas/real/leonardo-da-vinci.json")),
     ("linus-torvalds",       include_str!("../../../personas/real/linus-torvalds.json")),
+    ("marie-curie",          include_str!("../../../personas/real/marie-curie.json")),
     ("neil-degrasse-tyson", include_str!("../../../personas/real/neil-degrasse-tyson.json")),
     ("richard-feynman", include_str!("../../../personas/real/richard-feynman.json")),
     ("sergio-sacani",    include_str!("../../../personas/real/sergio-sacani.json")),
