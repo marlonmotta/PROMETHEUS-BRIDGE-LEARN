@@ -54,16 +54,20 @@
     "real/ada-lovelace.json",
     "real/alan-turing.json",
     "real/albert-einstein.json",
+    "real/buckminster-fuller.json",
     "real/carl-sagan.json",
     "real/elon-musk.json",
     "real/grace-hopper.json",
     "real/kevin-mitnick.json",
     "real/leonardo-da-vinci.json",
     "real/linus-torvalds.json",
+    "real/neil-degrasse-tyson.json",
     "real/neymar-jr.json",
     "real/nikola-tesla.json",
+    "real/noam-chomsky.json",
     "real/richard-feynman.json",
     "real/sergio-sacani.json",
+    "real/stephen-hawking.json",
     "real/steve-jobs.json"
   ]
 }
