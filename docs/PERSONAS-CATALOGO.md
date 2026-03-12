@@ -79,16 +79,17 @@
 | 58 | 🌌 Neil deGrasse Tyson | Mundo Real / Astrofísica e Divulgação | Real | 11-18 | 🟢LIVRE Explosivo, cósmico, cultura pop | [`neil-degrasse-tyson.json`](personas/real/neil-degrasse-tyson.json) |
 | 59 | 🧩 Noam Chomsky | Mundo Real / Linguística e Filosofia | Real | 15-18 | 🟢LIVRE Preciso, socrático, estrutura profunda | [`noam-chomsky.json`](personas/real/noam-chomsky.json) |
 | 60 | 🔺 Buckminster Fuller | Mundo Real / Arquitetura e Design | Real | 13-18 | 🟢LIVRE Sistêmico, visionário, fazer mais com menos | [`buckminster-fuller.json`](personas/real/buckminster-fuller.json) |
+| 61 | 🎨 Leonardo da Vinci | Histórico / Renascimento Italiano | Real | 11-18 | 🟢LIVRE Curioso, visual, interdisciplinar | [`leonardo-da-vinci.json`](personas/real/leonardo-da-vinci.json) |
 ---
 
 ## 📊 Estatísticas
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **60** |
+| Total de personas prontas | **61** |
 | Fictional | 44 |
-| Real | 16 |
-| Universos cobertos | 40 |
+| Real | 17 |
+| Universos cobertos | 41 |
 | Backlog pendente | ~169 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
 
 ---
@@ -138,6 +139,7 @@
 | Astrofísica e Divulgação | Neil deGrasse Tyson |
 | Linguística e Filosofia | Noam Chomsky |
 | Arquitetura e Design | Buckminster Fuller |
+| Renascimento Italiano | Leonardo da Vinci |
 | Divulgação BR | Sergio Sacani |
 
 ---
@@ -160,6 +162,7 @@
 | Explosivo / Cósmico / Cultura Pop | Neil deGrasse Tyson |
 | Preciso / Socrático / Analítico | Noam Chomsky |
 | Sistêmico / Visionário / Otimista | Buckminster Fuller |
+| Curioso / Visual / Interdisciplinar | Leonardo da Vinci |
 | Direto / Primeiros Princípios | Richard Feynman |
 | Seco / Pragmático | Linus Torvalds |
 | Calmo / Misterioso / Investigativo | Kevin Mitnick |
@@ -194,7 +197,7 @@
 | 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani, Superman, Iron Man, Pilar, Breno, Samba, Noob, Bacon Hair |
 | 🔵 10+ | 10-16 | Rumi, Mira, Zoey |
 | 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa |
-| 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing, Carl Sagan, Richard Feynman, Ada Lovelace, Grace Hopper, Stephen Hawking, Neil deGrasse Tyson |
+| 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing, Carl Sagan, Richard Feynman, Ada Lovelace, Grace Hopper, Stephen Hawking, Neil deGrasse Tyson, Leonardo da Vinci |
 | 🟡 15-18 | 15-18 | Noam Chomsky |
 | 🟡 13-18 | 13-18 | Linus Torvalds, Kevin Mitnick, Buckminster Fuller |
 | 🟠 16+ | 13-18 | Kratos, Ezio, Geralt, Leon, Claire, Chris |
@@ -215,9 +218,9 @@
 | Gosta de filosofia / argumentação | 🧩 Noam Chomsky, 🔍 L, 🦇 Batman, 📖 Deckard Cain |
 | Gosta de puzzles | 🗡️ Link, 🔺 Buckminster Fuller |
 
-| Gosta de história | 🗡️ Ezio, 🗺️ Lara Croft, 🔮 Vol'jin, 📖 Deckard Cain |
-| Gosta de ciência | 🧠 Einstein, 🕸️ Spider-Man, 🚀 Sacani, 🔬 Rebecca, 🔴🟡 Iron Man, 🚀 Elon Musk, ⚡ Tesla, 🔭 Carl Sagan, ⚛️ Richard Feynman, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson |
-| Gosta de design / criatividade | 🍎 Steve Jobs, 💥 Jinx, 🔴🟡 Iron Man, 🔺 Buckminster Fuller |
+| Gosta de história | 🗡️ Ezio, 🗺️ Lara Croft, 🔮 Vol'jin, 📖 Deckard Cain, 🎨 Leonardo da Vinci |
+| Gosta de ciência | 🧠 Einstein, 🕸️ Spider-Man, 🚀 Sacani, 🔬 Rebecca, 🔴🟡 Iron Man, 🚀 Elon Musk, ⚡ Tesla, 🔭 Carl Sagan, ⚛️ Richard Feynman, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson, 🎨 Leonardo da Vinci |
+| Gosta de design / criatividade | 🍎 Steve Jobs, 💥 Jinx, 🔴🟡 Iron Man, 🔺 Buckminster Fuller, 🎨 Leonardo da Vinci |
 | Gosta de tecnologia/engenharia | 🚀 Elon Musk, 🔴🟡 Iron Man, 🍎 Steve Jobs, ⚡ Nikola Tesla, 💻 Alan Turing, ⚛️ Richard Feynman, 🐧 Linus Torvalds, ⚓ Grace Hopper, 🔺 Buckminster Fuller |
 | Sofreu bullying/exclusão | 🛡️ Naofumi, 💚 Luigi, 🌪️ Thrall |
 | Tem ansiedade | 💚 Luigi, 🗡️ Raphtalia, 🌸 Aerith, 🌊 Tanjiro |
