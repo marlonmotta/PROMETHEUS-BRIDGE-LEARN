@@ -78,16 +78,17 @@
 | 57 | 🔭 Stephen Hawking | Mundo Real / Física e Cosmologia | Real | 11-18 | 🟢LIVRE Contemplativo, bem-humorado, cósmico | [`stephen-hawking.json`](personas/real/stephen-hawking.json) |
 | 58 | 🌌 Neil deGrasse Tyson | Mundo Real / Astrofísica e Divulgação | Real | 11-18 | 🟢LIVRE Explosivo, cósmico, cultura pop | [`neil-degrasse-tyson.json`](personas/real/neil-degrasse-tyson.json) |
 | 59 | 🧩 Noam Chomsky | Mundo Real / Linguística e Filosofia | Real | 15-18 | 🟢LIVRE Preciso, socrático, estrutura profunda | [`noam-chomsky.json`](personas/real/noam-chomsky.json) |
+| 60 | 🔺 Buckminster Fuller | Mundo Real / Arquitetura e Design | Real | 13-18 | 🟢LIVRE Sistêmico, visionário, fazer mais com menos | [`buckminster-fuller.json`](personas/real/buckminster-fuller.json) |
 ---
 
 ## 📊 Estatísticas
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **59** |
+| Total de personas prontas | **60** |
 | Fictional | 44 |
-| Real | 15 |
-| Universos cobertos | 39 |
+| Real | 16 |
+| Universos cobertos | 40 |
 | Backlog pendente | ~169 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
 
 ---
@@ -136,6 +137,7 @@
 | Física e Cosmologia | Stephen Hawking |
 | Astrofísica e Divulgação | Neil deGrasse Tyson |
 | Linguística e Filosofia | Noam Chomsky |
+| Arquitetura e Design | Buckminster Fuller |
 | Divulgação BR | Sergio Sacani |
 
 ---
@@ -157,6 +159,7 @@
 | Contemplativo / Bem-humorado / Cósmico | Stephen Hawking |
 | Explosivo / Cósmico / Cultura Pop | Neil deGrasse Tyson |
 | Preciso / Socrático / Analítico | Noam Chomsky |
+| Sistêmico / Visionário / Otimista | Buckminster Fuller |
 | Direto / Primeiros Princípios | Richard Feynman |
 | Seco / Pragmático | Linus Torvalds |
 | Calmo / Misterioso / Investigativo | Kevin Mitnick |
@@ -193,7 +196,7 @@
 | 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa |
 | 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing, Carl Sagan, Richard Feynman, Ada Lovelace, Grace Hopper, Stephen Hawking, Neil deGrasse Tyson |
 | 🟡 15-18 | 15-18 | Noam Chomsky |
-| 🟡 13-18 | 13-18 | Linus Torvalds, Kevin Mitnick |
+| 🟡 13-18 | 13-18 | Linus Torvalds, Kevin Mitnick, Buckminster Fuller |
 | 🟠 16+ | 13-18 | Kratos, Ezio, Geralt, Leon, Claire, Chris |
 
 ---
@@ -210,11 +213,12 @@
 | Precisa de energia/motivação | 💥 Goku, 🏴‍☠️ Luffy, 🚀 Sacani, 💪 Chris, ⚡ Ash, 🦸 Superman, 🔭 Carl Sagan, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson |
 | Gosta de tecnologia/STEM | 🔴🟡 Iron Man, 🕸️ Spider-Man, 🧠 Einstein, 🔬 Rebecca, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick, 🖊️ Ada Lovelace, ⚓ Grace Hopper |
 | Gosta de filosofia / argumentação | 🧩 Noam Chomsky, 🔍 L, 🦇 Batman, 📖 Deckard Cain |
-| Gosta de puzzles | 🗡️ Link |
+| Gosta de puzzles | 🗡️ Link, 🔺 Buckminster Fuller |
+
 | Gosta de história | 🗡️ Ezio, 🗺️ Lara Croft, 🔮 Vol'jin, 📖 Deckard Cain |
 | Gosta de ciência | 🧠 Einstein, 🕸️ Spider-Man, 🚀 Sacani, 🔬 Rebecca, 🔴🟡 Iron Man, 🚀 Elon Musk, ⚡ Tesla, 🔭 Carl Sagan, ⚛️ Richard Feynman, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson |
-| Gosta de design / criatividade | 🍎 Steve Jobs, 💥 Jinx, 🔴🟡 Iron Man |
-| Gosta de tecnologia/engenharia | 🚀 Elon Musk, 🔴🟡 Iron Man, 🍎 Steve Jobs, ⚡ Nikola Tesla, 💻 Alan Turing, ⚛️ Richard Feynman, 🐧 Linus Torvalds, ⚓ Grace Hopper |
+| Gosta de design / criatividade | 🍎 Steve Jobs, 💥 Jinx, 🔴🟡 Iron Man, 🔺 Buckminster Fuller |
+| Gosta de tecnologia/engenharia | 🚀 Elon Musk, 🔴🟡 Iron Man, 🍎 Steve Jobs, ⚡ Nikola Tesla, 💻 Alan Turing, ⚛️ Richard Feynman, 🐧 Linus Torvalds, ⚓ Grace Hopper, 🔺 Buckminster Fuller |
 | Sofreu bullying/exclusão | 🛡️ Naofumi, 💚 Luigi, 🌪️ Thrall |
 | Tem ansiedade | 💚 Luigi, 🗡️ Raphtalia, 🌸 Aerith, 🌊 Tanjiro |
 | Crianças (6-10) | 🍄 Mario, 💚 Luigi, ⛏️ Steve, ⚡ Ash, 🦁 Tai, 🌸 Aerith, 🌍 Pilar, 🎯 Breno, 🐱 Samba, 💛 Noob, 🧑 Bacon Hair |
