@@ -265,7 +265,7 @@
 | 163 | Albert Einstein     | Física                      | ✅     |
 | 164 | Stephen Hawking     | Física / Cosmologia         | ✅     |
 | 165 | Neil deGrasse Tyson | Astrofísica / Divulgação    | ✅     |
-| 166 | Noam Chomsky        | Linguística / Filosofia     | ⬜     |
+| 166 | Noam Chomsky        | Linguística / Filosofia     | ✅     |
 | 167 | Buckminster Fuller  | Arquitetura / Design        | ⬜     |
 | 168 | Leonardo da Vinci   | Arte / Ciência / Engenharia | ⬜ ⭐  |
 | 169 | Galileu Galilei     | Astronomia / Física         | ⬜     |
@@ -335,8 +335,8 @@
 | Lote 6 — Diário de Pilar | 3 |
 | Lote 6 — Roblox | 2 |
 | **Total** | **218** |
-| **Já criadas** | **56** |
-| **Pendentes** | **162** |
+| **Já criadas** | **57** |
+| **Pendentes** | **161** |
 
 ---
 
