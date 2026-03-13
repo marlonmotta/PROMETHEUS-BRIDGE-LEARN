@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @module WebAdapter
  * @description Implementação web do IAppService.
  *
@@ -13,8 +13,11 @@ import type { Persona } from "@pbl/shared/constants";
 import type { IAppService, AIRequest } from "./types";
 import { downloadBlob } from "./web-exporters";
 
-const GITHUB_RAW =
+const GITHUB_RAW_DIRECT =
   "https://raw.githubusercontent.com/marlonmotta/PROMETHEUS-BRIDGE-LEARN/main/personas";
+
+/** Em dev, usa proxy do Vite para evitar bloqueio do Brave Shields */
+const GITHUB_RAW = import.meta.env.DEV ? "/api/personas" : GITHUB_RAW_DIRECT;
 
 const MANIFEST_URL = `${GITHUB_RAW}/manifest.json`;
 

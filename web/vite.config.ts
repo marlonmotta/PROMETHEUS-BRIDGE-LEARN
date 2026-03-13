@@ -18,4 +18,14 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  server: {
+    proxy: {
+      "/api/personas": {
+        target:
+          "https://raw.githubusercontent.com/marlonmotta/PROMETHEUS-BRIDGE-LEARN/main/personas",
+        changeOrigin: true,
+        rewrite: (p) => p.replace(/^\/api\/personas/, ""),
+      },
+    },
+  },
 });

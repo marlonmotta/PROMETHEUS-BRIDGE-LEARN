@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @file App.integration.test.tsx
  * @description Testes de integração para o orchestrator desktop (App.tsx).
  *
@@ -11,12 +11,12 @@
 
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render, waitFor } from "@testing-library/react";
-import App from "@/App";
+import App from "../App";
 
 // ── Mocks globais ────────────────────────────────────────────────────────────
 
 /** Mock do invoke Tauri - retorna defaults seguros para todos os commands */
-vi.mock("@/lib/tauri", () => ({
+vi.mock("../lib/tauri", () => ({
   invoke: vi.fn((command: string) => {
     switch (command) {
       case "load_personas":
@@ -58,7 +58,7 @@ describe("App - inicialização", () => {
   });
 
   it("chama load_personas no mount", async () => {
-    const { invoke } = await import("@/lib/tauri");
+    const { invoke } = await import("../lib/tauri");
     render(<App />);
 
     await waitFor(() => {
@@ -67,7 +67,7 @@ describe("App - inicialização", () => {
   });
 
   it("chama check_ollama para detectar modo offline", async () => {
-    const { invoke } = await import("@/lib/tauri");
+    const { invoke } = await import("../lib/tauri");
     render(<App />);
 
     await waitFor(() => {
@@ -76,7 +76,7 @@ describe("App - inicialização", () => {
   });
 
   it("chama get_api_key para restaurar chave salva", async () => {
-    const { invoke } = await import("@/lib/tauri");
+    const { invoke } = await import("../lib/tauri");
     render(<App />);
 
     await waitFor(() => {
@@ -178,14 +178,14 @@ describe("App - carregamento de personas", () => {
   it("load_personas com retorno válido não lança erro", async () => {
     expect(() => render(<App />)).not.toThrow();
 
-    const { invoke } = await import("@/lib/tauri");
+    const { invoke } = await import("../lib/tauri");
     await waitFor(() => {
       expect(invoke).toHaveBeenCalledWith("load_personas");
     });
   });
 
   it("falha em load_personas não quebra a renderização", async () => {
-    const { invoke } = await import("@/lib/tauri");
+    const { invoke } = await import("../lib/tauri");
     vi.mocked(invoke).mockImplementation((cmd: string) => {
       if (cmd === "load_personas") return Promise.reject(new Error("Network error"));
       if (cmd === "check_ollama") return Promise.resolve(false);
@@ -197,7 +197,7 @@ describe("App - carregamento de personas", () => {
   });
 
   it("check_ollama retornando false não quebra a renderização", async () => {
-    const { invoke } = await import("@/lib/tauri");
+    const { invoke } = await import("../lib/tauri");
     vi.mocked(invoke).mockImplementation((cmd: string) => {
       if (cmd === "check_ollama") return Promise.resolve(false);
       if (cmd === "load_personas") return Promise.resolve([]);
