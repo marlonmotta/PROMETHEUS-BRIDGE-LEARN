@@ -8,7 +8,8 @@
 //!
 //! - [`personas`] - Gerenciamento do catálogo de personas (CRUD + atualização online)
 //! - [`ai`] - Bridge de comunicação com provedores de IA (Ollama, OpenAI, etc.)
-//! - [`export`] - Exportação multi-formato (TXT, HTML, MD, DOCX)
+//! - [`export`] - Exportação multi-formato (TXT, HTML, MD, DOCX, PDF)
+//! - [`import`] - Importação de arquivos (PDF, DOCX, TXT, MD)
 //! - [`secure_store`] - Armazenamento seguro de dados sensíveis (API keys)
 //!
 //! Este arquivo (`lib.rs`) atua como ponto de entrada: declara os módulos,
@@ -22,6 +23,7 @@
 
 pub mod ai;
 pub mod export;
+pub mod import;
 pub mod personas;
 pub mod secure_store;
 
@@ -81,15 +83,19 @@ pub fn run() {
         .plugin(tauri_plugin_updater::Builder::new().build())
         .plugin(tauri_plugin_store::Builder::new().build())
         .plugin(tauri_plugin_dialog::init())
+        .plugin(tauri_plugin_log::Builder::new().build())
         .invoke_handler(tauri::generate_handler![
             personas::load_personas,
             personas::update_personas_online,
             personas::delete_persona,
             personas::add_persona_from_file,
             personas::add_persona_from_json,
+            personas::cache_avatar,
             ai::invoke_ai,
             ai::check_ollama,
+            ai::extract_image_text,
             export::export_file,
+            import::import_file,
             secure_store::save_api_key,
             secure_store::get_api_key,
             secure_store::delete_api_key,

@@ -1,33 +1,97 @@
-# Dependências
+# ═══════════════════════════════════════════════════════════════
+# .gitignore — PROMETHEUS · BRIDGE · LEARN (PBL)
+# Stack: TypeScript/React + Rust/Tauri + Vite + Tailwind CSS
+# Monorepo: npm workspaces (interface, web, packages/*)
+# ═══════════════════════════════════════════════════════════════
+
+# ── Dependências ──────────────────────────────────────────────
 node_modules/
-.venv/
-venv/
-__pycache__/
 
-# IDE / Editor
-.vscode/
-.idea/
-*.swp
-*.swo
+# ── Build artifacts ───────────────────────────────────────────
+# Vite / React
+dist/
+dist-ssr/
+build/
+out/
+*.tsbuildinfo
 
-# OS
-.DS_Store
-Thumbs.db
-desktop.ini
+# Rust / Cargo / Tauri
+target/
+*.rs.bk
 
-# Env
+# ── Variáveis de ambiente ─────────────────────────────────────
+# NUNCA commitar .env com credenciais reais.
+# Apenas .env.example (sem valores reais) deve existir no repo.
 .env
 .env.*
 !.env.example
+*.local
 
-# Build
-dist/
-build/
-out/
-target/
+# ── Credenciais e segredos ────────────────────────────────────
+# Tauri signing keys (chave privada de release)
+*.key
+*.key.pub
+*.pem
+*.p12
+*.pfx
 
-# Logs
+# Tauri secure store (contém API keys criptografadas)
+pbl-secure.json
+
+# ── IDE / Editor ──────────────────────────────────────────────
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*.sw?
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# ── Sistema operacional ──────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# ── Logs ──────────────────────────────────────────────────────
+logs/
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Antigravity / Gemini (ferramentas de IA)
+# ── Testes e cobertura ────────────────────────────────────────
+coverage/
+*.lcov
+.nyc_output/
+
+# ── Bancos de dados locais ────────────────────────────────────
+*.sqlite
+*.sqlite3
+*.db
+
+# ── Arquivos temporários / gerados ────────────────────────────
+# PDFs de teste (gerados durante desenvolvimento)
+*.pdf
+tmp/
+temp/
+
+# ── Ferramentas de IA ─────────────────────────────────────────
 .gemini/
+.agents/
+.agent/
+_agents/
+_agent/
+
+# ── Sentry ────────────────────────────────────────────────────
+.sentryclirc

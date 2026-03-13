@@ -1,0 +1,41 @@
+{
+  "name": "@pbl/shared",
+  "private": true,
+  "version": "0.2.0",
+  "type": "module",
+  "exports": {
+    "./constants": "./src/constants.ts",
+    "./promptBuilder": "./src/promptBuilder.ts",
+    "./appReducer": "./src/appReducer.ts",
+    "./components/Icon": "./src/components/Icon.tsx",
+    "./components/PersonaAvatar": "./src/components/PersonaAvatar.tsx",
+    "./components/Toast": "./src/components/Toast.tsx",
+    "./components/ErrorBoundary": "./src/components/ErrorBoundary.tsx",
+    "./storage": "./src/storage.ts",
+    "./export": "./src/export.ts",
+    "./import": "./src/import.ts",
+    "./components/views/HomeView": "./src/components/views/HomeView.tsx",
+    "./components/views/PersonasView": "./src/components/views/PersonasView.tsx",
+    "./components/views/ContentView": "./src/components/views/ContentView.tsx",
+    "./components/views/ResultView": "./src/components/views/ResultView.tsx",
+    "./components/views/SettingsView": "./src/components/views/SettingsView.tsx",
+    "./components/views/DashboardView": "./src/components/views/DashboardView.tsx",
+    "./components/views/HistoryView": "./src/components/views/HistoryView.tsx",
+    "./components/views/ManagerView": "./src/components/views/ManagerView.tsx",
+    "./components/SidebarContent": "./src/components/SidebarContent.tsx",
+    "./i18n": "./src/i18n/index.ts"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/dompurify": "^3.0.5",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3"
+  },
+  "dependencies": {
+    "dompurify": "^3.3.2",
+    "marked": "^17.0.4"
+  }
+}

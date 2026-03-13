@@ -7,8 +7,8 @@
  */
 
 import { describe, it, expect } from "vitest";
-import { buildPromptPayload } from "../promptBuilder";
-import type { Persona, Settings } from "../constants";
+import { buildPromptPayload } from "@pbl/shared/promptBuilder";
+import type { Persona, Settings } from "@pbl/shared/constants";
 
 // ── Fixtures ────────────────────────────────────────────────────────────────
 

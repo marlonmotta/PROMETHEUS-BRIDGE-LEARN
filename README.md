@@ -176,10 +176,52 @@ Cada persona é um arquivo JSON com **8 blocos principais** que definem completa
 
 ## 📁 Arquitetura e Estrutura de Pastas
 
+### Monorepo — Visão Geral
+
+O projeto é um **monorepo npm** com 3 pacotes principais:
+
 ```
 PROMETHEUS-BRIDGE-LEARN/
 │
-├── personas/                         # 🧩 Catálogo de personas de IA
+├── packages/shared/          ← KERNEL — lógica de negócio compartilhada
+│   └── src/
+│       ├── constants.ts          ← Único source of truth: enums, defaults, tipos
+│       ├── promptBuilder.ts      ← Motor de montagem de prompt (função pura)
+│       ├── appReducer.ts         ← Estado global (Flux sem biblioteca externa)
+│       ├── storage.ts            ← Abstração de persistência (IStorage interface)
+│       └── components/           ← UI compartilhada entre web e desktop
+│
+├── web/                      ← PLATAFORMA WEB (React + Vite, deploy Vercel)
+│   └── src/
+│       ├── pages/WebApp.tsx       ← Orchestrator web (useReducer + WebAdapter)
+│       └── lib/services/
+│           ├── web-adapter.ts        ← IAppService web (fetch + localStorage + Blob)
+│           └── types.ts              ← Interface IAppService (contrato das plataformas)
+│
+├── interface/                ← PLATAFORMA DESKTOP (Tauri 2 + React)
+│   ├── src/components/App.tsx  ← Orchestrator desktop (useReducer + Tauri invoke)
+│   └── src-tauri/src/
+│       ├── lib.rs                ← Entry point Rust: registra commands, personas embutidas
+│       ├── ai.rs                 ← Bridge para 6 provedores de IA
+│       ├── export.rs             ← Exportação multi-formato + validação de path
+│       ├── import.rs             ← Importação de arquivos (PDF, DOCX, TXT, MD, ODT)
+│       └── personas.rs           ← CRUD de personas + sanitização anti-traversal
+│
+├── personas/                 ← Catálogo de personas (JSONs)
+└── .github/workflows/        ← CI (testes + lint) + Release (Tauri bundle + Vercel)
+```
+
+### Fluxo de Dados
+
+```
+packs/shared imports  ──►  web/  (WebAdapter + WebApp.tsx)  ──►  Vercel CDN
+                      └─►  interface/  (App.tsx + Rust)     ──►  Binário nativo
+```
+
+O `packages/shared` tem **zero dependência** de `web/` ou `interface/`.
+Quando as duas plataformas precisam de uma feature nova, a lógica vai em `shared/`,
+e cada plataforma provendo a implementação via `IAppService`.
+
 │   ├── manifest.json                 #    Índice de personas (usado pelo auto-update)
 │   ├── fictional/                    #    44 personas de personagens fictícios
 │   │   ├── goku.json
