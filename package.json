@@ -1,0 +1,12 @@
+{
+  "name": "prometheus-bridge-learn",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "workspaces": [
+    "packages/*",
+    "interface",
+    "web"
+  ]
+}

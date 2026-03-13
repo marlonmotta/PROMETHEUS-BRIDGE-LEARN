@@ -1,0 +1,140 @@
+name: CI
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main, dev]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NODE_VERSION: "20"
+
+jobs:
+  # ─────────────────────────────────────────────────────────────
+  # Job 1: Frontend Quality (lint + typecheck + tests + coverage)
+  # ─────────────────────────────────────────────────────────────
+  frontend:
+    name: Frontend (web + shared)
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      # ── Lint ───────────────────────────────────────────────
+      - name: Lint (web)
+        run: npm run lint -w web
+
+      - name: Lint (interface)
+        run: npm run lint -w interface
+
+      # ── TypeScript ─────────────────────────────────────────
+      - name: TypeCheck (web)
+        run: npx tsc -b --noEmit
+        working-directory: web
+
+      - name: TypeCheck (interface)
+        run: npx tsc -b --noEmit
+        working-directory: interface
+
+      # ── Tests + Coverage ───────────────────────────────────
+      - name: Tests + Coverage (web)
+        run: npm run test:coverage -w web
+
+      - name: Tests (interface)
+        run: npm test -w interface
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: coverage-report
+          path: web/coverage/
+          retention-days: 7
+
+      - name: Coverage summary comment
+        uses: davelosert/vitest-coverage-report-action@v2
+        if: github.event_name == 'pull_request'
+        with:
+          working-directory: web
+
+      # ── Build ──────────────────────────────────────────────
+      - name: Build (web)
+        run: npm run build -w web
+
+  # ─────────────────────────────────────────────────────────────
+  # Job 2: Rust / Tauri Backend (clippy + check)
+  # Não faz bundle completo do Tauri (levaria ~20min),
+  # apenas valida o Rust. O bundle ocorre em releases.
+  # ─────────────────────────────────────────────────────────────
+  rust:
+    name: Rust (Tauri backend)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js (needed for Tauri build scripts)
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+
+      - name: Install Rust toolchain (stable)
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
+
+      - name: Cache Cargo registry + build
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            interface/src-tauri/target
+          key: cargo-${{ runner.os }}-${{ hashFiles('interface/src-tauri/Cargo.lock') }}
+          restore-keys: |
+            cargo-${{ runner.os }}-
+
+      - name: Install system deps (Tauri Linux)
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y \
+            libwebkit2gtk-4.1-dev \
+            libgtk-3-dev \
+            libayatana-appindicator3-dev \
+            librsvg2-dev \
+            libdbus-1-dev \
+            libsecret-1-dev \
+            patchelf
+
+      - name: Install npm deps (needed for tauri-build)
+        run: npm ci
+
+      - name: Cargo check
+        run: cargo check --manifest-path interface/src-tauri/Cargo.toml
+
+      - name: Clippy (fail on warnings)
+        run: cargo clippy --manifest-path interface/src-tauri/Cargo.toml -- -D warnings
+
+      - name: rustfmt check
+        run: cargo fmt --manifest-path interface/src-tauri/Cargo.toml -- --check
+
+      - name: Rust tests
+        run: cargo test --manifest-path interface/src-tauri/Cargo.toml

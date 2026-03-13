@@ -1,0 +1,119 @@
+name: Release
+
+# Dispara apenas ao criar uma tag semântica (v0.2.0, v1.0.0, etc.)
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+"
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false  # nunca cancela um release em andamento
+
+env:
+  NODE_VERSION: "20"
+
+jobs:
+  # ─────────────────────────────────────────────────────────────────────────
+  # Job 1: Bundla o instalador Tauri para Windows, macOS e Linux
+  # ─────────────────────────────────────────────────────────────────────────
+  build-tauri:
+    name: Bundle (${{ matrix.platform }})
+    permissions:
+      contents: write  # necessário para criar o release no GitHub
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: ubuntu-22.04
+            args: ""
+          - platform: windows-latest
+            args: ""
+          - platform: macos-latest
+            args: "--target aarch64-apple-darwin"   # Apple Silicon
+          - platform: macos-latest
+            args: "--target x86_64-apple-darwin"    # Intel Mac
+
+    runs-on: ${{ matrix.platform }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+
+      - name: Install Rust stable
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.platform == 'macos-latest' && 'aarch64-apple-darwin,x86_64-apple-darwin' || '' }}
+
+      - name: Cache Cargo
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            interface/src-tauri/target
+          key: cargo-release-${{ runner.os }}-${{ hashFiles('interface/src-tauri/Cargo.lock') }}
+          restore-keys: cargo-release-${{ runner.os }}-
+
+      # Deps de sistema necessárias para o Tauri no Linux
+      - name: Install Linux system deps
+        if: matrix.platform == 'ubuntu-22.04'
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y \
+            libwebkit2gtk-4.1-dev \
+            libgtk-3-dev \
+            libayatana-appindicator3-dev \
+            librsvg2-dev \
+            patchelf
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      # Sincroniza versão do package.json → tauri.conf.json antes do bundle
+      - name: Sync version to tauri.conf.json
+        run: node interface/scripts/sync-version.mjs
+
+      # Ação oficial do Tauri que compila o frontend e gera o instalador (.exe / .dmg / .AppImage)
+      - name: Build Tauri app
+        uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Chave de assinatura (obrigatória para auto-updater seguro)
+          # Configurar em Settings > Secrets and Variables > Actions
+          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
+        with:
+          tagName: ${{ github.ref_name }}
+          releaseName: "PBL ${{ github.ref_name }}"
+          releaseBody: |
+            ## PROMETHEUS · BRIDGE · LEARN ${{ github.ref_name }}
+
+            Veja o [CHANGELOG](https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md) para detalhes das mudanças.
+
+            ### Download
+            - **Windows**: baixe o arquivo `.exe` (instalador) ou `.msi`
+            - **macOS**: baixe o arquivo `.dmg`
+            - **Linux**: baixe o arquivo `.AppImage` ou `.deb`
+
+            ### Atualização automática
+            Se você já tem o PBL instalado, a atualização será notificada automaticamente na próxima vez que o app for aberto.
+          releaseDraft: true      # Cria como draft — você revisa e publica manualmente
+          prerelease: false
+          projectPath: ./interface
+          args: ${{ matrix.args }}
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # Job 2: Deploy Web (Vercel) — desativado até configurar secrets Vercel
+  # Para reativar: adicionar VERCEL_TOKEN, VERCEL_ORG_ID, VERCEL_PROJECT_ID
+  # nos GitHub Secrets e descomentar o job abaixo.
+  # ─────────────────────────────────────────────────────────────────────────
+  # deploy-web:
+  #   name: Deploy Web (Vercel Production)
+  #   ...

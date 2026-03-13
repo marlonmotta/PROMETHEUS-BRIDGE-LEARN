@@ -1,0 +1,110 @@
+{
+  "app": {
+    "name": "PROMETHEUS · BRIDGE · LEARN",
+    "tagline": "Sistema Educacional Adaptativo com IA"
+  },
+  "nav": {
+    "home": "Início",
+    "personas": "Personas",
+    "history": "Histórico",
+    "manager": "Gerenciador",
+    "settings": "Configurações"
+  },
+  "home": {
+    "welcome": "Bem-vindo ao PBL",
+    "subtitle": "Adapte conteúdo educacional com o poder da IA e personas pedagógicas.",
+    "stats": {
+      "personas": "Personas",
+      "adaptations": "Adaptações",
+      "mode": "Modo"
+    },
+    "newAdaptation": "Nova Adaptação",
+    "recentHistory": "Histórico recente",
+    "emptyHistory": "Nenhuma adaptação salva ainda. Comece clicando em"
+  },
+  "dashboard": {
+    "personaSelector": "Seletor de Personas",
+    "noPersonas": "Nenhuma persona disponível",
+    "noPersonasHint": "Adicione personas pelo Gerenciador — importe de um arquivo JSON ou baixe do GitHub para começar a usar o app.",
+    "contentInput": "Entrada de Conteúdo Educacional",
+    "contentLabel": "Conteúdo educacional",
+    "contentPlaceholder": "Cole ou digite aqui o conteúdo que será adaptado pela persona...",
+    "importFile": "Importar arquivo",
+    "subject": "Disciplina",
+    "selectSubject": "Selecione a disciplina",
+    "difficulty": "Dificuldade",
+    "outputFormat": "Formato de saída",
+    "adaptButton": "Adaptar Conteúdo",
+    "adapting": "Adaptando...",
+    "result": "Resultado",
+    "resultPlaceholder": "Selecione uma persona, insira o conteúdo educacional e clique em \"Adaptar Conteúdo\" para gerar o resultado adaptado aqui.",
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "save": "Salvar",
+    "saved": "Salvo",
+    "filters": "Filtros",
+    "filterAll": "Todas",
+    "filterFictional": "Fictícias",
+    "filterReal": "Reais",
+    "filterFavorites": "Favoritos",
+    "category": "Categoria",
+    "categoryFictional": "Fictício",
+    "categoryReal": "Real",
+    "age": "Idade"
+  },
+  "settings": {
+    "title": "Configurações",
+    "aiMode": "Modo de IA",
+    "offline": "Offline (Ollama)",
+    "online": "Online (Cloud)",
+    "manual": "Manual",
+    "provider": "Provedor",
+    "model": "Modelo",
+    "apiKey": "Chave da API",
+    "ollamaUrl": "URL do Ollama",
+    "ollamaModel": "Modelo Ollama",
+    "outputLanguage": "Idioma de saída",
+    "save": "Salvar Configurações",
+    "historyTitle": "Histórico de Adaptações",
+    "emptyHistory": "Nenhuma adaptação salva.",
+    "clearHistory": "Limpar Histórico",
+    "platform": "Plataforma"
+  },
+  "manager": {
+    "title": "Gerenciador de Personas",
+    "importJson": "Importar JSON",
+    "downloadGithub": "Baixar do GitHub",
+    "empty": "Nenhuma persona importada.",
+    "confirmDelete": "Tem certeza que deseja excluir",
+    "cancel": "Cancelar",
+    "confirm": "Excluir"
+  },
+  "history": {
+    "title": "Histórico de Adaptações",
+    "empty": "Nenhuma adaptação salva.",
+    "clearAll": "Limpar tudo",
+    "loadItem": "Carregar"
+  },
+  "errors": {
+    "aiTimeout": "Timeout: a IA não respondeu em 60 segundos. Tente novamente.",
+    "aiError": "Erro ao chamar IA",
+    "manualFallback": "Use o prompt abaixo manualmente:",
+    "importError": "Erro ao importar arquivo",
+    "exportError": "Erro ao exportar arquivo",
+    "ocrError": "Erro ao extrair texto da imagem",
+    "ocrNoText": "Nenhum texto foi extraído da imagem.",
+    "ocrLoading": "Extraindo texto da imagem via IA... Aguarde.",
+    "ollamaNotSupported": "Ollama não é suportado na versão web. Use o modo online ou manual.",
+    "corsError": "Não foi possível conectar ao provedor. Isso pode ser causado por bloqueio de CORS no navegador. Tente usar o modo manual ou a versão desktop.",
+    "rateLimit": "Aguarde antes de gerar novamente."
+  },
+  "a11y": {
+    "openFilters": "Abrir filtros de personas",
+    "addFavorite": "Adicionar aos favoritos",
+    "removeFavorite": "Remover dos favoritos",
+    "deletePersona": "Excluir persona",
+    "deleteAdaptation": "Excluir adaptação",
+    "exportAs": "Exportar como",
+    "closeNotification": "Fechar notificação"
+  }
+}

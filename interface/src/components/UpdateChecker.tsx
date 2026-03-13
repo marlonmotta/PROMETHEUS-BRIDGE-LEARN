@@ -17,7 +17,7 @@
  */
 
 import { useState, useEffect, useRef } from "react";
-import Icon from "./Icon";
+import Icon from "@pbl/shared/components/Icon";
 
 /** Estados possíveis do fluxo de atualização */
 type UpdateStatus = "idle" | "checking" | "available" | "downloading" | "ready" | "error";
@@ -28,14 +28,19 @@ export default function UpdateChecker() {
   const [progress, setProgress] = useState(0);
   /** Tamanho total do download (bytes) para cálculo de progresso real */
   const contentLengthRef = useRef(0);
+  /** Armazena o objeto de update para reutilização no download */
+  const updateRef = useRef<{
+    version: string;
+    downloadAndInstall: (
+      onEvent?: (event: { event: string; data?: Record<string, number> }) => void,
+    ) => Promise<void>;
+  } | null>(null);
 
   /**
    * Verifica se há atualizações disponíveis no GitHub Releases.
    * Importa o plugin dinamicamente para não quebrar em ambientes não-Tauri.
    */
   async function checkForUpdate() {
-    if (typeof window === "undefined" || !window.__TAURI__) return;
-
     try {
       const { check } = await import("@tauri-apps/plugin-updater");
       setStatus("checking");
@@ -46,6 +51,7 @@ export default function UpdateChecker() {
         return;
       }
 
+      updateRef.current = update;
       setVersion(update.version);
       setStatus("available");
     } catch (e) {
@@ -61,11 +67,8 @@ export default function UpdateChecker() {
    * a porcentagem real (baseada no `contentLength` do evento `Started`).
    */
   async function downloadAndInstall() {
-    if (typeof window === "undefined" || !window.__TAURI__) return;
-
     try {
-      const { check } = await import("@tauri-apps/plugin-updater");
-      const update = await check();
+      const update = updateRef.current;
       if (!update) return;
 
       setStatus("downloading");
@@ -73,11 +76,11 @@ export default function UpdateChecker() {
       contentLengthRef.current = 0;
 
       await update.downloadAndInstall((event) => {
-        if (event.event === "Started" && event.data.contentLength) {
+        if (event.event === "Started" && event.data?.contentLength) {
           contentLengthRef.current = event.data.contentLength;
           setProgress(0);
         } else if (event.event === "Progress") {
-          setProgress((prev) => prev + (event.data.chunkLength || 0));
+          setProgress((prev) => prev + (event.data?.chunkLength || 0));
         } else if (event.event === "Finished") {
           setStatus("ready");
         }
@@ -99,7 +102,8 @@ export default function UpdateChecker() {
     try {
       const { relaunch } = await import("@tauri-apps/plugin-process");
       await relaunch();
-    } catch {
+    } catch (e) {
+      console.warn("[PBL] Falha ao reiniciar:", e);
       window.location.reload();
     }
   }
