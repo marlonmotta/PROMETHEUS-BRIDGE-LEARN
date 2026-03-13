@@ -1,4 +1,4 @@
-﻿//! # Módulo Personas - Gerenciamento do catálogo de personas
+//! # Módulo Personas - Gerenciamento do catálogo de personas
 //!
 //! Responsável por todas as operações CRUD sobre personas:
 //! carregamento (embutidas + dinâmicas), importação de arquivo/JSON,
@@ -148,7 +148,7 @@ pub async fn update_personas_online(app: tauri::AppHandle) -> Result<Vec<Value>,
 
     for item in personas_list {
         if let Some(filename) = item.as_str() {
-            let name = filename.split('/').last().unwrap_or(filename).to_string();
+            let name = filename.split('/').next_back().unwrap_or(filename).to_string();
             let local_path = dir.join(&name);
 
             if !local_path.exists() {
@@ -176,7 +176,7 @@ pub async fn update_personas_online(app: tauri::AppHandle) -> Result<Vec<Value>,
     for handle in handles {
         if let Ok(Some((filename, text))) = handle.await {
             if let Ok(json) = serde_json::from_str::<Value>(&text) {
-                let name = filename.split('/').last().unwrap_or(&filename);
+                let name = filename.split('/').next_back().unwrap_or(&filename);
                 let local_path = dir.join(name);
                 if fs::write(&local_path, &text).is_err() {
                     log::error!(

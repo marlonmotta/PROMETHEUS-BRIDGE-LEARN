@@ -1,4 +1,4 @@
-﻿//! # Módulo Secure Store - Armazenamento seguro de dados sensíveis
+//! # Módulo Secure Store - Armazenamento seguro de dados sensíveis
 //!
 //! Utiliza o keychain nativo do sistema operacional para armazenar
 //! dados sensíveis como API keys:
@@ -124,12 +124,12 @@ pub fn save_api_key(app: tauri::AppHandle, api_key: String) -> Result<(), String
 pub fn get_api_key(app: tauri::AppHandle) -> Result<String, String> {
     // Tenta keychain nativo primeiro
     match keyring_get() {
-        Ok(key) if !key.is_empty() => return Ok(key),
+        Ok(key) if !key.is_empty() => Ok(key),
         Ok(_) => {
             // Keychain vazio - tenta migrar do store antigo
             migrate_from_legacy_store(&app);
             // Tenta de novo após migração
-            return keyring_get();
+            keyring_get()
         }
         Err(e) => {
             log::warn!("[PBL] Keychain indisponível ({e}), usando fallback (plugin-store).");

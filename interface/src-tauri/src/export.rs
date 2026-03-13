@@ -1,4 +1,4 @@
-﻿//! # Módulo Export - Exportação multi-formato de conteúdo adaptado
+//! # Módulo Export - Exportação multi-formato de conteúdo adaptado
 //!
 //! Responsável por transformar o conteúdo adaptado pela IA em arquivos
 //! persistentes no disco. Suporta TXT, HTML, Markdown e DOCX nativo.
@@ -403,6 +403,7 @@ fn build_docx_paragraph(line: &str) -> docx_rs::Paragraph {
 /// - `**texto**` → negrito
 /// - `---` → separador horizontal
 /// - Linhas em branco → espaçamento vertical
+///
 /// Converte uma linha de texto com formatação Markdown inline
 /// (`**negrito**`, `*itálico*`, `***negrito+itálico***`) em um
 /// `Paragraph` do genpdf com segmentos estilizados via `push_styled`.

@@ -1,4 +1,4 @@
-﻿//! # Módulo AI - Bridge de comunicação com provedores de IA
+//! # Módulo AI - Bridge de comunicação com provedores de IA
 //!
 //! Implementa um "bridge" unificado que abstrai as diferenças de API entre
 //! os diversos provedores suportados. Cada provedor tem seu próprio formato
@@ -83,21 +83,21 @@ pub async fn invoke_ai(
 
     // ── Ollama (offline) ────────────────────────────────────────────────────
     if mode == "offline" || provider == "ollama" {
-        return call_ollama(&client, &model, &system_prompt, &user_content).await;
+        return call_ollama(client, &model, &system_prompt, &user_content).await;
     }
 
     // ── Gemini ──────────────────────────────────────────────────────────────
     if provider == "gemini" {
-        return call_gemini(&client, &api_key, &model, &system_prompt, &user_content).await;
+        return call_gemini(client, &api_key, &model, &system_prompt, &user_content).await;
     }
 
     // ── Anthropic ───────────────────────────────────────────────────────────
     if provider == "anthropic" {
-        return call_anthropic(&client, &api_key, &model, &system_prompt, &user_content).await;
+        return call_anthropic(client, &api_key, &model, &system_prompt, &user_content).await;
     }
 
     // ── OpenAI-compatible (openai, openrouter, groq) ────────────────────────
-    call_openai_compatible(&client, &provider, &api_key, &model, &system_prompt, &user_content)
+    call_openai_compatible(client, &provider, &api_key, &model, &system_prompt, &user_content)
         .await
 }
 
