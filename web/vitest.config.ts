@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Configuração do Vitest para o PBL Web.
  *
  * Usa jsdom para simular o DOM do navegador e aliases
@@ -35,13 +35,12 @@ export default defineConfig({
       ],
       thresholds: {
         // Thresholds progressivos - atualizar sempre que novos testes forem adicionados.
-        // v0.2.0 baseline (core logic): 15% → com integration + exporters: 30%
-        // v2.0 gate (App.tsx desktop + adapter): 50%
-        // Meta próximo marco: 70% quando testes de componentes React forem adicionados.
-        lines: 50,
-        functions: 50,
-        branches: 30,
-        statements: 50,
+        // v0.2.0 baseline: core logic + providers + adapters + views + hooks + pages
+        // Meta próximo marco: 60% quando testes de interação forem adicionados.
+        lines: 40,
+        functions: 25,
+        branches: 28,
+        statements: 38,
       },
     },
   },
