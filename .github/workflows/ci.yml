@@ -20,6 +20,8 @@ jobs:
   frontend:
     name: Frontend (web + shared)
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
 
     steps:
       - name: Checkout
