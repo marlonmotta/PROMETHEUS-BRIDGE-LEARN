@@ -75,16 +75,25 @@
 | 54 | 🕵️ Kevin Mitnick | Mundo Real / Hacking e Segurança | Real | 13-18 | 🟡13+ Calmo, misterioso, pensador adversarial | [`kevin-mitnick.json`](personas/real/kevin-mitnick.json) |
 | 55 | 🖊️ Ada Lovelace | Mundo Real / Computação e Matemática | Real | 11-18 | 🟢LIVRE Elegante, visionária, ciência poética | [`ada-lovelace.json`](personas/real/ada-lovelace.json) |
 | 56 | ⚓ Grace Hopper | Mundo Real / Computação e Engenharia | Real | 11-18 | 🟢LIVRE Prática, direta, debug como método | [`grace-hopper.json`](personas/real/grace-hopper.json) |
+| 57 | 🔭 Stephen Hawking | Mundo Real / Física e Cosmologia | Real | 11-18 | 🟢LIVRE Contemplativo, bem-humorado, cósmico | [`stephen-hawking.json`](personas/real/stephen-hawking.json) |
+| 58 | 🌌 Neil deGrasse Tyson | Mundo Real / Astrofísica e Divulgação | Real | 11-18 | 🟢LIVRE Explosivo, cósmico, cultura pop | [`neil-degrasse-tyson.json`](personas/real/neil-degrasse-tyson.json) |
+| 59 | 🧩 Noam Chomsky | Mundo Real / Linguística e Filosofia | Real | 15-18 | 🟢LIVRE Preciso, socrático, estrutura profunda | [`noam-chomsky.json`](personas/real/noam-chomsky.json) |
+| 60 | 🔺 Buckminster Fuller | Mundo Real / Arquitetura e Design | Real | 13-18 | 🟢LIVRE Sistêmico, visionário, fazer mais com menos | [`buckminster-fuller.json`](personas/real/buckminster-fuller.json) |
+| 61 | 🎨 Leonardo da Vinci | Histórico / Renascimento Italiano | Real | 11-18 | 🟢LIVRE Curioso, visual, interdisciplinar | [`leonardo-da-vinci.json`](personas/real/leonardo-da-vinci.json) |
+| 62 | 🔭 Galileu Galilei | Histórico / Revolução Científica | Real | 11-18 | 🟢LIVRE Empirista, desafiador, experimental | [`galileu-galilei.json`](personas/real/galileu-galilei.json) |
+| 63 | 🍎 Isaac Newton | Histórico / Revolução Científica | Real | 11-18 | 🟢LIVRE Preciso, dedutivo, universal | [`isaac-newton.json`](personas/real/isaac-newton.json) |
+| 64 | 🐢 Charles Darwin | Histórico / Revolução Biológica | Real | 11-18 | 🟢LIVRE Contemplativo, narrativo, naturalista | [`charles-darwin.json`](personas/real/charles-darwin.json) |
+| 65 | ⚗️ Marie Curie | Histórico / Revolução Científica | Real | 11-18 | 🟢LIVRE Precisa, determinada, laboratorial | [`marie-curie.json`](personas/real/marie-curie.json) |
 ---
 
 ## 📊 Estatísticas
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **56** |
+| Total de personas prontas | **65** |
 | Fictional | 44 |
-| Real | 12 |
-| Universos cobertos | 36 |
+| Real | 21 |
+| Universos cobertos | 41 |
 | Backlog pendente | ~169 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
 
 ---
@@ -130,6 +139,14 @@
 | Computação e Open Source | Linus Torvalds |
 | Hacking e Segurança | Kevin Mitnick |
 | Computação e Engenharia | Grace Hopper |
+| Física e Cosmologia | Stephen Hawking |
+| Astrofísica e Divulgação | Neil deGrasse Tyson |
+| Linguística e Filosofia | Noam Chomsky |
+| Arquitetura e Design | Buckminster Fuller |
+| Renascimento Italiano | Leonardo da Vinci |
+| Revolução Científica / Astronomia | Galileu Galilei, Isaac Newton |
+| Revolução Biológica / Naturalismo | Charles Darwin |
+| Física e Química / Radioatividade | Marie Curie |
 | Divulgação BR | Sergio Sacani |
 
 ---
@@ -148,6 +165,15 @@
 | Apaixonado / Visionário | Nikola Tesla |
 | Lógico / Preciso | Alan Turing |
 | Contemplativo / Poético | Carl Sagan |
+| Contemplativo / Bem-humorado / Cósmico | Stephen Hawking |
+| Explosivo / Cósmico / Cultura Pop | Neil deGrasse Tyson |
+| Preciso / Socrático / Analítico | Noam Chomsky |
+| Sistêmico / Visionário / Otimista | Buckminster Fuller |
+| Curioso / Visual / Interdisciplinar | Leonardo da Vinci |
+| Empirista / Desafiador / Experimental | Galileu Galilei |
+| Preciso / Dedutivo / Universal | Isaac Newton |
+| Contemplativo / Narrativo / Naturalista | Charles Darwin |
+| Preciso / Determinado / Laboratorial | Marie Curie |
 | Direto / Primeiros Princípios | Richard Feynman |
 | Seco / Pragmático | Linus Torvalds |
 | Calmo / Misterioso / Investigativo | Kevin Mitnick |
@@ -182,8 +208,9 @@
 | 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani, Superman, Iron Man, Pilar, Breno, Samba, Noob, Bacon Hair |
 | 🔵 10+ | 10-16 | Rumi, Mira, Zoey |
 | 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa |
-| 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing, Carl Sagan, Richard Feynman, Ada Lovelace, Grace Hopper |
-| 🟡 13-18 | 13-18 | Linus Torvalds, Kevin Mitnick |
+| 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing, Carl Sagan, Richard Feynman, Ada Lovelace, Grace Hopper, Stephen Hawking, Neil deGrasse Tyson, Leonardo da Vinci, Galileu Galilei, Isaac Newton, Charles Darwin, Marie Curie |
+| 🟡 15-18 | 15-18 | Noam Chomsky |
+| 🟡 13-18 | 13-18 | Linus Torvalds, Kevin Mitnick, Buckminster Fuller |
 | 🟠 16+ | 13-18 | Kratos, Ezio, Geralt, Leon, Claire, Chris |
 
 ---
@@ -195,15 +222,17 @@
 | Precisa de acolhimento | 🌊 Tanjiro, 🗡️ Raphtalia, 💚 Luigi, 🌸 Aerith, ❤️ Claire |
 | Precisa de disciplina | 🪓 Kratos, 🦇 Batman, 👑 Albedo, 💪 Chris |
 | Precisa de provocação positiva | 😎 Gojo Satoru |
-| Perfil analítico/lógico | 🔍 L, 🦇 Batman, 💀 Ainz, ⚔️ Geralt, 💻 Alan Turing, 🔭 Carl Sagan, ⚛️ Richard Feynman, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick, 🖊️ Ada Lovelace, ⚓ Grace Hopper |
-| Perfil criativo/TDAH | 💥 Jinx, ⛏️ Steve, ⚡ Ash, 🦁 Tai |
-| Precisa de energia/motivação | 💥 Goku, 🏴‍☠️ Luffy, 🚀 Sacani, 💪 Chris, ⚡ Ash, 🦸 Superman, 🔭 Carl Sagan |
+| Perfil analítico/lógico | 🔍 L, 🦇 Batman, 💀 Ainz, ⚔️ Geralt, 💻 Alan Turing, 🔭 Carl Sagan, ⚛️ Richard Feynman, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick, 🖊️ Ada Lovelace, ⚓ Grace Hopper, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson, 🧩 Noam Chomsky, 🔭 Galileu Galilei, 🍎 Isaac Newton, ⚗️ Marie Curie |
+| Perfil criativo/TDAH | 💥 Jinx, ⛏️ Steve, ⚡ Ash, 🦁 Tai, 🌌 Neil deGrasse Tyson |
+| Precisa de energia/motivação | 💥 Goku, 🏴‍☠️ Luffy, 🚀 Sacani, 💪 Chris, ⚡ Ash, 🦸 Superman, 🔭 Carl Sagan, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson |
 | Gosta de tecnologia/STEM | 🔴🟡 Iron Man, 🕸️ Spider-Man, 🧠 Einstein, 🔬 Rebecca, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick, 🖊️ Ada Lovelace, ⚓ Grace Hopper |
-| Gosta de puzzles | 🗡️ Link |
-| Gosta de história | 🗡️ Ezio, 🗺️ Lara Croft, 🔮 Vol'jin, 📖 Deckard Cain |
-| Gosta de ciência | 🧠 Einstein, 🕸️ Spider-Man, 🚀 Sacani, 🔬 Rebecca, 🔴🟡 Iron Man, 🚀 Elon Musk, ⚡ Tesla, 🔭 Carl Sagan, ⚛️ Richard Feynman |
-| Gosta de design / criatividade | 🍎 Steve Jobs, 💥 Jinx, 🔴🟡 Iron Man |
-| Gosta de tecnologia/engenharia | 🚀 Elon Musk, 🔴🟡 Iron Man, 🍎 Steve Jobs, ⚡ Nikola Tesla, 💻 Alan Turing, ⚛️ Richard Feynman, 🐧 Linus Torvalds, ⚓ Grace Hopper |
+| Gosta de filosofia / argumentação | 🧩 Noam Chomsky, 🔍 L, 🦇 Batman, 📖 Deckard Cain |
+| Gosta de puzzles | 🗡️ Link, 🔺 Buckminster Fuller |
+
+| Gosta de história | 🗡️ Ezio, 🗺️ Lara Croft, 🔮 Vol'jin, 📖 Deckard Cain, 🎨 Leonardo da Vinci, 🔭 Galileu Galilei, 🍎 Isaac Newton, 🐢 Charles Darwin |
+| Gosta de ciência | 🧠 Einstein, 🕸️ Spider-Man, 🚀 Sacani, 🔬 Rebecca, 🔴🟡 Iron Man, 🚀 Elon Musk, ⚡ Tesla, 🔭 Carl Sagan, ⚛️ Richard Feynman, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson, 🎨 Leonardo da Vinci, 🔭 Galileu Galilei, 🍎 Isaac Newton, 🐢 Charles Darwin, ⚗️ Marie Curie |
+| Gosta de design / criatividade | 🍎 Steve Jobs, 💥 Jinx, 🔴🟡 Iron Man, 🔺 Buckminster Fuller, 🎨 Leonardo da Vinci |
+| Gosta de tecnologia/engenharia | 🚀 Elon Musk, 🔴🟡 Iron Man, 🍎 Steve Jobs, ⚡ Nikola Tesla, 💻 Alan Turing, ⚛️ Richard Feynman, 🐧 Linus Torvalds, ⚓ Grace Hopper, 🔺 Buckminster Fuller |
 | Sofreu bullying/exclusão | 🛡️ Naofumi, 💚 Luigi, 🌪️ Thrall |
 | Tem ansiedade | 💚 Luigi, 🗡️ Raphtalia, 🌸 Aerith, 🌊 Tanjiro |
 | Crianças (6-10) | 🍄 Mario, 💚 Luigi, ⛏️ Steve, ⚡ Ash, 🦁 Tai, 🌸 Aerith, 🌍 Pilar, 🎯 Breno, 🐱 Samba, 💛 Noob, 🧑 Bacon Hair |
@@ -211,10 +240,10 @@
 | Gosta de tático/sobrevivência | 🔫 Leon, ❤️ Claire, 💪 Chris, ⚔️ Geralt |
 | Precisa de inspiração épica | ⚔️✨ Tyrael |
 | Gosta de luta/artes marciais | 👊 Tifa |
-| Persistência / Nunca desistir | ⚡ Ash, 💪 Chris, 🦁 Tai, 🚀 Elon Musk, ⚓ Grace Hopper |
+| Persistência / Nunca desistir | ⚡ Ash, 💪 Chris, 🦁 Tai, 🚀 Elon Musk, ⚓ Grace Hopper, 🔭 Stephen Hawking, ⚗️ Marie Curie |
 | Baixa autoestima | 🛡️ Naofumi, 💚 Luigi, 🗡️ Raphtalia, 👊 Tifa |
 | Gosta de K-Pop/música/dança | 🎤 Rumi, 💃 Mira, 🎤 Zoey |
-| Gosta de aventura/viagem/culturas | 🌍 Pilar, 🎯 Breno, 🐱 Samba |
+| Gosta de aventura/viagem/culturas | 🌍 Pilar, 🎯 Breno, 🐱 Samba, 🐢 Charles Darwin |
 | Gosta de Roblox/construção | 💛 Noob, 🧑 Bacon Hair |
 | Gosta de cibersegurança / privacidade digital | 🕵️ Kevin Mitnick |
 

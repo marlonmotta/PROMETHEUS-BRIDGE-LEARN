@@ -263,15 +263,15 @@
 | 161 | Ada Lovelace        | Computação / Matemática     | ✅     |
 | 162 | Grace Hopper        | Computação / Engenharia     | ✅     |
 | 163 | Albert Einstein     | Física                      | ✅     |
-| 164 | Stephen Hawking     | Física / Cosmologia         | ⬜     |
-| 165 | Neil deGrasse Tyson | Astrofísica / Divulgação    | ⬜     |
-| 166 | Noam Chomsky        | Linguística / Filosofia     | ⬜     |
-| 167 | Buckminster Fuller  | Arquitetura / Design        | ⬜     |
-| 168 | Leonardo da Vinci   | Arte / Ciência / Engenharia | ⬜ ⭐  |
-| 169 | Galileu Galilei     | Astronomia / Física         | ⬜     |
-| 170 | Isaac Newton        | Física / Matemática         | ⬜     |
-| 171 | Charles Darwin      | Biologia / Evolução         | ⬜     |
-| 172 | Marie Curie         | Física / Química            | ⬜ ⭐  |
+| 164 | Stephen Hawking     | Física / Cosmologia         | ✅     |
+| 165 | Neil deGrasse Tyson | Astrofísica / Divulgação    | ✅     |
+| 166 | Noam Chomsky        | Linguística / Filosofia     | ✅     |
+| 167 | Buckminster Fuller  | Arquitetura / Design        | ✅     |
+| 168 | Leonardo da Vinci   | Arte / Ciência / Engenharia | ✅     |
+| 169 | Galileu Galilei     | Astronomia / Física         | ✅     |
+| 170 | Isaac Newton        | Física / Matemática         | ✅     |
+| 171 | Charles Darwin      | Biologia / Evolução         | ✅     |
+| 172 | Marie Curie         | Física / Química            | ✅     |
 
 ---
 
@@ -335,8 +335,8 @@
 | Lote 6 — Diário de Pilar | 3 |
 | Lote 6 — Roblox | 2 |
 | **Total** | **218** |
-| **Já criadas** | **54** |
-| **Pendentes** | **164** |
+| **Já criadas** | **63** |
+| **Pendentes** | **155** |
 
 ---
 
