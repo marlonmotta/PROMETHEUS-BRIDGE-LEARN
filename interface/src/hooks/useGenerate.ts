@@ -13,6 +13,7 @@
 import { useCallback, useRef } from "react";
 import { invoke } from "../lib/tauri";
 import type { Persona, Settings } from "@pbl/shared/constants";
+import type { AppAction } from "@pbl/shared/appReducer";
 import { buildPromptPayload } from "@pbl/shared/promptBuilder";
 
 const AI_TIMEOUT_MS = 60_000;
@@ -23,7 +24,7 @@ interface UseGenerateParams {
   subject: string;
   difficulty: string;
   settings: Settings;
-  dispatch: React.Dispatch<any>;
+  dispatch: React.Dispatch<AppAction>;
 }
 
 export function useGenerate({

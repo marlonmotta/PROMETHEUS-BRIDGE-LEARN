@@ -12,10 +12,11 @@
 import { useCallback } from "react";
 import { invoke } from "../lib/tauri";
 import type { Settings } from "@pbl/shared/constants";
+import type { AppAction } from "@pbl/shared/appReducer";
 
 interface UseImportFileParams {
   settings: Settings;
-  dispatch: React.Dispatch<any>;
+  dispatch: React.Dispatch<AppAction>;
 }
 
 export function useImportFile({ settings, dispatch }: UseImportFileParams) {

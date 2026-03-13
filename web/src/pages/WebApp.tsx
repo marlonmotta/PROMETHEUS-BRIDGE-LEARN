@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @module WebApp
  * @description Orchestrator do PBL Web App (/app).
  *
@@ -130,7 +130,7 @@ export default function WebApp() {
           .catch((e) => console.warn("[PBL] Falha ao salvar API key:", e));
       }
     },
-    [service],
+    [service, state],
   );
 
   const handleGenerate = useCallback(async () => {
