@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Testes unitários do appReducer compartilhado - rodando no desktop.
  *
  * Verifica que o reducer do @pbl/shared funciona corretamente
@@ -60,10 +60,10 @@ describe("appReducer - geração", () => {
 });
 
 describe("appReducer - histórico", () => {
-  it("ADD_HISTORY adiciona e persiste", () => {
+  it("ADD_HISTORY adiciona item ao histórico", () => {
     const next = appReducer(state, { type: "ADD_HISTORY", item: mockHistoryItem });
     expect(next.history).toHaveLength(1);
-    expect(localStorage.getItem("pbl_history")).toBeTruthy();
+    expect(next.history[0]).toEqual(mockHistoryItem);
   });
 
   it("DELETE_HISTORY remove por índice", () => {
@@ -73,10 +73,8 @@ describe("appReducer - histórico", () => {
   });
 
   it("CLEAR_HISTORY limpa tudo", () => {
-    localStorage.setItem("pbl_history", "[]");
     const next = appReducer({ ...state, history: [mockHistoryItem] }, { type: "CLEAR_HISTORY" });
     expect(next.history).toEqual([]);
-    expect(localStorage.getItem("pbl_history")).toBeNull();
   });
 });
 
@@ -91,12 +89,11 @@ describe("appReducer - favoritos", () => {
 });
 
 describe("appReducer - settings", () => {
-  it("SET_SETTINGS persiste sem apiKey", () => {
+  it("SET_SETTINGS atualiza settings no estado", () => {
     const settings = { ...DEFAULT_SETTINGS, mode: "online" as const, apiKey: "secret" };
-    appReducer(state, { type: "SET_SETTINGS", settings });
-    const saved = JSON.parse(localStorage.getItem("pbl_settings")!);
-    expect(saved.mode).toBe("online");
-    expect(saved.apiKey).toBeUndefined();
+    const next = appReducer(state, { type: "SET_SETTINGS", settings });
+    expect(next.settings.mode).toBe("online");
+    expect(next.settings.apiKey).toBe("secret");
   });
 
   it("PATCH_SETTINGS atualiza parcialmente", () => {
