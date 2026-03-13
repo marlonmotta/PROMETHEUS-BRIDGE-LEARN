@@ -122,7 +122,8 @@ export class WebAdapter implements IAppService {
   }
 
   async updatePersonasOnline(): Promise<Persona[]> {
-    // Na web, o loadPersonas já busca do GitHub. Reutiliza.
+    // Invalida cache para forçar re-fetch do GitHub (não usar cache stale)
+    this.invalidatePersonasCache();
     return this.loadPersonas();
   }
 

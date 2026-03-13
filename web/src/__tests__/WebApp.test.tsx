@@ -13,6 +13,7 @@ const mockService = {
     { meta: { id: "test-2", display_name: "Persona B" }, _source: "remote" },
   ]),
   updatePersonasOnline: vi.fn().mockResolvedValue([]),
+  invalidatePersonasCache: vi.fn(),
   deletePersona: vi.fn().mockResolvedValue(undefined),
   addPersonaFromJson: vi.fn().mockResolvedValue({}),
   invokeAI: vi.fn().mockResolvedValue("Resposta da IA"),

@@ -24,6 +24,7 @@ export interface IAppService {
   // ── Personas ──
   loadPersonas(): Promise<Persona[]>;
   updatePersonasOnline(): Promise<Persona[]>;
+  invalidatePersonasCache(): void;
   deletePersona(id: string): Promise<void>;
   addPersonaFromJson(jsonStr: string): Promise<Persona>;
 

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @module App
  * @description Componente raiz da aplicação PBL (PROMETHEUS · BRIDGE · LEARN).
  *

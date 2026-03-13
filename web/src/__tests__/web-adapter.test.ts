@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Testes unitários do WebAdapter.
  *
  * Testa a implementação web do IAppService que substitui
@@ -289,5 +289,203 @@ describe("exportFile", () => {
     await adapter.exportFile("conteúdo", "xyz", "arquivo.xyz");
     // Não deve lançar erro - fallback para text/plain
     expect(capturedBlob?.type).toContain("text/plain");
+  });
+});
+
+// ─── Gemini Provider ──────────────────────────────────────────────────────────
+
+describe("invokeAI - Gemini", () => {
+  const geminiParams = {
+    mode: "online" as const,
+    provider: "gemini",
+    apiKey: "AIza-test-key",
+    model: "gemini-2.0-flash",
+    systemPrompt: "Você é um professor.",
+    userContent: "Adapte esse conteúdo.",
+  };
+
+  it("retorna resultado correto para resposta Gemini", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        candidates: [{ content: { parts: [{ text: "Resposta do Gemini" }] } }],
+      }),
+    } as Response);
+
+    const result = await adapter.invokeAI(geminiParams);
+    expect(result).toBe("Resposta do Gemini");
+  });
+
+  it("envia headers corretos para Gemini (x-goog-api-key)", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        candidates: [{ content: { parts: [{ text: "ok" }] } }],
+      }),
+    } as Response);
+
+    await adapter.invokeAI(geminiParams);
+
+    const fetchCall = vi.mocked(fetch).mock.calls[0];
+    expect(fetchCall[0]).toContain("gemini-2.0-flash:generateContent");
+    const headers = (fetchCall[1]?.headers as Record<string, string>) || {};
+    expect(headers["x-goog-api-key"]).toBe("AIza-test-key");
+  });
+
+  it("lança erro com status HTTP quando Gemini retorna erro", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: false,
+      status: 403,
+      text: async () => "Forbidden",
+    } as Response);
+
+    await expect(adapter.invokeAI(geminiParams)).rejects.toThrow("403");
+  });
+
+  it("retorna string vazia quando Gemini retorna resposta sem candidates", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      json: async () => ({ candidates: [] }),
+    } as Response);
+
+    const result = await adapter.invokeAI(geminiParams);
+    expect(result).toBe("");
+  });
+});
+
+// ─── Anthropic Provider ───────────────────────────────────────────────────────
+
+describe("invokeAI - Anthropic", () => {
+  const anthropicParams = {
+    mode: "online" as const,
+    provider: "anthropic",
+    apiKey: "sk-ant-test",
+    model: "claude-3-5-sonnet-20241022",
+    systemPrompt: "Você é um professor.",
+    userContent: "Adapte esse conteúdo.",
+  };
+
+  it("retorna resultado correto para resposta Anthropic", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        content: [{ text: "Resposta do Claude" }],
+      }),
+    } as Response);
+
+    // Clear rate limit from previous tests
+    localStorage.removeItem("pbl_last_invoke_ts");
+
+    const result = await adapter.invokeAI(anthropicParams);
+    expect(result).toBe("Resposta do Claude");
+  });
+
+  it("envia headers corretos para Anthropic (x-api-key + version)", async () => {
+    localStorage.removeItem("pbl_last_invoke_ts");
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      json: async () => ({ content: [{ text: "ok" }] }),
+    } as Response);
+
+    await adapter.invokeAI(anthropicParams);
+
+    const fetchCall = vi.mocked(fetch).mock.calls[0];
+    expect(fetchCall[0]).toContain("anthropic.com");
+    const headers = (fetchCall[1]?.headers as Record<string, string>) || {};
+    expect(headers["x-api-key"]).toBe("sk-ant-test");
+    expect(headers["anthropic-version"]).toBe("2023-06-01");
+  });
+
+  it("lança erro com status HTTP quando Anthropic retorna erro", async () => {
+    localStorage.removeItem("pbl_last_invoke_ts");
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: false,
+      status: 429,
+      text: async () => "Rate limited",
+    } as Response);
+
+    await expect(adapter.invokeAI(anthropicParams)).rejects.toThrow("429");
+  });
+});
+
+// ─── Cache Invalidation ──────────────────────────────────────────────────────
+
+describe("invalidatePersonasCache", () => {
+  it("remove timestamp do cache, forçando refetch na próxima chamada", () => {
+    localStorage.setItem("pbl_personas_cache_ts", String(Date.now()));
+    adapter.invalidatePersonasCache();
+    expect(localStorage.getItem("pbl_personas_cache_ts")).toBeNull();
+  });
+
+  it("não remove os dados do cache em si (apenas invalida)", () => {
+    localStorage.setItem("pbl_personas_cache", '[{"meta":{"id":"goku"}}]');
+    localStorage.setItem("pbl_personas_cache_ts", String(Date.now()));
+    adapter.invalidatePersonasCache();
+    expect(localStorage.getItem("pbl_personas_cache")).not.toBeNull();
+  });
+});
+
+// ─── loadPersonas ─────────────────────────────────────────────────────────────
+
+describe("loadPersonas", () => {
+  it("usa cache quando válido (< 24h)", async () => {
+    const personas = [{ meta: { id: "goku", display_name: "Goku" } }];
+    localStorage.setItem("pbl_personas_cache", JSON.stringify(personas));
+    localStorage.setItem("pbl_personas_cache_ts", String(Date.now()));
+
+    const fetchSpy = vi.spyOn(globalThis, "fetch");
+    const result = await adapter.loadPersonas();
+
+    expect(result).toHaveLength(1);
+    expect(result[0].meta.id).toBe("goku");
+    expect(fetchSpy).not.toHaveBeenCalled(); // NÃO fez fetch
+  });
+
+  it("faz fetch quando cache está expirado (> 24h)", async () => {
+    localStorage.setItem("pbl_personas_cache", "[]");
+    localStorage.setItem("pbl_personas_cache_ts", String(Date.now() - 25 * 60 * 60 * 1000));
+
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      json: async () => ({ personas: ["fictional/goku.json"] }),
+    } as Response);
+
+    // The loadPersonas will try to fetch individual personas too
+    // Mock subsequent fetches
+    const fetchSpy = vi.mocked(fetch);
+    fetchSpy.mockResolvedValueOnce({
+      ok: true,
+      json: async () => ({ personas: ["fictional/goku.json"] }),
+    } as Response);
+    fetchSpy.mockResolvedValueOnce({
+      ok: true,
+      json: async () => ({
+        meta: { id: "goku", display_name: "Goku" },
+        character: {},
+        prompts: {},
+      }),
+    } as Response);
+
+    await adapter.loadPersonas();
+    expect(fetchSpy).toHaveBeenCalled();
+  });
+
+  it("retorna cache antigo como fallback quando fetch falha (offline)", async () => {
+    const oldPersonas = [{ meta: { id: "naruto", display_name: "Naruto" } }];
+    localStorage.setItem("pbl_personas_cache", JSON.stringify(oldPersonas));
+    localStorage.setItem("pbl_personas_cache_ts", String(Date.now() - 48 * 60 * 60 * 1000));
+
+    vi.spyOn(globalThis, "fetch").mockRejectedValue(new Error("Network error"));
+
+    const result = await adapter.loadPersonas();
+    expect(result).toHaveLength(1);
+    expect(result[0].meta.id).toBe("naruto");
+  });
+
+  it("retorna array vazio quando fetch falha e não há cache", async () => {
+    vi.spyOn(globalThis, "fetch").mockRejectedValue(new Error("Network error"));
+
+    const result = await adapter.loadPersonas();
+    expect(result).toEqual([]);
   });
 });

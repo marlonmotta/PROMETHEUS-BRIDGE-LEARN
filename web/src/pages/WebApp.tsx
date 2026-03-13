@@ -75,6 +75,9 @@ export default function WebApp() {
 
   // ── Inicialização ──
   useEffect(() => {
+    // Invalida cache no boot para sempre buscar personas frescas do GitHub.
+    // Se offline, loadPersonas() ainda usa o cache como fallback.
+    service.invalidatePersonasCache();
     service
       .loadPersonas()
       .then((raw) => {
