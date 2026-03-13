@@ -38,9 +38,17 @@ fn validate_export_path(path: &str, format: &str) -> Result<(), String> {
 
             // Deny-list: bloqueia diretórios de sistema conhecidos
             let blocked = [
-                "\\windows\\", "\\system32", "\\syswow64",
-                "\\program files", "\\program files (x86)", "\\programdata",
-                "/etc/", "/usr/", "/bin/", "/sbin/", "/var/",
+                "\\windows\\",
+                "\\system32",
+                "\\syswow64",
+                "\\program files",
+                "\\program files (x86)",
+                "\\programdata",
+                "/etc/",
+                "/usr/",
+                "/bin/",
+                "/sbin/",
+                "/var/",
             ];
             if blocked.iter().any(|b| canon_str.contains(b)) {
                 return Err("Não é permitido exportar para diretórios de sistema.".to_string());
@@ -53,7 +61,9 @@ fn validate_export_path(path: &str, format: &str) -> Result<(), String> {
             }
 
             // Allow-list: se possível, verifica se está no perfil do usuário
-            if let Ok(user_profile) = std::env::var("USERPROFILE").or_else(|_| std::env::var("HOME")) {
+            if let Ok(user_profile) =
+                std::env::var("USERPROFILE").or_else(|_| std::env::var("HOME"))
+            {
                 let user_lower = user_profile.to_lowercase();
                 if !canon_str.starts_with(&user_lower) {
                     log::warn!(
@@ -116,12 +126,10 @@ pub fn export_file(content: String, format: String, path: String) -> Result<(), 
     validate_export_path(&path, &format)?;
 
     match format.as_str() {
-        "txt" | "md" => {
-            fs::write(&path, content).map_err(|e| {
-                log::error!("[PBL] Erro ao exportar arquivo: {e}");
-                "Não foi possível salvar o arquivo exportado".to_string()
-            })
-        }
+        "txt" | "md" => fs::write(&path, content).map_err(|e| {
+            log::error!("[PBL] Erro ao exportar arquivo: {e}");
+            "Não foi possível salvar o arquivo exportado".to_string()
+        }),
         "html" => generate_html(&content, &path),
         "docx" => generate_docx(&content, &path),
         "pdf" => generate_pdf(&content, &path),
@@ -188,9 +196,11 @@ fn generate_html(content: &str, path: &str) -> Result<(), String> {
         let trimmed = line.trim();
 
         // Fechar listas se a linha não é item
-        let is_ul = trimmed.starts_with("- ") || trimmed.starts_with("+ ")
+        let is_ul = trimmed.starts_with("- ")
+            || trimmed.starts_with("+ ")
             || (trimmed.starts_with("* ") && !trimmed.starts_with("**"));
-        let is_ol = trimmed.find(". ")
+        let is_ol = trimmed
+            .find(". ")
             .map(|p| !trimmed[..p].is_empty() && trimmed[..p].chars().all(|c| c.is_ascii_digit()))
             .unwrap_or(false);
 
@@ -220,7 +230,10 @@ fn generate_html(content: &str, path: &str) -> Result<(), String> {
         } else if let Some(h) = trimmed.strip_prefix("# ") {
             body.push_str(&format!("<h1>{}</h1>\n", md_inline_to_html(h)));
         } else if let Some(q) = trimmed.strip_prefix("> ") {
-            body.push_str(&format!("<blockquote>{}</blockquote>\n", md_inline_to_html(q)));
+            body.push_str(&format!(
+                "<blockquote>{}</blockquote>\n",
+                md_inline_to_html(q)
+            ));
         } else if is_ul {
             if !in_ul {
                 body.push_str("<ul>\n");
@@ -241,10 +254,15 @@ fn generate_html(content: &str, path: &str) -> Result<(), String> {
         }
     }
 
-    if in_ul { body.push_str("</ul>\n"); }
-    if in_ol { body.push_str("</ol>\n"); }
+    if in_ul {
+        body.push_str("</ul>\n");
+    }
+    if in_ol {
+        body.push_str("</ol>\n");
+    }
 
-    let html = format!(r#"<!DOCTYPE html>
+    let html = format!(
+        r#"<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -267,7 +285,8 @@ fn generate_html(content: &str, path: &str) -> Result<(), String> {
 <body>
 {body}
 </body>
-</html>"#);
+</html>"#
+    );
 
     fs::write(path, html).map_err(|e| {
         log::error!("[PBL] Erro ao exportar HTML: {e}");
@@ -289,53 +308,46 @@ fn generate_docx(content: &str, path: &str) -> Result<(), String> {
         } else if trimmed == "---" || trimmed == "___" || trimmed == "***" {
             // Separador → parágrafo vazio com borda inferior
             doc = doc.add_paragraph(Paragraph::new());
-        } else if let Some(h) = trimmed.strip_prefix("###### ")
+        } else if let Some(h) = trimmed
+            .strip_prefix("###### ")
             .or_else(|| trimmed.strip_prefix("##### "))
             .or_else(|| trimmed.strip_prefix("#### "))
         {
-            doc = doc.add_paragraph(
-                Paragraph::new().add_run(
-                    Run::new().add_text(h).bold().size(22)
-                )
-            );
+            doc =
+                doc.add_paragraph(Paragraph::new().add_run(Run::new().add_text(h).bold().size(22)));
         } else if let Some(h) = trimmed.strip_prefix("### ") {
-            doc = doc.add_paragraph(
-                Paragraph::new().add_run(
-                    Run::new().add_text(h).bold().size(24)
-                )
-            );
+            doc =
+                doc.add_paragraph(Paragraph::new().add_run(Run::new().add_text(h).bold().size(24)));
         } else if let Some(h) = trimmed.strip_prefix("## ") {
-            doc = doc.add_paragraph(
-                Paragraph::new().add_run(
-                    Run::new().add_text(h).bold().size(28)
-                )
-            );
+            doc =
+                doc.add_paragraph(Paragraph::new().add_run(Run::new().add_text(h).bold().size(28)));
         } else if let Some(h) = trimmed.strip_prefix("# ") {
             doc = doc.add_paragraph(
                 Paragraph::new()
                     .align(AlignmentType::Center)
-                    .add_run(Run::new().add_text(h).bold().size(32))
+                    .add_run(Run::new().add_text(h).bold().size(32)),
             );
         } else if let Some(q) = trimmed.strip_prefix("> ") {
             doc = doc.add_paragraph(
                 Paragraph::new()
                     .indent(Some(720), None, None, None)
-                    .add_run(Run::new().add_text(q).italic().color("555555"))
+                    .add_run(Run::new().add_text(q).italic().color("555555")),
             );
-        } else if let Some(rest) = trimmed.strip_prefix("- ")
+        } else if let Some(rest) = trimmed
+            .strip_prefix("- ")
             .or_else(|| trimmed.strip_prefix("+ "))
         {
             doc = doc.add_paragraph(
                 Paragraph::new()
                     .indent(Some(360), None, None, None)
-                    .add_run(Run::new().add_text(format!("• {}", rest)))
+                    .add_run(Run::new().add_text(format!("• {}", rest))),
             );
         } else if trimmed.starts_with("* ") && !trimmed.starts_with("**") {
             let rest = &trimmed[2..];
             doc = doc.add_paragraph(
                 Paragraph::new()
                     .indent(Some(360), None, None, None)
-                    .add_run(Run::new().add_text(format!("• {}", rest)))
+                    .add_run(Run::new().add_text(format!("• {}", rest))),
             );
         } else {
             // Parse inline markdown para DOCX
@@ -505,10 +517,7 @@ fn generate_pdf(content: &str, path: &str) -> Result<(), String> {
     let mut ordered_items: Vec<genpdf::elements::Paragraph> = Vec::new();
 
     /// Flush de lista não-ordenada acumulada
-    fn flush_unordered(
-        doc: &mut genpdf::Document,
-        items: &mut Vec<genpdf::elements::Paragraph>,
-    ) {
+    fn flush_unordered(doc: &mut genpdf::Document, items: &mut Vec<genpdf::elements::Paragraph>) {
         if items.is_empty() {
             return;
         }
@@ -520,10 +529,7 @@ fn generate_pdf(content: &str, path: &str) -> Result<(), String> {
     }
 
     /// Flush de lista ordenada acumulada
-    fn flush_ordered(
-        doc: &mut genpdf::Document,
-        items: &mut Vec<genpdf::elements::Paragraph>,
-    ) {
+    fn flush_ordered(doc: &mut genpdf::Document, items: &mut Vec<genpdf::elements::Paragraph>) {
         if items.is_empty() {
             return;
         }
@@ -546,9 +552,7 @@ fn generate_pdf(content: &str, path: &str) -> Result<(), String> {
         }
 
         // ── Separadores (---, ___, ***) ──
-        if (trimmed == "---" || trimmed == "___" || trimmed == "***")
-            && trimmed.len() >= 3
-        {
+        if (trimmed == "---" || trimmed == "___" || trimmed == "***") && trimmed.len() >= 3 {
             flush_unordered(&mut doc, &mut unordered_items);
             flush_ordered(&mut doc, &mut ordered_items);
             doc.push(elements::Break::new(1.0));
@@ -601,12 +605,16 @@ fn generate_pdf(content: &str, path: &str) -> Result<(), String> {
             flush_ordered(&mut doc, &mut ordered_items);
             let mut p = elements::Paragraph::default();
             p.push_styled(format!("  \u{201C}{}\u{201D}", quote_text), style_quote);
-            doc.push(elements::PaddedElement::new(p, genpdf::Margins::trbl(1, 0, 1, 10)));
+            doc.push(elements::PaddedElement::new(
+                p,
+                genpdf::Margins::trbl(1, 0, 1, 10),
+            ));
             continue;
         }
 
         // ── Lista não-ordenada (- item, * item, + item) ──
-        if let Some(rest) = trimmed.strip_prefix("- ")
+        if let Some(rest) = trimmed
+            .strip_prefix("- ")
             .or_else(|| trimmed.strip_prefix("+ "))
         {
             flush_ordered(&mut doc, &mut ordered_items);
@@ -647,7 +655,10 @@ fn generate_pdf(content: &str, path: &str) -> Result<(), String> {
                 flush_ordered(&mut doc, &mut ordered_items);
                 // Itens de múltipla escolha → parágrafo indentado
                 let p = parse_md_line(trimmed);
-                doc.push(elements::PaddedElement::new(p, genpdf::Margins::trbl(0, 0, 0, 8)));
+                doc.push(elements::PaddedElement::new(
+                    p,
+                    genpdf::Margins::trbl(0, 0, 0, 8),
+                ));
                 continue;
             }
         }
@@ -753,7 +764,11 @@ mod tests {
     fn html_gerado_contem_heading_h1() {
         let dir = env::temp_dir().join("pbl_test_h1.html");
         let path = dir.to_str().unwrap().to_string();
-        let result = export_file("# Título Principal".to_string(), "html".to_string(), path.clone());
+        let result = export_file(
+            "# Título Principal".to_string(),
+            "html".to_string(),
+            path.clone(),
+        );
         assert!(result.is_ok());
         let content = std::fs::read_to_string(&path).unwrap();
         assert!(content.contains("<h1>"), "got: {content}");
@@ -764,7 +779,11 @@ mod tests {
     fn html_gerado_contem_lista_nao_ordenada() {
         let dir = env::temp_dir().join("pbl_test_ul.html");
         let path = dir.to_str().unwrap().to_string();
-        let result = export_file("- Item 1\n- Item 2\n- Item 3".to_string(), "html".to_string(), path.clone());
+        let result = export_file(
+            "- Item 1\n- Item 2\n- Item 3".to_string(),
+            "html".to_string(),
+            path.clone(),
+        );
         assert!(result.is_ok());
         let content = std::fs::read_to_string(&path).unwrap();
         assert!(content.contains("<ul>"), "got: {content}");
@@ -776,7 +795,11 @@ mod tests {
     fn html_gerado_contem_blockquote() {
         let dir = env::temp_dir().join("pbl_test_quote.html");
         let path = dir.to_str().unwrap().to_string();
-        let result = export_file("> Citação importante".to_string(), "html".to_string(), path.clone());
+        let result = export_file(
+            "> Citação importante".to_string(),
+            "html".to_string(),
+            path.clone(),
+        );
         assert!(result.is_ok());
         let content = std::fs::read_to_string(&path).unwrap();
         assert!(content.contains("<blockquote>"), "got: {content}");
@@ -854,7 +877,11 @@ mod tests {
     fn exporta_txt_com_sucesso() {
         let dir = env::temp_dir().join("pbl_test_export_txt.txt");
         let path = dir.to_str().unwrap().to_string();
-        let result = export_file("Conteúdo teste".to_string(), "txt".to_string(), path.clone());
+        let result = export_file(
+            "Conteúdo teste".to_string(),
+            "txt".to_string(),
+            path.clone(),
+        );
         assert!(result.is_ok());
         let content = fs::read_to_string(&path).unwrap();
         assert_eq!(content, "Conteúdo teste");
@@ -865,7 +892,11 @@ mod tests {
     fn exporta_md_com_sucesso() {
         let dir = env::temp_dir().join("pbl_test_export.md");
         let path = dir.to_str().unwrap().to_string();
-        let result = export_file("# Título\nTexto".to_string(), "md".to_string(), path.clone());
+        let result = export_file(
+            "# Título\nTexto".to_string(),
+            "md".to_string(),
+            path.clone(),
+        );
         assert!(result.is_ok());
         let content = fs::read_to_string(&path).unwrap();
         assert!(content.contains("# Título"));

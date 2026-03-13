@@ -15,8 +15,8 @@
 //! | Groq       | Cloud        | `api.groq.com/openai/v1/chat/completions`   |
 
 use serde_json::Value;
-use std::sync::LazyLock;
 use std::sync::atomic::{AtomicU64, Ordering};
+use std::sync::LazyLock;
 use std::time::{Duration, SystemTime, UNIX_EPOCH};
 
 /// Cliente HTTP reutilizável para chamadas de IA (timeout 120s).
@@ -75,7 +75,10 @@ pub async fn invoke_ai(
         if last > 0 && now_ms.saturating_sub(last) < MIN_INVOKE_INTERVAL_MS {
             return Err("Aguarde alguns segundos antes de gerar novamente.".to_string());
         }
-        if LAST_INVOKE_MS.compare_exchange(last, now_ms, Ordering::Release, Ordering::Relaxed).is_ok() {
+        if LAST_INVOKE_MS
+            .compare_exchange(last, now_ms, Ordering::Release, Ordering::Relaxed)
+            .is_ok()
+        {
             break;
         }
     }
@@ -97,8 +100,15 @@ pub async fn invoke_ai(
     }
 
     // ── OpenAI-compatible (openai, openrouter, groq) ────────────────────────
-    call_openai_compatible(client, &provider, &api_key, &model, &system_prompt, &user_content)
-        .await
+    call_openai_compatible(
+        client,
+        &provider,
+        &api_key,
+        &model,
+        &system_prompt,
+        &user_content,
+    )
+    .await
 }
 
 /// Verifica se o servidor Ollama está acessível em `localhost:11434`.
@@ -209,10 +219,7 @@ async fn call_gemini(
     } else {
         model
     };
-    let url = format!(
-        "{}/{}:generateContent",
-        GEMINI_BASE_URL, m
-    );
+    let url = format!("{}/{}:generateContent", GEMINI_BASE_URL, m);
     let body = serde_json::json!({
         "contents": [
             { "role": "user", "parts": [{ "text": user_content }] }
@@ -223,7 +230,10 @@ async fn call_gemini(
         "generationConfig": { "maxOutputTokens": 8192 }
     });
     send_and_parse(
-        client.post(&url).header("x-goog-api-key", api_key).json(&body),
+        client
+            .post(&url)
+            .header("x-goog-api-key", api_key)
+            .json(&body),
         "/candidates/0/content/parts/0/text",
         "Gemini",
     )
@@ -414,11 +424,12 @@ async fn call_gemini_vision(
     mime: &str,
     image_b64: &str,
 ) -> Result<String, String> {
-    let m = if model.is_empty() { "gemini-2.0-flash" } else { model };
-    let url = format!(
-        "{}/{}:generateContent",
-        GEMINI_BASE_URL, m
-    );
+    let m = if model.is_empty() {
+        "gemini-2.0-flash"
+    } else {
+        model
+    };
+    let url = format!("{}/{}:generateContent", GEMINI_BASE_URL, m);
     let body = serde_json::json!({
         "contents": [{
             "parts": [
@@ -434,7 +445,10 @@ async fn call_gemini_vision(
         "generationConfig": { "maxOutputTokens": 4096 }
     });
     send_and_parse(
-        client.post(&url).header("x-goog-api-key", api_key).json(&body),
+        client
+            .post(&url)
+            .header("x-goog-api-key", api_key)
+            .json(&body),
         "/candidates/0/content/parts/0/text",
         "Gemini (vision)",
     )
@@ -449,7 +463,11 @@ async fn call_anthropic_vision(
     mime: &str,
     image_b64: &str,
 ) -> Result<String, String> {
-    let m = if model.is_empty() { "claude-3-5-sonnet-20241022" } else { model };
+    let m = if model.is_empty() {
+        "claude-3-5-sonnet-20241022"
+    } else {
+        model
+    };
     let body = serde_json::json!({
         "model": m,
         "max_tokens": 4096,
@@ -479,4 +497,3 @@ async fn call_anthropic_vision(
     )
     .await
 }
-

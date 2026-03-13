@@ -1,4 +1,4 @@
-﻿//! # Módulo de Importação de Arquivos
+//! # Módulo de Importação de Arquivos
 //!
 //! Extrai texto de arquivos PDF e DOCX para uso como entrada no sistema
 //! de adaptação. O texto extraído é retornado ao frontend como string pura
@@ -62,12 +62,10 @@ fn import_file_sync(path: &str) -> Result<String, String> {
     }
 
     match ext.as_str() {
-        "txt" | "md" => {
-            fs::read_to_string(path).map_err(|e| {
-                log::error!("[PBL] Erro ao ler arquivo texto: {e}");
-                "Não foi possível ler o arquivo de texto".to_string()
-            })
-        }
+        "txt" | "md" => fs::read_to_string(path).map_err(|e| {
+            log::error!("[PBL] Erro ao ler arquivo texto: {e}");
+            "Não foi possível ler o arquivo de texto".to_string()
+        }),
         "pdf" => extract_pdf(path),
         "docx" => extract_docx(path),
         "odt" => extract_odt(path),
@@ -84,7 +82,8 @@ fn import_file_sync(path: &str) -> Result<String, String> {
 fn extract_pdf(path: &str) -> Result<String, String> {
     let bytes = fs::read(path).map_err(|e| {
         log::error!("[PBL] Erro ao ler PDF: {e}");
-        "Não foi possível abrir o arquivo PDF. Verifique se o arquivo não está corrompido.".to_string()
+        "Não foi possível abrir o arquivo PDF. Verifique se o arquivo não está corrompido."
+            .to_string()
     })?;
 
     let text = pdf_extract::extract_text_from_mem(&bytes).map_err(|e| {
@@ -94,7 +93,8 @@ fn extract_pdf(path: &str) -> Result<String, String> {
             "Isso geralmente acontece com PDFs gerados por scanner (imagens).\n",
             "💡 Solução: Abra o arquivo no Word ou LibreOffice e salve como .docx ou .txt, ",
             "depois importe esse novo arquivo."
-        ).to_string()
+        )
+        .to_string()
     })?;
 
     let cleaned = text
@@ -266,9 +266,7 @@ fn extract_docx(path: &str) -> Result<String, String> {
 
     // Remove linhas vazias consecutivas excessivas
     let text = result.join("\n");
-    let cleaned: Vec<&str> = text
-        .lines()
-        .collect();
+    let cleaned: Vec<&str> = text.lines().collect();
 
     Ok(cleaned.join("\n"))
 }
@@ -291,7 +289,10 @@ mod tests {
         let _ = fs::remove_file(path);
         assert!(result.is_err());
         let err = result.unwrap_err();
-        assert!(err.contains("xyz") || err.contains("suportado"), "got: {err}");
+        assert!(
+            err.contains("xyz") || err.contains("suportado"),
+            "got: {err}"
+        );
     }
 
     #[test]

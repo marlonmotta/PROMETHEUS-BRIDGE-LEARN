@@ -148,7 +148,11 @@ pub async fn update_personas_online(app: tauri::AppHandle) -> Result<Vec<Value>,
 
     for item in personas_list {
         if let Some(filename) = item.as_str() {
-            let name = filename.split('/').next_back().unwrap_or(filename).to_string();
+            let name = filename
+                .split('/')
+                .next_back()
+                .unwrap_or(filename)
+                .to_string();
             let local_path = dir.join(&name);
 
             if !local_path.exists() {
@@ -179,10 +183,7 @@ pub async fn update_personas_online(app: tauri::AppHandle) -> Result<Vec<Value>,
                 let name = filename.split('/').next_back().unwrap_or(&filename);
                 let local_path = dir.join(name);
                 if fs::write(&local_path, &text).is_err() {
-                    log::error!(
-                        "[PBL] Falha ao salvar persona localmente: {:?}",
-                        local_path
-                    );
+                    log::error!("[PBL] Falha ao salvar persona localmente: {:?}", local_path);
                 }
                 downloaded.push(json);
             }
@@ -270,7 +271,11 @@ fn validate_persona_json(json: &Value) -> Result<String, String> {
 }
 
 /// Salva o conteúdo de uma persona validada no diretório local.
-fn save_persona_to_disk(app: &tauri::AppHandle, safe_id: &str, content: &str) -> Result<(), String> {
+fn save_persona_to_disk(
+    app: &tauri::AppHandle,
+    safe_id: &str,
+    content: &str,
+) -> Result<(), String> {
     let dest = personas_dir(app)?.join(format!("{}.json", safe_id));
     fs::write(&dest, content).map_err(|e| {
         log::error!("[PBL] Erro ao salvar persona em {:?}: {e}", dest);
@@ -390,14 +395,10 @@ pub async fn cache_avatar(
         .build()
         .map_err(|e| format!("Erro ao criar cliente HTTP: {e}"))?;
 
-    let resp = client
-        .get(&avatar_url)
-        .send()
-        .await
-        .map_err(|e| {
-            log::error!("[PBL] Erro ao baixar avatar {safe_id}: {e}");
-            format!("Falha ao baixar avatar: {e}")
-        })?;
+    let resp = client.get(&avatar_url).send().await.map_err(|e| {
+        log::error!("[PBL] Erro ao baixar avatar {safe_id}: {e}");
+        format!("Falha ao baixar avatar: {e}")
+    })?;
 
     if !resp.status().is_success() {
         return Err(format!("HTTP {} ao baixar avatar", resp.status()));
@@ -427,16 +428,28 @@ mod tests {
     #[test]
     fn sanitize_persona_id_aceita_ids_validos() {
         assert_eq!(sanitize_persona_id("goku").unwrap(), "goku");
-        assert_eq!(sanitize_persona_id("jiraiya-sensei").unwrap(), "jiraiya-sensei");
+        assert_eq!(
+            sanitize_persona_id("jiraiya-sensei").unwrap(),
+            "jiraiya-sensei"
+        );
         assert_eq!(sanitize_persona_id("l_lawliet").unwrap(), "l_lawliet");
-        assert_eq!(sanitize_persona_id("albert-einstein").unwrap(), "albert-einstein");
+        assert_eq!(
+            sanitize_persona_id("albert-einstein").unwrap(),
+            "albert-einstein"
+        );
     }
 
     #[test]
     fn sanitize_persona_id_remove_caracteres_perigosos() {
-        assert_eq!(sanitize_persona_id("../../etc/passwd").unwrap(), "etcpasswd");
+        assert_eq!(
+            sanitize_persona_id("../../etc/passwd").unwrap(),
+            "etcpasswd"
+        );
         assert_eq!(sanitize_persona_id("goku<script>").unwrap(), "gokuscript");
-        assert_eq!(sanitize_persona_id("test file.json").unwrap(), "testfilejson");
+        assert_eq!(
+            sanitize_persona_id("test file.json").unwrap(),
+            "testfilejson"
+        );
     }
 
     #[test]
