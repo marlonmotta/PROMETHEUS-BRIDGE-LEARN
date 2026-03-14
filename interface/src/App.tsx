@@ -2,15 +2,12 @@
  * @module App
  * @description Componente raiz da aplicação PBL (PROMETHEUS · BRIDGE · LEARN).
  *
- * Orquestra o estado global da aplicação e a navegação entre views.
- * Cada view é renderizada condicionalmente com base no estado `view`.
+ * Usa `useReducer` com o `appReducer` compartilhado para gerenciar
+ * todo o estado da aplicação via dispatch de ações tipadas.
  *
  * ## Arquitetura de Estado
  *
- * O estado é gerenciado via React hooks locais (sem Redux/Zustand) porque
- * a complexidade atual não justifica uma biblioteca externa de state management.
- * O estado se divide em:
- *
+ * O estado é centralizado num único `useReducer`:
  * - **Navegação**: `view` - qual tela está ativa
  * - **Personas**: `personas`, `selectedPersona` - catálogo e seleção
  * - **Conteúdo**: `content`, `subject`, `difficulty` - input do professor
@@ -18,351 +15,227 @@
  * - **Persistência**: `settings`, `history`, `favorites` - via localStorage
  * - **Conectividade**: `ollamaOnline` - status do servidor Ollama local
  *
- * ## Fluxo Principal
+ * ## Hooks Extraídos
  *
- * 1. Home → 2. Selecionar Persona → 3. Inserir Conteúdo → 4. Gerar → 5. Resultado
+ * A lógica de negócio foi extraída para hooks dedicados:
+ * - `useGenerate` - chamada IA + timeout + abort
+ * - `useExport` - exportar conteúdo em diversos formatos
+ * - `useImportFile` - importar documentos e imagens (OCR)
  */
 
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useReducer, useEffect, useCallback, useRef } from "react";
 import { invoke } from "./lib/tauri";
-import {
-  DEFAULT_SETTINGS,
-  SUBJECTS,
-  type Persona,
-  type Settings,
-  type HistoryItem,
-  type View,
-} from "./lib/constants";
-import { buildPromptPayload } from "./lib/promptBuilder";
+import { SUBJECTS, type Persona, type Settings, type HistoryItem } from "@pbl/shared/constants";
+import { appReducer, createInitialState, persistState } from "@pbl/shared/appReducer";
+import { useGenerate } from "./hooks/useGenerate";
+import { useExport } from "./hooks/useExport";
+import { useImportFile } from "./hooks/useImportFile";
 import Sidebar from "./components/Sidebar";
-import HomeView from "./components/HomeView";
-import PersonasView from "./components/PersonasView";
-import ContentView from "./components/ContentView";
-import ResultView from "./components/ResultView";
-import ManagerView from "./components/ManagerView";
-import SettingsView from "./components/SettingsView";
+import DashboardView from "@pbl/shared/components/views/DashboardView";
+import HomeView from "@pbl/shared/components/views/HomeView";
+import HistoryView from "@pbl/shared/components/views/HistoryView";
+import ManagerView from "./components/DesktopManagerWrapper";
+import SettingsView from "@pbl/shared/components/views/SettingsView";
 import UpdateChecker from "./components/UpdateChecker";
-import ToastContainer from "./components/Toast";
+import ToastContainer from "@pbl/shared/components/Toast";
 
 export default function App() {
-  // ── Estado de navegação ──
-  const [view, setView] = useState<View>("home");
+  const [state, dispatch] = useReducer(appReducer, undefined, createInitialState);
 
-  // ── Estado de personas ──
-  const [personas, setPersonas] = useState<Persona[]>([]);
-  const [selectedPersona, setSelectedPersona] = useState<Persona | null>(null);
-
-  // ── Estado de conteúdo e geração ──
-  const [content, setContent] = useState("");
-  const [subject, setSubject] = useState("");
-  const [difficulty, setDifficulty] = useState("simple");
-  const [result, setResult] = useState("");
-  const [fullPrompt, setFullPrompt] = useState("");
-  const [generating, setGenerating] = useState(false);
-
-  // ── Estado de conectividade ──
-  const [ollamaOnline, setOllamaOnline] = useState(false);
-
-  // ── Estado persistido (localStorage) ──
-  const [history, setHistory] = useState<HistoryItem[]>([]);
-
-  /**
-   * Favorites armazenadas como Set para lookup O(1).
-   * Inicializadas a partir do localStorage com fallback para Set vazio.
-   */
-  const [favorites, setFavorites] = useState<Set<string>>(() => {
-    try {
-      const raw = localStorage.getItem("pbl_favorites");
-      return raw ? new Set(JSON.parse(raw)) : new Set();
-    } catch {
-      return new Set();
-    }
-  });
-
-  /**
-   * Settings globais inicializadas com merge do localStorage + defaults.
-   * O spread `{ ...DEFAULT_SETTINGS, ...parsed }` garante que novos campos
-   * adicionados em atualizações sejam preenchidos com valores padrão.
-   *
-   * NOTA: A API key NÃO é carregada do localStorage - vem do secure store
-   * do Tauri (ver useEffect de inicialização abaixo).
-   */
-  const [settings, setSettings] = useState<Settings>(() => {
-    try {
-      const raw = localStorage.getItem("pbl_settings");
-      const parsed = raw ? { ...DEFAULT_SETTINGS, ...JSON.parse(raw) } : DEFAULT_SETTINGS;
-      return { ...parsed, apiKey: "" };
-    } catch {
-      return DEFAULT_SETTINGS;
-    }
-  });
-
-  /**
-   * Flag para garantir que a atualização online de personas rode apenas uma vez.
-   * Sem isso, o useEffect com `personas.length` como dependência poderia
-   * entrar em loop quando novas personas são adicionadas pelo update.
-   */
   const hasCheckedOnlineRef = useRef(false);
 
-  // ── Inicialização (carrega personas, verifica Ollama, restaura histórico, API key) ──
+  // ── Hooks de lógica de negócio ──
+  const { handleGenerate } = useGenerate({
+    selectedPersona: state.selectedPersona,
+    content: state.content,
+    subject: state.subject,
+    difficulty: state.difficulty,
+    settings: state.settings,
+    dispatch,
+  });
+
+  const { handleExport } = useExport();
+
+  const { handleImportFile } = useImportFile({
+    settings: state.settings,
+    dispatch,
+  });
+
+  // ── Persistência de estado (settings, history, favorites) ──
+  const { settings, history, favorites } = state;
+  useEffect(() => {
+    persistState({ settings, history, favorites });
+  }, [settings, history, favorites]);
+
+  // ── Inicialização ──
   useEffect(() => {
     invoke<Persona[]>("load_personas")
       .then((raw) => {
         if (raw && Array.isArray(raw)) {
-          setPersonas(raw.map((p) => ({ ...p, _source: p._source || "embedded" })));
+          const personas = raw.map((p) => ({ ...p, _source: p._source || "embedded" }));
+          dispatch({ type: "SET_PERSONAS", personas });
+          // Auto-select first persona alphabetically
+          const sorted = [...personas].sort((a, b) =>
+            (a.meta?.display_name || "").localeCompare(b.meta?.display_name || ""),
+          );
+          if (sorted.length > 0) {
+            dispatch({ type: "SET_SELECTED_PERSONA", persona: sorted[0] });
+          }
         }
       })
-      .catch(() => {});
+      .catch((e) => console.error("[PBL] Falha ao carregar personas:", e));
 
     invoke<boolean>("check_ollama")
       .then((v) => {
-        if (typeof v === "boolean") setOllamaOnline(v);
+        if (typeof v === "boolean") dispatch({ type: "SET_OLLAMA_ONLINE", online: v });
       })
-      .catch(() => setOllamaOnline(false));
+      .catch(() => dispatch({ type: "SET_OLLAMA_ONLINE", online: false }));
 
-    // Carrega API key do armazenamento seguro do Tauri
     invoke<string>("get_api_key")
       .then((key) => {
-        if (key) setSettings((prev) => ({ ...prev, apiKey: key }));
+        if (key) dispatch({ type: "PATCH_SETTINGS", partial: { apiKey: key } });
       })
-      .catch(() => {});
-
-    try {
-      const raw = localStorage.getItem("pbl_history");
-      if (raw) setHistory(JSON.parse(raw));
-    } catch {
-      // Dados corrompidos no localStorage — reinicia do zero
-    }
+      .catch((e) => console.error("[PBL] Falha ao carregar API key:", e));
   }, []);
 
-  /**
-   * Atualização silenciosa de personas do GitHub.
-   *
-   * Roda uma única vez após o carregamento inicial das personas embutidas.
-   * A flag `hasCheckedOnlineRef` previne re-execuções quando o estado
-   * de personas muda (o que causaria loop infinito).
-   */
+  // ── Atualização online de personas (uma vez) ──
   useEffect(() => {
-    if (personas.length === 0 || hasCheckedOnlineRef.current) return;
+    if (state.personas.length === 0 || hasCheckedOnlineRef.current) return;
     hasCheckedOnlineRef.current = true;
 
     invoke<Persona[]>("update_personas_online")
       .then((novas) => {
         if (novas && novas.length > 0) {
-          const ids = new Set(novas.map((p) => p.meta?.id));
-          setPersonas((prev) => [
-            ...prev.filter((p) => !ids.has(p.meta?.id)),
-            ...novas.map((p) => ({ ...p, _source: "local" })),
-          ]);
+          dispatch({ type: "MERGE_PERSONAS", newPersonas: novas });
         }
       })
-      .catch(() => {
-        // Falha silenciosa: atualização online é best-effort
-      });
-  }, [personas.length]);
+      .catch((e) => console.error("[PBL] Falha ao atualizar personas:", e));
+  }, [state.personas.length]);
 
-  // ── Handlers de persistência ──
+  // ── Handlers ──
 
-  /**
-   * Salva settings no localStorage e API key no armazenamento seguro.
-   *
-   * A API key é separada do JSON de settings no localStorage para não
-   * ficar exposta em plaintext. Ela é enviada ao backend Tauri que a
-   * persiste via tauri-plugin-store (criptografado em disco).
-   */
   const saveSettings = useCallback((s: Settings) => {
-    setSettings(s);
-    // Salva settings SEM a API key no localStorage
-    const { apiKey: _, ...settingsWithoutKey } = s;
-    localStorage.setItem("pbl_settings", JSON.stringify(settingsWithoutKey));
-    // Salva API key no armazenamento seguro do Tauri
+    dispatch({ type: "SET_SETTINGS", settings: s });
     if (s.apiKey !== undefined) {
-      invoke("save_api_key", { apiKey: s.apiKey }).catch(() => {});
+      invoke("save_api_key", { apiKey: s.apiKey }).catch((e) =>
+        console.error("[PBL] Falha ao salvar API key:", e),
+      );
     }
     if (s.mode === "offline") {
       invoke<boolean>("check_ollama")
-        .then(setOllamaOnline)
-        .catch(() => {});
+        .then((v) => dispatch({ type: "SET_OLLAMA_ONLINE", online: !!v }))
+        .catch((e) => console.error("[PBL] Falha ao checar Ollama:", e));
     }
   }, []);
 
-  /** Salva o histórico de adaptações no localStorage */
-  const saveHistory = useCallback((items: HistoryItem[]) => {
-    setHistory(items);
-    localStorage.setItem("pbl_history", JSON.stringify(items));
-  }, []);
-
-  /** Toggle de favoritos com persistência imediata */
-  const toggleFavorite = useCallback((id: string) => {
-    setFavorites((prev) => {
-      const next = new Set(prev);
-      if (next.has(id)) next.delete(id);
-      else next.add(id);
-      localStorage.setItem("pbl_favorites", JSON.stringify([...next]));
-      return next;
-    });
-  }, []);
-
-  /** Remove um item específico do histórico por índice */
-  const deleteHistoryItem = useCallback((index: number) => {
-    setHistory((prev) => {
-      const updated = prev.filter((_, i) => i !== index);
-      localStorage.setItem("pbl_history", JSON.stringify(updated));
-      return updated;
-    });
-  }, []);
-
-  /** Limpa todo o histórico de adaptações */
-  const clearHistory = useCallback(() => {
-    setHistory([]);
-    localStorage.removeItem("pbl_history");
-  }, []);
-
-  /**
-   * Handler de geração de conteúdo adaptado.
-   *
-   * Delega a construção do prompt para `promptBuilder.ts` (SoC).
-   * Em modo manual, exibe o prompt para cópia. Nos demais modos,
-   * invoca a IA via backend Tauri.
-   */
-  const handleGenerate = useCallback(async () => {
-    if (!selectedPersona || !content) return;
-    setGenerating(true);
-
-    const payload = buildPromptPayload(selectedPersona, content, subject, difficulty, settings);
-
-    setFullPrompt(payload.rewriteInstruction);
-
-    // Modo manual: exibe o prompt para o professor copiar
-    if (settings.mode === "manual") {
-      setResult(payload.rewriteInstruction);
-      setGenerating(false);
-      setView("result");
-      return;
-    }
-
-    // Modo online/offline: invoca a IA via backend
-    try {
-      const res = await invoke<string>("invoke_ai", {
-        mode: settings.mode,
-        provider: payload.provider,
-        apiKey: settings.apiKey || "",
-        model: payload.model,
-        systemPrompt: payload.systemPrompt,
-        userContent: payload.rewriteInstruction,
-      });
-      setResult(res);
-    } catch (e) {
-      setResult(
-        `Erro ao chamar IA: ${e}\n\nUse o prompt abaixo manualmente:\n\n${payload.rewriteInstruction}`,
-      );
-    }
-    setGenerating(false);
-    setView("result");
-  }, [selectedPersona, content, subject, difficulty, settings]);
-
-  /** Reseta o fluxo para uma nova adaptação */
-  const startNewAdaptation = useCallback(() => {
-    setResult("");
-    setContent("");
-    setSubject("");
-    setSelectedPersona(null);
-    setView("personas");
-  }, []);
-
-  /** Salva a adaptação atual no histórico */
   const handleSaveHistory = useCallback(() => {
+    const now = new Date();
     const item: HistoryItem = {
-      persona: selectedPersona?.meta?.display_name || "",
-      subject: SUBJECTS[subject] || subject,
-      content,
-      result,
-      date: new Date().toLocaleDateString("pt-BR"),
+      persona: state.selectedPersona?.meta?.display_name || "",
+      subject: SUBJECTS[state.subject] || state.subject,
+      content: state.content,
+      result: state.result,
+      date:
+        now.toLocaleDateString("pt-BR") +
+        " às " +
+        now.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }),
     };
-    saveHistory([item, ...history].slice(0, 20));
-  }, [selectedPersona, subject, content, result, history, saveHistory]);
+    dispatch({ type: "ADD_HISTORY", item });
+  }, [state.selectedPersona, state.subject, state.content, state.result]);
 
   return (
     <>
       <UpdateChecker />
       <ToastContainer />
       <Sidebar
-        view={view}
-        setView={setView}
-        ollamaOnline={ollamaOnline}
-        hasPersona={!!selectedPersona}
-        hasResult={!!result}
+        view={state.view}
+        setView={(v) => dispatch({ type: "SET_VIEW", view: v })}
+        ollamaOnline={state.ollamaOnline}
       />
-      <main className="flex-1 overflow-y-auto p-10 bg-bg">
-        <div className="max-w-[900px]">
-          {view === "home" && (
+      <main
+        className={`flex-1 p-5 lg:p-10 bg-bg ${state.view === "personas" ? "xl:overflow-hidden overflow-y-auto" : "overflow-y-auto"}`}
+      >
+        <div className={state.view === "personas" ? "" : "max-w-[900px]"}>
+          {state.view === "home" && (
             <HomeView
-              personaCount={personas.length}
-              history={history}
-              settings={settings}
-              onNewAdaptation={startNewAdaptation}
+              personaCount={state.personas.length}
+              history={state.history}
+              settings={state.settings}
+              onNewAdaptation={() => dispatch({ type: "SET_VIEW", view: "personas" })}
               onLoadHistory={(item) => {
-                setContent(item.content);
-                setResult(item.result);
-                setView("result");
+                dispatch({ type: "SET_CONTENT", content: item.content });
+                dispatch({ type: "SET_RESULT", result: item.result });
+                dispatch({ type: "SET_VIEW", view: "personas" });
               }}
-              onDeleteHistory={deleteHistoryItem}
+              onDeleteHistory={(i) => dispatch({ type: "DELETE_HISTORY", index: i })}
             />
           )}
-          {view === "personas" && (
-            <PersonasView
-              personas={personas}
-              selectedPersona={selectedPersona}
-              favorites={favorites}
-              onToggleFavorite={toggleFavorite}
-              onSelect={(p) => setSelectedPersona(p)}
-              onUse={() => setView("content")}
-            />
-          )}
-          {view === "content" && (
-            <ContentView
-              selectedPersona={selectedPersona}
-              content={content}
-              subject={subject}
-              difficulty={difficulty}
-              generating={generating}
-              settings={settings}
-              onContentChange={setContent}
-              onSubjectChange={setSubject}
-              onDifficultyChange={setDifficulty}
-              onSettingsChange={(partial) => saveSettings({ ...settings, ...partial })}
-              onChangePersona={() => setView("personas")}
+          {state.view === "personas" && (
+            <DashboardView
+              personas={state.personas}
+              selectedPersona={state.selectedPersona}
+              favorites={state.favorites}
+              content={state.content}
+              subject={state.subject}
+              difficulty={state.difficulty}
+              result={state.result}
+              generating={state.generating}
+              settings={state.settings}
+              avatarBase="/avatars"
+              onSelectPersona={(p) => dispatch({ type: "SET_SELECTED_PERSONA", persona: p })}
+              onToggleFavorite={(id) => dispatch({ type: "TOGGLE_FAVORITE", id })}
+              onContentChange={(c) => dispatch({ type: "SET_CONTENT", content: c })}
+              onSubjectChange={(s) => dispatch({ type: "SET_SUBJECT", subject: s })}
+              onDifficultyChange={(d) => dispatch({ type: "SET_DIFFICULTY", difficulty: d })}
+              onSettingsChange={(partial) => dispatch({ type: "PATCH_SETTINGS", partial })}
               onGenerate={handleGenerate}
-            />
-          )}
-          {view === "result" && (
-            <ResultView
-              result={result}
-              fullPrompt={fullPrompt}
-              selectedPersona={selectedPersona}
-              settings={settings}
-              subject={subject}
-              difficulty={difficulty}
               onSaveHistory={handleSaveHistory}
-              onNewAdaptation={startNewAdaptation}
+              resultSaved={!!state.result && state.history.some((h) => h.result === state.result)}
+              onExport={(format) => handleExport(state.result, format)}
+              onImportFile={handleImportFile}
             />
           )}
-          {view === "manager" && (
+          {state.view === "history" && (
+            <HistoryView
+              history={state.history}
+              onLoadHistory={(item) => {
+                dispatch({ type: "SET_CONTENT", content: item.content });
+                dispatch({ type: "SET_RESULT", result: item.result });
+                dispatch({ type: "SET_VIEW", view: "personas" });
+              }}
+              onDeleteHistory={(i) => dispatch({ type: "DELETE_HISTORY", index: i })}
+              onClearHistory={() => dispatch({ type: "CLEAR_HISTORY" })}
+              onExport={handleExport}
+            />
+          )}
+          {state.view === "manager" && (
             <ManagerView
-              personas={personas}
-              setPersonas={setPersonas}
-              selectedPersona={selectedPersona}
-              setSelectedPersona={setSelectedPersona}
+              personas={state.personas}
+              setPersonas={(p) =>
+                dispatch({
+                  type: "SET_PERSONAS",
+                  personas: typeof p === "function" ? p(state.personas) : p,
+                })
+              }
+              selectedPersona={state.selectedPersona}
+              setSelectedPersona={(p) =>
+                dispatch({
+                  type: "SET_SELECTED_PERSONA",
+                  persona: typeof p === "function" ? p(state.selectedPersona) : p,
+                })
+              }
             />
           )}
-          {view === "settings" && (
+          {state.view === "settings" && (
             <SettingsView
-              settings={settings}
-              ollamaOnline={ollamaOnline}
+              settings={state.settings}
+              ollamaOnline={state.ollamaOnline}
               onSave={saveSettings}
-              history={history}
-              onDeleteHistory={deleteHistoryItem}
-              onClearHistory={clearHistory}
+              history={state.history}
+              onDeleteHistory={(i) => dispatch({ type: "DELETE_HISTORY", index: i })}
+              onClearHistory={() => dispatch({ type: "CLEAR_HISTORY" })}
+              onDeleteApiKey={() => invoke("delete_api_key").catch((e) => console.error("[PBL] Falha ao limpar API key:", e))}
+              platform="Desktop"
             />
           )}
         </div>

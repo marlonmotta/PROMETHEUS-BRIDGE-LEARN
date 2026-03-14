@@ -14,7 +14,7 @@ import {
   OUTPUT_LANGUAGES,
   OUTPUT_FORMATS,
   DEFAULT_SETTINGS,
-} from "../constants";
+} from "@pbl/shared/constants";
 
 describe("SUBJECTS", () => {
   it("contém pelo menos 5 disciplinas", () => {
