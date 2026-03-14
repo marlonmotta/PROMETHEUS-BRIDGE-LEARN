@@ -5,7 +5,7 @@
 
 **Versão**: 1.0.0
 **Última Atualização**: 2026-03-08
-**Status**: RASCUNHO — revisar antes de mover para o Git
+**Status**: Publicado
 
 ---
 
@@ -402,6 +402,3 @@ R: Sim. O schema é agnóstico. Testado com GPT-4, Claude 3, Gemini Pro. Funcion
 ```
 
 ---
-
-> 📝 Este guia é um RASCUNHO. Após revisão, será movido para `GIT/docs/GUIA-DE-USO.md`.
-> Dados brutos e ideias originais estão em `.agent-context-mm/internal/brainstorm-bruto.md`.

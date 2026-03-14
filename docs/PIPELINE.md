@@ -5,7 +5,7 @@
 
 **Versão**: 1.0.0
 **Data**: 2026-03-08
-**Status**: RASCUNHO — revisar antes de mover para o Git
+**Status**: Publicado
 
 ---
 
@@ -929,11 +929,6 @@ def montar_prompt(persona, conteudo_original):
 
 ---
 
-> 📝 Este documento é RASCUNHO. Após revisão, será migrado para `GIT/docs/`.
-> Complementar ao GUIA-DE-USO.md (versão para leigos/professores).
-
----
-
 ## 12. Módulos Pendentes — Roadmap Técnico
 
 > Itens do brainstorm que precisam virar especificação técnica e implementação.
@@ -1145,5 +1140,4 @@ v3.0 (ECOSSISTEMA)
 
 ---
 
-> 📝 Este documento é RASCUNHO. Após revisão, será migrado para `GIT/docs/`.
-> Complementar ao GUIA-DE-USO.md (versão para leigos/professores).
+> 📝 Complementar ao [GUIA-DE-USO.md](GUIA-DE-USO.md) (versão para leigos/professores).
