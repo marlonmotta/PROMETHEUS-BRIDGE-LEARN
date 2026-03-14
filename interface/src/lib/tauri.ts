@@ -27,11 +27,13 @@
  * @returns Promise com o resultado do comando ou `undefined` se Tauri indisponível
  */
 export async function invoke<T = unknown>(cmd: string, args?: Record<string, unknown>): Promise<T> {
-  if (typeof window !== "undefined" && window.__TAURI__) {
-    return window.__TAURI__.core.invoke(cmd, args) as Promise<T>;
+  try {
+    const { invoke: tauriInvoke } = await import("@tauri-apps/api/core");
+    return tauriInvoke<T>(cmd, args);
+  } catch {
+    console.warn(`[PBL] Tauri não disponível - ignorando invoke("${cmd}")`);
+    throw new Error(`Tauri runtime not available for command "${cmd}"`);
   }
-  console.warn(`[PBL] Tauri não disponível - ignorando invoke("${cmd}")`);
-  return undefined as unknown as T;
 }
 
 /**

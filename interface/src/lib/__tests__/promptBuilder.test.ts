@@ -7,8 +7,8 @@
  */
 
 import { describe, it, expect } from "vitest";
-import { buildPromptPayload } from "../promptBuilder";
-import type { Persona, Settings } from "../constants";
+import { buildPromptPayload } from "@pbl/shared/promptBuilder";
+import type { Persona, Settings } from "@pbl/shared/constants";
 
 // ── Fixtures ────────────────────────────────────────────────────────────────
 
@@ -89,7 +89,7 @@ describe("buildPromptPayload", () => {
     const content = "A mitocôndria é a organela responsável pela respiração celular.";
     const result = buildPromptPayload(mockPersona, content, "science", "simple", defaultSettings);
     expect(result.rewriteInstruction).toContain(content);
-    expect(result.rewriteInstruction).toContain("CONTEÚDO ORIGINAL:");
+    expect(result.rewriteInstruction).toContain("CONTEUDO_ORIGINAL");
   });
 
   it("usa Ollama como provider no modo offline", () => {
