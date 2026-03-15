@@ -73,8 +73,13 @@ jobs:
             librsvg2-dev \
             patchelf
 
+      # @tauri-apps/cli usa optional deps platform-specific para native bindings.
+      # npm ci tem bug (#4828) que pode pular esses bindings em monorepos.
+      # Solução: npm install limpo garante resolução correta em todas as plataformas.
       - name: Install npm dependencies
-        run: npm ci
+        run: |
+          rm -rf node_modules package-lock.json
+          npm install
 
       # Sincroniza versão do package.json → tauri.conf.json antes do bundle
       - name: Sync version to tauri.conf.json
