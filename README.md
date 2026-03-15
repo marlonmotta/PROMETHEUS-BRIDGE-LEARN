@@ -222,6 +222,7 @@ O `packages/shared` tem **zero dependência** de `web/` ou `interface/`.
 Quando as duas plataformas precisam de uma feature nova, a lógica vai em `shared/`,
 e cada plataforma provendo a implementação via `IAppService`.
 
+```
 │   ├── manifest.json                 #    Índice de personas (usado pelo auto-update)
 │   ├── fictional/                    #    44 personas de personagens fictícios
 │   │   ├── goku.json
