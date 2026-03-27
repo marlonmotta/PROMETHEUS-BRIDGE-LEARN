@@ -22,7 +22,7 @@
 |---|---------|----------|--------|
 | 1 | Spider-Man / Homem-Aranha | Marvel | ✅ |
 | 2 | Iron Man / Homem de Ferro | Marvel | ✅ |
-| 3 | Captain America / Capitão América | Marvel | ⬜ |
+| 3 | Captain America / Capitão América | Marvel | ✅ |
 | 4 | Black Panther / Pantera Negra | Marvel | ⬜ |
 | 5 | Doctor Strange / Doutor Estranho | Marvel | ⬜ |
 | 6 | Thor | Marvel | ⬜ |
@@ -335,8 +335,8 @@
 | Lote 6 — Diário de Pilar | 3 |
 | Lote 6 — Roblox | 2 |
 | **Total** | **218** |
-| **Já criadas** | **63** |
-| **Pendentes** | **155** |
+| **Já criadas** | **64** |
+| **Pendentes** | **154** |
 
 ---
 
