@@ -61,8 +61,16 @@ pub const PERSONAS_EMBEDDED: &[(&str, &str)] = &[
         include_str!("../../../personas/fictional/batman.json"),
     ),
     (
+        "black-panther",
+        include_str!("../../../personas/fictional/black-panther.json"),
+    ),
+    (
         "breno",
         include_str!("../../../personas/fictional/breno.json"),
+    ),
+    (
+        "captain-america",
+        include_str!("../../../personas/fictional/captain-america.json"),
     ),
     (
         "chris-redfield",
@@ -83,6 +91,10 @@ pub const PERSONAS_EMBEDDED: &[(&str, &str)] = &[
     (
         "deckard-cain",
         include_str!("../../../personas/fictional/deckard-cain.json"),
+    ),
+    (
+        "doctor-strange",
+        include_str!("../../../personas/fictional/doctor-strange.json"),
     ),
     (
         "ezio-auditore",
