@@ -11,6 +11,7 @@ import { memo, useState } from "react";
 import type { Persona } from "@pbl/shared/constants";
 import Icon from "@pbl/shared/components/Icon";
 import { toast } from "@pbl/shared/components/Toast";
+import { useI18n } from "@pbl/shared/i18n";
 
 interface Props {
   personas: Persona[];
@@ -35,6 +36,7 @@ export default memo(function ManagerView({
   const [updating, setUpdating] = useState(false);
   const [deleteTarget, setDeleteTarget] = useState<Persona | null>(null);
   const [confirmDeleteAll, setConfirmDeleteAll] = useState(false);
+  const { t } = useI18n();
 
   async function updateOnline() {
     setUpdating(true);
@@ -46,12 +48,12 @@ export default memo(function ManagerView({
           ...personas.filter((p) => !ids.has(p.meta?.id)),
           ...novas.map((p) => ({ ...p, _source: "local" as const })),
         ]);
-        toast(`${novas.length} persona(s) atualizada(s) do GitHub`, "success");
+        toast(t("manager.updateSuccess", { count: String(novas.length) }), "success");
       } else {
-        toast("Tudo atualizado. Nenhuma persona nova no repositório.", "info");
+        toast(t("manager.updateUpToDate"), "info");
       }
     } catch (e) {
-      toast(`Falha ao conectar ao GitHub: ${e}`, "error");
+      toast(`${t("manager.updateError")}: ${e}`, "error");
     }
     setUpdating(false);
   }
@@ -60,7 +62,7 @@ export default memo(function ManagerView({
     if (!deleteTarget) return;
     const id = deleteTarget.meta?.id;
     if (!id) {
-      toast("Persona sem ID válido", "error");
+      toast(t("manager.invalidId"), "error");
       setDeleteTarget(null);
       return;
     }
@@ -80,9 +82,9 @@ export default memo(function ManagerView({
           onSelectedPersonaChanged(null);
         }
       }
-      toast("Persona excluída com sucesso", "success");
+      toast(t("manager.deleteSuccess"), "success");
     } catch (e) {
-      toast(`Erro ao excluir persona: ${e}`, "error");
+      toast(`${t("manager.deleteError")}: ${e}`, "error");
     }
     setDeleteTarget(null);
   }
@@ -93,9 +95,9 @@ export default memo(function ManagerView({
       await Promise.all(ids.map((id) => onDeletePersona(id)));
       onPersonasChanged([]);
       onSelectedPersonaChanged(null);
-      toast(`${personas.length} persona(s) excluída(s)`, "success");
+      toast(t("manager.deletedCount", { count: String(personas.length) }), "success");
     } catch (e) {
-      toast(`Erro ao excluir personas: ${e}`, "error");
+      toast(`${t("manager.deleteAllError")}: ${e}`, "error");
     }
     setConfirmDeleteAll(false);
   }
@@ -108,12 +110,12 @@ export default memo(function ManagerView({
     <section className="h-full flex flex-col overflow-hidden">
       <div className="mb-8">
         <h1 className="text-[28px] font-bold text-txt mb-1.5">
-          Gerenciar Personas
+          {t("manager.title")}
         </h1>
         <p className="text-sm text-txt-2">
-          Gerencie todas as personas disponíveis ·{" "}
+          {t("manager.subtitle")} ·{" "}
           <span className="text-accent font-medium">{personas.length}</span>{" "}
-          personas
+          {t("manager.personas")}
         </p>
       </div>
 
@@ -126,26 +128,26 @@ export default memo(function ManagerView({
           className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-sm border border-border text-txt text-[13px] font-medium hover:bg-bg-3 transition-colors disabled:opacity-50"
         >
           <Icon name="refresh" size={15} />
-          {updating ? "Atualizando..." : "Atualizar do GitHub"}
+          {updating ? t("manager.updating") : t("manager.updateGithub")}
         </button>
         <button
           onClick={() => setConfirmDeleteAll(true)}
           disabled={personas.length === 0}
           className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-sm text-[13px] text-danger border border-danger/20 bg-danger/10 hover:bg-danger/20 transition-colors disabled:opacity-40"
         >
-          <Icon name="trash" size={15} /> Excluir Todas
+          <Icon name="trash" size={15} /> {t("manager.deleteAll")}
         </button>
       </div>
 
       {/* Lista de personas */}
       <div className="bg-bg-2 border border-border rounded p-5 flex-1 min-h-0 flex flex-col">
         <h2 className="text-sm font-semibold mb-4">
-          Catálogo ({personas.length} personas)
+          {t("manager.catalog")} ({personas.length} {t("manager.personas")})
         </h2>
 
         {localPersonas.length === 0 && (
           <div className="text-sm text-txt-3 text-center py-6">
-            Nenhuma persona importada ou baixada.
+            {t("manager.empty")}
           </div>
         )}
 
@@ -186,9 +188,9 @@ export default memo(function ManagerView({
             className="bg-bg-2 border border-border rounded p-7 max-w-sm w-[90%]"
             onClick={(e) => e.stopPropagation()}
           >
-            <h3 className="font-bold mb-2.5">Excluir persona?</h3>
+            <h3 className="font-bold mb-2.5">{t("manager.deleteConfirm")}</h3>
             <p className="text-txt-2 text-sm mb-5">
-              Tem certeza que deseja excluir{" "}
+              {t("manager.deleteConfirmMessage")}{" "}
               <strong>{deleteTarget.meta?.display_name}</strong>?
             </p>
             <div className="flex gap-2.5 justify-end">
@@ -196,13 +198,13 @@ export default memo(function ManagerView({
                 onClick={() => setDeleteTarget(null)}
                 className="text-[13px] text-txt-2 border border-border rounded-sm px-4 py-2 hover:bg-bg-3 transition-colors"
               >
-                Cancelar
+                {t("manager.cancel")}
               </button>
               <button
                 onClick={doDelete}
                 className="text-[13px] text-danger border border-danger/20 bg-danger/10 rounded-sm px-4 py-2 hover:bg-danger/20 transition-colors"
               >
-                Excluir
+                {t("manager.delete")}
               </button>
             </div>
           </div>
@@ -219,24 +221,22 @@ export default memo(function ManagerView({
             className="bg-bg-2 border border-border rounded p-7 max-w-sm w-[90%]"
             onClick={(e) => e.stopPropagation()}
           >
-            <h3 className="font-bold mb-2.5">Excluir todas as personas?</h3>
+            <h3 className="font-bold mb-2.5">{t("manager.deleteAllConfirm")}</h3>
             <p className="text-txt-2 text-sm mb-5">
-              Tem certeza que deseja excluir{" "}
-              <strong>todas as {personas.length} personas</strong>? Você poderá
-              baixá-las novamente pelo GitHub.
+              {t("manager.deleteAllMessage", { count: String(personas.length) })}
             </p>
             <div className="flex gap-2.5 justify-end">
               <button
                 onClick={() => setConfirmDeleteAll(false)}
                 className="text-[13px] text-txt-2 border border-border rounded-sm px-4 py-2 hover:bg-bg-3 transition-colors"
               >
-                Cancelar
+                {t("manager.cancel")}
               </button>
               <button
                 onClick={doDeleteAll}
                 className="text-[13px] text-danger border border-danger/20 bg-danger/10 rounded-sm px-4 py-2 hover:bg-danger/20 transition-colors"
               >
-                Excluir Todas
+                {t("manager.deleteAll")}
               </button>
             </div>
           </div>

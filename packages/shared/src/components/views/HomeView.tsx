@@ -14,6 +14,7 @@
 import { memo } from "react";
 import { type HistoryItem, type Settings } from "@pbl/shared/constants";
 import Icon from "@pbl/shared/components/Icon";
+import { useI18n } from "@pbl/shared/i18n";
 
 interface Props {
   /** Número total de personas disponíveis no catálogo */
@@ -44,23 +45,24 @@ export default memo(function HomeView({
   onLoadHistory,
   onDeleteHistory,
 }: Props) {
+  const { t } = useI18n();
   const aiMode = AI_MODE_LABELS[settings.mode] || settings.provider;
 
   /** Dados dos cards de estatísticas com IDs estáveis para keys */
   const stats = [
-    { id: "personas", value: personaCount, label: "Personas disponíveis" },
-    { id: "history", value: history.length, label: "Adaptações salvas" },
-    { id: "ai-mode", value: aiMode, label: "Modo de IA ativo" },
+    { id: "personas", value: personaCount, label: t("home.stats.personas") },
+    { id: "history", value: history.length, label: t("home.stats.adaptations") },
+    { id: "ai-mode", value: aiMode, label: t("home.stats.mode") },
   ];
 
   return (
     <section>
       <div className="mb-8">
         <h1 className="text-[28px] font-bold text-txt mb-1.5">
-          Bem-vindo ao PBL
+          {t("home.welcome")}
         </h1>
         <p className="text-sm text-txt-2">
-          Adapte conteúdo pedagógico ao universo do seu aluno com IA
+          {t("home.subtitle")}
         </p>
       </div>
 
@@ -83,14 +85,14 @@ export default memo(function HomeView({
         className="inline-flex items-center gap-2 px-7 py-3.5 rounded-sm bg-accent text-white font-medium text-[15px] hover:bg-accent-2 transition-colors"
       >
         <Icon name="plus" size={20} />
-        Nova Adaptação
+        {t("home.newAdaptation")}
       </button>
 
       {/* Histórico recente */}
       {history.length > 0 && (
         <>
           <div className="text-xs text-txt-3 uppercase tracking-wider mt-7 mb-3">
-            Histórico recente
+            {t("home.recentHistory")}
           </div>
           <div className="flex flex-col gap-2">
             {history.slice(0, 5).map((item, i) => (
@@ -121,8 +123,8 @@ export default memo(function HomeView({
       )}
       {history.length === 0 && (
         <div className="mt-8 p-10 text-center text-txt-3 bg-bg-2 border border-dashed border-border rounded">
-          Nenhuma adaptação salva ainda. Comece clicando em{" "}
-          <strong>Nova Adaptação</strong>!
+          {t("home.emptyHistory")}{" "}
+          <strong>{t("home.newAdaptation")}</strong>!
         </div>
       )}
     </section>

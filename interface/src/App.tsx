@@ -38,6 +38,7 @@ import ManagerView from "./components/DesktopManagerWrapper";
 import SettingsView from "@pbl/shared/components/views/SettingsView";
 import UpdateChecker from "./components/UpdateChecker";
 import ToastContainer from "@pbl/shared/components/Toast";
+import { I18nProvider } from "@pbl/shared/i18n";
 
 export default function App() {
   const [state, dispatch] = useReducer(appReducer, undefined, createInitialState);
@@ -144,7 +145,7 @@ export default function App() {
   }, [state.selectedPersona, state.subject, state.content, state.result]);
 
   return (
-    <>
+    <I18nProvider locale={state.settings.interfaceLanguage}>
       <UpdateChecker />
       <ToastContainer />
       <Sidebar
@@ -240,6 +241,6 @@ export default function App() {
           )}
         </div>
       </main>
-    </>
+    </I18nProvider>
   );
 }

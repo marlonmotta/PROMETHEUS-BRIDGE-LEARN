@@ -52,6 +52,7 @@ import ManagerView from "@/components/app/WebManagerWrapper";
 import SettingsView from "@pbl/shared/components/views/SettingsView";
 import ToastContainer from "@pbl/shared/components/Toast";
 import { useImportFile } from "@/hooks/useImportFile";
+import { I18nProvider } from "@pbl/shared/i18n";
 
 export default function WebApp() {
   const service = useService();
@@ -218,7 +219,7 @@ export default function WebApp() {
   const { handleImportFile } = useImportFile({ settings: state.settings, dispatch });
 
   return (
-    <>
+    <I18nProvider locale={state.settings.interfaceLanguage}>
       <ToastContainer />
       <Sidebar
         view={state.view}
@@ -360,7 +361,7 @@ export default function WebApp() {
         </div>
         <ScrollToTopButton parentRef={mainRef} />
       </main>
-    </>
+    </I18nProvider>
   );
 }
 
