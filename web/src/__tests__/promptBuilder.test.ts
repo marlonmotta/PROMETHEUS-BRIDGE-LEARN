@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Testes unitários do módulo promptBuilder.
  * Portado do desktop com os mesmos cenários de teste.
  */
@@ -44,6 +44,7 @@ const defaultSettings: Settings = {
   apiKey: "",
   outputLanguage: "pt-BR",
   outputFormat: "free",
+  interfaceLanguage: "pt-BR",
 };
 
 describe("buildPromptPayload", () => {

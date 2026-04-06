@@ -9,15 +9,42 @@
  * - Constantes em `UPPER_SNAKE_CASE`
  * - Tipos/Interfaces em `PascalCase`
  * - Chaves de objetos em `camelCase` ou slugs (`kebab-case` para IDs)
- * - Labels exibidos ao usuário em Português do Brasil
+ * - Labels exibidos ao usuário são resolvidos via i18n
  */
 
+/** Tipo da função de tradução (evita dependência circular com i18n) */
+export type TFunction = (key: string, params?: Record<string, string | number>) => string;
+
 /**
- * Mapa de disciplinas disponíveis no sistema.
- * Chave = slug interno | Valor = label exibido na interface.
- *
- * Novas disciplinas devem ser adicionadas **somente aqui** -
- * todos os componentes referenciam este mapa.
+ * Slugs das disciplinas disponíveis no sistema.
+ * Novas disciplinas devem ser adicionadas aqui E nos arquivos i18n.
+ */
+export const SUBJECT_KEYS = [
+  "math",
+  "portuguese",
+  "science",
+  "physics",
+  "chemistry",
+  "biology",
+  "history",
+  "geography",
+] as const;
+
+/**
+ * Retorna o mapa de disciplinas com labels traduzidos.
+ * @param t - Função de tradução do i18n
+ */
+export function getSubjects(t: TFunction): Record<string, string> {
+  const map: Record<string, string> = {};
+  for (const key of SUBJECT_KEYS) {
+    map[key] = t(`constants.subjects.${key}`);
+  }
+  return map;
+}
+
+/**
+ * Mapa estático de disciplinas (fallback PT-BR para uso fora de React).
+ * @deprecated Use `getSubjects(t)` para labels traduzidos.
  */
 export const SUBJECTS: Record<string, string> = {
   math: "Matemática",
@@ -31,8 +58,24 @@ export const SUBJECTS: Record<string, string> = {
 };
 
 /**
- * Níveis de dificuldade para adaptação do conteúdo.
- * Utiliza a nomenclatura "Rank" para gamificação da experiência do aluno.
+ * Slugs de dificuldade para adaptação do conteúdo.
+ */
+export const DIFFICULTY_KEYS = ["simple", "moderate", "advanced"] as const;
+
+/**
+ * Retorna o mapa de dificuldades com labels traduzidos.
+ */
+export function getDifficulties(t: TFunction): Record<string, string> {
+  const map: Record<string, string> = {};
+  for (const key of DIFFICULTY_KEYS) {
+    map[key] = t(`constants.difficulties.${key}`);
+  }
+  return map;
+}
+
+/**
+ * Mapa estático de dificuldades (fallback PT-BR).
+ * @deprecated Use `getDifficulties(t)` para labels traduzidos.
  */
 export const DIFFICULTIES: Record<string, string> = {
   simple: "Rank D - Simples",
@@ -66,8 +109,24 @@ export const OUTPUT_LANGUAGES: Record<string, string> = {
 };
 
 /**
- * Formatos de saída disponíveis para o conteúdo adaptado.
- * Define a estrutura do texto gerado pela IA (prova, resumo, etc.).
+ * Slugs dos formatos de saída.
+ */
+export const FORMAT_KEYS = ["free", "exam", "summary", "exercises", "lesson_plan"] as const;
+
+/**
+ * Retorna o mapa de formatos com labels traduzidos.
+ */
+export function getOutputFormats(t: TFunction): Record<string, string> {
+  const map: Record<string, string> = {};
+  for (const key of FORMAT_KEYS) {
+    map[key] = t(`constants.outputFormats.${key}`);
+  }
+  return map;
+}
+
+/**
+ * Mapa estático de formatos (fallback PT-BR).
+ * @deprecated Use `getOutputFormats(t)` para labels traduzidos.
  */
 export const OUTPUT_FORMATS: Record<string, string> = {
   free: "Livre (padrão)",
@@ -162,6 +221,8 @@ export interface Settings {
   outputLanguage: string;
   /** Formato de saída do conteúdo */
   outputFormat: string;
+  /** Idioma da interface do usuário (ex: "pt-BR", "en", "es") */
+  interfaceLanguage: string;
 }
 
 /**
@@ -194,4 +255,5 @@ export const DEFAULT_SETTINGS: Settings = {
   apiKey: "",
   outputLanguage: "pt-BR",
   outputFormat: "free",
+  interfaceLanguage: "pt-BR",
 };

@@ -20,6 +20,7 @@ const defaultSettings: Settings = {
   outputLanguage: "pt-BR",
   ollamaModel: "",
   ollamaUrl: "http://localhost:11434",
+  interfaceLanguage: "pt-BR",
 };
 
 function makePersona(id: string, name: string): Persona {
