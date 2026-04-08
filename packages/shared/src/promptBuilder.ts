@@ -37,7 +37,7 @@ export interface PromptPayload {
   rewriteInstruction: string;
   /** Provedor de IA selecionado (ex: "ollama", "openai") */
   provider: string;
-  /** Modelo específico do provedor (ex: "gpt-4o", "llama3") */
+  /** Modelo específico do provedor (ex: "gpt-5.4", "llama3") */
   model: string;
 }
 

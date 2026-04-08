@@ -31,7 +31,7 @@ describe("appReducer - navegação", () => {
   });
 
   it("START_NEW_ADAPTATION reseta e navega para personas", () => {
-    const mid = { ...state, content: "test", result: "res", view: "result" as const };
+    const mid = { ...state, content: "test", result: "res", view: "personas" as const };
     const next = appReducer(mid, { type: "START_NEW_ADAPTATION" });
     expect(next.content).toBe("");
     expect(next.result).toBe("");
@@ -55,7 +55,7 @@ describe("appReducer - geração", () => {
     });
     expect(next.generating).toBe(false);
     expect(next.result).toBe("Resultado");
-    expect(next.view).toBe("result");
+    expect(next.view).toBe("personas");
   });
 });
 

@@ -235,6 +235,51 @@ export default function App() {
               onDeleteHistory={(i) => dispatch({ type: "DELETE_HISTORY", index: i })}
               onClearHistory={() => dispatch({ type: "CLEAR_HISTORY" })}
               onDeleteApiKey={() => invoke("delete_api_key").catch((e) => console.error("[PBL] Falha ao limpar API key:", e))}
+              onDownloadLogs={() => {
+                invoke<string>("export_app_logs").then(content => {
+                  const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
+                  const url = URL.createObjectURL(blob);
+                  const a = document.createElement("a");
+                  a.href = url;
+                  a.download = "PBL_Error_Log.txt";
+                  document.body.appendChild(a);
+                  a.click();
+                  document.body.removeChild(a);
+                  URL.revokeObjectURL(url);
+                }).catch(e => {
+                  console.error("[PBL] Falha ao extrair log de erro:", e);
+                  alert("Não foi possível gerar ou baixar o log. Detalhes:\n" + e);
+                });
+              }}
+              /* TODO: Ativar este botão após configurar o Worker da Cloudflare
+              onSendLogs={() => {
+                invoke<string>("export_app_logs").then(async (logContent) => {
+                  try {
+                    const res = await fetch(LOG_REPORT_ENDPOINT, {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({
+                        log: logContent,
+                        appVersion: (globalThis as unknown as Record<string, string>).__APP_VERSION__ ?? "0.2.0",
+                        platform: "Desktop",
+                      }),
+                    });
+                    const data = await res.json();
+                    if (data.success) {
+                      alert("✅ " + data.message);
+                    } else {
+                      alert("❌ Falha ao enviar: " + (data.error || "Erro desconhecido"));
+                    }
+                  } catch (err) {
+                    console.error("[PBL] Falha ao enviar log:", err);
+                    alert("❌ Não foi possível conectar ao servidor de suporte. Verifique sua internet e tente novamente.");
+                  }
+                }).catch(e => {
+                  console.error("[PBL] Falha ao extrair log:", e);
+                  alert("❌ Não foi possível extrair o log do aplicativo.");
+                });
+              }}
+              */
               platform="Desktop"
             />
           )}
