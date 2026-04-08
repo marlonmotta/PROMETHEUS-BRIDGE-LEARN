@@ -11,6 +11,19 @@
  * - **jpg/png/webp/gif**: OCR via API de IA com vision
  */
 
+import { t as tStandalone } from "./i18n";
+
+function getLocale(): string {
+  try {
+    const s = localStorage.getItem("pbl_settings");
+    if (s) {
+      const parsed = JSON.parse(s);
+      if (parsed.interfaceLanguage) return parsed.interfaceLanguage;
+    }
+  } catch (e) {}
+  return "pt-BR";
+}
+
 /** Extensões de imagem suportadas para OCR */
 const IMAGE_EXTENSIONS = ["jpg", "jpeg", "png", "webp", "gif"];
 
@@ -85,7 +98,7 @@ async function extractDocxText(file: File): Promise<string> {
   const xmlContent = await extractFileFromZip(buffer, "word/document.xml");
 
   if (!xmlContent) {
-    throw new Error("Arquivo DOCX inválido ou corrompido");
+    throw new Error(tStandalone("errors.importDocxInvalid", getLocale()));
   }
 
   const parser = new DOMParser();
@@ -185,7 +198,7 @@ async function extractOdtText(file: File): Promise<string> {
   const xmlContent = await extractFileFromZip(buffer, "content.xml");
 
   if (!xmlContent) {
-    throw new Error("ODT inválido: content.xml não encontrado no arquivo.");
+    throw new Error(tStandalone("errors.importOdtInvalid", getLocale()));
   }
 
   // Extrai texto das tags <text:p>
@@ -207,7 +220,7 @@ async function extractOdtText(file: File): Promise<string> {
   }
 
   if (paragraphs.length === 0) {
-    throw new Error("O documento ODT não contém texto extraível.");
+    throw new Error(tStandalone("errors.importOdtNoText", getLocale()));
   }
 
   return paragraphs.join("\n");
@@ -224,7 +237,9 @@ async function extractPdfText(file: File): Promise<string> {
   const MAX_PDF_SIZE = 50 * 1024 * 1024; // 50MB
   if (file.size > MAX_PDF_SIZE) {
     throw new Error(
-      `PDF muito grande (${(file.size / 1024 / 1024).toFixed(1)}MB). Máximo permitido: 50MB.`,
+      tStandalone("errors.importPdfTooLarge", getLocale(), {
+        size: (file.size / 1024 / 1024).toFixed(1),
+      })
     );
   }
 
@@ -235,9 +250,7 @@ async function extractPdfText(file: File): Promise<string> {
   try {
     pdfjsLib = await /* @vite-ignore */ import("pdfjs-dist");
   } catch {
-    throw new Error(
-      "Suporte a PDF não está disponível neste ambiente. Use .docx, .odt ou .txt.",
-    );
+    throw new Error(tStandalone("errors.importPdfNotSupported", getLocale()));
   }
 
   pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
@@ -261,10 +274,7 @@ async function extractPdfText(file: File): Promise<string> {
 
   const text = pages.join("\n").trim();
   if (!text) {
-    throw new Error(
-      "Este PDF não contém texto extraível - provavelmente é um documento escaneado (imagem).\n\n" +
-        "💡 Solução: Abra no Word ou LibreOffice, exporte como .docx ou .txt, e reimporte.",
-    );
+    throw new Error(tStandalone("errors.importPdfNoText", getLocale()));
   }
 
   return text;
@@ -279,7 +289,7 @@ export function imageToBase64(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.onload = () => resolve(reader.result as string);
-    reader.onerror = () => reject(new Error("Erro ao ler imagem"));
+    reader.onerror = () => reject(new Error(tStandalone("errors.importImageError", getLocale())));
     reader.readAsDataURL(file);
   });
 }
@@ -304,8 +314,7 @@ export async function extractTextFromImage(
   const mimeMatch = dataUrl.match(/data:(image\/[^;]+);/);
   const mime = mimeMatch ? mimeMatch[1] : "image/jpeg";
 
-  const prompt =
-    "Extraia TODO o texto contido nesta imagem. Mantenha a formatação original o mais fielmente possível (títulos, numeração, alternativas a/b/c/d, espaçamentos). Retorne APENAS o texto extraído, sem comentários adicionais.";
+  const prompt = tStandalone("errors.ocrPrompt", getLocale());
 
   if (provider === "gemini") {
     return callGeminiVision(apiKey, model || "gemini-2.0-flash", prompt, mime, base64);
@@ -360,11 +369,16 @@ async function callOpenaiVision(
   });
 
   if (!resp.ok) {
-    throw new Error(`Vision API ${resp.status}: ${await resp.text()}`);
+    throw new Error(
+      tStandalone("errors.visionApiError", getLocale(), {
+        status: resp.status,
+        error: await resp.text(),
+      }),
+    );
   }
   const j = await resp.json();
   const text = j?.choices?.[0]?.message?.content;
-  if (!text) throw new Error(j?.error?.message || "Resposta vazia da API");
+  if (!text) throw new Error(j?.error?.message || tStandalone("errors.importEmptyAPI", getLocale()));
   return text;
 }
 
@@ -398,11 +412,16 @@ async function callGeminiVision(
   });
 
   if (!resp.ok) {
-    throw new Error(`Gemini Vision ${resp.status}: ${await resp.text()}`);
+    throw new Error(
+      tStandalone("errors.geminiVisionError", getLocale(), {
+        status: resp.status,
+        error: await resp.text(),
+      }),
+    );
   }
   const j = await resp.json();
   const text = j?.candidates?.[0]?.content?.parts?.[0]?.text;
-  if (!text) throw new Error("Não foi possível extrair texto via Gemini");
+  if (!text) throw new Error(tStandalone("errors.importGeminiError", getLocale()));
   return text;
 }
 
@@ -445,10 +464,15 @@ async function callAnthropicVision(
   });
 
   if (!resp.ok) {
-    throw new Error(`Anthropic Vision ${resp.status}: ${await resp.text()}`);
+    throw new Error(
+      tStandalone("errors.anthropicVisionError", getLocale(), {
+        status: resp.status,
+        error: await resp.text(),
+      }),
+    );
   }
   const j = await resp.json();
   const text = j?.content?.[0]?.text;
-  if (!text) throw new Error("Não foi possível extrair texto via Anthropic");
+  if (!text) throw new Error(tStandalone("errors.importAnthropicError", getLocale()));
   return text;
 }

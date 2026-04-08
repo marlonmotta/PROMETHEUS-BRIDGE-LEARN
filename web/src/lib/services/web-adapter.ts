@@ -12,6 +12,20 @@
 import type { Persona } from "@pbl/shared/constants";
 import type { IAppService, AIRequest } from "./types";
 import { downloadBlob } from "./web-exporters";
+import { t as tStandalone } from "@pbl/shared/i18n";
+
+function getLocale(): string {
+  try {
+    const s = localStorage.getItem("pbl_settings");
+    if (s) {
+      const parsed = JSON.parse(s);
+      if (parsed.interfaceLanguage) return parsed.interfaceLanguage;
+    }
+  } catch {
+    // ignore e retorna fallback
+  }
+  return "pt-BR";
+}
 
 const GITHUB_RAW_DIRECT =
   "https://raw.githubusercontent.com/marlonmotta/PROMETHEUS-BRIDGE-LEARN/main/personas";
@@ -101,7 +115,7 @@ export class WebAdapter implements IAppService {
           }
         }
       } catch (e) {
-        console.warn("[PBL] Cache de personas corrompido:", e);
+        console.warn(tStandalone("dev.cacheCorrupted", getLocale()), e);
       }
 
       // Atualiza cache com timestamp
@@ -109,13 +123,13 @@ export class WebAdapter implements IAppService {
       localStorage.setItem("pbl_personas_cache_ts", String(Date.now()));
       return personas;
     } catch (e) {
-      console.warn("[PBL] Falha ao carregar personas remotas, usando cache:", e);
+      console.warn(tStandalone("dev.remoteLoadFailed", getLocale()), e);
       // Offline: tenta cache (mesmo expirado, como fallback)
       try {
         const cached = localStorage.getItem("pbl_personas_cache");
         return cached ? JSON.parse(cached) : [];
       } catch (e) {
-        console.warn("[PBL] Falha ao ler cache offline:", e);
+        console.warn(tStandalone("dev.offlineCacheReadFailed", getLocale()), e);
         return [];
       }
     }
@@ -148,20 +162,18 @@ export class WebAdapter implements IAppService {
         localStorage.setItem("pbl_personas_cache", JSON.stringify(filtered));
       }
     } catch (e) {
-      console.warn("[PBL] Falha ao deletar persona do cache:", e);
+      console.warn(tStandalone("dev.deleteCacheFailed", getLocale()), e);
     }
   }
 
   async addPersonaFromJson(jsonStr: string): Promise<Persona> {
     // Limite de tamanho: 100KB por persona para prevenir DoS (paridade com Rust backend)
     if (jsonStr.length > 100_000) {
-      throw new Error("JSON da persona excede o limite de 100KB");
+      throw new Error(tStandalone("errors.personaSizeLimit", getLocale()));
     }
     const persona: Persona = JSON.parse(jsonStr);
     if (!persona?.meta?.id || !persona?.meta?.display_name) {
-      throw new Error(
-        "Persona inválida: meta.id e meta.display_name são obrigatórios",
-      );
+      throw new Error(tStandalone("errors.personaInvalid", getLocale()));
     }
     try {
       const cached = localStorage.getItem("pbl_personas_cache");
@@ -169,7 +181,7 @@ export class WebAdapter implements IAppService {
       personas.push({ ...persona, _source: "local" });
       localStorage.setItem("pbl_personas_cache", JSON.stringify(personas));
     } catch (e) {
-      console.warn("[PBL] Falha ao salvar persona no cache:", e);
+      console.warn(tStandalone("dev.saveCacheFailed", getLocale()), e);
     }
     return persona;
   }
@@ -193,7 +205,9 @@ export class WebAdapter implements IAppService {
     const elapsed = now - last;
     if (elapsed < WebAdapter.MIN_INVOKE_INTERVAL) {
       throw new Error(
-        `Aguarde ${Math.ceil((WebAdapter.MIN_INVOKE_INTERVAL - elapsed) / 1000)}s antes de gerar novamente.`,
+        tStandalone("errors.rateLimitSeconds", getLocale(), {
+          seconds: Math.ceil((WebAdapter.MIN_INVOKE_INTERVAL - elapsed) / 1000),
+        }),
       );
     }
     localStorage.setItem(WebAdapter.RATE_LIMIT_KEY, String(now));
@@ -201,9 +215,7 @@ export class WebAdapter implements IAppService {
     const { provider, apiKey, model, systemPrompt, userContent } = params;
 
     if (provider === "ollama") {
-      throw new Error(
-        "Ollama não é suportado na versão web. Use o modo online ou manual.",
-      );
+      throw new Error(tStandalone("errors.ollamaNotSupported", getLocale()));
     }
 
     // Gemini tem API diferente
@@ -243,16 +255,10 @@ export class WebAdapter implements IAppService {
       }),
     }).catch((err) => {
       if (err instanceof DOMException && err.name === "TimeoutError") {
-        throw new Error(
-          `Timeout: o provedor ${provider} não respondeu em 60 segundos. Tente novamente.`,
-        );
+        throw new Error(tStandalone("errors.timeoutProvider", getLocale(), { provider }));
       }
       if (err instanceof TypeError) {
-        throw new Error(
-          `Não foi possível conectar ao provedor ${provider}. ` +
-            `Isso pode ser causado por bloqueio de CORS no navegador. ` +
-            `Tente usar o modo manual ou a versão desktop.`,
-        );
+        throw new Error(tStandalone("errors.corsError", getLocale()));
       }
       throw err;
     });

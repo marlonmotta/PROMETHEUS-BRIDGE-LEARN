@@ -12,6 +12,7 @@ import type { Persona } from "@pbl/shared/constants";
 import Icon from "@pbl/shared/components/Icon";
 import { toast } from "@pbl/shared/components/Toast";
 import SharedManagerView from "@pbl/shared/components/views/ManagerView";
+import { useI18n } from "@pbl/shared/i18n";
 
 interface Props {
   personas: Persona[];
@@ -27,6 +28,7 @@ export default function ManagerView({
   setSelectedPersona,
 }: Props) {
   const [importing, setImporting] = useState(false);
+  const { t } = useI18n();
 
   async function importFromFile() {
     try {
@@ -45,9 +47,9 @@ export default function ManagerView({
         }
         return [...prev, { ...json, _source: "local" }];
       });
-      toast(`"${json.meta?.display_name}" importada com sucesso`, "success");
+      toast(`"${json.meta?.display_name}" ${t("manager.importSuccess")}`, "success");
     } catch (err: unknown) {
-      toast(`Erro na importação: ${(err as Error).message}`, "error");
+      toast(`${t("manager.importError")}: ${(err as Error).message}`, "error");
     } finally {
       setImporting(false);
     }
@@ -59,7 +61,7 @@ export default function ManagerView({
       disabled={importing}
       className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-sm bg-accent text-white text-[13px] font-medium hover:bg-accent-2 transition-colors disabled:opacity-50"
     >
-      <Icon name="download" size={15} /> {importing ? "Importando..." : "Importar do arquivo"}
+      <Icon name="download" size={15} /> {importing ? t("manager.importing") : t("manager.importFile")}
     </button>
   );
 

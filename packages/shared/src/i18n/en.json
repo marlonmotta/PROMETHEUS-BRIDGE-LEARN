@@ -83,7 +83,8 @@
     "generateButton": "Generate Adaptation",
     "generating": "Generating with AI...",
     "via": "Via",
-    "manualMode": "Manual mode - copyable prompt"
+    "manualMode": "Manual mode - copyable prompt",
+    "importFileTooltip": "Import file (PDF, DOCX, TXT, MD) or image (JPG, PNG)"
   },
   "result": {
     "title": "Result",
@@ -170,7 +171,11 @@
     "updateError": "Failed to connect to GitHub",
     "invalidId": "Persona without valid ID",
     "deletedCount": "{{count}} persona(s) deleted",
-    "deleteAllError": "Error deleting personas"
+    "deleteAllError": "Error deleting personas",
+    "importFile": "Import from file",
+    "importSuccess": "imported successfully",
+    "importError": "Import error",
+    "importing": "Importing..."
   },
   "history": {
     "title": "Adaptation History",
@@ -191,9 +196,42 @@
     "ocrError": "Error extracting text from image",
     "ocrNoText": "No text was extracted from the image.",
     "ocrLoading": "Extracting text from image via AI... Please wait.",
+    "ocrApiHint": "Check that your API key is configured and the provider supports vision.",
+    "unknownError": "Unknown error",
     "ollamaNotSupported": "Ollama is not supported in the web version. Use online or manual mode.",
     "corsError": "Could not connect to the provider. This may be caused by CORS blocking in the browser. Try using manual mode or the desktop version.",
-    "rateLimit": "Please wait before generating again."
+    "rateLimit": "Please wait before generating again.",
+    "missingMetaId": "Field meta.id missing from JSON",
+    "missingDisplayName": "Field meta.display_name missing from JSON",
+    "personaSizeLimit": "Persona JSON exceeds the 100KB limit",
+    "personaInvalid": "Invalid persona: meta.id and meta.display_name are required",
+    "rateLimitSeconds": "Please wait {{seconds}}s before generating again.",
+    "timeoutProvider": "Timeout: the provider {{provider}} did not respond in 60 seconds. Please try again.",
+    "importDocxInvalid": "Invalid or corrupted DOCX file",
+    "importOdtInvalid": "Invalid ODT: content.xml not found in file.",
+    "importOdtNoText": "The ODT document does not contain extractable text.",
+    "importPdfTooLarge": "PDF too large ({{size}}MB). Maximum allowed: 50MB.",
+    "importPdfNotSupported": "PDF support is not available in this environment. Use .docx, .odt, or .txt.",
+    "importPdfNoText": "This PDF does not contain extractable text - it is probably a scanned document (image).\n\n💡 Solution: Open it in Word or LibreOffice, export it as .docx or .txt, and re-import.",
+    "importImageError": "Error reading image",
+    "ocrPrompt": "Extract ALL text contained in this image. Keep the original formatting as faithfully as possible (titles, numbering, a/b/c/d alternatives, spacing). Return ONLY the extracted text, without additional comments.",
+    "visionApiError": "Vision API {{status}}: {{error}}",
+    "geminiVisionError": "Gemini Vision {{status}}: {{error}}",
+    "importEmptyAPI": "Empty API response",
+    "importGeminiError": "Could not extract text via Gemini",
+    "anthropicVisionError": "Anthropic Vision {{status}}: {{error}}",
+    "importAnthropicError": "Could not extract text via Anthropic"
+  },
+  "update": {
+    "newVersion": "New version available",
+    "versionAvailable": "Version {{version}} is available for download.",
+    "updateNow": "Update now",
+    "later": "Later",
+    "downloading": "Downloading update...",
+    "ready": "Update ready",
+    "restartHint": "Restart the app to apply the update.",
+    "restartNow": "Restart now",
+    "error": "Update failed. Please try again later."
   },
   "errorBoundary": {
     "title": "Something went wrong",
@@ -208,7 +246,19 @@
     "deletePersona": "Delete persona",
     "deleteAdaptation": "Delete adaptation",
     "exportAs": "Export as",
-    "closeNotification": "Close notification"
+    "closeNotification": "Close notification",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mainNavigation": "Main navigation",
+    "backToHome": "Back to Home",
+    "backToTop": "Back to top"
+  },
+  "dev": {
+    "cacheCorrupted": "[PBL] Persona cache corrupted:",
+    "remoteLoadFailed": "[PBL] Failed to load remote personas, falling back to cache:",
+    "offlineCacheReadFailed": "[PBL] Failed to read offline cache:",
+    "deleteCacheFailed": "[PBL] Failed to delete persona from cache:",
+    "saveCacheFailed": "[PBL] Failed to save persona to cache:"
   },
   "constants": {
     "subjects": {

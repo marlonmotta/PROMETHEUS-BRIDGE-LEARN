@@ -185,7 +185,7 @@ export default memo(function ContentView({
               type="button"
               onClick={onImportFile}
               className="inline-flex items-center gap-1 text-[11px] text-accent hover:text-accent-2 transition-colors font-medium"
-              title="Importar arquivo PDF, DOCX, TXT ou MD"
+              title={t("content.importFileTooltip")}
             >
               <Icon name="upload" size={13} />
               {t("content.importFile")}

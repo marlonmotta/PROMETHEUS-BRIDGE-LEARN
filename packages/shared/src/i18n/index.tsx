@@ -38,6 +38,8 @@ import { createContext, useContext, useMemo, type ReactNode } from "react";
 import ptBR from "./pt-BR.json";
 import en from "./en.json";
 import es from "./es.json";
+import fr from "./fr.json";
+import { type TranslationKey } from "./types";
 
 export type LocaleKey = string;
 export type LocaleData = Record<string, unknown>;
@@ -47,6 +49,7 @@ const LOCALES: Record<string, LocaleData> = {
   "pt-BR": ptBR,
   en: en,
   es: es,
+  fr: fr,
 };
 
 /** Locale padrão */
@@ -61,6 +64,7 @@ export const INTERFACE_LANGUAGES: Record<string, string> = {
   "pt-BR": "Português (BR)",
   en: "English",
   es: "Español",
+  fr: "Français",
 };
 
 /** Resolve uma chave hierárquica ("a.b.c") no objeto de locale */
@@ -75,7 +79,7 @@ function resolve(obj: unknown, path: string): string {
 }
 
 /** Tipo da função de tradução */
-type TFunction = (key: string, params?: Record<string, string | number>) => string;
+type TFunction = (key: TranslationKey, params?: Record<string, string | number>) => string;
 
 /** Tipo do contexto de i18n */
 interface I18nContextValue {
@@ -87,7 +91,7 @@ interface I18nContextValue {
 function createTFunction(locale: string): TFunction {
   const data = LOCALES[locale] || LOCALES[DEFAULT_LOCALE];
 
-  return function t(key: string, params?: Record<string, string | number>): string {
+  return function t(key: TranslationKey, params?: Record<string, string | number>): string {
     let text = resolve(data, key);
 
     // Fallback para o locale padrão se a chave não for encontrada
@@ -160,7 +164,7 @@ export function useI18n(): I18nContextValue {
 export function useTranslation(locale: string = DEFAULT_LOCALE) {
   const data = LOCALES[locale] || LOCALES[DEFAULT_LOCALE];
 
-  function t(key: string, params?: Record<string, string | number>): string {
+  function t(key: TranslationKey, params?: Record<string, string | number>): string {
     let text = resolve(data, key);
     if (params) {
       for (const [k, v] of Object.entries(params)) {
@@ -174,9 +178,19 @@ export function useTranslation(locale: string = DEFAULT_LOCALE) {
 }
 
 /** Acesso direto sem hook (para módulos não-React) */
-export function t(key: string, locale: string = DEFAULT_LOCALE): string {
+export function t(
+  key: TranslationKey,
+  locale: string = DEFAULT_LOCALE,
+  params?: Record<string, string | number>,
+): string {
   const data = LOCALES[locale] || LOCALES[DEFAULT_LOCALE];
-  return resolve(data, key);
+  let text = resolve(data, key);
+  if (params) {
+    for (const [k, v] of Object.entries(params)) {
+      text = text.replace(`{{${k}}}`, String(v));
+    }
+  }
+  return text;
 }
 
 /** Lista de locales disponíveis */

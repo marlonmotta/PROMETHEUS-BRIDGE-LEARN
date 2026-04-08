@@ -10,9 +10,10 @@
 import { memo, type ReactNode } from "react";
 import { type View } from "@pbl/shared/constants";
 import { useI18n } from "@pbl/shared/i18n";
+import { type TranslationKey } from "../i18n/types";
 
 /** Configuração dos itens de navegação */
-const NAV_ITEMS: { id: View; labelKey: string; icon: string }[] = [
+const NAV_ITEMS: { id: View; labelKey: TranslationKey; icon: string }[] = [
   {
     id: "home",
     labelKey: "nav.home",

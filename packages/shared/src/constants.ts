@@ -11,9 +11,10 @@
  * - Chaves de objetos em `camelCase` ou slugs (`kebab-case` para IDs)
  * - Labels exibidos ao usuário são resolvidos via i18n
  */
+import { type TranslationKey } from "./i18n/types";
 
 /** Tipo da função de tradução (evita dependência circular com i18n) */
-export type TFunction = (key: string, params?: Record<string, string | number>) => string;
+export type TFunction = (key: TranslationKey, params?: Record<string, string | number>) => string;
 
 /**
  * Slugs das disciplinas disponíveis no sistema.
@@ -37,7 +38,7 @@ export const SUBJECT_KEYS = [
 export function getSubjects(t: TFunction): Record<string, string> {
   const map: Record<string, string> = {};
   for (const key of SUBJECT_KEYS) {
-    map[key] = t(`constants.subjects.${key}`);
+    map[key] = t(`constants.subjects.${key}` as TranslationKey);
   }
   return map;
 }
@@ -68,7 +69,7 @@ export const DIFFICULTY_KEYS = ["simple", "moderate", "advanced"] as const;
 export function getDifficulties(t: TFunction): Record<string, string> {
   const map: Record<string, string> = {};
   for (const key of DIFFICULTY_KEYS) {
-    map[key] = t(`constants.difficulties.${key}`);
+    map[key] = t(`constants.difficulties.${key}` as TranslationKey);
   }
   return map;
 }
@@ -119,7 +120,7 @@ export const FORMAT_KEYS = ["free", "exam", "summary", "exercises", "lesson_plan
 export function getOutputFormats(t: TFunction): Record<string, string> {
   const map: Record<string, string> = {};
   for (const key of FORMAT_KEYS) {
-    map[key] = t(`constants.outputFormats.${key}`);
+    map[key] = t(`constants.outputFormats.${key}` as TranslationKey);
   }
   return map;
 }

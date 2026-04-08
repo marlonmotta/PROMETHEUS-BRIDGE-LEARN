@@ -83,7 +83,8 @@
     "generateButton": "Generar Adaptación",
     "generating": "Generando con IA...",
     "via": "Vía",
-    "manualMode": "Modo manual - prompt copiable"
+    "manualMode": "Modo manual - prompt copiable",
+    "importFileTooltip": "Importar archivo (PDF, DOCX, TXT, MD) o imagen (JPG, PNG)"
   },
   "result": {
     "title": "Resultado",
@@ -170,7 +171,11 @@
     "updateError": "Error al conectar con GitHub",
     "invalidId": "Persona sin ID válido",
     "deletedCount": "{{count}} persona(s) eliminada(s)",
-    "deleteAllError": "Error al eliminar personas"
+    "deleteAllError": "Error al eliminar personas",
+    "importFile": "Importar desde archivo",
+    "importSuccess": "importada con éxito",
+    "importError": "Error en la importación",
+    "importing": "Importando..."
   },
   "history": {
     "title": "Historial de Adaptaciones",
@@ -191,9 +196,42 @@
     "ocrError": "Error al extraer texto de la imagen",
     "ocrNoText": "No se extrajo texto de la imagen.",
     "ocrLoading": "Extrayendo texto de la imagen vía IA... Espera.",
+    "ocrApiHint": "Verifica que la clave API esté configurada y el proveedor soporte vision.",
+    "unknownError": "Error desconocido",
     "ollamaNotSupported": "Ollama no es compatible con la versión web. Usa el modo en línea o manual.",
     "corsError": "No se pudo conectar al proveedor. Esto puede ser causado por bloqueo de CORS en el navegador. Intenta usar el modo manual o la versión de escritorio.",
-    "rateLimit": "Espera antes de generar de nuevo."
+    "rateLimit": "Espera antes de generar de nuevo.",
+    "missingMetaId": "Campo meta.id ausente en el JSON",
+    "missingDisplayName": "Campo meta.display_name ausente en el JSON",
+    "personaSizeLimit": "El JSON de la persona excede el límite de 100KB",
+    "personaInvalid": "Persona inválida: meta.id y meta.display_name son obligatorios",
+    "rateLimitSeconds": "Por favor, espera {{seconds}}s antes de generar de nuevo.",
+    "timeoutProvider": "Tiempo de espera: el proveedor {{provider}} no respondió en 60 segundos. Inténtalo de nuevo.",
+    "importDocxInvalid": "Archivo DOCX inválido o corrupto",
+    "importOdtInvalid": "ODT inválido: no se encontró content.xml en el archivo.",
+    "importOdtNoText": "El documento ODT no contiene texto extraíble.",
+    "importPdfTooLarge": "PDF demasiado grande ({{size}}MB). Máximo permitido: 50MB.",
+    "importPdfNotSupported": "El soporte para PDF no está disponible en este entorno. Usa .docx, .odt o .txt.",
+    "importPdfNoText": "Este PDF no contiene texto extraíble - probablemente es un documento escaneado (imagen).\n\n💡 Solución: Ábrelo en Word o LibreOffice, expórtalo como .docx o .txt, y vuelve a importarlo.",
+    "importImageError": "Error al leer la imagen",
+    "ocrPrompt": "Extrae TODO el texto contenido en esta imagen. Mantén el formato original lo más fielmente posible (títulos, numeración, alternativas a/b/c/d, espaciados). Devuelve SOLO el texto extraído, sin comentarios adicionales.",
+    "visionApiError": "Vision API {{status}}: {{error}}",
+    "geminiVisionError": "Gemini Vision {{status}}: {{error}}",
+    "importEmptyAPI": "Respuesta vacía de la API",
+    "importGeminiError": "No se pudo extraer el texto a través de Gemini",
+    "anthropicVisionError": "Anthropic Vision {{status}}: {{error}}",
+    "importAnthropicError": "No se pudo extraer el texto a través de Anthropic"
+  },
+  "update": {
+    "newVersion": "Nueva versión disponible",
+    "versionAvailable": "Versión {{version}} disponible para descargar.",
+    "updateNow": "Actualizar ahora",
+    "later": "Después",
+    "downloading": "Descargando actualización...",
+    "ready": "Actualización lista",
+    "restartHint": "Reinicia la app para aplicar la actualización.",
+    "restartNow": "Reiniciar ahora",
+    "error": "Error al actualizar. Intenta de nuevo más tarde."
   },
   "errorBoundary": {
     "title": "Algo salió mal",
@@ -208,7 +246,19 @@
     "deletePersona": "Eliminar persona",
     "deleteAdaptation": "Eliminar adaptación",
     "exportAs": "Exportar como",
-    "closeNotification": "Cerrar notificación"
+    "closeNotification": "Cerrar notificación",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "mainNavigation": "Navegación principal",
+    "backToHome": "Volver al inicio",
+    "backToTop": "Volver arriba"
+  },
+  "dev": {
+    "cacheCorrupted": "[PBL] Caché de personas corrupto:",
+    "remoteLoadFailed": "[PBL] Fallo al cargar personas remotas, usando caché:",
+    "offlineCacheReadFailed": "[PBL] Fallo al leer caché sin conexión:",
+    "deleteCacheFailed": "[PBL] Fallo al eliminar persona de la caché:",
+    "saveCacheFailed": "[PBL] Fallo al guardar persona en la caché:"
   },
   "constants": {
     "subjects": {

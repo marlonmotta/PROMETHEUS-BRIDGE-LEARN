@@ -28,7 +28,7 @@ import { memo, useState, useEffect } from "react";
 import {
   MODEL_PLACEHOLDERS,
   OUTPUT_LANGUAGES,
-  OUTPUT_FORMATS,
+  getOutputFormats,
   type Settings,
   type HistoryItem,
 } from "@pbl/shared/constants";
@@ -132,7 +132,12 @@ export default memo(function SettingsView({
         <h2 className="text-sm font-semibold mb-4">{t("settings.interfaceLanguage")}</h2>
         <select
           value={local.interfaceLanguage}
-          onChange={(e) => update({ interfaceLanguage: e.target.value })}
+          onChange={(e) => {
+            const lang = e.target.value;
+            update({ interfaceLanguage: lang });
+            // Aplica imediatamente sem esperar "Salvar"
+            onSave({ ...local, interfaceLanguage: lang });
+          }}
           className="bg-bg border border-border rounded-sm text-txt text-[13px] px-3.5 py-2.5 outline-none focus:border-accent transition-colors"
         >
           {Object.entries(INTERFACE_LANGUAGES).map(([k, v]) => (
@@ -292,7 +297,7 @@ export default memo(function SettingsView({
               onChange={(e) => update({ outputFormat: e.target.value })}
               className="bg-bg border border-border rounded-sm text-txt text-[13px] px-3.5 py-2.5 outline-none focus:border-accent transition-colors"
             >
-              {Object.entries(OUTPUT_FORMATS).map(([k, v]) => (
+              {Object.entries(getOutputFormats(t)).map(([k, v]) => (
                 <option key={k} value={k}>
                   {v}
                 </option>

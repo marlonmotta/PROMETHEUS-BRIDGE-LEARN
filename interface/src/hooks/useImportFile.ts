@@ -13,6 +13,7 @@ import { useCallback } from "react";
 import { invoke } from "../lib/tauri";
 import type { Settings } from "@pbl/shared/constants";
 import type { AppAction } from "@pbl/shared/appReducer";
+import { useI18n } from "@pbl/shared/i18n";
 
 interface UseImportFileParams {
   settings: Settings;
@@ -20,6 +21,7 @@ interface UseImportFileParams {
 }
 
 export function useImportFile({ settings, dispatch }: UseImportFileParams) {
+  const { t } = useI18n();
   const handleImportFile = useCallback(async () => {
     try {
       const { open } = await import("@tauri-apps/plugin-dialog");
@@ -40,7 +42,7 @@ export function useImportFile({ settings, dispatch }: UseImportFileParams) {
 
       if (imageExts.includes(ext)) {
         // Imagem → OCR via IA com vision
-        dispatch({ type: "SET_CONTENT", content: "⏳ Extraindo texto da imagem via IA... Aguarde." });
+        dispatch({ type: "SET_CONTENT", content: `⏳ ${t("errors.ocrLoading")}` });
         try {
           const text = await invoke<string>("extract_image_text", {
             path: filePath,
@@ -52,11 +54,11 @@ export function useImportFile({ settings, dispatch }: UseImportFileParams) {
           if (text) {
             dispatch({ type: "SET_CONTENT", content: text });
           } else {
-            dispatch({ type: "SET_CONTENT", content: "⚠️ Nenhum texto foi extraído da imagem." });
+            dispatch({ type: "SET_CONTENT", content: `⚠️ ${t("errors.ocrNoText")}` });
           }
         } catch (err) {
-          const msg = typeof err === "string" ? err : (err as Error)?.message || "Erro desconhecido";
-          dispatch({ type: "SET_CONTENT", content: `❌ Erro ao extrair texto da imagem:\n\n${msg}\n\nVerifique se a API key está configurada e o provedor suporta vision.` });
+          const msg = typeof err === "string" ? err : (err as Error)?.message || t("errors.unknownError");
+          dispatch({ type: "SET_CONTENT", content: `❌ ${t("errors.ocrError")}:\n\n${msg}\n\n${t("errors.ocrApiHint")}` });
           console.error("[PBL] OCR error:", err);
         }
       } else {
@@ -67,15 +69,15 @@ export function useImportFile({ settings, dispatch }: UseImportFileParams) {
             dispatch({ type: "SET_CONTENT", content: text });
           }
         } catch (err) {
-          const msg = typeof err === "string" ? err : (err as Error)?.message || "Erro desconhecido";
-          dispatch({ type: "SET_CONTENT", content: `❌ Erro ao importar arquivo:\n\n${msg}` });
+          const msg = typeof err === "string" ? err : (err as Error)?.message || t("errors.unknownError");
+          dispatch({ type: "SET_CONTENT", content: `❌ ${t("errors.importError")}:\n\n${msg}` });
           console.error("[PBL] Import error:", err);
         }
       }
     } catch (err) {
       console.error("[PBL] Import dialog error:", err);
     }
-  }, [settings, dispatch]);
+  }, [settings, dispatch, t]);
 
   return { handleImportFile };
 }
