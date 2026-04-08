@@ -25,7 +25,7 @@
 
 import { useReducer, useEffect, useCallback, useRef } from "react";
 import { invoke } from "./lib/tauri";
-import { SUBJECTS, LOG_REPORT_ENDPOINT, type Persona, type Settings, type HistoryItem } from "@pbl/shared/constants";
+import { SUBJECTS, type Persona, type Settings, type HistoryItem } from "@pbl/shared/constants";
 import { appReducer, createInitialState, persistState } from "@pbl/shared/appReducer";
 import { useGenerate } from "./hooks/useGenerate";
 import { useExport } from "./hooks/useExport";
@@ -251,6 +251,7 @@ export default function App() {
                   alert("Não foi possível gerar ou baixar o log. Detalhes:\n" + e);
                 });
               }}
+              /* TODO: Ativar este botão após configurar o Worker da Cloudflare
               onSendLogs={() => {
                 invoke<string>("export_app_logs").then(async (logContent) => {
                   try {
@@ -278,6 +279,7 @@ export default function App() {
                   alert("❌ Não foi possível extrair o log do aplicativo.");
                 });
               }}
+              */
               platform="Desktop"
             />
           )}

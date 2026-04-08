@@ -700,8 +700,8 @@ fn generate_pdf(content: &str, path: &str) -> Result<(), String> {
 /// Lê o arquivo PBL.log e retorna como string
 #[tauri::command]
 pub fn export_app_logs(app: tauri::AppHandle) -> Result<String, String> {
-    use tauri::Manager;
     use std::fs;
+    use tauri::Manager;
 
     match app.path().app_log_dir() {
         Ok(log_dir) => {
