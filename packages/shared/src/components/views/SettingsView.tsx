@@ -30,7 +30,6 @@ import {
   OUTPUT_LANGUAGES,
   OUTPUT_FORMATS,
   AVAILABLE_MODELS,
-  LOG_REPORT_ENDPOINT,
   type Settings,
   type HistoryItem,
 } from "@pbl/shared/constants";
@@ -55,8 +54,8 @@ interface Props {
   onDeleteApiKey?: () => void;
   /** Callback executado para extrair e baixar e analisar logs da aplicação */
   onDownloadLogs?: () => void;
-  /** Callback para enviar log anonimamente via Worker */
-  onSendLogs?: () => void;
+  /** Callback para enviar log anonimamente via Worker (TODO) */
+  // onSendLogs?: () => void;
   /** Plataforma atual exibida na seção "Sobre". Default: "Web" */
   platform?: "Web" | "Desktop";
 }
@@ -70,7 +69,7 @@ export default memo(function SettingsView({
   onClearHistory,
   onDeleteApiKey,
   onDownloadLogs,
-  onSendLogs,
+  // onSendLogs,
   platform = "Web",
 }: Props) {
   /** Estado local editável (não persiste até clicar "Salvar") */

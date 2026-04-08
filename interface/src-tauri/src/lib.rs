@@ -368,29 +368,8 @@ pub fn run() {
             secure_store::save_api_key,
             secure_store::get_api_key,
             secure_store::delete_api_key,
-            export_app_logs,
+            export::export_app_logs,
         ])
         .run(tauri::generate_context!())
         .expect("[PBL] Falha crítica ao inicializar a aplicação Tauri");
-}
-
-/// Comando para extrair os logs de erro da aplicação Tauri
-/// Lê o arquivo PBL.log e retorna como string
-#[tauri::command]
-pub fn export_app_logs(app: tauri::AppHandle) -> Result<String, String> {
-    use tauri::Manager;
-    use std::fs;
-
-    match app.path().app_log_dir() {
-        Ok(log_dir) => {
-            // No Tauri o log format da app padrão assume o nome do projeto + '.log'
-            let log_file = log_dir.join("PBL.log");
-            if log_file.exists() {
-                fs::read_to_string(&log_file).map_err(|e| format!("Erro ao ler o log: {}", e))
-            } else {
-                Err("Nenhum log de erro foi gerado ainda.".into())
-            }
-        }
-        Err(_) => Err("Não foi possível acessar a pasta de logs do sistema.".into()),
-    }
 }
