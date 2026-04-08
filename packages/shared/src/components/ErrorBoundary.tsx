@@ -20,7 +20,7 @@
  */
 
 import { Component, type ErrorInfo, type ReactNode } from "react";
-import { t } from "@pbl/shared/i18n";
+import { t, getLocale } from "@pbl/shared/i18n";
 
 interface Props {
   /** Componentes filhos a serem protegidos */
@@ -43,7 +43,7 @@ export default class ErrorBoundary extends Component<Props, State> {
   static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
-      errorMessage: error.message || t("errorBoundary.defaultError"),
+      errorMessage: error.message || t("errorBoundary.defaultError", getLocale()),
     };
   }
 
@@ -58,9 +58,9 @@ export default class ErrorBoundary extends Component<Props, State> {
         <div className="min-h-screen bg-bg flex items-center justify-center p-8">
           <div className="max-w-md w-full bg-bg-2 border border-border rounded-lg p-8 text-center">
             <div className="text-4xl mb-4">⚠️</div>
-            <h1 className="text-xl font-bold text-txt mb-2">{t("errorBoundary.title")}</h1>
+            <h1 className="text-xl font-bold text-txt mb-2">{t("errorBoundary.title", getLocale())}</h1>
             <p className="text-sm text-txt-2 mb-4 leading-relaxed">
-              {t("errorBoundary.description")}
+              {t("errorBoundary.description", getLocale())}
             </p>
             {this.state.errorMessage && (
               <pre className="text-xs text-danger/70 bg-bg border border-border rounded p-3 mb-4 text-left overflow-x-auto">
@@ -71,7 +71,7 @@ export default class ErrorBoundary extends Component<Props, State> {
               onClick={() => window.location.reload()}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-sm bg-accent text-white font-medium text-sm hover:bg-accent-2 transition-colors"
             >
-              {t("errorBoundary.reload")}
+              {t("errorBoundary.reload", getLocale())}
             </button>
           </div>
         </div>

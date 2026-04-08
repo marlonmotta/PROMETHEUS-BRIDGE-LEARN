@@ -52,7 +52,11 @@
     "category": "Category",
     "categoryFictional": "Fictional",
     "categoryReal": "Real",
-    "age": "Age"
+    "age": "Age",
+    "aiModeOllama": "Ollama · {{model}}",
+    "aiModeOnline": "{{provider}} · {{model}}",
+    "aiModeManual": "Manual",
+    "personaCount": "{{count}} personas"
   },
   "personas": {
     "title": "Select Persona",
@@ -65,7 +69,9 @@
     "favorites": "Favorites",
     "selected": "Selected",
     "usePersona": "Use this persona →",
-    "noResults": "No personas found with these filters."
+    "noResults": "No personas found with these filters.",
+    "ageYears": "{{range}} years",
+    "agePlus": "{{age}}+"
   },
   "content": {
     "title": "Content to Adapt",
@@ -146,7 +152,13 @@
     "dangerZoneDesc": "Restores all settings, history and favorites to their initial state.",
     "resetAll": "Reset all",
     "resetConfirm": "Reset everything?",
-    "resetWarning": "All settings, history and favorites will be permanently deleted. The app will return to factory state."
+    "resetWarning": "All settings, history and favorites will be permanently deleted. The app will return to factory state.",
+    "providerOpenAI": "OpenAI (GPT-4o)",
+    "providerAnthropic": "Anthropic (Claude)",
+    "providerOpenRouter": "OpenRouter (one key - all models)",
+    "providerGroq": "Groq (ultra-fast, Llama 3)",
+    "providerGemini": "Google Gemini",
+    "modelPlaceholder": "model name"
   },
   "manager": {
     "title": "Manage Personas",
@@ -251,7 +263,23 @@
     "closeMenu": "Close menu",
     "mainNavigation": "Main navigation",
     "backToHome": "Back to Home",
-    "backToTop": "Back to top"
+    "backToTop": "Back to top",
+    "deleteAdaptationOf": "Delete adaptation from {{persona}}",
+    "deletePersonaNamed": "Delete persona {{name}}"
+  },
+  "exam": {
+    "adaptedActivity": "Adapted Activity",
+    "nameField": "Name:",
+    "teacherField": "Teacher:",
+    "classField": "Class:",
+    "dateField": "Date:",
+    "footer": "Generated with PROMETHEUS · BRIDGE · LEARN (PBL)",
+    "htmlTitle": "PBL Adaptation - {{persona}}",
+    "htmlTitleSimple": "PBL Adaptation"
+  },
+  "export": {
+    "htmlTitle": "PBL - Adapted Content",
+    "popupBlocked": "The browser blocked the print window. Disable the popup blocker and try again."
   },
   "dev": {
     "cacheCorrupted": "[PBL] Persona cache corrupted:",

@@ -168,7 +168,7 @@ export default memo(function ManagerView({
               </div>
               <button
                 onClick={() => setDeleteTarget(p)}
-                aria-label={`Excluir persona ${p.meta?.display_name}`}
+                aria-label={t("a11y.deletePersonaNamed", { name: p.meta?.display_name || "" })}
                 className="text-[12px] text-danger/60 hover:text-danger transition-colors px-2 py-1 shrink-0"
               >
                 <Icon name="trash" size={13} />

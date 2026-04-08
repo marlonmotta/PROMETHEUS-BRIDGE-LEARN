@@ -52,7 +52,11 @@
     "category": "Categoría",
     "categoryFictional": "Ficticio",
     "categoryReal": "Real",
-    "age": "Edad"
+    "age": "Edad",
+    "aiModeOllama": "Ollama · {{model}}",
+    "aiModeOnline": "{{provider}} · {{model}}",
+    "aiModeManual": "Manual",
+    "personaCount": "{{count}} personas"
   },
   "personas": {
     "title": "Seleccionar Persona",
@@ -65,7 +69,9 @@
     "favorites": "Favoritas",
     "selected": "Seleccionada",
     "usePersona": "Usar esta persona →",
-    "noResults": "No se encontraron personas con estos filtros."
+    "noResults": "No se encontraron personas con estos filtros.",
+    "ageYears": "{{range}} años",
+    "agePlus": "{{age}}+"
   },
   "content": {
     "title": "Contenido para Adaptar",
@@ -146,7 +152,13 @@
     "dangerZoneDesc": "Restaura todas las configuraciones, historial y favoritos a su estado inicial.",
     "resetAll": "Restablecer todo",
     "resetConfirm": "¿Restablecer todo?",
-    "resetWarning": "Todas las configuraciones, historial y favoritos serán eliminados permanentemente. La app volverá al estado de fábrica."
+    "resetWarning": "Todas las configuraciones, historial y favoritos serán eliminados permanentemente. La app volverá al estado de fábrica.",
+    "providerOpenAI": "OpenAI (GPT-4o)",
+    "providerAnthropic": "Anthropic (Claude)",
+    "providerOpenRouter": "OpenRouter (una key - todos)",
+    "providerGroq": "Groq (ultra-rápido, Llama 3)",
+    "providerGemini": "Google Gemini",
+    "modelPlaceholder": "nombre del modelo"
   },
   "manager": {
     "title": "Gestionar Personas",
@@ -251,7 +263,23 @@
     "closeMenu": "Cerrar menú",
     "mainNavigation": "Navegación principal",
     "backToHome": "Volver al inicio",
-    "backToTop": "Volver arriba"
+    "backToTop": "Volver arriba",
+    "deleteAdaptationOf": "Eliminar adaptación de {{persona}}",
+    "deletePersonaNamed": "Eliminar persona {{name}}"
+  },
+  "exam": {
+    "adaptedActivity": "Actividad Adaptada",
+    "nameField": "Nombre:",
+    "teacherField": "Profesor(a):",
+    "classField": "Grupo:",
+    "dateField": "Fecha:",
+    "footer": "Generado con PROMETHEUS · BRIDGE · LEARN (PBL)",
+    "htmlTitle": "Adaptación PBL - {{persona}}",
+    "htmlTitleSimple": "Adaptación PBL"
+  },
+  "export": {
+    "htmlTitle": "PBL - Contenido Adaptado",
+    "popupBlocked": "El navegador bloqueó la ventana de impresión. Desactive el bloqueador de ventanas emergentes e inténtelo de nuevo."
   },
   "dev": {
     "cacheCorrupted": "[PBL] Caché de personas corrupto:",

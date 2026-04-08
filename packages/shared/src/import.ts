@@ -11,18 +11,7 @@
  * - **jpg/png/webp/gif**: OCR via API de IA com vision
  */
 
-import { t as tStandalone } from "./i18n";
-
-function getLocale(): string {
-  try {
-    const s = localStorage.getItem("pbl_settings");
-    if (s) {
-      const parsed = JSON.parse(s);
-      if (parsed.interfaceLanguage) return parsed.interfaceLanguage;
-    }
-  } catch (e) {}
-  return "pt-BR";
-}
+import { t as tStandalone, getLocale } from "./i18n";
 
 /** Extensões de imagem suportadas para OCR */
 const IMAGE_EXTENSIONS = ["jpg", "jpeg", "png", "webp", "gif"];

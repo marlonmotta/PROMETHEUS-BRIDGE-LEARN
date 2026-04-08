@@ -31,12 +31,6 @@ interface Props {
   onDeleteHistory: (index: number) => void;
 }
 
-/** Labels legíveis para os modos de IA */
-const AI_MODE_LABELS: Record<string, string> = {
-  offline: "Ollama",
-  manual: "manual",
-};
-
 export default memo(function HomeView({
   personaCount,
   history,
@@ -46,7 +40,7 @@ export default memo(function HomeView({
   onDeleteHistory,
 }: Props) {
   const { t } = useI18n();
-  const aiMode = AI_MODE_LABELS[settings.mode] || settings.provider;
+  const aiMode = settings.mode === "offline" ? "Ollama" : settings.mode === "manual" ? t("dashboard.aiModeManual") : settings.provider;
 
   /** Dados dos cards de estatísticas com IDs estáveis para keys */
   const stats = [
@@ -111,7 +105,7 @@ export default memo(function HomeView({
                 </div>
                 <button
                   onClick={() => onDeleteHistory(i)}
-                  aria-label={`Excluir adaptação de ${item.persona}`}
+                  aria-label={t("a11y.deleteAdaptationOf", { persona: item.persona })}
                   className="text-[11px] text-danger/60 hover:text-danger transition-colors px-1.5 py-1"
                 >
                   <Icon name="x" size={13} />

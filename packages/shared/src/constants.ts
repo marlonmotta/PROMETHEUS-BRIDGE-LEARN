@@ -105,8 +105,9 @@ export const MODEL_PLACEHOLDERS: Record<string, string> = {
  */
 export const OUTPUT_LANGUAGES: Record<string, string> = {
   "pt-BR": "Português (BR)",
-  en: "Inglês",
-  es: "Espanhol",
+  en: "English",
+  es: "Español",
+  fr: "Français",
 };
 
 /**

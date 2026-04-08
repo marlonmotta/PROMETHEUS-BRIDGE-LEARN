@@ -174,7 +174,7 @@ export default memo(function DashboardView({
               {t("dashboard.personaSelector")}
             </h2>
             <span className="text-[11px] text-txt-3">
-              {filtered.length} personas
+              {t("dashboard.personaCount", { count: String(filtered.length) })}
             </span>
           </div>
 
@@ -372,10 +372,10 @@ export default memo(function DashboardView({
                 className={`w-1.5 h-1.5 rounded-full ${settings.mode === "offline" ? "bg-ok" : settings.mode === "online" ? "bg-accent" : "bg-gold"}`}
               />
               {settings.mode === "offline"
-                ? `Ollama · ${settings.ollamaModel || "-"}`
+                ? t("dashboard.aiModeOllama", { model: settings.ollamaModel || "-" })
                 : settings.mode === "online"
-                  ? `${settings.provider || "Cloud"} · ${settings.model || "-"}`
-                  : "Manual"}
+                  ? t("dashboard.aiModeOnline", { provider: settings.provider || "Cloud", model: settings.model || "-" })
+                  : t("dashboard.aiModeManual")}
             </span>
           </div>
 

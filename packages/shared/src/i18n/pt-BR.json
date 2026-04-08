@@ -52,7 +52,11 @@
     "category": "Categoria",
     "categoryFictional": "Fictício",
     "categoryReal": "Real",
-    "age": "Idade"
+    "age": "Idade",
+    "aiModeOllama": "Ollama · {{model}}",
+    "aiModeOnline": "{{provider}} · {{model}}",
+    "aiModeManual": "Manual",
+    "personaCount": "{{count}} personas"
   },
   "personas": {
     "title": "Selecionar Persona",
@@ -65,7 +69,9 @@
     "favorites": "Favoritas",
     "selected": "Selecionada",
     "usePersona": "Usar essa persona →",
-    "noResults": "Nenhuma persona encontrada com esses filtros."
+    "noResults": "Nenhuma persona encontrada com esses filtros.",
+    "ageYears": "{{range}} anos",
+    "agePlus": "{{age}}+"
   },
   "content": {
     "title": "Conteúdo para Adaptar",
@@ -146,7 +152,13 @@
     "dangerZoneDesc": "Restaura todas as configurações, histórico e favoritas ao estado inicial.",
     "resetAll": "Resetar tudo",
     "resetConfirm": "Resetar tudo?",
-    "resetWarning": "Todas as configurações, histórico e favoritas serão apagados permanentemente. O app voltará ao estado de fábrica."
+    "resetWarning": "Todas as configurações, histórico e favoritas serão apagados permanentemente. O app voltará ao estado de fábrica.",
+    "providerOpenAI": "OpenAI (GPT-4o)",
+    "providerAnthropic": "Anthropic (Claude)",
+    "providerOpenRouter": "OpenRouter (uma key - todos)",
+    "providerGroq": "Groq (ultra-rápido, Llama 3)",
+    "providerGemini": "Google Gemini",
+    "modelPlaceholder": "nome do modelo"
   },
   "manager": {
     "title": "Gerenciar Personas",
@@ -251,7 +263,23 @@
     "closeMenu": "Fechar menu",
     "mainNavigation": "Navegação principal",
     "backToHome": "Voltar para Home",
-    "backToTop": "Voltar ao topo"
+    "backToTop": "Voltar ao topo",
+    "deleteAdaptationOf": "Excluir adaptação de {{persona}}",
+    "deletePersonaNamed": "Excluir persona {{name}}"
+  },
+  "exam": {
+    "adaptedActivity": "Atividade Adaptada",
+    "nameField": "Nome:",
+    "teacherField": "Professor(a):",
+    "classField": "Turma:",
+    "dateField": "Data:",
+    "footer": "Gerado com PROMETHEUS · BRIDGE · LEARN (PBL)",
+    "htmlTitle": "Adaptação PBL - {{persona}}",
+    "htmlTitleSimple": "Adaptação PBL"
+  },
+  "export": {
+    "htmlTitle": "PBL - Conteúdo Adaptado",
+    "popupBlocked": "O navegador bloqueou a janela de impressão. Desative o bloqueador de pop-ups e tente novamente."
   },
   "dev": {
     "cacheCorrupted": "[PBL] Cache de personas corrompido:",

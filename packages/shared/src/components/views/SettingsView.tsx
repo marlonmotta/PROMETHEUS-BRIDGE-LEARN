@@ -237,11 +237,11 @@ export default memo(function SettingsView({
               onChange={(e) => update({ provider: e.target.value })}
               className="bg-bg border border-border rounded-sm text-txt text-[13px] px-3.5 py-2.5 outline-none focus:border-accent transition-colors"
             >
-              <option value="openai">OpenAI (GPT-4o)</option>
-              <option value="anthropic">Anthropic (Claude)</option>
-              <option value="openrouter">OpenRouter (uma key - todos)</option>
-              <option value="groq">Groq (ultra-rápido, Llama 3)</option>
-              <option value="gemini">Google Gemini</option>
+              <option value="openai">{t("settings.providerOpenAI")}</option>
+              <option value="anthropic">{t("settings.providerAnthropic")}</option>
+              <option value="openrouter">{t("settings.providerOpenRouter")}</option>
+              <option value="groq">{t("settings.providerGroq")}</option>
+              <option value="gemini">{t("settings.providerGemini")}</option>
             </select>
           </div>
           <div className="flex flex-col gap-1.5 mb-4">
@@ -250,7 +250,7 @@ export default memo(function SettingsView({
               value={local.model}
               onChange={(e) => update({ model: e.target.value })}
               placeholder={
-                MODEL_PLACEHOLDERS[local.provider] || "nome do modelo"
+                MODEL_PLACEHOLDERS[local.provider] || t("settings.modelPlaceholder")
               }
               className="bg-bg border border-border rounded-sm text-txt text-[13px] px-3.5 py-2.5 outline-none focus:border-accent transition-colors"
             />

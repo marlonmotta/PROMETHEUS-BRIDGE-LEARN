@@ -65,16 +65,16 @@ export default memo(function ResultView({
   onSaveHistory,
   onNewAdaptation,
 }: Props) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const isManual = settings.mode === "manual";
   const subjectLabel = getSubjects(t)[subject] || subject;
   const diffLabel = getDifficulties(t)[difficulty] || difficulty;
   const aiLabel =
     settings.mode === "offline"
-      ? `Ollama (${settings.ollamaModel})`
+      ? t("dashboard.aiModeOllama", { model: settings.ollamaModel })
       : settings.mode === "online"
         ? `${settings.provider} / ${settings.model || MODEL_PLACEHOLDERS[settings.provider] || ""}`
-        : "Manual";
+        : t("dashboard.aiModeManual");
 
   /**
    * Copia texto para a área de transferência.
@@ -139,10 +139,10 @@ export default memo(function ResultView({
     const personaName = selectedPersona?.meta?.display_name || "Persona";
 
     return `<!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="${locale}">
 <head>
   <meta charset="UTF-8">
-  <title>Adaptação PBL - ${personaName}</title>
+  <title>${t("exam.htmlTitle", { persona: personaName })}</title>
   <style>
     @page {
       size: A4;
@@ -326,13 +326,13 @@ export default memo(function ResultView({
 </head>
 <body>
   <div class="exam-header">
-    <div class="exam-title">${subjectLabel ? subjectLabel + " - " : ""}Atividade Adaptada</div>
+    <div class="exam-title">${subjectLabel ? subjectLabel + " - " : ""}${t("exam.adaptedActivity")}</div>
     <div class="exam-fields">
-      <div class="exam-field full"><span>Nome:</span></div>
-      <div class="exam-field full"><span>Professor(a):</span></div>
+      <div class="exam-field full"><span>${t("exam.nameField")}</span></div>
+      <div class="exam-field full"><span>${t("exam.teacherField")}</span></div>
       <div class="exam-row">
-        <div class="exam-field"><span>Turma:</span></div>
-        <div class="exam-field"><span>Data:</span>____/____/________</div>
+        <div class="exam-field"><span>${t("exam.classField")}</span></div>
+        <div class="exam-field"><span>${t("exam.dateField")}</span>____/____/________</div>
       </div>
     </div>
   </div>
@@ -340,7 +340,7 @@ export default memo(function ResultView({
     ${sanitizedHtml}
   </div>
   <div class="exam-footer">
-    Gerado com PROMETHEUS · BRIDGE · LEARN (PBL)
+    ${t("exam.footer")}
   </div>
 </body>
 </html>`;
@@ -375,7 +375,7 @@ export default memo(function ResultView({
           parsedHtml = `<pre>${text}</pre>`;
         }
         const sanitizedHtml = DOMPurify.sanitize(parsedHtml);
-        content = `<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><title>Adaptação PBL</title></head><body><div style="font-family:sans-serif;max-width:800px;margin:40px auto;line-height:1.8">${sanitizedHtml}</div></body></html>`;
+        content = `<!DOCTYPE html><html lang="${locale}"><head><meta charset="UTF-8"><title>${t("exam.htmlTitleSimple")}</title></head><body><div style="font-family:sans-serif;max-width:800px;margin:40px auto;line-height:1.8">${sanitizedHtml}</div></body></html>`;
         mime = "text/html";
       } else if (format === "md") {
         mime = "text/markdown";

@@ -115,10 +115,10 @@ export default memo(function PersonasView({
           className="bg-bg-2 border border-border rounded-sm text-txt text-[13px] px-3.5 py-2.5 outline-none focus:border-accent transition-colors"
         >
           <option value="">{t("personas.allAges")}</option>
-          <option value="6-10">6-10 anos</option>
-          <option value="11-14">11-14 anos</option>
-          <option value="15-18">15-18 anos</option>
-          <option value="18+">18+</option>
+          <option value="6-10">{t("personas.ageYears", { range: "6-10" })}</option>
+          <option value="11-14">{t("personas.ageYears", { range: "11-14" })}</option>
+          <option value="15-18">{t("personas.ageYears", { range: "15-18" })}</option>
+          <option value="18+">{t("personas.agePlus", { age: "18" })}</option>
         </select>
         <button
           onClick={() => setFilterFav(!filterFav)}

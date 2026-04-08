@@ -52,7 +52,11 @@
     "category": "Catégorie",
     "categoryFictional": "Fictif",
     "categoryReal": "Réel",
-    "age": "Âge"
+    "age": "Âge",
+    "aiModeOllama": "Ollama · {{model}}",
+    "aiModeOnline": "{{provider}} · {{model}}",
+    "aiModeManual": "Manuel",
+    "personaCount": "{{count}} personas"
   },
   "personas": {
     "title": "Sélectionner une Persona",
@@ -65,7 +69,9 @@
     "favorites": "Favoris",
     "selected": "Sélectionnée",
     "usePersona": "Utiliser cette persona →",
-    "noResults": "Aucune persona trouvée avec ces filtres."
+    "noResults": "Aucune persona trouvée avec ces filtres.",
+    "ageYears": "{{range}} ans",
+    "agePlus": "{{age}}+"
   },
   "content": {
     "title": "Contenu à Adapter",
@@ -146,7 +152,13 @@
     "dangerZoneDesc": "Restaure tous les paramètres, l'historique et les favoris à leur état initial.",
     "resetAll": "Tout réinitialiser",
     "resetConfirm": "Tout réinitialiser ?",
-    "resetWarning": "Tous les paramètres, l'historique et les favoris seront définitivement supprimés. L'application reviendra à son état d'usine."
+    "resetWarning": "Tous les paramètres, l'historique et les favoris seront définitivement supprimés. L'application reviendra à son état d'usine.",
+    "providerOpenAI": "OpenAI (GPT-4o)",
+    "providerAnthropic": "Anthropic (Claude)",
+    "providerOpenRouter": "OpenRouter (une clé - tous)",
+    "providerGroq": "Groq (ultra-rapide, Llama 3)",
+    "providerGemini": "Google Gemini",
+    "modelPlaceholder": "nom du modèle"
   },
   "manager": {
     "title": "Gérer les Personas",
@@ -251,7 +263,23 @@
     "closeMenu": "Fermer le menu",
     "mainNavigation": "Navigation principale",
     "backToHome": "Retour à l'accueil",
-    "backToTop": "Retour en haut"
+    "backToTop": "Retour en haut",
+    "deleteAdaptationOf": "Supprimer l'adaptation de {{persona}}",
+    "deletePersonaNamed": "Supprimer la persona {{name}}"
+  },
+  "exam": {
+    "adaptedActivity": "Activité Adaptée",
+    "nameField": "Nom :",
+    "teacherField": "Professeur(e) :",
+    "classField": "Classe :",
+    "dateField": "Date :",
+    "footer": "Généré avec PROMETHEUS · BRIDGE · LEARN (PBL)",
+    "htmlTitle": "Adaptation PBL - {{persona}}",
+    "htmlTitleSimple": "Adaptation PBL"
+  },
+  "export": {
+    "htmlTitle": "PBL - Contenu Adapté",
+    "popupBlocked": "Le navigateur a bloqué la fenêtre d'impression. Désactivez le bloqueur de fenêtres contextuelles et réessayez."
   },
   "dev": {
     "cacheCorrupted": "[PBL] Cache de personas corrompu :",

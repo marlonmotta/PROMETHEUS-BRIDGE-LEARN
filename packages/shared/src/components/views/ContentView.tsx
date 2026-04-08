@@ -71,7 +71,7 @@ export default memo(function ContentView({
   /** Label descritivo do modo de IA ativo para exibição ao usuário */
   const aiLabel =
     settings.mode === "offline"
-      ? `Ollama (${settings.ollamaModel})`
+      ? t("dashboard.aiModeOllama", { model: settings.ollamaModel })
       : settings.mode === "online"
         ? `${settings.provider} / ${settings.model || MODEL_PLACEHOLDERS[settings.provider] || ""}`
         : t("content.manualMode");

@@ -12,20 +12,7 @@
 import type { Persona } from "@pbl/shared/constants";
 import type { IAppService, AIRequest } from "./types";
 import { downloadBlob } from "./web-exporters";
-import { t as tStandalone } from "@pbl/shared/i18n";
-
-function getLocale(): string {
-  try {
-    const s = localStorage.getItem("pbl_settings");
-    if (s) {
-      const parsed = JSON.parse(s);
-      if (parsed.interfaceLanguage) return parsed.interfaceLanguage;
-    }
-  } catch {
-    // ignore e retorna fallback
-  }
-  return "pt-BR";
-}
+import { t as tStandalone, getLocale } from "@pbl/shared/i18n";
 
 const GITHUB_RAW_DIRECT =
   "https://raw.githubusercontent.com/marlonmotta/PROMETHEUS-BRIDGE-LEARN/main/personas";

@@ -103,7 +103,7 @@ function createTFunction(locale: string): TFunction {
 
     if (params) {
       for (const [k, v] of Object.entries(params)) {
-        text = text.replace(`{{${k}}}`, String(v));
+        text = text.replaceAll(`{{${k}}}`, String(v));
       }
     }
     return text;
@@ -156,25 +156,30 @@ export function useI18n(): I18nContextValue {
 // ─── API standalone (para código fora de React) ─────────────────────────────
 
 /**
+ * Retorna o locale ativo lido do localStorage.
+ * Usado por módulos fora do React (import.ts, web-adapter.ts, ErrorBoundary).
+ */
+export function getLocale(): string {
+  try {
+    const s = localStorage.getItem("pbl_settings");
+    if (s) {
+      const parsed = JSON.parse(s);
+      if (parsed.interfaceLanguage) return parsed.interfaceLanguage;
+    }
+  } catch {
+    // fallback silencioso
+  }
+  return DEFAULT_LOCALE;
+}
+
+/**
  * Hook legado de tradução (sem Context).
  *
  * @deprecated Use `useI18n()` via Context para reatividade automática.
  * Mantido para compatibilidade com código existente.
  */
 export function useTranslation(locale: string = DEFAULT_LOCALE) {
-  const data = LOCALES[locale] || LOCALES[DEFAULT_LOCALE];
-
-  function t(key: TranslationKey, params?: Record<string, string | number>): string {
-    let text = resolve(data, key);
-    if (params) {
-      for (const [k, v] of Object.entries(params)) {
-        text = text.replace(`{{${k}}}`, String(v));
-      }
-    }
-    return text;
-  }
-
-  return { t, locale };
+  return { t: createTFunction(locale), locale };
 }
 
 /** Acesso direto sem hook (para módulos não-React) */
@@ -183,14 +188,7 @@ export function t(
   locale: string = DEFAULT_LOCALE,
   params?: Record<string, string | number>,
 ): string {
-  const data = LOCALES[locale] || LOCALES[DEFAULT_LOCALE];
-  let text = resolve(data, key);
-  if (params) {
-    for (const [k, v] of Object.entries(params)) {
-      text = text.replace(`{{${k}}}`, String(v));
-    }
-  }
-  return text;
+  return createTFunction(locale)(key, params);
 }
 
 /** Lista de locales disponíveis */
