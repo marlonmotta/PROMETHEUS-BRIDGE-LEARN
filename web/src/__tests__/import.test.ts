@@ -115,7 +115,7 @@ describe("extractTextFromImage", () => {
       }),
     } as Response);
 
-    const result = await extractTextFromImage(fakeImage, "openai", "sk-test", "gpt-4o");
+    const result = await extractTextFromImage(fakeImage, "openai", "sk-test", "gpt-5.4");
     expect(result).toBe("Texto extraído da prova");
 
     // Verifica que foi para o endpoint OpenAI
@@ -156,7 +156,7 @@ describe("extractTextFromImage", () => {
       }),
     } as Response);
 
-    await extractTextFromImage(fakeImage, "openrouter", "sk-or", "gpt-4o");
+    await extractTextFromImage(fakeImage, "openrouter", "sk-or", "gpt-5.4");
     expect(fetchSpy.mock.calls[0][0]).toContain("openrouter.ai");
   });
 
@@ -168,7 +168,7 @@ describe("extractTextFromImage", () => {
     } as Response);
 
     await expect(
-      extractTextFromImage(fakeImage, "openai", "bad-key", "gpt-4o"),
+      extractTextFromImage(fakeImage, "openai", "bad-key", "gpt-5.4"),
     ).rejects.toThrow("401");
   });
 
@@ -179,7 +179,7 @@ describe("extractTextFromImage", () => {
     } as Response);
 
     await expect(
-      extractTextFromImage(fakeImage, "openai", "sk-test", "gpt-4o"),
+      extractTextFromImage(fakeImage, "openai", "sk-test", "gpt-5.4"),
     ).rejects.toThrow(/vazia/i);
   });
 });
