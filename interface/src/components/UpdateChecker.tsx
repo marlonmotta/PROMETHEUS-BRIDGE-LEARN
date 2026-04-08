@@ -18,6 +18,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Icon from "@pbl/shared/components/Icon";
+import { useI18n } from "@pbl/shared/i18n";
 
 /** Estados possíveis do fluxo de atualização */
 type UpdateStatus = "idle" | "checking" | "available" | "downloading" | "ready" | "error";
@@ -26,6 +27,7 @@ export default function UpdateChecker() {
   const [status, setStatus] = useState<UpdateStatus>("idle");
   const [version, setVersion] = useState("");
   const [progress, setProgress] = useState(0);
+  const { t } = useI18n();
   /** Tamanho total do download (bytes) para cálculo de progresso real */
   const contentLengthRef = useRef(0);
   /** Armazena o objeto de update para reutilização no download */
@@ -125,23 +127,23 @@ export default function UpdateChecker() {
       {status === "available" && (
         <div>
           <div className="text-sm font-semibold mb-1.5 flex items-center gap-1.5">
-            <Icon name="download" size={15} className="text-accent" /> Nova versão disponível
+            <Icon name="download" size={15} className="text-accent" /> {t("update.newVersion")}
           </div>
           <p className="text-[12px] text-txt-2 mb-3">
-            Versão {version} está disponível para download.
+            {t("update.versionAvailable", { version })}
           </p>
           <div className="flex gap-2">
             <button
               onClick={downloadAndInstall}
               className="text-[12px] px-3 py-1.5 rounded-sm bg-accent text-white font-medium hover:bg-accent-2 transition-colors"
             >
-              Atualizar agora
+              {t("update.updateNow")}
             </button>
             <button
               onClick={() => setStatus("idle")}
               className="text-[12px] px-3 py-1.5 rounded-sm border border-border text-txt-2 hover:bg-bg-3 transition-colors"
             >
-              Depois
+              {t("update.later")}
             </button>
           </div>
         </div>
@@ -150,8 +152,7 @@ export default function UpdateChecker() {
       {status === "downloading" && (
         <div>
           <div className="text-sm font-semibold mb-2 flex items-center gap-1.5">
-            <Icon name="refresh" size={15} className="text-accent animate-spin" /> Baixando
-            atualização...
+            <Icon name="refresh" size={15} className="text-accent animate-spin" /> {t("update.downloading")}
           </div>
           <div className="w-full h-1.5 bg-bg rounded-full overflow-hidden">
             <div
@@ -165,21 +166,21 @@ export default function UpdateChecker() {
       {status === "ready" && (
         <div>
           <div className="text-sm font-semibold mb-1.5 flex items-center gap-1.5">
-            <Icon name="check" size={15} className="text-ok" /> Atualização pronta
+            <Icon name="check" size={15} className="text-ok" /> {t("update.ready")}
           </div>
-          <p className="text-[12px] text-txt-2 mb-3">Reinicie o app para aplicar a atualização.</p>
+          <p className="text-[12px] text-txt-2 mb-3">{t("update.restartHint")}</p>
           <button
             onClick={relaunch}
             className="text-[12px] px-3 py-1.5 rounded-sm bg-ok text-white font-medium hover:opacity-90 transition-colors"
           >
-            Reiniciar agora
+            {t("update.restartNow")}
           </button>
         </div>
       )}
 
       {status === "error" && (
         <div className="text-[12px] text-danger flex items-center gap-1.5">
-          <Icon name="x" size={14} /> Erro ao atualizar. Tente novamente mais tarde.
+          <Icon name="x" size={14} /> {t("update.error")}
         </div>
       )}
     </div>

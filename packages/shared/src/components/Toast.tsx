@@ -23,6 +23,7 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import Icon from "./Icon";
+import { useI18n } from "@pbl/shared/i18n";
 
 /** Tipos visuais de toast suportados */
 type ToastType = "success" | "error" | "info";
@@ -88,6 +89,7 @@ export function toast(message: string, type: ToastType = "info") {
  * ou será removido automaticamente após 4 segundos.
  */
 export default function ToastContainer() {
+  const { t } = useI18n();
   const [toasts, setToasts] = useState<ToastItem[]>([]);
   const counterRef = useRef(0);
   const timersRef = useRef<Set<ReturnType<typeof setTimeout>>>(new Set());
@@ -114,20 +116,20 @@ export default function ToastContainer() {
 
   return (
     <div className="fixed bottom-4 right-4 z-60 flex flex-col gap-2 pointer-events-none">
-      {toasts.map((t) => (
+      {toasts.map((item) => (
         <div
-          key={t.id}
+          key={item.id}
           role="alert"
-          className={`pointer-events-auto flex items-center gap-2.5 px-4 py-3 rounded border shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-sm text-[13px] font-medium animate-slide-in ${COLOR_MAP[t.type]}`}
+          className={`pointer-events-auto flex items-center gap-2.5 px-4 py-3 rounded border shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-sm text-[13px] font-medium animate-slide-in ${COLOR_MAP[item.type]}`}
         >
-          <Icon name={ICON_MAP[t.type] as keyof typeof ICON_MAP} size={15} />
-          <span>{t.message}</span>
+          <Icon name={ICON_MAP[item.type] as keyof typeof ICON_MAP} size={15} />
+          <span>{item.message}</span>
           <button
             onClick={() =>
-              setToasts((prev) => prev.filter((x) => x.id !== t.id))
+              setToasts((prev) => prev.filter((x) => x.id !== item.id))
             }
             className="ml-2 opacity-50 hover:opacity-100 transition-opacity"
-            aria-label="Fechar notificação"
+            aria-label={t("a11y.closeNotification")}
           >
             <Icon name="x" size={12} />
           </button>

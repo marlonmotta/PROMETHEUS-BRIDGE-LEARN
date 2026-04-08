@@ -6,6 +6,7 @@
 import { memo, useState } from "react";
 import { type HistoryItem } from "@pbl/shared/constants";
 import Icon from "@pbl/shared/components/Icon";
+import { useI18n } from "@pbl/shared/i18n";
 
 interface Props {
   history: HistoryItem[];
@@ -22,6 +23,7 @@ export default memo(function HistoryView({
   onClearHistory,
   onExport,
 }: Props) {
+  const { t } = useI18n();
   const [confirmClear, setConfirmClear] = useState(false);
 
   if (history.length === 0) {
@@ -31,11 +33,10 @@ export default memo(function HistoryView({
           <Icon name="clock" size={28} />
         </div>
         <h2 className="text-lg font-semibold text-txt mb-2">
-          Nenhuma adaptação ainda
+          {t("history.empty")}
         </h2>
         <p className="text-[13px] text-txt-3 max-w-sm">
-          Suas adaptações geradas pela IA aparecerão aqui. Vá para a tela de
-          Personas para criar sua primeira adaptação.
+          {t("history.emptyHint")}
         </p>
       </div>
     );
@@ -44,17 +45,17 @@ export default memo(function HistoryView({
   return (
     <div>
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-lg font-bold text-txt">Histórico de Adaptações</h1>
+        <h1 className="text-lg font-bold text-txt">{t("history.title")}</h1>
         {confirmClear ? (
           <div className="flex items-center gap-2">
             <span className="text-[11px] text-danger">
-              Excluir todo o histórico?
+              {t("history.clearConfirm")}
             </span>
             <button
               onClick={() => setConfirmClear(false)}
               className="text-[11px] text-txt-2 border border-border rounded px-3 py-1.5 hover:bg-bg-3 transition-colors"
             >
-              Cancelar
+              {t("history.cancel")}
             </button>
             <button
               onClick={() => {
@@ -63,7 +64,7 @@ export default memo(function HistoryView({
               }}
               className="text-[11px] text-white bg-danger rounded px-3 py-1.5 hover:bg-danger/80 transition-colors"
             >
-              Confirmar
+              {t("history.confirm")}
             </button>
           </div>
         ) : (
@@ -71,7 +72,7 @@ export default memo(function HistoryView({
             onClick={() => setConfirmClear(true)}
             className="text-[11px] text-danger border border-danger/30 rounded px-3 py-1.5 hover:bg-danger/10 transition-colors"
           >
-            Limpar tudo
+            {t("history.clearAll")}
           </button>
         )}
       </div>
@@ -115,7 +116,7 @@ export default memo(function HistoryView({
                   onClick={() => onLoadHistory(item)}
                   className="text-[11px] text-accent border border-accent/30 rounded px-2.5 py-1 hover:bg-accent/10 transition-colors"
                 >
-                  Carregar
+                  {t("history.load")}
                 </button>
                 <button
                   onClick={() => onDeleteHistory(i)}

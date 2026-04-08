@@ -6,6 +6,7 @@
 
 import { type View } from "@pbl/shared/constants";
 import SidebarContent from "@pbl/shared/components/SidebarContent";
+import { useI18n } from "@pbl/shared/i18n";
 
 interface Props {
   view: View;
@@ -18,11 +19,13 @@ export default function Sidebar({
   setView,
   ollamaOnline,
 }: Props) {
+  const { t } = useI18n();
+
   return (
     <aside
       className="w-44 min-w-44 lg:w-56 lg:min-w-56 bg-bg-2 border-r border-border flex flex-col p-4 lg:p-5 px-2 lg:px-3 gap-2 no-print"
       role="navigation"
-      aria-label="Navegação principal"
+      aria-label={t("a11y.mainNavigation")}
     >
       <SidebarContent
         view={view}

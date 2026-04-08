@@ -9,32 +9,34 @@
 
 import { memo, type ReactNode } from "react";
 import { type View } from "@pbl/shared/constants";
+import { useI18n } from "@pbl/shared/i18n";
+import { type TranslationKey } from "../i18n/types";
 
 /** Configuração dos itens de navegação */
-const NAV_ITEMS: { id: View; label: string; icon: string }[] = [
+const NAV_ITEMS: { id: View; labelKey: TranslationKey; icon: string }[] = [
   {
     id: "home",
-    label: "Home",
+    labelKey: "nav.home",
     icon: "M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z M9 22V12h6v10",
   },
   {
     id: "personas",
-    label: "Personas",
+    labelKey: "nav.personas",
     icon: "M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2 M12 3a4 4 0 100 8 4 4 0 000-8z",
   },
   {
     id: "history",
-    label: "Histórico",
+    labelKey: "nav.history",
     icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
   },
   {
     id: "manager",
-    label: "Gerenciador",
+    labelKey: "nav.manager",
     icon: "M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z",
   },
   {
     id: "settings",
-    label: "Configurações",
+    labelKey: "nav.settings",
     icon: "M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z",
   },
 ];
@@ -56,6 +58,7 @@ export default memo(function SidebarContent({
   headerSlot,
   statusSlot,
 }: Props) {
+  const { t } = useI18n();
   return (
     <>
       {/* Logo */}
@@ -97,7 +100,7 @@ export default memo(function SidebarContent({
             >
               <path d={item.icon} />
             </svg>
-            {item.label}
+            {t(item.labelKey)}
           </button>
         ))}
       </nav>

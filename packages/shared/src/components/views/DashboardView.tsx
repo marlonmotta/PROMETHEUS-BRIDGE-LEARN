@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @module DashboardView
  * @description Tela principal all-in-one do PBL.
  *
@@ -9,9 +9,10 @@
  */
 
 import { memo, useState, useMemo, useEffect, useRef } from "react";
-import { SUBJECTS, OUTPUT_FORMATS, type Persona, type Settings } from "@pbl/shared/constants";
+import { getSubjects, getOutputFormats, type Persona, type Settings } from "@pbl/shared/constants";
 import Icon from "@pbl/shared/components/Icon";
 import PersonaAvatar from "@pbl/shared/components/PersonaAvatar";
+import { useI18n } from "@pbl/shared/i18n";
 
 /* ─── Props ─── */
 
@@ -68,6 +69,7 @@ export default memo(function DashboardView({
   const [copied, setCopied] = useState(false);
   const [filterMenuOpen, setFilterMenuOpen] = useState(false);
   const filterRef = useRef<HTMLDivElement>(null);
+  const { t } = useI18n();
 
   // Close filter dropdown on click outside
   useEffect(() => {
@@ -152,13 +154,13 @@ export default memo(function DashboardView({
   const canGenerate = !!selectedPersona && !!content && !generating;
 
   const FILTERS = [
-    { id: "all" as const, label: "Todos" },
-    { id: "favorites" as const, label: "★ Favoritos" },
-    { id: "fictional" as const, label: "Fictício" },
-    { id: "real" as const, label: "Real" },
-    { id: "6-10" as const, label: "Idade 6-10" },
-    { id: "11-14" as const, label: "Idade 11-14" },
-    { id: "15+" as const, label: "Idade 15+" },
+    { id: "all" as const, label: t("dashboard.filterAll") },
+    { id: "favorites" as const, label: t("dashboard.filterFavorites") },
+    { id: "fictional" as const, label: t("dashboard.filterFictional") },
+    { id: "real" as const, label: t("dashboard.filterReal") },
+    { id: "6-10" as const, label: `${t("dashboard.filterAge")} 6-10` },
+    { id: "11-14" as const, label: `${t("dashboard.filterAge")} 11-14` },
+    { id: "15+" as const, label: `${t("dashboard.filterAge")} 15+` },
   ];
 
   return (
@@ -169,10 +171,10 @@ export default memo(function DashboardView({
         <div className="bg-bg-2 border border-border rounded-lg p-4 xl:p-5 h-auto xl:h-[calc(100dvh-7rem)] overflow-hidden flex flex-col">
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-sm font-semibold text-txt">
-              Seletor de Personas
+              {t("dashboard.personaSelector")}
             </h2>
             <span className="text-[11px] text-txt-3">
-              {filtered.length} personas
+              {t("dashboard.personaCount", { count: String(filtered.length) })}
             </span>
           </div>
 
@@ -181,7 +183,7 @@ export default memo(function DashboardView({
             <input
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              placeholder="Buscar persona..."
+              placeholder={t("dashboard.searchPlaceholder")}
               className="flex-1 bg-bg border border-border rounded-sm text-txt text-[12px] px-3 py-2 outline-none focus:border-accent transition-colors"
             />
             <div className="relative" ref={filterRef}>
@@ -192,8 +194,8 @@ export default memo(function DashboardView({
                     ? "bg-accent/15 border-accent text-accent"
                     : "border-border text-txt-3 hover:border-accent hover:text-accent"
                 }`}
-                title="Filtros"
-                aria-label="Abrir filtros de personas"
+                title={t("dashboard.filters")}
+                aria-label={t("a11y.openFilters")}
               >
                 <svg
                   width="16"
@@ -239,12 +241,10 @@ export default memo(function DashboardView({
               <div className="flex flex-col items-center justify-center py-12 text-center gap-3">
                 <Icon name="user" size={40} />
                 <p className="text-[13px] text-txt-2 font-medium">
-                  Nenhuma persona disponível
+                  {t("dashboard.noPersonas")}
                 </p>
                 <p className="text-[12px] text-txt-3 max-w-xs">
-                  Adicione personas pelo <strong>Gerenciador</strong> - importe
-                  de um arquivo JSON ou baixe do GitHub para começar a usar o
-                  app.
+                  {t("dashboard.noPersonasHint")}
                 </p>
               </div>
             ) : (
@@ -319,7 +319,7 @@ export default memo(function DashboardView({
                 </div>
                 <button
                   onClick={() => onToggleFavorite(selectedPersona.meta.id)}
-                  aria-label={favorites.has(selectedPersona.meta.id) ? "Remover dos favoritos" : "Adicionar aos favoritos"}
+                  aria-label={favorites.has(selectedPersona.meta.id) ? t("a11y.removeFavorite") : t("a11y.addFavorite")}
                   className={`shrink-0 transition-colors ${favorites.has(selectedPersona.meta.id) ? "text-gold" : "text-txt-3 hover:text-gold"}`}
                 >
                   <Icon
@@ -342,15 +342,15 @@ export default memo(function DashboardView({
                 )}
                 <div className="flex items-center gap-4 text-[11px]">
                   <div className="flex items-center gap-1.5">
-                    <span className="text-txt-3">Categoria:</span>
+                    <span className="text-txt-3">{t("dashboard.category")}:</span>
                     <span className="text-accent font-medium">
                       {selectedPersona.meta?.category === "fictional"
-                        ? "Fictício"
-                        : "Real"}
+                        ? t("dashboard.categoryFictional")
+                        : t("dashboard.categoryReal")}
                     </span>
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <span className="text-txt-3">Idade:</span>
+                    <span className="text-txt-3">{t("dashboard.age")}:</span>
                     <span className="text-accent font-medium">
                       {selectedPersona.meta?.target_age_range || "-"}
                     </span>
@@ -365,32 +365,32 @@ export default memo(function DashboardView({
         <div className="bg-bg-2 border border-border rounded-lg p-4 xl:p-5 flex flex-col h-auto xl:h-[calc(100dvh-7rem)] overflow-hidden">
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-sm font-semibold text-txt">
-              Entrada de Conteúdo Educacional
+              {t("dashboard.contentInput")}
             </h2>
             <span className="text-[10px] text-txt-3 bg-bg border border-border rounded px-2 py-1 flex items-center gap-1.5">
               <span
                 className={`w-1.5 h-1.5 rounded-full ${settings.mode === "offline" ? "bg-ok" : settings.mode === "online" ? "bg-accent" : "bg-gold"}`}
               />
               {settings.mode === "offline"
-                ? `Ollama · ${settings.ollamaModel || "-"}`
+                ? t("dashboard.aiModeOllama", { model: settings.ollamaModel || "-" })
                 : settings.mode === "online"
-                  ? `${settings.provider || "Cloud"} · ${settings.model || "-"}`
-                  : "Manual"}
+                  ? t("dashboard.aiModeOnline", { provider: settings.provider || "Cloud", model: settings.model || "-" })
+                  : t("dashboard.aiModeManual")}
             </span>
           </div>
 
           {/* Subject */}
           <div className="flex flex-col gap-1.5 mb-3">
             <label className="text-[11px] text-txt-2 font-medium">
-              Disciplina: {SUBJECTS[subject] || "Selecione"}
+              {t("dashboard.subject")}: {getSubjects(t)[subject] || t("dashboard.selectSubject")}
             </label>
             <select
               value={subject}
               onChange={(e) => onSubjectChange(e.target.value)}
               className="bg-bg border border-border rounded-sm text-txt text-[12px] px-3 py-2 outline-none focus:border-accent transition-colors"
             >
-              <option value="">Selecione a disciplina</option>
-              {Object.entries(SUBJECTS).map(([k, v]) => (
+              <option value="">{t("dashboard.selectSubject")}</option>
+              {Object.entries(getSubjects(t)).map(([k, v]) => (
                 <option key={k} value={k}>
                   {v}
                 </option>
@@ -401,30 +401,30 @@ export default memo(function DashboardView({
           {/* Difficulty */}
           <div className="flex flex-col gap-1.5 mb-3">
             <label className="text-[11px] text-txt-2 font-medium">
-              Dificuldade
+              {t("dashboard.difficulty")}
             </label>
             <select
               value={difficulty}
               onChange={(e) => onDifficultyChange(e.target.value)}
               className="bg-bg border border-border rounded-sm text-txt text-[12px] px-3 py-2 outline-none focus:border-accent transition-colors"
             >
-              <option value="fundamental">Fundamental</option>
-              <option value="medio">Médio</option>
-              <option value="avancado">Avançado</option>
+              <option value="fundamental">{t("constants.difficultyLevels.fundamental")}</option>
+              <option value="medio">{t("constants.difficultyLevels.medio")}</option>
+              <option value="avancado">{t("constants.difficultyLevels.avancado")}</option>
             </select>
           </div>
 
           {/* Output Format */}
           <div className="flex flex-col gap-1.5 mb-3">
             <label className="text-[11px] text-txt-2 font-medium">
-              Formato de saída
+              {t("dashboard.outputFormat")}
             </label>
             <select
               value={settings.outputFormat}
               onChange={(e) => onSettingsChange?.({ outputFormat: e.target.value })}
               className="bg-bg border border-border rounded-sm text-txt text-[12px] px-3 py-2 outline-none focus:border-accent transition-colors"
             >
-              {Object.entries(OUTPUT_FORMATS).map(([k, v]) => (
+              {Object.entries(getOutputFormats(t)).map(([k, v]) => (
                 <option key={k} value={k}>
                   {v}
                 </option>
@@ -435,27 +435,27 @@ export default memo(function DashboardView({
           {/* Content textarea */}
           <div className="flex flex-col gap-1.5 flex-1 mb-4">
             <label className="text-[11px] text-txt-2 font-medium flex items-center gap-2">
-              Conteúdo educacional
+              {t("dashboard.contentLabel")}
               {onImportFile && (
                 <button
                   type="button"
                   onClick={onImportFile}
                   className="inline-flex items-center gap-1 text-[10px] text-accent hover:text-accent-2 transition-colors font-medium"
-                  title="Importar arquivo (PDF, DOCX, TXT, MD) ou imagem (JPG, PNG)"
+                  title={t("content.importFileTooltip")}
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                     <polyline points="17 8 12 3 7 8" />
                     <line x1="12" y1="3" x2="12" y2="15" />
                   </svg>
-                  Importar arquivo
+                  {t("dashboard.importFile")}
                 </button>
               )}
             </label>
             <textarea
               value={content}
               onChange={(e) => onContentChange(e.target.value)}
-              placeholder="Cole ou digite aqui o conteúdo que será adaptado pela persona..."
+              placeholder={t("dashboard.contentPlaceholder")}
               className="flex-1 min-h-[160px] bg-bg border border-border rounded-sm text-txt text-[12px] px-3.5 py-3 outline-none focus:border-accent transition-colors resize-none leading-relaxed"
             />
           </div>
@@ -474,12 +474,12 @@ export default memo(function DashboardView({
             {generating ? (
               <>
                 <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                Adaptando...
+                {t("dashboard.adapting")}
               </>
             ) : (
               <>
                 <Icon name="sparkles" size={16} />
-                Adaptar Conteúdo
+                {t("dashboard.adaptButton")}
               </>
             )}
           </button>
@@ -488,7 +488,7 @@ export default memo(function DashboardView({
           <div className="mt-4 pt-4 border-t border-border flex-1 flex flex-col min-h-0">
             <div className="flex items-center justify-between mb-3">
               <span className="text-[12px] font-semibold text-txt">
-                Resultado
+                {t("dashboard.result")}
               </span>
               {result && (
                 <div className="flex items-center gap-1.5 flex-wrap">
@@ -498,7 +498,7 @@ export default memo(function DashboardView({
                         <button
                           key={fmt}
                           onClick={() => onExport(fmt)}
-                          aria-label={`Exportar como ${fmt.toUpperCase()}`}
+                          aria-label={`${t("a11y.exportAs")} ${fmt.toUpperCase()}`}
                           className="text-[10px] text-txt-3 border border-border rounded px-2 py-1 hover:border-accent hover:text-accent transition-colors uppercase"
                         >
                           {fmt}
@@ -512,7 +512,7 @@ export default memo(function DashboardView({
                     className="text-[10px] text-txt-3 border border-border rounded px-2 py-1 hover:border-accent hover:text-accent transition-colors flex items-center gap-1"
                   >
                     <Icon name={copied ? "check" : "copy"} size={11} />
-                    {copied ? "Copiado" : "Copiar"}
+                    {copied ? t("dashboard.copied") : t("dashboard.copy")}
                   </button>
                   <button
                     onClick={handleSave}
@@ -524,7 +524,7 @@ export default memo(function DashboardView({
                     }`}
                   >
                     <Icon name={resultSaved ? "check" : "save"} size={11} />{" "}
-                    {resultSaved ? "Salvo" : "Salvar"}
+                    {resultSaved ? t("dashboard.saved") : t("dashboard.save")}
                   </button>
                 </div>
               )}
@@ -534,8 +534,7 @@ export default memo(function DashboardView({
                 <span className="text-txt">{result}</span>
               ) : (
                 <span className="text-txt-3 italic">
-                  Selecione uma persona, insira o conteúdo educacional e clique
-                  em "Adaptar Conteúdo" para gerar o resultado adaptado aqui.
+                  {t("dashboard.resultPlaceholder")}
                 </span>
               )}
             </div>

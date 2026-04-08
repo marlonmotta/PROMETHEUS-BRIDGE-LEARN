@@ -11,6 +11,8 @@
  * - **pdf**: abre o diálogo de impressão nativo do browser (Salvar como PDF)
  */
 
+import { t as tStandalone, getLocale } from "./i18n";
+
 /**
  * MIME types por formato de exportação.
  */
@@ -105,10 +107,10 @@ function textToHtml(content: string): string {
   const body = bodyParts.join("\n");
 
   return `<!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="${getLocale()}">
 <head>
   <meta charset="UTF-8">
-  <title>PBL - Conteúdo Adaptado</title>
+  <title>${tStandalone("export.htmlTitle", getLocale())}</title>
   <style>
     body { font-family: 'Liberation Sans', Arial, sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1.5rem; color: #222; line-height: 1.7; font-size: 14px; }
     h1 { text-align: center; font-size: 1.4rem; margin: 1.5rem 0; border-bottom: 2px solid #333; padding-bottom: 0.5rem; }
@@ -152,7 +154,7 @@ function printAsPdf(content: string): void {
   const printWindow = window.open("", "_blank");
   if (!printWindow) {
     throw new Error(
-      "O navegador bloqueou a janela de impressão. Desative o bloqueador de pop-ups e tente novamente."
+      tStandalone("export.popupBlocked", getLocale())
     );
   }
   printWindow.document.write(html);
