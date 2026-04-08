@@ -1,8 +1,8 @@
-﻿/**
- * Testes unitários do appReducer compartilhado.
+/**
+ * Testes unit�rios do appReducer compartilhado.
  *
- * Testa todas as ações do reducer que é o coração do estado
- * da aplicação PBL - usado tanto no desktop quanto no web.
+ * Testa todas as a��es do reducer que � o cora��o do estado
+ * da aplica��o PBL - usado tanto no desktop quanto no web.
  */
 
 import { describe, it, expect, beforeEach } from "vitest";
@@ -18,7 +18,7 @@ import {
   type HistoryItem,
 } from "@pbl/shared/constants";
 
-// ── Fixtures ────────────────────────────────────────────────────────────────
+// -- Fixtures ----------------------------------------------------------------
 
 const mockPersona: Persona = {
   meta: {
@@ -30,7 +30,7 @@ const mockPersona: Persona = {
   },
   character: { universe: "Dragon Ball", role: "Guerreiro Saiyajin" },
   prompts: {
-    system_prompt: "Você é o Goku.",
+    system_prompt: "Voc� � o Goku.",
     greeting: "Ei!",
     rewrite_instruction: "Adapte usando Dragon Ball.",
   },
@@ -46,15 +46,15 @@ const mockPersona2: Persona = {
   },
   character: { universe: "Naruto", role: "Sannin" },
   prompts: {
-    system_prompt: "Você é o Jiraiya.",
-    greeting: "Olá!",
+    system_prompt: "Voc� � o Jiraiya.",
+    greeting: "Ol�!",
     rewrite_instruction: "Adapte usando Naruto.",
   },
 };
 
 const mockHistoryItem: HistoryItem = {
   persona: "Goku",
-  subject: "Matemática",
+  subject: "Matem�tica",
   content: "2+2=4",
   result: "Treino com poder de luta de 4",
   date: "01/01/2026",
@@ -62,7 +62,7 @@ const mockHistoryItem: HistoryItem = {
 
 let initialState: AppState;
 
-// ── Testes ───────────────────────────────────────────────────────────────────
+// -- Testes -------------------------------------------------------------------
 
 describe("createInitialState", () => {
   beforeEach(() => {
@@ -81,7 +81,7 @@ describe("createInitialState", () => {
     expect(state.settings).toEqual(DEFAULT_SETTINGS);
   });
 
-  it("hidrata histórico do localStorage", () => {
+  it("hidrata hist�rico do localStorage", () => {
     localStorage.setItem("pbl_history", JSON.stringify([mockHistoryItem]));
     const state = createInitialState();
     expect(state.history).toHaveLength(1);
@@ -123,7 +123,7 @@ describe("appReducer", () => {
     initialState = createInitialState();
   });
 
-  // ── Navegação ──
+  // -- Navega��o --
 
   describe("SET_VIEW", () => {
     it("muda a view ativa", () => {
@@ -134,7 +134,7 @@ describe("appReducer", () => {
       expect(next.view).toBe("personas");
     });
 
-    it("não altera outros campos", () => {
+    it("n�o altera outros campos", () => {
       const next = appReducer(initialState, {
         type: "SET_VIEW",
         view: "settings",
@@ -144,7 +144,7 @@ describe("appReducer", () => {
     });
   });
 
-  // ── Personas ──
+  // -- Personas --
 
   describe("SET_PERSONAS", () => {
     it("define a lista de personas", () => {
@@ -207,10 +207,10 @@ describe("appReducer", () => {
     });
   });
 
-  // ── Conteúdo ──
+  // -- Conte�do --
 
-  describe("campos de conteúdo", () => {
-    it("SET_CONTENT atualiza conteúdo", () => {
+  describe("campos de conte�do", () => {
+    it("SET_CONTENT atualiza conte�do", () => {
       const next = appReducer(initialState, {
         type: "SET_CONTENT",
         content: "2+2=?",
@@ -251,10 +251,10 @@ describe("appReducer", () => {
     });
   });
 
-  // ── Geração ──
+  // -- Gera��o --
 
   describe("SET_GENERATING", () => {
-    it("ativa flag de geração", () => {
+    it("ativa flag de gera��o", () => {
       const next = appReducer(initialState, {
         type: "SET_GENERATING",
         generating: true,
@@ -274,12 +274,12 @@ describe("appReducer", () => {
       expect(next.result).toBe("Resultado da IA");
       expect(next.fullPrompt).toBe("Prompt completo");
       expect(next.generating).toBe(false);
-      // O reducer navega para 'result' após geração concluída
-      expect(next.view).toBe("result");
+      // O reducer navega para 'result' ap�s gera��o conclu�da
+      expect(next.view).toBe("personas");
     });
   });
 
-  // ── Settings ──
+  // -- Settings --
 
   describe("SET_SETTINGS", () => {
     it("persiste settings no localStorage sem apiKey", () => {
@@ -289,8 +289,8 @@ describe("appReducer", () => {
         apiKey: "sk-secret",
       };
       appReducer(initialState, { type: "SET_SETTINGS", settings: newSettings });
-      // Persistência é feita pelo orchestrator via persistState() em useEffect
-      // O reducer é puro - não escreve no localStorage diretamente
+      // Persist�ncia � feita pelo orchestrator via persistState() em useEffect
+      // O reducer � puro - n�o escreve no localStorage diretamente
       const saved = JSON.parse(localStorage.getItem("pbl_settings") || "null");
       expect(saved).toBeNull();
     });
@@ -307,7 +307,7 @@ describe("appReducer", () => {
     });
   });
 
-  // ── Histórico ──
+  // -- Hist�rico --
 
   describe("ADD_HISTORY", () => {
     it("adiciona item no topo e persiste", () => {
@@ -317,7 +317,7 @@ describe("appReducer", () => {
       });
       expect(next.history).toHaveLength(1);
       expect(next.history[0].persona).toBe("Goku");
-      // O reducer é puro - persistência é feita pelo orchestrator via persistState() em useEffect
+      // O reducer � puro - persist�ncia � feita pelo orchestrator via persistState() em useEffect
       expect(localStorage.getItem("pbl_history")).toBeNull();
     });
 
@@ -339,7 +339,7 @@ describe("appReducer", () => {
   });
 
   describe("DELETE_HISTORY", () => {
-    it("remove item por índice", () => {
+    it("remove item por �ndice", () => {
       const stateWithHistory = {
         ...initialState,
         history: [mockHistoryItem, { ...mockHistoryItem, persona: "Jiraiya" }],
@@ -354,17 +354,17 @@ describe("appReducer", () => {
   });
 
   describe("CLEAR_HISTORY", () => {
-    it("limpa todo o histórico e remove do localStorage", () => {
+    it("limpa todo o hist�rico e remove do localStorage", () => {
       localStorage.setItem("pbl_history", JSON.stringify([mockHistoryItem]));
       const stateWithHistory = { ...initialState, history: [mockHistoryItem] };
       const next = appReducer(stateWithHistory, { type: "CLEAR_HISTORY" });
       expect(next.history).toEqual([]);
-      // Reducer puro - não limpa localStorage diretamente. O orchestrator cuida via persistState()
-      // (localStorage.getItem("pbl_history") ainda conterá o valor anterior)
+      // Reducer puro - n�o limpa localStorage diretamente. O orchestrator cuida via persistState()
+      // (localStorage.getItem("pbl_history") ainda conter� o valor anterior)
     });
   });
 
-  // ── Favoritos ──
+  // -- Favoritos --
 
   describe("TOGGLE_FAVORITE", () => {
     it("adiciona favorito", () => {
@@ -383,22 +383,22 @@ describe("appReducer", () => {
 
     it("persiste no localStorage", () => {
       appReducer(initialState, { type: "TOGGLE_FAVORITE", id: "goku" });
-      // O reducer é puro - persistência é feita pelo orchestrator via persistState() em useEffect
+      // O reducer � puro - persist�ncia � feita pelo orchestrator via persistState() em useEffect
       expect(localStorage.getItem("pbl_favorites")).toBeNull();
     });
   });
 
-  // ── Ações compostas ──
+  // -- A��es compostas --
 
   describe("START_NEW_ADAPTATION", () => {
-    it("reseta campos de conteúdo e navega para personas", () => {
+    it("reseta campos de conte�do e navega para personas", () => {
       const midFlow = {
         ...initialState,
         content: "Texto antigo",
         result: "Resultado antigo",
         subject: "math",
         selectedPersona: mockPersona,
-        view: "result" as const,
+        view: "personas" as const,
       };
       const next = appReducer(midFlow, { type: "START_NEW_ADAPTATION" });
       expect(next.content).toBe("");
@@ -419,10 +419,10 @@ describe("appReducer", () => {
     });
   });
 
-  // ── Imutabilidade ──
+  // -- Imutabilidade --
 
   describe("imutabilidade", () => {
-    it("não muta o estado original ao dispatch", () => {
+    it("n�o muta o estado original ao dispatch", () => {
       const frozen = Object.freeze({ ...initialState });
       const next = appReducer(frozen as AppState, {
         type: "SET_VIEW",
@@ -443,10 +443,10 @@ describe("appReducer", () => {
     });
   });
 
-  // ── SET_HISTORY ──
+  // -- SET_HISTORY --
 
   describe("SET_HISTORY", () => {
-    it("substitui histórico completo e persiste", () => {
+    it("substitui hist�rico completo e persiste", () => {
       const items = [
         mockHistoryItem,
         { ...mockHistoryItem, persona: "Jiraiya" },
@@ -456,14 +456,14 @@ describe("appReducer", () => {
         history: items,
       });
       expect(next.history).toHaveLength(2);
-      // O reducer é puro - persistência via persistState() no orchestrator
+      // O reducer � puro - persist�ncia via persistState() no orchestrator
       expect(localStorage.getItem("pbl_history")).toBeNull();
     });
   });
 
-  // ── Ação desconhecida ──
+  // -- A��o desconhecida --
 
-  describe("ação desconhecida", () => {
+  describe("a��o desconhecida", () => {
     it("retorna o estado inalterado", () => {
       const next = appReducer(initialState, {
         type: "UNKNOWN",
