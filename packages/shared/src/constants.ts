@@ -136,7 +136,6 @@ export type View =
   | "home"
   | "personas"
   | "content"
-  | "result"
   | "history"
   | "manager"
   | "settings";

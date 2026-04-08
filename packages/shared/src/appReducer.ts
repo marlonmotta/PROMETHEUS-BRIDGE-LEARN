@@ -230,7 +230,7 @@ export function appReducer(state: AppState, action: AppAction): AppState {
         result: action.result,
         fullPrompt: action.fullPrompt,
         generating: false,
-        view: "result",
+        view: "personas",
       };
 
     default:
