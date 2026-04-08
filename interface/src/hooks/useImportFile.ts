@@ -27,9 +27,9 @@ export function useImportFile({ settings, dispatch }: UseImportFileParams) {
       const { open } = await import("@tauri-apps/plugin-dialog");
       const selected = await open({
         filters: [
-          { name: "Todos suportados", extensions: ["pdf", "docx", "txt", "md", "jpg", "jpeg", "png", "webp", "gif"] },
-          { name: "Documentos", extensions: ["pdf", "docx", "txt", "md"] },
-          { name: "Imagens (OCR)", extensions: ["jpg", "jpeg", "png", "webp", "gif"] },
+          { name: t("content.importAllSupported"), extensions: ["pdf", "docx", "txt", "md", "jpg", "jpeg", "png", "webp", "gif"] },
+          { name: t("content.importDocuments"), extensions: ["pdf", "docx", "txt", "md"] },
+          { name: t("content.importImages"), extensions: ["jpg", "jpeg", "png", "webp", "gif"] },
         ],
         multiple: false,
       });

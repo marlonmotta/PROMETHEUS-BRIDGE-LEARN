@@ -90,7 +90,10 @@
     "generating": "Gerando com IA...",
     "via": "Via",
     "manualMode": "Modo manual - prompt copiável",
-    "importFileTooltip": "Importar arquivo (PDF, DOCX, TXT, MD) ou imagem (JPG, PNG)"
+    "importFileTooltip": "Importar arquivo (PDF, DOCX, TXT, MD) ou imagem (JPG, PNG)",
+    "importAllSupported": "Todos suportados",
+    "importDocuments": "Documentos",
+    "importImages": "Imagens (OCR)"
   },
   "result": {
     "title": "Resultado",

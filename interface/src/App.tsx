@@ -137,9 +137,10 @@ export default function App() {
       content: state.content,
       result: state.result,
       date:
-        now.toLocaleDateString("pt-BR") +
-        " às " +
-        now.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }),
+        now.toLocaleString(settings.interfaceLanguage || "pt-BR", {
+          day: "2-digit", month: "2-digit", year: "numeric",
+          hour: "2-digit", minute: "2-digit",
+        }),
     };
     dispatch({ type: "ADD_HISTORY", item });
   }, [state.selectedPersona, state.subject, state.content, state.result]);
