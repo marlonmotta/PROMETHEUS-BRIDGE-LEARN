@@ -233,8 +233,8 @@ describe("buildPromptPayload", () => {
     const result = buildPromptPayload(mockPersona, "Content", "math", "simple", settings);
 
     expect(result.rewriteInstruction).toContain("Responda inteiramente em");
-    // OUTPUT_LANGUAGES["en"] retorna "Inglês" (o rótulo em português do idioma)
-    expect(result.rewriteInstruction).toContain("Inglês");
+    // OUTPUT_LANGUAGES["en"] retorna "English" (nome nativo / autonymous)
+    expect(result.rewriteInstruction).toContain("English");
   });
 
   it("NÃO injeta instrução de idioma quando outputLanguage é 'pt-BR' (padrão)", () => {
