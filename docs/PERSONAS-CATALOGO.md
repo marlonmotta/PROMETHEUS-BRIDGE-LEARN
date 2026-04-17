@@ -91,14 +91,15 @@
 | 70 | ⚡ Raiden | Metal Gear | Fictional | 13-18 | 🟡13+ Determinado, evolutivo, filosófico-ação | [`raiden.json`](personas/fictional/raiden.json) |
 | 71 | 🔮 Bayonetta | Bayonetta | Fictional | 13-18 | 🟡13+ Teatral, sofisticada, autoconfiante | [`bayonetta.json`](personas/fictional/bayonetta.json) |
 | 72 | 🃏 Kefka | Final Fantasy VI | Fictional | 13-18 | 🟡13+ Caótico, filosófico, Socrático-nihilista | [`kefka.json`](personas/fictional/kefka.json) |
+| 73 | 🌙 Sephiroth | Final Fantasy VII | Fictional | 13-18 | 🟡13+ Frio, preciso, perfeccionista-exigente | [`sephiroth.json`](personas/fictional/sephiroth.json) |
 ---
 
 ## 📊 Estatísticas
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **72** |
-| Fictional | 51 |
+| Total de personas prontas | **73** |
+| Fictional | 52 |
 | Real | 21 |
 | Universos cobertos | 44 |
 | Backlog pendente | ~169 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
@@ -130,7 +131,7 @@
 | World of Warcraft | Thrall, Vol'jin |
 | Diablo | Tyrael, Deckard Cain |
 | Resident Evil | Leon, Claire, Chris, Rebecca |
-| Final Fantasy VII | Tifa, Aerith |
+| Final Fantasy VII | Tifa, Aerith, Sephiroth |
 | Pokémon | Ash Ketchum |
 | Digimon | Tai Kamiya |
 | Guerreiras do K-Pop (HUNTR/X) | Rumi, Mira, Zoey |
@@ -169,6 +170,7 @@
 | Sério / Estratégico | Batman, Kakashi, Kratos, Albedo, Leon |
 | Teatral / Sofisticado / Autoconfiante | Bayonetta |
 | Caótico / Filosófico / Socrático-Nihilista | Kefka |
+| Frio / Preciso / Perfeccionista | Sephiroth |
 | Grave / Filosófico-Militar | Big Boss |
 | Determinado / Evolutivo / Filosófico-Ação | Raiden |
 | Inspirador / Honesto / Tático | Captain America |
@@ -224,7 +226,7 @@
 |--------------|-------|----------|
 | 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani, Superman, Iron Man, Captain America, Black Panther, Pilar, Breno, Samba, Noob, Bacon Hair |
 | 🔵 10+ | 10-16 | Rumi, Mira, Zoey |
-| 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa, Doctor Strange, Big Boss, Raiden, Bayonetta, Kefka |
+| 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa, Doctor Strange, Big Boss, Raiden, Bayonetta, Kefka, Sephiroth |
 | 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing, Carl Sagan, Richard Feynman, Ada Lovelace, Grace Hopper, Stephen Hawking, Neil deGrasse Tyson, Leonardo da Vinci, Galileu Galilei, Isaac Newton, Charles Darwin, Marie Curie |
 | 🟡 15-18 | 15-18 | Noam Chomsky |
 | 🟡 13-18 | 13-18 | Linus Torvalds, Kevin Mitnick, Buckminster Fuller |
@@ -237,7 +239,7 @@
 | Perfil do Aluno | Persona Recomendada |
 |----------------|-------------------|
 | Precisa de acolhimento | 🌊 Tanjiro, 🗡️ Raphtalia, 💚 Luigi, 🌸 Aerith, ❤️ Claire |
-| Precisa de disciplina | 🪓 Kratos, 🦇 Batman, 👑 Albedo, 💪 Chris, 🛡️ Captain America, 🐾 Black Panther, 🎖️ Big Boss |
+| Precisa de disciplina | 🪓 Kratos, 🦇 Batman, 👑 Albedo, 💪 Chris, 🛡️ Captain America, 🐾 Black Panther, 🎖️ Big Boss, 🌙 Sephiroth |
 | Precisa de provocação positiva | 😎 Gojo Satoru |
 | Perfil analítico/lógico | 🔍 L, 🦇 Batman, 💀 Ainz, ⚔️ Geralt, 🌀 Doctor Strange, 💻 Alan Turing, 🔭 Carl Sagan, ⚛️ Richard Feynman, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick, 🖊️ Ada Lovelace, ⚓ Grace Hopper, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson, 🧩 Noam Chomsky, 🔭 Galileu Galilei, 🍎 Isaac Newton, ⚗️ Marie Curie |
 | Precisa construir autoconfiança | 🔮 Bayonetta, ⚡ Raiden, 🛡️ Naofumi |
