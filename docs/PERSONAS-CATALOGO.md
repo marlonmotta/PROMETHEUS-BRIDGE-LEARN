@@ -95,17 +95,18 @@
 | 74 | ⚡ Thor | Marvel / MCU | Fictional | 11-18 | 🟢LIVRE Nobre, caloroso, épico-humorístico | [`thor.json`](personas/fictional/thor.json) |
 | 75 | 💚 Hulk (Professor Hulk) | Marvel / MCU | Fictional | 11-18 | 🟢LIVRE Dual: científico-preciso + direto-entusiasta | [`hulk.json`](personas/fictional/hulk.json) |
 | 76 | 🐺 Wolverine | Marvel / X-Men | Fictional | 13-18 | 🟡13+ Gruff, direto, veterano-leal | [`wolverine.json`](personas/fictional/wolverine.json) |
+| 77 | 🧠 Professor X | Marvel / X-Men | Fictional | 11-18 | 🔵10+ Sereno, empático, socrático-inclusivo | [`professor-x.json`](personas/fictional/professor-x.json) |
 ---
 
 ## 📊 Estatísticas
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **76** |
-| Fictional | 55 |
+| Total de personas prontas | **77** |
+| Fictional | 56 |
 | Real | 21 |
-| Universos cobertos | 44 |
-| Backlog pendente | ~169 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
+| Universos cobertos | 50 |
+| Backlog pendente | ~142 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
 
 ---
 
@@ -115,7 +116,7 @@
 |----------|---------------------|
 | Naruto | Jiraiya Sensei, Kakashi |
 | Marvel / MCU | Spider-Man, Iron Man, Captain America, Black Panther, Doctor Strange, Thor, Hulk |
-| Marvel / X-Men | Wolverine |
+| Marvel / X-Men | Wolverine, Professor X |
 | DC Comics | Batman, Superman |
 | Dragon Ball | Goku |
 | Minecraft | Steve |
@@ -178,6 +179,7 @@
 | Nobre / Caloroso / Épico-Humorístico | Thor |
 | Dual: Científico-Preciso / Direto-Entusiasta | Hulk (Professor Hulk) |
 | Gruff / Direto / Veterano-Leal | Wolverine |
+| Sereno / Empático / Socrático-Inclusivo | Professor X |
 | Grave / Filosófico-Militar | Big Boss |
 | Determinado / Evolutivo / Filosófico-Ação | Raiden |
 | Inspirador / Honesto / Tático | Captain America |
@@ -232,7 +234,7 @@
 | Classificação | Faixa | Personas |
 |--------------|-------|----------|
 | 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani, Superman, Iron Man, Captain America, Black Panther, Pilar, Breno, Samba, Noob, Bacon Hair, Thor, Hulk |
-| 🔵 10+ | 10-16 | Rumi, Mira, Zoey |
+| 🔵 10+ | 10-18 | Rumi, Mira, Zoey, Professor X |
 | 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa, Doctor Strange, Big Boss, Raiden, Bayonetta, Kefka, Sephiroth, Wolverine |
 | 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing, Carl Sagan, Richard Feynman, Ada Lovelace, Grace Hopper, Stephen Hawking, Neil deGrasse Tyson, Leonardo da Vinci, Galileu Galilei, Isaac Newton, Charles Darwin, Marie Curie |
 | 🟡 15-18 | 15-18 | Noam Chomsky |
@@ -245,7 +247,7 @@
 
 | Perfil do Aluno | Persona Recomendada |
 |----------------|-------------------|
-| Precisa de acolhimento | 🌊 Tanjiro, 🗡️ Raphtalia, 💚 Luigi, 🌸 Aerith, ❤️ Claire |
+| Precisa de acolhimento | 🌊 Tanjiro, 🗡️ Raphtalia, 💚 Luigi, 🌸 Aerith, ❤️ Claire, 🧠 Professor X |
 | Precisa de disciplina | 🪓 Kratos, 🦇 Batman, 👑 Albedo, 💪 Chris, 🛡️ Captain America, 🐾 Black Panther, 🎖️ Big Boss, 🌙 Sephiroth |
 | Precisa de provocação positiva | 😎 Gojo Satoru |
 | Perfil analítico/lógico | 🔍 L, 🦇 Batman, 💀 Ainz, ⚔️ Geralt, 🌀 Doctor Strange, 💻 Alan Turing, 🔭 Carl Sagan, ⚛️ Richard Feynman, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick, 🖊️ Ada Lovelace, ⚓ Grace Hopper, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson, 🧩 Noam Chomsky, 🔭 Galileu Galilei, 🍎 Isaac Newton, ⚗️ Marie Curie |
@@ -254,14 +256,14 @@
 | Perfil criativo/TDAH | 💥 Jinx, ⛏️ Steve, ⚡ Ash, 🦁 Tai, 🌌 Neil deGrasse Tyson |
 | Precisa de energia/motivação | 💥 Goku, 🏴‍☠️ Luffy, 🚀 Sacani, 💪 Chris, ⚡ Ash, 🦸 Superman, 🛡️ Captain America, 🔭 Carl Sagan, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson, ⚡ Thor |
 | Gosta de tecnologia/STEM | 🔴🟡 Iron Man, 🕸️ Spider-Man, 🐾 Black Panther, 🧠 Einstein, 🔬 Rebecca, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick, 🖊️ Ada Lovelace, ⚓ Grace Hopper, 💚 Hulk |
-| Gosta de filosofia / argumentação | 🧩 Noam Chomsky, 🔍 L, 🦇 Batman, 🌀 Doctor Strange, 📖 Deckard Cain |
+| Gosta de filosofia / argumentação | 🧩 Noam Chomsky, 🔍 L, 🦇 Batman, 🌀 Doctor Strange, 📖 Deckard Cain, 🧠 Professor X |
 | Gosta de puzzles | 🗡️ Link, 🔺 Buckminster Fuller |
 
 | Gosta de história | 🗡️ Ezio, 🗺️ Lara Croft, 🛡️ Captain America, 🐾 Black Panther, 🔮 Vol'jin, 📖 Deckard Cain, 🎨 Leonardo da Vinci, 🔭 Galileu Galilei, 🍎 Isaac Newton, 🐢 Charles Darwin, 🐺 Wolverine |
 | Gosta de ciência | 🧠 Einstein, 🕸️ Spider-Man, 🚀 Sacani, 🔬 Rebecca, 🔴🟡 Iron Man, 🌀 Doctor Strange, 🚀 Elon Musk, ⚡ Tesla, 🔭 Carl Sagan, ⚛️ Richard Feynman, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson, 🎨 Leonardo da Vinci, 🔭 Galileu Galilei, 🍎 Isaac Newton, 🐢 Charles Darwin, ⚗️ Marie Curie |
 | Gosta de design / criatividade | 🍎 Steve Jobs, 💥 Jinx, 🔴🟡 Iron Man, 🔺 Buckminster Fuller, 🎨 Leonardo da Vinci, 🔮 Bayonetta |
 | Gosta de tecnologia/engenharia | 🚀 Elon Musk, 🔴🟡 Iron Man, 🍎 Steve Jobs, ⚡ Nikola Tesla, 💻 Alan Turing, ⚛️ Richard Feynman, 🐧 Linus Torvalds, ⚓ Grace Hopper, 🔺 Buckminster Fuller |
-| Sofreu bullying/exclusão | 🛡️ Naofumi, 💚 Luigi, 🌪️ Thrall, 🐺 Wolverine |
+| Sofreu bullying/exclusão | 🛡️ Naofumi, 💚 Luigi, 🌪️ Thrall, 🐺 Wolverine, 🧠 Professor X |
 | Tem ansiedade | 💚 Luigi, 🗡️ Raphtalia, 🌸 Aerith, 🌊 Tanjiro |
 | Crianças (6-10) | 🍄 Mario, 💚 Luigi, ⛏️ Steve, ⚡ Ash, 🦁 Tai, 🌸 Aerith, 🌍 Pilar, 🎯 Breno, 🐱 Samba, 💛 Noob, 🧑 Bacon Hair |
 | Gamer/RPG/MMORPG | 💀 Ainz, 👑 Albedo, 🛡️ Naofumi, 🌪️ Thrall, 🔮 Vol'jin |
@@ -270,7 +272,7 @@
 | Precisa de inspiração épica | ⚔️✨ Tyrael |
 | Gosta de luta/artes marciais | 👊 Tifa |
 | Persistência / Nunca desistir | ⚡ Ash, 💪 Chris, 🦁 Tai, 🛡️ Captain America, 🚀 Elon Musk, ⚓ Grace Hopper, 🔭 Stephen Hawking, ⚗️ Marie Curie, ⚡ Thor |
-| Baixa autoestima | 🛡️ Naofumi, 💚 Luigi, 🗡️ Raphtalia, 👊 Tifa, ⚡ Raiden |
+| Baixa autoestima | 🛡️ Naofumi, 💚 Luigi, 🗡️ Raphtalia, 👊 Tifa, ⚡ Raiden, 🧠 Professor X |
 | Gosta de K-Pop/música/dança | 🎤 Rumi, 💃 Mira, 🎤 Zoey |
 | Gosta de aventura/viagem/culturas | 🌍 Pilar, 🎯 Breno, 🐱 Samba, 🐢 Charles Darwin |
 | Gosta de Roblox/construção | 💛 Noob, 🧑 Bacon Hair |
