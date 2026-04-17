@@ -280,7 +280,7 @@
 | # | Persona | Universo | Status |
 |---|---------|----------|--------|
 | 173 | Big Boss | Metal Gear | ✅ |
-| 174 | Raiden | Metal Gear | ⬜ |
+| 174 | Raiden | Metal Gear | ✅ |
 | 175 | Bayonetta | Bayonetta | ⬜ |
 | 176 | Kefka | Final Fantasy VI | ⬜ |
 | 177 | Sephiroth | Final Fantasy VII | ⬜ |
@@ -335,8 +335,8 @@
 | Lote 6 — Diário de Pilar | 3 |
 | Lote 6 — Roblox | 2 |
 | **Total** | **218** |
-| **Já criadas** | **67** |
-| **Pendentes** | **151** |
+| **Já criadas** | **68** |
+| **Pendentes** | **150** |
 
 ---
 

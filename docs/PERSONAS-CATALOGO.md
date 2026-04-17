@@ -88,14 +88,15 @@
 | 64 | 🐢 Charles Darwin | Histórico / Revolução Biológica | Real | 11-18 | 🟢LIVRE Contemplativo, narrativo, naturalista | [`charles-darwin.json`](personas/real/charles-darwin.json) |
 | 65 | ⚗️ Marie Curie | Histórico / Revolução Científica | Real | 11-18 | 🟢LIVRE Precisa, determinada, laboratorial | [`marie-curie.json`](personas/real/marie-curie.json) |
 | 69 | 🎖️ Big Boss | Metal Gear | Fictional | 13-18 | 🟡13+ Grave, estratégico, filosófico-militar | [`big-boss.json`](personas/fictional/big-boss.json) |
+| 70 | ⚡ Raiden | Metal Gear | Fictional | 13-18 | 🟡13+ Determinado, evolutivo, filosófico-ação | [`raiden.json`](personas/fictional/raiden.json) |
 ---
 
 ## 📊 Estatísticas
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **69** |
-| Fictional | 48 |
+| Total de personas prontas | **70** |
+| Fictional | 49 |
 | Real | 21 |
 | Universos cobertos | 42 |
 | Backlog pendente | ~169 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
@@ -151,7 +152,7 @@
 | Revolução Científica / Astronomia | Galileu Galilei, Isaac Newton |
 | Revolução Biológica / Naturalismo | Charles Darwin |
 | Física e Química / Radioatividade | Marie Curie |
-| Metal Gear | Big Boss |
+| Metal Gear | Big Boss, Raiden |
 | Divulgação BR | Sergio Sacani |
 
 ---
@@ -163,6 +164,7 @@
 | Descontraído / Humorístico | Jiraiya, Spider-Man, Luffy, Jinx, Mario, Ash, Iron Man |
 | Sério / Estratégico | Batman, Kakashi, Kratos, Albedo, Leon |
 | Grave / Filosófico-Militar | Big Boss |
+| Determinado / Evolutivo / Filosófico-Ação | Raiden |
 | Inspirador / Honesto / Tático | Captain America |
 | Régio / Sábio / Excelência Cultural | Black Panther |
 | Analítico / Socrático / Irônico | Doctor Strange |
@@ -216,7 +218,7 @@
 |--------------|-------|----------|
 | 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani, Superman, Iron Man, Captain America, Black Panther, Pilar, Breno, Samba, Noob, Bacon Hair |
 | 🔵 10+ | 10-16 | Rumi, Mira, Zoey |
-| 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa, Doctor Strange, Big Boss |
+| 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa, Doctor Strange, Big Boss, Raiden |
 | 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing, Carl Sagan, Richard Feynman, Ada Lovelace, Grace Hopper, Stephen Hawking, Neil deGrasse Tyson, Leonardo da Vinci, Galileu Galilei, Isaac Newton, Charles Darwin, Marie Curie |
 | 🟡 15-18 | 15-18 | Noam Chomsky |
 | 🟡 13-18 | 13-18 | Linus Torvalds, Kevin Mitnick, Buckminster Fuller |
@@ -246,12 +248,12 @@
 | Tem ansiedade | 💚 Luigi, 🗡️ Raphtalia, 🌸 Aerith, 🌊 Tanjiro |
 | Crianças (6-10) | 🍄 Mario, 💚 Luigi, ⛏️ Steve, ⚡ Ash, 🦁 Tai, 🌸 Aerith, 🌍 Pilar, 🎯 Breno, 🐱 Samba, 💛 Noob, 🧑 Bacon Hair |
 | Gamer/RPG/MMORPG | 💀 Ainz, 👑 Albedo, 🛡️ Naofumi, 🌪️ Thrall, 🔮 Vol'jin |
-| Gosta de stealth/espionagem/estratégia | 🎖️ Big Boss |
+| Gosta de stealth/espionagem/estratégia | 🎖️ Big Boss, ⚡ Raiden |
 | Gosta de tático/sobrevivência | 🔫 Leon, ❤️ Claire, 💪 Chris, ⚔️ Geralt, 🎖️ Big Boss |
 | Precisa de inspiração épica | ⚔️✨ Tyrael |
 | Gosta de luta/artes marciais | 👊 Tifa |
 | Persistência / Nunca desistir | ⚡ Ash, 💪 Chris, 🦁 Tai, 🛡️ Captain America, 🚀 Elon Musk, ⚓ Grace Hopper, 🔭 Stephen Hawking, ⚗️ Marie Curie |
-| Baixa autoestima | 🛡️ Naofumi, 💚 Luigi, 🗡️ Raphtalia, 👊 Tifa |
+| Baixa autoestima | 🛡️ Naofumi, 💚 Luigi, 🗡️ Raphtalia, 👊 Tifa, ⚡ Raiden |
 | Gosta de K-Pop/música/dança | 🎤 Rumi, 💃 Mira, 🎤 Zoey |
 | Gosta de aventura/viagem/culturas | 🌍 Pilar, 🎯 Breno, 🐱 Samba, 🐢 Charles Darwin |
 | Gosta de Roblox/construção | 💛 Noob, 🧑 Bacon Hair |
