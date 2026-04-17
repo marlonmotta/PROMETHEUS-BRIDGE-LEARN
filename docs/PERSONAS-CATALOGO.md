@@ -89,16 +89,17 @@
 | 65 | ⚗️ Marie Curie | Histórico / Revolução Científica | Real | 11-18 | 🟢LIVRE Precisa, determinada, laboratorial | [`marie-curie.json`](personas/real/marie-curie.json) |
 | 69 | 🎖️ Big Boss | Metal Gear | Fictional | 13-18 | 🟡13+ Grave, estratégico, filosófico-militar | [`big-boss.json`](personas/fictional/big-boss.json) |
 | 70 | ⚡ Raiden | Metal Gear | Fictional | 13-18 | 🟡13+ Determinado, evolutivo, filosófico-ação | [`raiden.json`](personas/fictional/raiden.json) |
+| 71 | 🔮 Bayonetta | Bayonetta | Fictional | 13-18 | 🟡13+ Teatral, sofisticada, autoconfiante | [`bayonetta.json`](personas/fictional/bayonetta.json) |
 ---
 
 ## 📊 Estatísticas
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **70** |
-| Fictional | 49 |
+| Total de personas prontas | **71** |
+| Fictional | 50 |
 | Real | 21 |
-| Universos cobertos | 42 |
+| Universos cobertos | 43 |
 | Backlog pendente | ~169 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
 
 ---
@@ -152,6 +153,7 @@
 | Revolução Científica / Astronomia | Galileu Galilei, Isaac Newton |
 | Revolução Biológica / Naturalismo | Charles Darwin |
 | Física e Química / Radioatividade | Marie Curie |
+| Bayonetta | Bayonetta |
 | Metal Gear | Big Boss, Raiden |
 | Divulgação BR | Sergio Sacani |
 
@@ -163,6 +165,7 @@
 |-----|----------|
 | Descontraído / Humorístico | Jiraiya, Spider-Man, Luffy, Jinx, Mario, Ash, Iron Man |
 | Sério / Estratégico | Batman, Kakashi, Kratos, Albedo, Leon |
+| Teatral / Sofisticado / Autoconfiante | Bayonetta |
 | Grave / Filosófico-Militar | Big Boss |
 | Determinado / Evolutivo / Filosófico-Ação | Raiden |
 | Inspirador / Honesto / Tático | Captain America |
@@ -218,7 +221,7 @@
 |--------------|-------|----------|
 | 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani, Superman, Iron Man, Captain America, Black Panther, Pilar, Breno, Samba, Noob, Bacon Hair |
 | 🔵 10+ | 10-16 | Rumi, Mira, Zoey |
-| 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa, Doctor Strange, Big Boss, Raiden |
+| 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa, Doctor Strange, Big Boss, Raiden, Bayonetta |
 | 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing, Carl Sagan, Richard Feynman, Ada Lovelace, Grace Hopper, Stephen Hawking, Neil deGrasse Tyson, Leonardo da Vinci, Galileu Galilei, Isaac Newton, Charles Darwin, Marie Curie |
 | 🟡 15-18 | 15-18 | Noam Chomsky |
 | 🟡 13-18 | 13-18 | Linus Torvalds, Kevin Mitnick, Buckminster Fuller |
@@ -234,6 +237,7 @@
 | Precisa de disciplina | 🪓 Kratos, 🦇 Batman, 👑 Albedo, 💪 Chris, 🛡️ Captain America, 🐾 Black Panther, 🎖️ Big Boss |
 | Precisa de provocação positiva | 😎 Gojo Satoru |
 | Perfil analítico/lógico | 🔍 L, 🦇 Batman, 💀 Ainz, ⚔️ Geralt, 🌀 Doctor Strange, 💻 Alan Turing, 🔭 Carl Sagan, ⚛️ Richard Feynman, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick, 🖊️ Ada Lovelace, ⚓ Grace Hopper, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson, 🧩 Noam Chomsky, 🔭 Galileu Galilei, 🍎 Isaac Newton, ⚗️ Marie Curie |
+| Precisa construir autoconfiança | 🔮 Bayonetta, ⚡ Raiden, 🛡️ Naofumi |
 | Perfil criativo/TDAH | 💥 Jinx, ⛏️ Steve, ⚡ Ash, 🦁 Tai, 🌌 Neil deGrasse Tyson |
 | Precisa de energia/motivação | 💥 Goku, 🏴‍☠️ Luffy, 🚀 Sacani, 💪 Chris, ⚡ Ash, 🦸 Superman, 🛡️ Captain America, 🔭 Carl Sagan, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson |
 | Gosta de tecnologia/STEM | 🔴🟡 Iron Man, 🕸️ Spider-Man, 🐾 Black Panther, 🧠 Einstein, 🔬 Rebecca, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick, 🖊️ Ada Lovelace, ⚓ Grace Hopper |
@@ -242,7 +246,7 @@
 
 | Gosta de história | 🗡️ Ezio, 🗺️ Lara Croft, 🛡️ Captain America, 🐾 Black Panther, 🔮 Vol'jin, 📖 Deckard Cain, 🎨 Leonardo da Vinci, 🔭 Galileu Galilei, 🍎 Isaac Newton, 🐢 Charles Darwin |
 | Gosta de ciência | 🧠 Einstein, 🕸️ Spider-Man, 🚀 Sacani, 🔬 Rebecca, 🔴🟡 Iron Man, 🌀 Doctor Strange, 🚀 Elon Musk, ⚡ Tesla, 🔭 Carl Sagan, ⚛️ Richard Feynman, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson, 🎨 Leonardo da Vinci, 🔭 Galileu Galilei, 🍎 Isaac Newton, 🐢 Charles Darwin, ⚗️ Marie Curie |
-| Gosta de design / criatividade | 🍎 Steve Jobs, 💥 Jinx, 🔴🟡 Iron Man, 🔺 Buckminster Fuller, 🎨 Leonardo da Vinci |
+| Gosta de design / criatividade | 🍎 Steve Jobs, 💥 Jinx, 🔴🟡 Iron Man, 🔺 Buckminster Fuller, 🎨 Leonardo da Vinci, 🔮 Bayonetta |
 | Gosta de tecnologia/engenharia | 🚀 Elon Musk, 🔴🟡 Iron Man, 🍎 Steve Jobs, ⚡ Nikola Tesla, 💻 Alan Turing, ⚛️ Richard Feynman, 🐧 Linus Torvalds, ⚓ Grace Hopper, 🔺 Buckminster Fuller |
 | Sofreu bullying/exclusão | 🛡️ Naofumi, 💚 Luigi, 🌪️ Thrall |
 | Tem ansiedade | 💚 Luigi, 🗡️ Raphtalia, 🌸 Aerith, 🌊 Tanjiro |
