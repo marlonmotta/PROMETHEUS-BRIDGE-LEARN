@@ -12,6 +12,7 @@ import Icon from "@pbl/shared/components/Icon";
 import { toast } from "@pbl/shared/components/Toast";
 import { useService } from "@/providers/useService";
 import SharedManagerView from "@pbl/shared/components/views/ManagerView";
+import { useI18n } from "@pbl/shared/i18n";
 
 interface Props {
   personas: Persona[];
@@ -28,6 +29,7 @@ export default function ManagerView({
 }: Props) {
   const service = useService();
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const { t } = useI18n();
 
   async function handleFileChange(e: ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
@@ -37,9 +39,9 @@ export default function ManagerView({
       const text = await file.text();
       const json = JSON.parse(text) as Persona;
 
-      if (!json.meta?.id) throw new Error("Campo meta.id ausente no JSON");
+      if (!json.meta?.id) throw new Error(t("errors.missingMetaId"));
       if (!json.meta?.display_name) {
-        throw new Error("Campo meta.display_name ausente no JSON");
+        throw new Error(t("errors.missingDisplayName"));
       }
 
       await service.addPersonaFromJson(text);
@@ -53,9 +55,9 @@ export default function ManagerView({
         }
         return [...prev, { ...json, _source: "local" }];
       });
-      toast(`"${json.meta.display_name}" importada com sucesso`, "success");
+      toast(`"${json.meta.display_name}" ${t("manager.importSuccess")}`, "success");
     } catch (err: unknown) {
-      toast(`Erro na importação: ${(err as Error).message}`, "error");
+      toast(`${t("manager.importError")}: ${(err as Error).message}`, "error");
     }
 
     e.target.value = "";
@@ -74,7 +76,7 @@ export default function ManagerView({
         onClick={() => fileInputRef.current?.click()}
         className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-sm bg-accent text-white text-[13px] font-medium hover:bg-accent-2 transition-colors"
       >
-        <Icon name="download" size={15} /> Importar do arquivo
+        <Icon name="download" size={15} /> {t("manager.importFile")}
       </button>
     </>
   );

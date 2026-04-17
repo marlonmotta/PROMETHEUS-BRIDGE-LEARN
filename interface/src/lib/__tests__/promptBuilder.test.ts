@@ -48,6 +48,7 @@ const defaultSettings: Settings = {
   apiKey: "",
   outputLanguage: "pt-BR",
   outputFormat: "free",
+  interfaceLanguage: "pt-BR",
 };
 
 // ── Testes ───────────────────────────────────────────────────────────────────

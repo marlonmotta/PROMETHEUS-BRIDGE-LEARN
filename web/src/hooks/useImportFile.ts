@@ -13,6 +13,7 @@
 import { useCallback } from "react";
 import type { Settings } from "@pbl/shared/constants";
 import type { AppAction } from "@pbl/shared/appReducer";
+import { useI18n } from "@pbl/shared/i18n";
 
 interface UseImportFileParams {
   settings: Settings;
@@ -20,6 +21,7 @@ interface UseImportFileParams {
 }
 
 export function useImportFile({ settings, dispatch }: UseImportFileParams) {
+  const { t } = useI18n();
   const handleImportFile = useCallback(async () => {
     try {
       const { openFilePicker, isImageFile, extractTextFromFile, extractTextFromImage } =
@@ -30,7 +32,7 @@ export function useImportFile({ settings, dispatch }: UseImportFileParams) {
 
       if (isImageFile(file.name)) {
         // Imagem → OCR via IA com vision
-        dispatch({ type: "SET_CONTENT", content: "⏳ Extraindo texto da imagem via IA... Aguarde." });
+        dispatch({ type: "SET_CONTENT", content: `⏳ ${t("errors.ocrLoading")}` });
         try {
           const text = await extractTextFromImage(
             file,
@@ -38,12 +40,12 @@ export function useImportFile({ settings, dispatch }: UseImportFileParams) {
             settings.apiKey || "",
             settings.model || "",
           );
-          dispatch({ type: "SET_CONTENT", content: text || "⚠️ Nenhum texto foi extraído da imagem." });
+          dispatch({ type: "SET_CONTENT", content: text || `⚠️ ${t("errors.ocrNoText")}` });
         } catch (err) {
-          const msg = typeof err === "string" ? err : (err as Error)?.message || "Erro desconhecido";
+          const msg = typeof err === "string" ? err : (err as Error)?.message || t("errors.unknownError");
           dispatch({
             type: "SET_CONTENT",
-            content: `❌ Erro ao extrair texto da imagem:\n\n${msg}\n\nVerifique se a API key está configurada e o provedor suporta vision.`,
+            content: `❌ ${t("errors.ocrError")}:\n\n${msg}\n\n${t("errors.ocrApiHint")}`,
           });
         }
       } else {
@@ -52,14 +54,14 @@ export function useImportFile({ settings, dispatch }: UseImportFileParams) {
           const text = await extractTextFromFile(file);
           dispatch({ type: "SET_CONTENT", content: text });
         } catch (err) {
-          const msg = typeof err === "string" ? err : (err as Error)?.message || "Erro desconhecido";
-          dispatch({ type: "SET_CONTENT", content: `❌ Erro ao importar arquivo:\n\n${msg}` });
+          const msg = typeof err === "string" ? err : (err as Error)?.message || t("errors.unknownError");
+          dispatch({ type: "SET_CONTENT", content: `❌ ${t("errors.importError")}:\n\n${msg}` });
         }
       }
     } catch (err) {
       console.error("[PBL] Import error:", err);
     }
-  }, [settings, dispatch]);
+  }, [settings, dispatch, t]);
 
   return { handleImportFile };
 }

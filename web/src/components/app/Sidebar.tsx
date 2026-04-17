@@ -11,6 +11,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { type View } from "@pbl/shared/constants";
 import SidebarContent from "@pbl/shared/components/SidebarContent";
+import { useI18n } from "@pbl/shared/i18n";
 
 interface Props {
   view: View;
@@ -26,6 +27,7 @@ export default function Sidebar({
   hasResult: _hasResult,
 }: Props) {
   const [open, setOpen] = useState(false);
+  const { t } = useI18n();
 
   function navigate(v: View) {
     setView(v);
@@ -59,7 +61,7 @@ export default function Sidebar({
       <button
         onClick={() => setOpen(true)}
         className="md:hidden fixed top-4 left-4 z-50 w-10 h-10 rounded-full bg-bg-2 border border-border text-txt flex items-center justify-center shadow-lg hover:bg-bg-3 transition-colors cursor-pointer"
-        aria-label="Abrir menu"
+        aria-label={t("a11y.openMenu")}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +97,7 @@ export default function Sidebar({
           ${open ? "translate-x-0" : "-translate-x-full md:translate-x-0"}
         `}
         role="navigation"
-        aria-label="Navegação principal"
+        aria-label={t("a11y.mainNavigation")}
       >
         <SidebarContent
           view={view}
@@ -105,7 +107,7 @@ export default function Sidebar({
               <Link
                 to="/"
                 className="w-7 h-7 flex items-center justify-center rounded-sm text-txt-2 hover:text-accent hover:bg-accent/10 transition-colors shrink-0"
-                title="Voltar para Home"
+                title={t("a11y.backToHome")}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -125,7 +127,7 @@ export default function Sidebar({
               <button
                 onClick={() => setOpen(false)}
                 className="md:hidden ml-auto w-8 h-8 flex items-center justify-center rounded-sm text-txt-2 hover:text-txt hover:bg-bg-3 transition-colors cursor-pointer"
-                aria-label="Fechar menu"
+                aria-label={t("a11y.closeMenu")}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

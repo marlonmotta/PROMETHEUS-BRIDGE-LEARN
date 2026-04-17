@@ -23,7 +23,7 @@
     "./components/views/HistoryView": "./src/components/views/HistoryView.tsx",
     "./components/views/ManagerView": "./src/components/views/ManagerView.tsx",
     "./components/SidebarContent": "./src/components/SidebarContent.tsx",
-    "./i18n": "./src/i18n/index.ts"
+    "./i18n": "./src/i18n/index.tsx"
   },
   "peerDependencies": {
     "react": "^19.0.0",

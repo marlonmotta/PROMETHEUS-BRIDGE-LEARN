@@ -52,6 +52,7 @@ import ManagerView from "@/components/app/WebManagerWrapper";
 import SettingsView from "@pbl/shared/components/views/SettingsView";
 import ToastContainer from "@pbl/shared/components/Toast";
 import { useImportFile } from "@/hooks/useImportFile";
+import { I18nProvider, t as tStandalone, useI18n } from "@pbl/shared/i18n";
 
 export default function WebApp() {
   const service = useService();
@@ -187,7 +188,7 @@ export default function WebApp() {
       if (controller.signal.aborted) return;
       dispatch({
         type: "GENERATION_COMPLETE",
-        result: `Erro ao chamar IA: ${e}\n\nUse o prompt abaixo manualmente:\n\n${payload.rewriteInstruction}`,
+        result: `${tStandalone("errors.aiError", state.settings.interfaceLanguage)}: ${e}\n\n${tStandalone("errors.manualFallback", state.settings.interfaceLanguage)}\n\n${payload.rewriteInstruction}`,
         fullPrompt: payload.rewriteInstruction,
       });
     }
@@ -208,9 +209,10 @@ export default function WebApp() {
       content: state.content,
       result: state.result,
       date:
-        now.toLocaleDateString("pt-BR") +
-        " às " +
-        now.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }),
+        now.toLocaleString(state.settings.interfaceLanguage || "pt-BR", {
+          day: "2-digit", month: "2-digit", year: "numeric",
+          hour: "2-digit", minute: "2-digit",
+        }),
     };
     dispatch({ type: "ADD_HISTORY", item });
   }, [state.selectedPersona, state.subject, state.content, state.result]);
@@ -218,7 +220,7 @@ export default function WebApp() {
   const { handleImportFile } = useImportFile({ settings: state.settings, dispatch });
 
   return (
-    <>
+    <I18nProvider locale={state.settings.interfaceLanguage}>
       <ToastContainer />
       <Sidebar
         view={state.view}
@@ -360,7 +362,7 @@ export default function WebApp() {
         </div>
         <ScrollToTopButton parentRef={mainRef} />
       </main>
-    </>
+    </I18nProvider>
   );
 }
 
@@ -370,6 +372,7 @@ function ScrollToTopButton({
   parentRef: RefObject<HTMLElement | null>;
 }) {
   const [visible, setVisible] = useState(false);
+  const { t } = useI18n();
 
   useEffect(() => {
     const el = parentRef.current;
@@ -397,7 +400,7 @@ function ScrollToTopButton({
   return (
     <button
       onClick={scrollToTop}
-      aria-label="Voltar ao topo"
+      aria-label={t("a11y.backToTop")}
       className={`fixed bottom-6 right-6 z-40 w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center shadow-lg hover:bg-accent-2 transition-all duration-300 cursor-pointer ${
         visible
           ? "opacity-100 translate-y-0"

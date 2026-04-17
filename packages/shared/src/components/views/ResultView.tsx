@@ -23,14 +23,15 @@ import { memo } from "react";
 import { marked } from "marked";
 import DOMPurify from "dompurify";
 import {
-  SUBJECTS,
-  DIFFICULTIES,
+  getSubjects,
+  getDifficulties,
   MODEL_PLACEHOLDERS,
   type Persona,
   type Settings,
 } from "@pbl/shared/constants";
 import Icon from "@pbl/shared/components/Icon";
 import { toast } from "@pbl/shared/components/Toast";
+import { useI18n } from "@pbl/shared/i18n";
 
 // Configuração do parser de markdown
 marked.setOptions({ breaks: true, gfm: true });
@@ -64,15 +65,16 @@ export default memo(function ResultView({
   onSaveHistory,
   onNewAdaptation,
 }: Props) {
+  const { t, locale } = useI18n();
   const isManual = settings.mode === "manual";
-  const subjectLabel = SUBJECTS[subject] || subject;
-  const diffLabel = DIFFICULTIES[difficulty] || difficulty;
+  const subjectLabel = getSubjects(t)[subject] || subject;
+  const diffLabel = getDifficulties(t)[difficulty] || difficulty;
   const aiLabel =
     settings.mode === "offline"
-      ? `Ollama (${settings.ollamaModel})`
+      ? t("dashboard.aiModeOllama", { model: settings.ollamaModel })
       : settings.mode === "online"
         ? `${settings.provider} / ${settings.model || MODEL_PLACEHOLDERS[settings.provider] || ""}`
-        : "Manual";
+        : t("dashboard.aiModeManual");
 
   /**
    * Copia texto para a área de transferência.
@@ -88,7 +90,7 @@ export default memo(function ResultView({
       document.execCommand("copy");
       document.body.removeChild(el);
     });
-    toast("Copiado para a área de transferência", "success");
+    toast(t("result.copiedToClipboard"), "success");
   }
 
   /**
@@ -137,10 +139,10 @@ export default memo(function ResultView({
     const personaName = selectedPersona?.meta?.display_name || "Persona";
 
     return `<!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="${locale}">
 <head>
   <meta charset="UTF-8">
-  <title>Adaptação PBL - ${personaName}</title>
+  <title>${t("exam.htmlTitle", { persona: personaName })}</title>
   <style>
     @page {
       size: A4;
@@ -324,13 +326,13 @@ export default memo(function ResultView({
 </head>
 <body>
   <div class="exam-header">
-    <div class="exam-title">${subjectLabel ? subjectLabel + " - " : ""}Atividade Adaptada</div>
+    <div class="exam-title">${subjectLabel ? subjectLabel + " - " : ""}${t("exam.adaptedActivity")}</div>
     <div class="exam-fields">
-      <div class="exam-field full"><span>Nome:</span></div>
-      <div class="exam-field full"><span>Professor(a):</span></div>
+      <div class="exam-field full"><span>${t("exam.nameField")}</span></div>
+      <div class="exam-field full"><span>${t("exam.teacherField")}</span></div>
       <div class="exam-row">
-        <div class="exam-field"><span>Turma:</span></div>
-        <div class="exam-field"><span>Data:</span>____/____/________</div>
+        <div class="exam-field"><span>${t("exam.classField")}</span></div>
+        <div class="exam-field"><span>${t("exam.dateField")}</span>____/____/________</div>
       </div>
     </div>
   </div>
@@ -338,7 +340,7 @@ export default memo(function ResultView({
     ${sanitizedHtml}
   </div>
   <div class="exam-footer">
-    Gerado com PROMETHEUS · BRIDGE · LEARN (PBL)
+    ${t("exam.footer")}
   </div>
 </body>
 </html>`;
@@ -362,7 +364,7 @@ export default memo(function ResultView({
         mime = "text/html";
         ext = "html";
         toast(
-          "Documento salvo! Abra o arquivo no navegador e use Ctrl+P para gerar o PDF.",
+          t("result.pdfHint"),
           "info",
         );
       } else if (format === "html") {
@@ -373,7 +375,7 @@ export default memo(function ResultView({
           parsedHtml = `<pre>${text}</pre>`;
         }
         const sanitizedHtml = DOMPurify.sanitize(parsedHtml);
-        content = `<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><title>Adaptação PBL</title></head><body><div style="font-family:sans-serif;max-width:800px;margin:40px auto;line-height:1.8">${sanitizedHtml}</div></body></html>`;
+        content = `<!DOCTYPE html><html lang="${locale}"><head><meta charset="UTF-8"><title>${t("exam.htmlTitleSimple")}</title></head><body><div style="font-family:sans-serif;max-width:800px;margin:40px auto;line-height:1.8">${sanitizedHtml}</div></body></html>`;
         mime = "text/html";
       } else if (format === "md") {
         mime = "text/markdown";
@@ -388,9 +390,9 @@ export default memo(function ResultView({
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
-      toast(`Arquivo ${format.toUpperCase()} salvo com sucesso!`, "success");
+      toast(t("result.fileSaved", { format: format.toUpperCase() }), "success");
     } catch (e) {
-      toast(`Erro ao salvar ${format.toUpperCase()}: ${e}`, "error");
+      toast(`${t("result.fileError", { format: format.toUpperCase() })}: ${e}`, "error");
     }
   }
 
@@ -411,9 +413,9 @@ export default memo(function ResultView({
   return (
     <section id="print-area">
       <div className="mb-8 no-print">
-        <h1 className="text-[28px] font-bold text-txt mb-1.5">Resultado</h1>
+        <h1 className="text-[28px] font-bold text-txt mb-1.5">{t("result.title")}</h1>
         <p className="text-sm text-txt-2">
-          Conteúdo adaptado no universo da persona
+          {t("result.subtitle")}
         </p>
       </div>
 
@@ -433,19 +435,18 @@ export default memo(function ResultView({
       {isManual && (
         <div>
           <Block
-            title="System Prompt"
+            title={t("result.systemPrompt")}
             text={selectedPersona?.prompts?.system_prompt || ""}
             onCopy={copy}
           />
           <Block
-            title="Instrução Completa (cole na IA)"
+            title={t("result.fullInstruction")}
             text={fullPrompt}
             onCopy={copy}
           />
           <p className="text-xs text-txt-3 py-2.5 flex items-center gap-1.5">
             <Icon name="info" size={14} className="text-txt-3 shrink-0" />
-            Cole o <strong>System Prompt</strong> no campo de sistema da IA,
-            depois cole a <strong>Instrução Completa</strong> como mensagem.
+            {t("result.manualHint")}
           </p>
         </div>
       )}
@@ -458,9 +459,9 @@ export default memo(function ResultView({
               onClick={() => copy(result)}
               className="inline-flex items-center gap-1.5 text-[13px] text-txt-2 border border-border rounded-sm px-3 py-1.5 hover:bg-bg-3 transition-colors"
             >
-              <Icon name="copy" size={14} /> Copiar texto
+              <Icon name="copy" size={14} /> {t("result.copyText")}
             </button>
-            <span className="text-xs text-txt-3">Gerado por: {aiLabel}</span>
+            <span className="text-xs text-txt-3">{t("result.generatedBy")}: {aiLabel}</span>
           </div>
           <div
             className="prose bg-bg-2 border border-border rounded p-7 text-[15px] leading-relaxed text-txt"
@@ -473,7 +474,7 @@ export default memo(function ResultView({
 
       {/* Barra de exportação */}
       <div className="flex items-center gap-2.5 flex-wrap my-4 no-print">
-        <span className="text-xs text-txt-2 font-medium">Exportar:</span>
+        <span className="text-xs text-txt-2 font-medium">{t("result.export")}:</span>
         {["txt", "md", "html", "docx"].map((f) => (
           <button
             key={f}
@@ -497,13 +498,13 @@ export default memo(function ResultView({
           onClick={onSaveHistory}
           className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-sm bg-gold text-[#0d0d0d] font-semibold text-[13px] hover:bg-gold-2 transition-colors"
         >
-          <Icon name="save" size={15} /> Salvar no histórico
+          <Icon name="save" size={15} /> {t("result.saveHistory")}
         </button>
         <button
           onClick={onNewAdaptation}
           className="inline-flex items-center gap-1.5 text-[13px] text-txt-2 border border-border rounded-sm px-4 py-2.5 hover:bg-bg-3 transition-colors"
         >
-          <Icon name="refresh" size={14} /> Nova Adaptação
+          <Icon name="refresh" size={14} /> {t("result.newAdaptation")}
         </button>
       </div>
     </section>
@@ -525,6 +526,7 @@ function Block({
   text: string;
   onCopy: (t: string) => void;
 }) {
+  const { t } = useI18n();
   return (
     <div className="bg-bg-2 border border-border rounded mb-5 overflow-hidden">
       <div className="flex justify-between items-center px-4 py-3 border-b border-border text-xs text-txt-2 uppercase tracking-wider">
@@ -533,7 +535,7 @@ function Block({
           onClick={() => onCopy(text)}
           className="inline-flex items-center gap-1.5 text-[12px] text-txt border border-border rounded-sm px-2 py-1 hover:bg-bg-3 transition-colors"
         >
-          <Icon name="copy" size={12} /> Copiar
+          <Icon name="copy" size={12} /> {t("dashboard.copy")}
         </button>
       </div>
       <pre className="p-4 text-[13px] leading-relaxed text-txt whitespace-pre-wrap wrap-break-word max-h-80 overflow-y-auto">

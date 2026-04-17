@@ -20,6 +20,7 @@ import { memo, useState, useMemo } from "react";
 import type { Persona } from "@pbl/shared/constants";
 import Icon from "@pbl/shared/components/Icon";
 import PersonaAvatar from "@pbl/shared/components/PersonaAvatar";
+import { useI18n } from "@pbl/shared/i18n";
 
 interface Props {
   /** Catálogo completo de personas disponíveis */
@@ -51,6 +52,7 @@ export default memo(function PersonasView({
   const [filterCategory, setFilterCategory] = useState("");
   const [filterAge, setFilterAge] = useState("");
   const [filterFav, setFilterFav] = useState(false);
+  const { t } = useI18n();
 
   /**
    * Lista filtrada e ordenada de personas.
@@ -83,10 +85,10 @@ export default memo(function PersonasView({
     <section>
       <div className="mb-8">
         <h1 className="text-[28px] font-bold text-txt mb-1.5">
-          Selecionar Persona
+          {t("personas.title")}
         </h1>
         <p className="text-sm text-txt-2">
-          Escolha a persona que o aluno vai se conectar
+          {t("personas.subtitle")}
         </p>
       </div>
 
@@ -95,7 +97,7 @@ export default memo(function PersonasView({
         <input
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          placeholder="Buscar persona..."
+          placeholder={t("personas.searchPlaceholder")}
           className="flex-1 min-w-0 bg-bg-2 border border-border rounded-sm text-txt text-[13px] px-3.5 py-2.5 outline-none focus:border-accent transition-colors"
         />
         <select
@@ -103,26 +105,26 @@ export default memo(function PersonasView({
           onChange={(e) => setFilterCategory(e.target.value)}
           className="bg-bg-2 border border-border rounded-sm text-txt text-[13px] px-3.5 py-2.5 outline-none focus:border-accent transition-colors"
         >
-          <option value="">Todas categorias</option>
-          <option value="fictional">Fictícias</option>
-          <option value="real">Reais</option>
+          <option value="">{t("personas.allCategories")}</option>
+          <option value="fictional">{t("personas.fictional")}</option>
+          <option value="real">{t("personas.real")}</option>
         </select>
         <select
           value={filterAge}
           onChange={(e) => setFilterAge(e.target.value)}
           className="bg-bg-2 border border-border rounded-sm text-txt text-[13px] px-3.5 py-2.5 outline-none focus:border-accent transition-colors"
         >
-          <option value="">Todas idades</option>
-          <option value="6-10">6-10 anos</option>
-          <option value="11-14">11-14 anos</option>
-          <option value="15-18">15-18 anos</option>
-          <option value="18+">18+</option>
+          <option value="">{t("personas.allAges")}</option>
+          <option value="6-10">{t("personas.ageYears", { range: "6-10" })}</option>
+          <option value="11-14">{t("personas.ageYears", { range: "11-14" })}</option>
+          <option value="15-18">{t("personas.ageYears", { range: "15-18" })}</option>
+          <option value="18+">{t("personas.agePlus", { age: "18" })}</option>
         </select>
         <button
           onClick={() => setFilterFav(!filterFav)}
           className={`text-[13px] px-3.5 py-2.5 rounded-sm border transition-colors ${filterFav ? "bg-gold/20 border-gold text-gold" : "bg-bg-2 border-border text-txt-2 hover:border-accent"}`}
         >
-          <Icon name="star" size={14} fill={filterFav} /> Favoritas
+          <Icon name="star" size={14} fill={filterFav} /> {t("personas.favorites")}
         </button>
       </div>
 
@@ -202,7 +204,7 @@ export default memo(function PersonasView({
                 </div>
                 {selected && (
                   <div className="absolute bottom-2.5 right-2.5 bg-accent text-white text-[10px] px-2 py-0.5 rounded-full inline-flex items-center gap-1">
-                    <Icon name="check" size={10} /> Selecionada
+                    <Icon name="check" size={10} /> {t("personas.selected")}
                   </div>
                 )}
               </div>
@@ -213,7 +215,7 @@ export default memo(function PersonasView({
 
       {filtered.length === 0 && personas.length > 0 && (
         <div className="p-10 text-center text-txt-3 bg-bg-2 border border-dashed border-border rounded">
-          Nenhuma persona encontrada com esses filtros.
+          {t("personas.noResults")}
         </div>
       )}
 
@@ -245,7 +247,7 @@ export default memo(function PersonasView({
             onClick={onUse}
             className="inline-flex items-center gap-2 px-4 py-2.5 rounded-sm bg-accent text-white text-[13px] font-medium hover:bg-accent-2 transition-colors"
           >
-            Usar essa persona →
+            {t("personas.usePersona")}
           </button>
         </div>
       )}

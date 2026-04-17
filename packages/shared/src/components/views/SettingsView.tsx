@@ -28,13 +28,14 @@ import { memo, useState, useEffect } from "react";
 import {
   MODEL_PLACEHOLDERS,
   OUTPUT_LANGUAGES,
-  OUTPUT_FORMATS,
+  getOutputFormats,
   type Settings,
   type HistoryItem,
 } from "@pbl/shared/constants";
 import Icon from "@pbl/shared/components/Icon";
 import { toast } from "@pbl/shared/components/Toast";
 import { getStorage } from "@pbl/shared/storage";
+import { useI18n, INTERFACE_LANGUAGES } from "@pbl/shared/i18n";
 
 interface Props {
   /** Configurações globais atuais */
@@ -69,6 +70,7 @@ export default memo(function SettingsView({
   const [local, setLocal] = useState<Settings>({ ...settings });
   const [confirmClear, setConfirmClear] = useState(false);
   const [confirmReset, setConfirmReset] = useState(false);
+  const { t } = useI18n();
 
   // Sincroniza estado local quando props mudam externamente
   useEffect(() => {
@@ -91,43 +93,64 @@ export default memo(function SettingsView({
   /** Persiste as configurações e exibe feedback visual */
   function save() {
     onSave(local);
-    toast("Configurações salvas com sucesso!", "success");
+    toast(t("settings.saved"), "success");
   }
 
   /** Definição dos modos de IA disponíveis com descrições */
   const modes: { value: Settings["mode"]; title: string; desc: string }[] = [
     {
       value: "offline",
-      title: "Offline (Ollama)",
+      title: t("settings.offline"),
       desc:
         ollamaOnline !== undefined
-          ? "Usa IA local na sua máquina. Requer Ollama instalado."
-          : "Disponível apenas no app desktop. Baixe em github.com/marlonmotta/PROMETHEUS-BRIDGE-LEARN/releases",
+          ? t("settings.offlineDesc")
+          : t("settings.offlineDesktopOnly"),
     },
     {
       value: "online",
-      title: "Online (API)",
-      desc: "Usa um provider externo. Necessário API key.",
+      title: t("settings.online"),
+      desc: t("settings.onlineDesc"),
     },
     {
       value: "manual",
-      title: "Manual (copiar prompt)",
-      desc: "Gera o prompt para você colar no ChatGPT, Claude ou Gemini.",
+      title: t("settings.manual"),
+      desc: t("settings.manualDesc"),
     },
   ];
 
   return (
     <section>
       <div className="mb-8">
-        <h1 className="text-[28px] font-bold text-txt mb-1.5">Configurações</h1>
+        <h1 className="text-[28px] font-bold text-txt mb-1.5">{t("settings.title")}</h1>
         <p className="text-sm text-txt-2">
-          Configure o modo de IA, idioma e preferências
+          {t("settings.subtitle")}
         </p>
+      </div>
+
+      {/* Seleção do idioma da interface */}
+      <div className="bg-bg-2 border border-border rounded p-6 mb-5">
+        <h2 className="text-sm font-semibold mb-4">{t("settings.interfaceLanguage")}</h2>
+        <select
+          value={local.interfaceLanguage}
+          onChange={(e) => {
+            const lang = e.target.value;
+            update({ interfaceLanguage: lang });
+            // Aplica imediatamente sem esperar "Salvar"
+            onSave({ ...local, interfaceLanguage: lang });
+          }}
+          className="bg-bg border border-border rounded-sm text-txt text-[13px] px-3.5 py-2.5 outline-none focus:border-accent transition-colors"
+        >
+          {Object.entries(INTERFACE_LANGUAGES).map(([k, v]) => (
+            <option key={k} value={k}>
+              {v}
+            </option>
+          ))}
+        </select>
       </div>
 
       {/* Seleção do modo de IA */}
       <div className="bg-bg-2 border border-border rounded p-6 mb-5">
-        <h2 className="text-sm font-semibold mb-4">Modo de IA</h2>
+        <h2 className="text-sm font-semibold mb-4">{t("settings.aiMode")}</h2>
         <div className="flex flex-col gap-2.5">
           {modes.map((m) => (
             <label
@@ -152,8 +175,8 @@ export default memo(function SettingsView({
                 <strong className="text-[13px] block mb-0.5">
                   {m.title}
                   {m.value === "offline" && ollamaOnline === undefined && (
-                    <span className="ml-2 text-[10px] text-gold font-normal px-1.5 py-0.5 rounded bg-gold/10 border border-gold/20">
-                      Desktop only
+                      <span className="ml-2 text-[10px] text-gold font-normal px-1.5 py-0.5 rounded bg-gold/10 border border-gold/20">
+                      {t("settings.desktopOnly")}
                     </span>
                   )}
                 </strong>
@@ -167,20 +190,20 @@ export default memo(function SettingsView({
       {/* Configurações do Ollama (modo offline, desktop-only) */}
       {local.mode === "offline" && ollamaOnline !== undefined && (
         <div className="bg-bg-2 border border-border rounded p-6 mb-5">
-          <h2 className="text-sm font-semibold mb-4">Ollama</h2>
+          <h2 className="text-sm font-semibold mb-4">{t("settings.ollama")}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-3">
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs text-txt-2 font-medium">Modelo</label>
+              <label className="text-xs text-txt-2 font-medium">{t("settings.ollamaModel")}</label>
               <input
                 value={local.ollamaModel}
                 onChange={(e) => update({ ollamaModel: e.target.value })}
-                placeholder="ex: llama3, mistral, phi3"
+                placeholder={t("settings.ollamaModelPlaceholder")}
                 className="bg-bg border border-border rounded-sm text-txt text-[13px] px-3.5 py-2.5 outline-none focus:border-accent transition-colors"
               />
             </div>
             <div className="flex flex-col gap-1.5">
               <label className="text-xs text-txt-2 font-medium">
-                URL do servidor
+                {t("settings.ollamaUrl")}
               </label>
               <input
                 value={local.ollamaUrl}
@@ -196,8 +219,8 @@ export default memo(function SettingsView({
             />
             <span>
               {ollamaOnline
-                ? `Ollama detectado em ${local.ollamaUrl}`
-                : "Ollama não detectado. Instale em ollama.com"}
+                ? t("settings.ollamaDetected", { url: local.ollamaUrl })
+                : t("settings.ollamaNotDetected")}
             </span>
           </div>
         </div>
@@ -206,34 +229,34 @@ export default memo(function SettingsView({
       {/* Configurações de provedor online */}
       {local.mode === "online" && (
         <div className="bg-bg-2 border border-border rounded p-6 mb-5">
-          <h2 className="text-sm font-semibold mb-4">Provider Online</h2>
+          <h2 className="text-sm font-semibold mb-4">{t("settings.providerOnline")}</h2>
           <div className="flex flex-col gap-1.5 mb-4">
-            <label className="text-xs text-txt-2 font-medium">Provider</label>
+            <label className="text-xs text-txt-2 font-medium">{t("settings.provider")}</label>
             <select
               value={local.provider}
               onChange={(e) => update({ provider: e.target.value })}
               className="bg-bg border border-border rounded-sm text-txt text-[13px] px-3.5 py-2.5 outline-none focus:border-accent transition-colors"
             >
-              <option value="openai">OpenAI (GPT-4o)</option>
-              <option value="anthropic">Anthropic (Claude)</option>
-              <option value="openrouter">OpenRouter (uma key - todos)</option>
-              <option value="groq">Groq (ultra-rápido, Llama 3)</option>
-              <option value="gemini">Google Gemini</option>
+              <option value="openai">{t("settings.providerOpenAI")}</option>
+              <option value="anthropic">{t("settings.providerAnthropic")}</option>
+              <option value="openrouter">{t("settings.providerOpenRouter")}</option>
+              <option value="groq">{t("settings.providerGroq")}</option>
+              <option value="gemini">{t("settings.providerGemini")}</option>
             </select>
           </div>
           <div className="flex flex-col gap-1.5 mb-4">
-            <label className="text-xs text-txt-2 font-medium">Modelo</label>
+            <label className="text-xs text-txt-2 font-medium">{t("settings.model")}</label>
             <input
               value={local.model}
               onChange={(e) => update({ model: e.target.value })}
               placeholder={
-                MODEL_PLACEHOLDERS[local.provider] || "nome do modelo"
+                MODEL_PLACEHOLDERS[local.provider] || t("settings.modelPlaceholder")
               }
               className="bg-bg border border-border rounded-sm text-txt text-[13px] px-3.5 py-2.5 outline-none focus:border-accent transition-colors"
             />
           </div>
           <div className="flex flex-col gap-1.5">
-            <label className="text-xs text-txt-2 font-medium">API Key</label>
+            <label className="text-xs text-txt-2 font-medium">{t("settings.apiKey")}</label>
             <input
               type="password"
               value={local.apiKey}
@@ -247,11 +270,11 @@ export default memo(function SettingsView({
 
       {/* Configurações de saída */}
       <div className="bg-bg-2 border border-border rounded p-6 mb-5">
-        <h2 className="text-sm font-semibold mb-4">Saída</h2>
+        <h2 className="text-sm font-semibold mb-4">{t("settings.output")}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="flex flex-col gap-1.5">
             <label className="text-xs text-txt-2 font-medium">
-              Idioma da resposta
+              {t("settings.outputLanguage")}
             </label>
             <select
               value={local.outputLanguage}
@@ -267,14 +290,14 @@ export default memo(function SettingsView({
           </div>
           <div className="flex flex-col gap-1.5">
             <label className="text-xs text-txt-2 font-medium">
-              Formato padrão
+              {t("settings.outputFormat")}
             </label>
             <select
               value={local.outputFormat}
               onChange={(e) => update({ outputFormat: e.target.value })}
               className="bg-bg border border-border rounded-sm text-txt text-[13px] px-3.5 py-2.5 outline-none focus:border-accent transition-colors"
             >
-              {Object.entries(OUTPUT_FORMATS).map(([k, v]) => (
+              {Object.entries(getOutputFormats(t)).map(([k, v]) => (
                 <option key={k} value={k}>
                   {v}
                 </option>
@@ -289,28 +312,28 @@ export default memo(function SettingsView({
         onClick={save}
         className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-sm bg-accent text-white text-[13px] font-medium hover:bg-accent-2 transition-colors"
       >
-        <Icon name="save" size={15} /> Salvar configurações
+        <Icon name="save" size={15} /> {t("settings.save")}
       </button>
 
       {/* Gerenciamento do histórico */}
       <div className="bg-bg-2 border border-border rounded p-6 mt-6">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-sm font-semibold">
-            Histórico de Adaptações ({history.length})
+            {t("settings.historyTitle")} ({history.length})
           </h2>
           {history.length > 0 && (
             <button
               onClick={() => setConfirmClear(true)}
               className="inline-flex items-center gap-1.5 text-[12px] text-danger border border-danger/20 bg-danger/10 rounded-sm px-3 py-1.5 hover:bg-danger/20 transition-colors"
             >
-              <Icon name="trash" size={13} /> Limpar tudo
+              <Icon name="trash" size={13} /> {t("settings.clearHistory")}
             </button>
           )}
         </div>
 
         {history.length === 0 && (
           <div className="text-sm text-txt-3 text-center py-6">
-            Nenhuma adaptação salva.
+            {t("settings.emptyHistory")}
           </div>
         )}
 
@@ -341,14 +364,14 @@ export default memo(function SettingsView({
 
       {/* Seção Sobre */}
       <div className="bg-bg-2 border border-border rounded p-6 mt-6">
-        <h2 className="text-sm font-semibold mb-4">Sobre</h2>
+        <h2 className="text-sm font-semibold mb-4">{t("settings.about")}</h2>
         <div className="flex flex-col gap-2.5 text-[13px]">
           <div className="flex justify-between">
-            <span className="text-txt-2">Versão</span>
+            <span className="text-txt-2">{t("settings.version")}</span>
             <span className="text-txt font-medium">v{(globalThis as unknown as Record<string, string>).__APP_VERSION__ ?? "0.2.0"}</span>
           </div>
           <div className="flex justify-between">
-            <span className="text-txt-2">Repositório</span>
+            <span className="text-txt-2">{t("settings.repository")}</span>
             <a
               href="https://github.com/marlonmotta/PROMETHEUS-BRIDGE-LEARN"
               target="_blank"
@@ -359,13 +382,12 @@ export default memo(function SettingsView({
             </a>
           </div>
           <div className="flex justify-between items-center">
-            <span className="text-txt-2">Plataforma</span>
+            <span className="text-txt-2">{t("settings.platform")}</span>
             <span className="text-txt font-medium">{platform}</span>
           </div>
           <div className="border-t border-border pt-2.5 mt-1">
             <span className="text-[11px] text-txt-3">
-              PBL - PROMETHEUS · BRIDGE · LEARN - Sistema adaptativo de conteúdo
-              pedagógico com IA.
+              {t("settings.aboutDescription")}
             </span>
           </div>
         </div>
@@ -374,17 +396,16 @@ export default memo(function SettingsView({
       {/* Zona de perigo */}
       <div className="bg-danger/4 border border-danger/20 rounded p-6 mt-6">
         <h2 className="text-sm font-semibold text-danger mb-2">
-          Zona de perigo
+          {t("settings.dangerZone")}
         </h2>
         <p className="text-[12px] text-txt-3 mb-4">
-          Restaura todas as configurações, histórico e favoritas ao estado
-          inicial.
+          {t("settings.dangerZoneDesc")}
         </p>
         <button
           onClick={() => setConfirmReset(true)}
           className="inline-flex items-center gap-1.5 text-[12px] text-danger border border-danger/20 bg-danger/10 rounded-sm px-3 py-1.5 hover:bg-danger/20 transition-colors"
         >
-          <Icon name="trash" size={13} /> Resetar tudo
+          <Icon name="trash" size={13} /> {t("settings.resetAll")}
         </button>
       </div>
 
@@ -398,27 +419,26 @@ export default memo(function SettingsView({
             className="bg-bg-2 border border-border rounded p-7 max-w-sm w-[90%]"
             onClick={(e) => e.stopPropagation()}
           >
-            <h3 className="font-bold mb-2.5">Limpar todo o histórico?</h3>
+            <h3 className="font-bold mb-2.5">{t("settings.clearHistoryConfirm")}</h3>
             <p className="text-txt-2 text-sm mb-5">
-              Tem certeza? Essa ação não pode ser desfeita. Todas as{" "}
-              <strong>{history.length}</strong> adaptações serão removidas.
+              {t("settings.clearHistoryWarning", { count: String(history.length) })}
             </p>
             <div className="flex gap-2.5 justify-end">
               <button
                 onClick={() => setConfirmClear(false)}
                 className="text-[13px] text-txt-2 border border-border rounded-sm px-4 py-2 hover:bg-bg-3 transition-colors"
               >
-                Cancelar
+                {t("settings.cancel")}
               </button>
               <button
                 onClick={() => {
                   onClearHistory();
                   setConfirmClear(false);
-                  toast("Histórico limpo com sucesso", "success");
+                  toast(t("settings.clearHistorySuccess"), "success");
                 }}
                 className="text-[13px] text-danger border border-danger/20 bg-danger/10 rounded-sm px-4 py-2 hover:bg-danger/20 transition-colors"
               >
-                Limpar tudo
+                {t("settings.clearHistory")}
               </button>
             </div>
           </div>
@@ -435,17 +455,16 @@ export default memo(function SettingsView({
             className="bg-bg-2 border border-border rounded p-7 max-w-sm w-[90%]"
             onClick={(e) => e.stopPropagation()}
           >
-            <h3 className="font-bold mb-2.5 text-danger">Resetar tudo?</h3>
+            <h3 className="font-bold mb-2.5 text-danger">{t("settings.resetConfirm")}</h3>
             <p className="text-txt-2 text-sm mb-5">
-              Todas as configurações, histórico e favoritas serão apagados
-              permanentemente. O app voltará ao estado de fábrica.
+              {t("settings.resetWarning")}
             </p>
             <div className="flex gap-2.5 justify-end">
               <button
                 onClick={() => setConfirmReset(false)}
                 className="text-[13px] text-txt-2 border border-border rounded-sm px-4 py-2 hover:bg-bg-3 transition-colors"
               >
-                Cancelar
+                {t("settings.cancel")}
               </button>
               <button
                 onClick={() => {
@@ -462,7 +481,7 @@ export default memo(function SettingsView({
                 }}
                 className="text-[13px] text-white bg-danger rounded-sm px-4 py-2 hover:bg-red-600 transition-colors"
               >
-                Resetar tudo
+                {t("settings.resetAll")}
               </button>
             </div>
           </div>
