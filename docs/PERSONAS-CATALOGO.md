@@ -93,14 +93,15 @@
 | 72 | 🃏 Kefka | Final Fantasy VI | Fictional | 13-18 | 🟡13+ Caótico, filosófico, Socrático-nihilista | [`kefka.json`](personas/fictional/kefka.json) |
 | 73 | 🌙 Sephiroth | Final Fantasy VII | Fictional | 13-18 | 🟡13+ Frio, preciso, perfeccionista-exigente | [`sephiroth.json`](personas/fictional/sephiroth.json) |
 | 74 | ⚡ Thor | Marvel / MCU | Fictional | 11-18 | 🟢LIVRE Nobre, caloroso, épico-humorístico | [`thor.json`](personas/fictional/thor.json) |
+| 75 | 💚 Hulk (Professor Hulk) | Marvel / MCU | Fictional | 11-18 | 🟢LIVRE Dual: científico-preciso + direto-entusiasta | [`hulk.json`](personas/fictional/hulk.json) |
 ---
 
 ## 📊 Estatísticas
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **74** |
-| Fictional | 53 |
+| Total de personas prontas | **75** |
+| Fictional | 54 |
 | Real | 21 |
 | Universos cobertos | 44 |
 | Backlog pendente | ~169 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
@@ -112,7 +113,7 @@
 | Universo | Personas Disponíveis |
 |----------|---------------------|
 | Naruto | Jiraiya Sensei, Kakashi |
-| Marvel / MCU | Spider-Man, Iron Man, Captain America, Black Panther, Doctor Strange, Thor |
+| Marvel / MCU | Spider-Man, Iron Man, Captain America, Black Panther, Doctor Strange, Thor, Hulk |
 | DC Comics | Batman, Superman |
 | Dragon Ball | Goku |
 | Minecraft | Steve |
@@ -173,6 +174,7 @@
 | Caótico / Filosófico / Socrático-Nihilista | Kefka |
 | Frio / Preciso / Perfeccionista | Sephiroth |
 | Nobre / Caloroso / Épico-Humorístico | Thor |
+| Dual: Científico-Preciso / Direto-Entusiasta | Hulk (Professor Hulk) |
 | Grave / Filosófico-Militar | Big Boss |
 | Determinado / Evolutivo / Filosófico-Ação | Raiden |
 | Inspirador / Honesto / Tático | Captain America |
@@ -226,7 +228,7 @@
 
 | Classificação | Faixa | Personas |
 |--------------|-------|----------|
-| 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani, Superman, Iron Man, Captain America, Black Panther, Pilar, Breno, Samba, Noob, Bacon Hair, Thor |
+| 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani, Superman, Iron Man, Captain America, Black Panther, Pilar, Breno, Samba, Noob, Bacon Hair, Thor, Hulk |
 | 🔵 10+ | 10-16 | Rumi, Mira, Zoey |
 | 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa, Doctor Strange, Big Boss, Raiden, Bayonetta, Kefka, Sephiroth |
 | 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing, Carl Sagan, Richard Feynman, Ada Lovelace, Grace Hopper, Stephen Hawking, Neil deGrasse Tyson, Leonardo da Vinci, Galileu Galilei, Isaac Newton, Charles Darwin, Marie Curie |
@@ -248,7 +250,7 @@
 | Perfil filosófico / pensamento crítico avançado | 🃏 Kefka, 🔍 L, 🌀 Doctor Strange, 🧩 Noam Chomsky |
 | Perfil criativo/TDAH | 💥 Jinx, ⛏️ Steve, ⚡ Ash, 🦁 Tai, 🌌 Neil deGrasse Tyson |
 | Precisa de energia/motivação | 💥 Goku, 🏴‍☠️ Luffy, 🚀 Sacani, 💪 Chris, ⚡ Ash, 🦸 Superman, 🛡️ Captain America, 🔭 Carl Sagan, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson, ⚡ Thor |
-| Gosta de tecnologia/STEM | 🔴🟡 Iron Man, 🕸️ Spider-Man, 🐾 Black Panther, 🧠 Einstein, 🔬 Rebecca, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick, 🖊️ Ada Lovelace, ⚓ Grace Hopper |
+| Gosta de tecnologia/STEM | 🔴🟡 Iron Man, 🕸️ Spider-Man, 🐾 Black Panther, 🧠 Einstein, 🔬 Rebecca, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick, 🖊️ Ada Lovelace, ⚓ Grace Hopper, 💚 Hulk |
 | Gosta de filosofia / argumentação | 🧩 Noam Chomsky, 🔍 L, 🦇 Batman, 🌀 Doctor Strange, 📖 Deckard Cain |
 | Gosta de puzzles | 🗡️ Link, 🔺 Buckminster Fuller |
 

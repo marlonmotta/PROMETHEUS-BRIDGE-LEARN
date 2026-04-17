@@ -26,7 +26,7 @@
 | 4 | Black Panther / Pantera Negra | Marvel | ✅ |
 | 5 | Doctor Strange / Doutor Estranho | Marvel | ✅ |
 | 6 | Thor | Marvel | ✅ |
-| 7 | Hulk | Marvel | ⬜ |
+| 7 | Hulk | Marvel | ✅ |
 | 8 | Wolverine | Marvel | ⬜ |
 | 9 | Professor X | Marvel | ⬜ ⭐ |
 | 10 | Reed Richards / Sr. Fantástico | Marvel | ⬜ |
@@ -335,8 +335,8 @@
 | Lote 6 — Diário de Pilar | 3 |
 | Lote 6 — Roblox | 2 |
 | **Total** | **218** |
-| **Já criadas** | **72** |
-| **Pendentes** | **146** |
+| **Já criadas** | **73** |
+| **Pendentes** | **145** |
 
 ---
 
