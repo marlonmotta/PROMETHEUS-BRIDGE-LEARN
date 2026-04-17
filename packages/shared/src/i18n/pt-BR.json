@@ -161,7 +161,12 @@
     "providerOpenRouter": "OpenRouter (uma key - todos)",
     "providerGroq": "Groq (ultra-rápido, Llama 3)",
     "providerGemini": "Google Gemini",
-    "modelPlaceholder": "nome do modelo"
+    "modelPlaceholder": "nome do modelo",
+    "selectModel": "Selecione um modelo...",
+    "supportTitle": "Suporte / Log de Erros",
+    "supportDesc": "Se o sistema estiver instável ou a IA estiver falhando, você pode enviar o log de erros <strong>de forma anônima</strong> diretamente para nossa equipe. Nenhum dado pessoal é coletado — apenas o log técnico do aplicativo.",
+    "downloadLog": "Baixar log.txt",
+    "sendLogAnonymously": "Enviar log anonimamente"
   },
   "manager": {
     "title": "Gerenciar Personas",

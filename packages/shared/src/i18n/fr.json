@@ -161,7 +161,12 @@
     "providerOpenRouter": "OpenRouter (une clé - tous)",
     "providerGroq": "Groq (ultra-rapide, Llama 3)",
     "providerGemini": "Google Gemini",
-    "modelPlaceholder": "nom du modèle"
+    "modelPlaceholder": "nom du modèle",
+    "selectModel": "Sélectionnez un modèle...",
+    "supportTitle": "Support / Journal d'erreurs",
+    "supportDesc": "Si le système est instable ou si l'IA ne fonctionne pas, vous pouvez envoyer le journal d'erreurs <strong>de manière anonyme</strong> directement à notre équipe. Aucune donnée personnelle n'est collectée — uniquement le journal technique de l'application.",
+    "downloadLog": "Télécharger log.txt",
+    "sendLogAnonymously": "Envoyer le journal anonymement"
   },
   "manager": {
     "title": "Gérer les Personas",

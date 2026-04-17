@@ -161,7 +161,12 @@
     "providerOpenRouter": "OpenRouter (one key - all models)",
     "providerGroq": "Groq (ultra-fast, Llama 3)",
     "providerGemini": "Google Gemini",
-    "modelPlaceholder": "model name"
+    "modelPlaceholder": "model name",
+    "selectModel": "Select a model...",
+    "supportTitle": "Support / Error Log",
+    "supportDesc": "If the system is unstable or the AI is failing, you can send the error log <strong>anonymously</strong> directly to our team. No personal data is collected — only the technical application log.",
+    "downloadLog": "Download log.txt",
+    "sendLogAnonymously": "Send log anonymously"
   },
   "manager": {
     "title": "Manage Personas",

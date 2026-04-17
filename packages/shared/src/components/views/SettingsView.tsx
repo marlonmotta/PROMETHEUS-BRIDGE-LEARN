@@ -434,24 +434,25 @@ export default memo(function SettingsView({
 
       {/* Suporte e Problemas */}
       <div className="bg-bg-2 border border-border rounded p-6 mt-6">
-        <h2 className="text-sm font-semibold mb-2">Suporte / Log de Erros</h2>
-        <p className="text-[12px] text-txt-2 mb-4">
-          Se o sistema estiver instável ou a IA estiver falhando, você pode enviar o log de erros <strong>de forma anônima</strong> diretamente para nossa equipe. Nenhum dado pessoal é coletado — apenas o log técnico do aplicativo.
-        </p>
+        <h2 className="text-sm font-semibold mb-2">{t("settings.supportTitle")}</h2>
+        <p
+          className="text-[12px] text-txt-2 mb-4"
+          dangerouslySetInnerHTML={{ __html: t("settings.supportDesc") }}
+        />
         <div className="flex flex-wrap gap-3">
           {/* // TODO: Ativar este botão após configurar o Worker da Cloudflare
           <button
             onClick={() => onSendLogs?.()}
             className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-sm bg-accent text-white text-[12px] font-medium hover:bg-accent/80 transition-colors"
           >
-            <Icon name="send" size={15} /> Enviar log anonimamente
+            <Icon name="send" size={15} /> {t("settings.sendLogAnonymously")}
           </button>
           */}
           <button
             onClick={() => onDownloadLogs?.()}
             className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-sm bg-bg border border-border text-txt text-[12px] font-medium hover:bg-bg-3 transition-colors"
           >
-            <Icon name="download" size={15} /> Baixar log.txt
+            <Icon name="download" size={15} /> {t("settings.downloadLog")}
           </button>
         </div>
       </div>
