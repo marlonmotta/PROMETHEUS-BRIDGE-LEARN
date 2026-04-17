@@ -25,7 +25,7 @@
 | 3 | Captain America / Capitão América | Marvel | ✅ |
 | 4 | Black Panther / Pantera Negra | Marvel | ✅ |
 | 5 | Doctor Strange / Doutor Estranho | Marvel | ✅ |
-| 6 | Thor | Marvel | ⬜ |
+| 6 | Thor | Marvel | ✅ |
 | 7 | Hulk | Marvel | ⬜ |
 | 8 | Wolverine | Marvel | ⬜ |
 | 9 | Professor X | Marvel | ⬜ ⭐ |
@@ -335,8 +335,8 @@
 | Lote 6 — Diário de Pilar | 3 |
 | Lote 6 — Roblox | 2 |
 | **Total** | **218** |
-| **Já criadas** | **71** |
-| **Pendentes** | **147** |
+| **Já criadas** | **72** |
+| **Pendentes** | **146** |
 
 ---
 
