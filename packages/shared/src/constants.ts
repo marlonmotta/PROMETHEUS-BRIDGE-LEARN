@@ -17,7 +17,6 @@ import { type TranslationKey } from "./i18n/types";
 export type TFunction = (key: TranslationKey, params?: Record<string, string | number>) => string;
 
 /**
-/**
  * Slugs das disciplinas disponíveis no sistema.
  * Novas disciplinas devem ser adicionadas aqui E nos arquivos i18n.
  */
@@ -59,7 +58,6 @@ export const LOG_REPORT_ENDPOINT = "https://pbl-log-reporter.YOUR_SUBDOMAIN.work
  * Novas disciplinas devem ser adicionadas **somente aqui** -
  * todos os componentes referenciam este mapa.
  * @deprecated Use `getSubjects(t)` para labels traduzidos.
- */
  */
 export const SUBJECTS: Record<string, string> = {
   math: "Matemática",
