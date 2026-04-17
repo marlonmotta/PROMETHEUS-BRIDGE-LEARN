@@ -61,6 +61,14 @@ pub const PERSONAS_EMBEDDED: &[(&str, &str)] = &[
         include_str!("../../../personas/fictional/batman.json"),
     ),
     (
+        "bayonetta",
+        include_str!("../../../personas/fictional/bayonetta.json"),
+    ),
+    (
+        "big-boss",
+        include_str!("../../../personas/fictional/big-boss.json"),
+    ),
+    (
         "black-panther",
         include_str!("../../../personas/fictional/black-panther.json"),
     ),
@@ -117,6 +125,10 @@ pub const PERSONAS_EMBEDDED: &[(&str, &str)] = &[
         include_str!("../../../personas/fictional/goku.json"),
     ),
     (
+        "hulk",
+        include_str!("../../../personas/fictional/hulk.json"),
+    ),
+    (
         "iron-man",
         include_str!("../../../personas/fictional/iron-man.json"),
     ),
@@ -131,6 +143,10 @@ pub const PERSONAS_EMBEDDED: &[(&str, &str)] = &[
     (
         "kakashi",
         include_str!("../../../personas/fictional/kakashi.json"),
+    ),
+    (
+        "kefka",
+        include_str!("../../../personas/fictional/kefka.json"),
     ),
     (
         "kratos",
@@ -189,6 +205,10 @@ pub const PERSONAS_EMBEDDED: &[(&str, &str)] = &[
         include_str!("../../../personas/fictional/professor-x.json"),
     ),
     (
+        "raiden",
+        include_str!("../../../personas/fictional/raiden.json"),
+    ),
+    (
         "raphtalia",
         include_str!("../../../personas/fictional/raphtalia.json"),
     ),
@@ -203,6 +223,10 @@ pub const PERSONAS_EMBEDDED: &[(&str, &str)] = &[
     (
         "samba",
         include_str!("../../../personas/fictional/samba.json"),
+    ),
+    (
+        "sephiroth",
+        include_str!("../../../personas/fictional/sephiroth.json"),
     ),
     (
         "spider-man",
@@ -225,6 +249,10 @@ pub const PERSONAS_EMBEDDED: &[(&str, &str)] = &[
         include_str!("../../../personas/fictional/tanjiro.json"),
     ),
     (
+        "thor",
+        include_str!("../../../personas/fictional/thor.json"),
+    ),
+    (
         "thrall",
         include_str!("../../../personas/fictional/thrall.json"),
     ),
@@ -239,6 +267,10 @@ pub const PERSONAS_EMBEDDED: &[(&str, &str)] = &[
     (
         "voljin",
         include_str!("../../../personas/fictional/voljin.json"),
+    ),
+    (
+        "wolverine",
+        include_str!("../../../personas/fictional/wolverine.json"),
     ),
     (
         "wonder-woman",

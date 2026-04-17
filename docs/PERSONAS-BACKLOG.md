@@ -25,10 +25,10 @@
 | 3 | Captain America / Capitão América | Marvel | ✅ |
 | 4 | Black Panther / Pantera Negra | Marvel | ✅ |
 | 5 | Doctor Strange / Doutor Estranho | Marvel | ✅ |
-| 6 | Thor | Marvel | ⬜ |
-| 7 | Hulk | Marvel | ⬜ |
-| 8 | Wolverine | Marvel | ⬜ |
-| 9 | Professor X | Marvel | ⬜ ⭐ |
+| 6 | Thor | Marvel | ✅ |
+| 7 | Hulk | Marvel | ✅ |
+| 8 | Wolverine | Marvel | ✅ |
+| 9 | Professor X | Marvel | ✅ |
 | 10 | Reed Richards / Sr. Fantástico | Marvel | ⬜ |
 | 11 | Nick Fury | Marvel | ⬜ |
 | 12 | Hawkeye / Gavião Arqueiro | Marvel | ⬜ |
@@ -279,11 +279,11 @@
 
 | # | Persona | Universo | Status |
 |---|---------|----------|--------|
-| 173 | Big Boss | Metal Gear | ⬜ |
-| 174 | Raiden | Metal Gear | ⬜ |
-| 175 | Bayonetta | Bayonetta | ⬜ |
-| 176 | Kefka | Final Fantasy VI | ⬜ |
-| 177 | Sephiroth | Final Fantasy VII | ⬜ |
+| 173 | Big Boss | Metal Gear | ✅ |
+| 174 | Raiden | Metal Gear | ✅ |
+| 175 | Bayonetta | Bayonetta | ✅ |
+| 176 | Kefka | Final Fantasy VI | ✅ |
+| 177 | Sephiroth | Final Fantasy VII | ✅ |
 | 178 | Tidus | Final Fantasy X | ⬜ |
 | 179 | Lightning | Final Fantasy XIII | ⬜ |
 | 180 | Noctis | Final Fantasy XV | ⬜ |
@@ -335,8 +335,8 @@
 | Lote 6 — Diário de Pilar | 3 |
 | Lote 6 — Roblox | 2 |
 | **Total** | **218** |
-| **Já criadas** | **66** |
-| **Pendentes** | **152** |
+| **Já criadas** | **76** |
+| **Pendentes** | **142** |
 
 ---
 
