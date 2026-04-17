@@ -282,7 +282,7 @@
 | 173 | Big Boss | Metal Gear | ✅ |
 | 174 | Raiden | Metal Gear | ✅ |
 | 175 | Bayonetta | Bayonetta | ✅ |
-| 176 | Kefka | Final Fantasy VI | ⬜ |
+| 176 | Kefka | Final Fantasy VI | ✅ |
 | 177 | Sephiroth | Final Fantasy VII | ⬜ |
 | 178 | Tidus | Final Fantasy X | ⬜ |
 | 179 | Lightning | Final Fantasy XIII | ⬜ |
@@ -335,8 +335,8 @@
 | Lote 6 — Diário de Pilar | 3 |
 | Lote 6 — Roblox | 2 |
 | **Total** | **218** |
-| **Já criadas** | **69** |
-| **Pendentes** | **149** |
+| **Já criadas** | **70** |
+| **Pendentes** | **148** |
 
 ---
 
