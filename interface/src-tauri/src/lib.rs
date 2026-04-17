@@ -368,6 +368,7 @@ pub fn run() {
             secure_store::save_api_key,
             secure_store::get_api_key,
             secure_store::delete_api_key,
+            export::export_app_logs,
         ])
         .run(tauri::generate_context!())
         .expect("[PBL] Falha crítica ao inicializar a aplicação Tauri");

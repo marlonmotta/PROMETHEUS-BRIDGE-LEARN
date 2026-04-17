@@ -13,6 +13,14 @@
  */
 
 /**
+ * Endpoint do Cloudflare Worker para envio anônimo de logs de erro.
+ * O professor clica "Enviar" e o log vira uma Issue no GitHub automaticamente.
+ *
+ * ⚠️ Substituir pela URL real após deploy do Worker (workers/log-reporter/).
+ */
+export const LOG_REPORT_ENDPOINT = "https://pbl-log-reporter.YOUR_SUBDOMAIN.workers.dev/report";
+
+/**
  * Mapa de disciplinas disponíveis no sistema.
  * Chave = slug interno | Valor = label exibido na interface.
  *
@@ -48,11 +56,55 @@ export const DIFFICULTIES: Record<string, string> = {
  * novos modelos forem lançados pelos provedores.
  */
 export const MODEL_PLACEHOLDERS: Record<string, string> = {
-  openai: "gpt-4o",
-  anthropic: "claude-3-5-sonnet-20241022",
-  openrouter: "openai/gpt-4o",
+  openai: "gpt-5.4",
+  anthropic: "claude-sonnet-4.6",
+  openrouter: "anthropic/claude-sonnet-4.6",
   groq: "llama-3.3-70b-versatile",
-  gemini: "gemini-2.0-flash",
+  gemini: "gemini-2.5-flash",
+};
+
+/**
+ * Modelos disponíveis agrupados por provedor.
+ * Utilizado para preencher o <select> de seleção na tela de configurações.
+ *
+ * ⚠️ ATUALIZADO EM: 06/04/2026
+ * Fonte: Documentação oficial de cada provedor + pesquisa web.
+ * GPT-4o, Claude 3.5, Gemini 2.0 foram DEPRECIADOS/RETIRADOS das APIs.
+ */
+export const AVAILABLE_MODELS: Record<string, { id: string; name: string }[]> = {
+  openai: [
+    { id: "gpt-5.4", name: "GPT-5.4 (Flagship — Recomendado)" },
+    { id: "gpt-5.4-mini", name: "GPT-5.4 Mini (Rápido/Barato)" },
+    { id: "gpt-5.4-nano", name: "GPT-5.4 Nano (Ultra-Barato)" },
+    { id: "custom_other", name: "Outro (Digitar manualmente)" },
+  ],
+  anthropic: [
+    { id: "claude-opus-4.6", name: "Claude Opus 4.6 (Flagship — Raciocínio Forte)" },
+    { id: "claude-sonnet-4.6", name: "Claude Sonnet 4.6 (Recomendado — Equilibrado)" },
+    { id: "claude-haiku-4.5", name: "Claude Haiku 4.5 (Rápido/Barato)" },
+    { id: "custom_other", name: "Outro (Digitar manualmente)" },
+  ],
+  openrouter: [
+    { id: "anthropic/claude-sonnet-4.6", name: "Claude Sonnet 4.6 (Anthropic)" },
+    { id: "openai/gpt-5.4", name: "GPT-5.4 (OpenAI)" },
+    { id: "google/gemini-3.1-pro", name: "Gemini 3.1 Pro (Google)" },
+    { id: "deepseek/deepseek-v3.2", name: "DeepSeek V3.2" },
+    { id: "qwen/qwen-3.6-plus", name: "Qwen 3.6 Plus (Alibaba)" },
+    { id: "custom_other", name: "Outro (Digitar manualmente)" },
+  ],
+  groq: [
+    { id: "llama-3.3-70b-versatile", name: "LLaMA 3.3 70B Versatile (Recomendado)" },
+    { id: "llama-3.1-8b-instant", name: "LLaMA 3.1 8B Instant (Ultra-Rápido)" },
+    { id: "openai/gpt-oss-120b", name: "GPT-OSS 120B (Open-Weight)" },
+    { id: "openai/gpt-oss-20b", name: "GPT-OSS 20B (Open-Weight/Leve)" },
+    { id: "custom_other", name: "Outro (Digitar manualmente)" },
+  ],
+  gemini: [
+    { id: "gemini-3.1-pro", name: "Gemini 3.1 Pro (Flagship — Raciocínio)" },
+    { id: "gemini-2.5-pro", name: "Gemini 2.5 Pro (Robusto/Estável)" },
+    { id: "gemini-2.5-flash", name: "Gemini 2.5 Flash (Recomendado — Rápido)" },
+    { id: "custom_other", name: "Outro (Digitar manualmente)" },
+  ],
 };
 
 /**
@@ -84,7 +136,6 @@ export type View =
   | "home"
   | "personas"
   | "content"
-  | "result"
   | "history"
   | "manager"
   | "settings";
