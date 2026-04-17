@@ -312,7 +312,7 @@ export async function extractTextFromImage(
   } else if (provider === "anthropic") {
     return callAnthropicVision(apiKey, model || "claude-3-5-sonnet-20241022", prompt, mime, base64);
   } else {
-    return callOpenaiVision(provider, apiKey, model || "gpt-4o", prompt, mime, base64);
+    return callOpenaiVision(provider, apiKey, model || "gpt-5.4", prompt, mime, base64);
   }
 }
 

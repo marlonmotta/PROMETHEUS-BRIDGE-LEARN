@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Testes unitários do módulo promptBuilder.
  * Portado do desktop com os mesmos cenários de teste.
  */
@@ -158,7 +158,7 @@ describe("buildPromptPayload", () => {
       "simple",
       onlineSettings,
     );
-    expect(result.model).toBe("gpt-4o");
+    expect(result.model).toBe("gpt-5.4");
   });
 
   it("lida com persona sem pedagogy (campos opcionais)", () => {

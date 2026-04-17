@@ -279,7 +279,7 @@ async fn call_openai_compatible(
     user_content: &str,
 ) -> Result<String, String> {
     let base_url = openai_compatible_url(provider);
-    let m = if model.is_empty() { "gpt-4o" } else { model };
+    let m = if model.is_empty() { "gpt-5.4" } else { model };
     let body = serde_json::json!({
         "model": m,
         "messages": [
@@ -391,7 +391,7 @@ async fn call_openai_vision(
     image_b64: &str,
 ) -> Result<String, String> {
     let base_url = openai_compatible_url(provider);
-    let m = if model.is_empty() { "gpt-4o" } else { model };
+    let m = if model.is_empty() { "gpt-5.4" } else { model };
     let body = serde_json::json!({
         "model": m,
         "messages": [{
