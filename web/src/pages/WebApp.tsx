@@ -215,7 +215,7 @@ export default function WebApp() {
         }),
     };
     dispatch({ type: "ADD_HISTORY", item });
-  }, [state.selectedPersona, state.subject, state.content, state.result]);
+  }, [state.selectedPersona, state.subject, state.content, state.result, state.settings.interfaceLanguage]);
 
   const { handleImportFile } = useImportFile({ settings: state.settings, dispatch });
 
