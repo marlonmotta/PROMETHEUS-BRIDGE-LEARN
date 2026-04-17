@@ -120,7 +120,7 @@ describe("buildPromptPayload", () => {
       model: "",
     };
     const result = buildPromptPayload(mockPersona, "Texto", "math", "simple", onlineSettings);
-    expect(result.model).toBe("gpt-4o");
+    expect(result.model).toBe("gpt-5.4");
   });
 
   it("lida com persona sem pedagogy (campos opcionais)", () => {

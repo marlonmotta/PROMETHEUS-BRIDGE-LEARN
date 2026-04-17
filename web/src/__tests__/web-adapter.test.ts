@@ -133,7 +133,7 @@ describe("invokeAI", () => {
     mode: "online" as const,
     provider: "openai",
     apiKey: "sk-test",
-    model: "gpt-4o",
+    model: "gpt-5.4",
     systemPrompt: "Você é um professor.",
     userContent: "Adapte esse conteúdo.",
   };

@@ -29,6 +29,8 @@ import {
   MODEL_PLACEHOLDERS,
   OUTPUT_LANGUAGES,
   getOutputFormats,
+  AVAILABLE_MODELS,
+
   type Settings,
   type HistoryItem,
 } from "@pbl/shared/constants";
@@ -52,6 +54,10 @@ interface Props {
   onClearHistory: () => void;
   /** Callback para remover a API key do keychain (desktop) ou sessionStorage (web) */
   onDeleteApiKey?: () => void;
+  /** Callback executado para extrair e baixar e analisar logs da aplicação */
+  onDownloadLogs?: () => void;
+  /** Callback para enviar log anonimamente via Worker (TODO) */
+  // onSendLogs?: () => void;
   /** Plataforma atual exibida na seção "Sobre". Default: "Web" */
   platform?: "Web" | "Desktop";
 }
@@ -64,6 +70,8 @@ export default memo(function SettingsView({
   onDeleteHistory,
   onClearHistory,
   onDeleteApiKey,
+  onDownloadLogs,
+  // onSendLogs,
   platform = "Web",
 }: Props) {
   /** Estado local editável (não persiste até clicar "Salvar") */
@@ -246,14 +254,45 @@ export default memo(function SettingsView({
           </div>
           <div className="flex flex-col gap-1.5 mb-4">
             <label className="text-xs text-txt-2 font-medium">{t("settings.model")}</label>
-            <input
-              value={local.model}
-              onChange={(e) => update({ model: e.target.value })}
-              placeholder={
-                MODEL_PLACEHOLDERS[local.provider] || t("settings.modelPlaceholder")
-              }
-              className="bg-bg border border-border rounded-sm text-txt text-[13px] px-3.5 py-2.5 outline-none focus:border-accent transition-colors"
-            />
+            {AVAILABLE_MODELS[local.provider] ? (
+              <div className="flex flex-col gap-2">
+                <select
+                  value={
+                    AVAILABLE_MODELS[local.provider]?.some((m) => m.id === local.model) && local.model !== "custom_other"
+                      ? local.model
+                      : "custom_other"
+                  }
+                  onChange={(e) => {
+                    const val = e.target.value;
+                    update({ model: val === "custom_other" ? "" : val });
+                  }}
+                  className="bg-bg border border-border rounded-sm text-txt text-[13px] px-3.5 py-2.5 outline-none focus:border-accent transition-colors"
+                >
+                  <option value="" disabled>{t("settings.selectModel") || "Selecione um modelo..."}</option>
+                  {AVAILABLE_MODELS[local.provider].map((m) => (
+                    <option key={m.id} value={m.id}>
+                      {m.name}
+                    </option>
+                  ))}
+                </select>
+                {(!AVAILABLE_MODELS[local.provider]?.some((m) => m.id === local.model) || local.model === "custom_other") && (
+                  <input
+                    value={local.model === "custom_other" ? "" : local.model}
+                    onChange={(e) => update({ model: e.target.value })}
+                    placeholder={MODEL_PLACEHOLDERS[local.provider] || t("settings.modelPlaceholder")}
+                    className="bg-bg border border-border rounded-sm text-txt text-[13px] px-3.5 py-2.5 outline-none focus:border-accent transition-colors"
+                  />
+                )}
+              </div>
+            ) : (
+              <input
+                value={local.model}
+                onChange={(e) => update({ model: e.target.value })}
+                placeholder={MODEL_PLACEHOLDERS[local.provider] || t("settings.modelPlaceholder")}
+                className="bg-bg border border-border rounded-sm text-txt text-[13px] px-3.5 py-2.5 outline-none focus:border-accent transition-colors"
+              />
+            )}
+
           </div>
           <div className="flex flex-col gap-1.5">
             <label className="text-xs text-txt-2 font-medium">{t("settings.apiKey")}</label>
@@ -390,6 +429,30 @@ export default memo(function SettingsView({
               {t("settings.aboutDescription")}
             </span>
           </div>
+        </div>
+      </div>
+
+      {/* Suporte e Problemas */}
+      <div className="bg-bg-2 border border-border rounded p-6 mt-6">
+        <h2 className="text-sm font-semibold mb-2">Suporte / Log de Erros</h2>
+        <p className="text-[12px] text-txt-2 mb-4">
+          Se o sistema estiver instável ou a IA estiver falhando, você pode enviar o log de erros <strong>de forma anônima</strong> diretamente para nossa equipe. Nenhum dado pessoal é coletado — apenas o log técnico do aplicativo.
+        </p>
+        <div className="flex flex-wrap gap-3">
+          {/* // TODO: Ativar este botão após configurar o Worker da Cloudflare
+          <button
+            onClick={() => onSendLogs?.()}
+            className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-sm bg-accent text-white text-[12px] font-medium hover:bg-accent/80 transition-colors"
+          >
+            <Icon name="send" size={15} /> Enviar log anonimamente
+          </button>
+          */}
+          <button
+            onClick={() => onDownloadLogs?.()}
+            className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-sm bg-bg border border-border text-txt text-[12px] font-medium hover:bg-bg-3 transition-colors"
+          >
+            <Icon name="download" size={15} /> Baixar log.txt
+          </button>
         </div>
       </div>
 

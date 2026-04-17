@@ -13,7 +13,7 @@ import type { Persona, Settings } from "@pbl/shared/constants";
 
 const defaultSettings: Settings = {
   provider: "openai",
-  model: "gpt-4o",
+  model: "gpt-5.4",
   apiKey: "",
   mode: "online",
   outputFormat: "free",
