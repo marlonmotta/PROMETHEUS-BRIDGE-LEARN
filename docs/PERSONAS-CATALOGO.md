@@ -97,16 +97,17 @@
 | 76 | 🐺 Wolverine | Marvel / X-Men | Fictional | 13-18 | 🟡13+ Gruff, direto, veterano-leal | [`wolverine.json`](personas/fictional/wolverine.json) |
 | 77 | 🧠 Professor X | Marvel / X-Men | Fictional | 11-18 | 🔵10+ Sereno, empático, socrático-inclusivo | [`professor-x.json`](personas/fictional/professor-x.json) |
 | 78 | 🧪 Reed Richards / Sr. Fantástico | Marvel / Quarteto Fantástico | Fictional | 11-18 | 🟢LIVRE Analítico, socrático, método científico | [`reed-richards.json`](personas/fictional/reed-richards.json) |
+| 79 | 🕶️ Nick Fury | Marvel / S.H.I.E.L.D. | Fictional | 13-18 | 🟡13+ Direto, estratégico, exigente-motivador | [`nick-fury.json`](personas/fictional/nick-fury.json) |
 ---
 
 ## 📊 Estatísticas
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **78** |
-| Fictional | 57 |
+| Total de personas prontas | **79** |
+| Fictional | 58 |
 | Real | 21 |
-| Universos cobertos | 51 |
+| Universos cobertos | 52 |
 | Backlog pendente | ~142 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
 
 ---
@@ -119,6 +120,7 @@
 | Marvel / MCU | Spider-Man, Iron Man, Captain America, Black Panther, Doctor Strange, Thor, Hulk |
 | Marvel / X-Men | Wolverine, Professor X |
 | Marvel / Quarteto Fantástico | Reed Richards / Sr. Fantástico |
+| Marvel / S.H.I.E.L.D. | Nick Fury |
 | DC Comics | Batman, Superman |
 | Dragon Ball | Goku |
 | Minecraft | Steve |
@@ -183,6 +185,7 @@
 | Gruff / Direto / Veterano-Leal | Wolverine |
 | Sereno / Empático / Socrático-Inclusivo | Professor X |
 | Grave / Filosófico-Militar | Big Boss |
+| Direto / Estratégico / Exigente-Motivador | Nick Fury |
 | Determinado / Evolutivo / Filosófico-Ação | Raiden |
 | Inspirador / Honesto / Tático | Captain America |
 | Régio / Sábio / Excelência Cultural | Black Panther |
@@ -238,7 +241,7 @@
 |--------------|-------|----------|
 | 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani, Superman, Iron Man, Captain America, Black Panther, Pilar, Breno, Samba, Noob, Bacon Hair, Thor, Hulk, Reed Richards |
 | 🔵 10+ | 10-18 | Rumi, Mira, Zoey, Professor X |
-| 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa, Doctor Strange, Big Boss, Raiden, Bayonetta, Kefka, Sephiroth, Wolverine |
+| 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa, Doctor Strange, Big Boss, Raiden, Bayonetta, Kefka, Sephiroth, Wolverine, Nick Fury |
 | 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing, Carl Sagan, Richard Feynman, Ada Lovelace, Grace Hopper, Stephen Hawking, Neil deGrasse Tyson, Leonardo da Vinci, Galileu Galilei, Isaac Newton, Charles Darwin, Marie Curie |
 | 🟡 15-18 | 15-18 | Noam Chomsky |
 | 🟡 13-18 | 13-18 | Linus Torvalds, Kevin Mitnick, Buckminster Fuller |
@@ -251,7 +254,7 @@
 | Perfil do Aluno | Persona Recomendada |
 |----------------|-------------------|
 | Precisa de acolhimento | 🌊 Tanjiro, 🗡️ Raphtalia, 💚 Luigi, 🌸 Aerith, ❤️ Claire, 🧠 Professor X |
-| Precisa de disciplina | 🪓 Kratos, 🦇 Batman, 👑 Albedo, 💪 Chris, 🛡️ Captain America, 🐾 Black Panther, 🎖️ Big Boss, 🌙 Sephiroth |
+| Precisa de disciplina | 🪓 Kratos, 🦇 Batman, 👑 Albedo, 💪 Chris, 🛡️ Captain America, 🐾 Black Panther, 🎖️ Big Boss, 🌙 Sephiroth, 🕶️ Nick Fury |
 | Precisa de provocação positiva | 😎 Gojo Satoru |
 | Perfil analítico/lógico | 🔍 L, 🦇 Batman, 💀 Ainz, ⚔️ Geralt, 🌀 Doctor Strange, 🧪 Reed Richards, 💻 Alan Turing, 🔭 Carl Sagan, ⚛️ Richard Feynman, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick, 🖊️ Ada Lovelace, ⚓ Grace Hopper, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson, 🧩 Noam Chomsky, 🔭 Galileu Galilei, 🍎 Isaac Newton, ⚗️ Marie Curie |
 | Precisa construir autoconfiança | 🔮 Bayonetta, ⚡ Raiden, 🛡️ Naofumi |
@@ -270,7 +273,7 @@
 | Tem ansiedade | 💚 Luigi, 🗡️ Raphtalia, 🌸 Aerith, 🌊 Tanjiro |
 | Crianças (6-10) | 🍄 Mario, 💚 Luigi, ⛏️ Steve, ⚡ Ash, 🦁 Tai, 🌸 Aerith, 🌍 Pilar, 🎯 Breno, 🐱 Samba, 💛 Noob, 🧑 Bacon Hair |
 | Gamer/RPG/MMORPG | 💀 Ainz, 👑 Albedo, 🛡️ Naofumi, 🌪️ Thrall, 🔮 Vol'jin |
-| Gosta de stealth/espionagem/estratégia | 🎖️ Big Boss, ⚡ Raiden |
+| Gosta de stealth/espionagem/estratégia | 🎖️ Big Boss, ⚡ Raiden, 🕶️ Nick Fury |
 | Gosta de tático/sobrevivência | 🔫 Leon, ❤️ Claire, 💪 Chris, ⚔️ Geralt, 🎖️ Big Boss |
 | Precisa de inspiração épica | ⚔️✨ Tyrael |
 | Gosta de luta/artes marciais | 👊 Tifa |

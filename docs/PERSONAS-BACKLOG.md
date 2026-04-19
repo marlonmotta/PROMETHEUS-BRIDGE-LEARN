@@ -30,7 +30,7 @@
 | 8 | Wolverine | Marvel | ✅ |
 | 9 | Professor X | Marvel | ✅ |
 | 10 | Reed Richards / Sr. Fantástico | Marvel | ✅ |
-| 11 | Nick Fury | Marvel | ⬜ |
+| 11 | Nick Fury | Marvel | ✅ |
 | 12 | Hawkeye / Gavião Arqueiro | Marvel | ⬜ |
 | 13 | Black Widow / Viúva Negra | Marvel | ⬜ |
 | 14 | Deadpool / Mercenário Tagarela | Marvel | ⬜ ⭐ |
@@ -335,8 +335,8 @@
 | Lote 6 — Diário de Pilar | 3 |
 | Lote 6 — Roblox | 2 |
 | **Total** | **218** |
-| **Já criadas** | **77** |
-| **Pendentes** | **141** |
+| **Já criadas** | **78** |
+| **Pendentes** | **140** |
 
 ---
 
