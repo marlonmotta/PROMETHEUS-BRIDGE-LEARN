@@ -32,7 +32,7 @@
 | 10 | Reed Richards / Sr. Fantástico | Marvel | ✅ |
 | 11 | Nick Fury | Marvel | ✅ |
 | 12 | Hawkeye / Gavião Arqueiro | Marvel | ✅ |
-| 13 | Black Widow / Viúva Negra | Marvel | ⬜ |
+| 13 | Black Widow / Viúva Negra | Marvel | ✅ |
 | 14 | Deadpool / Mercenário Tagarela | Marvel | ⬜ ⭐ |
 | 15 | Moon Knight / Cavaleiro da Lua | Marvel | ⬜ |
 | 16 | Daredevil / Demolidor | Marvel | ⬜ |
@@ -335,8 +335,8 @@
 | Lote 6 — Diário de Pilar | 3 |
 | Lote 6 — Roblox | 2 |
 | **Total** | **218** |
-| **Já criadas** | **79** |
-| **Pendentes** | **139** |
+| **Já criadas** | **80** |
+| **Pendentes** | **138** |
 
 ---
 
