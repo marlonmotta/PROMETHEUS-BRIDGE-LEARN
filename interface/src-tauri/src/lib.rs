@@ -253,6 +253,10 @@ pub const PERSONAS_EMBEDDED: &[(&str, &str)] = &[
         include_str!("../../../personas/fictional/samba.json"),
     ),
     (
+        "scarlet-witch",
+        include_str!("../../../personas/fictional/scarlet-witch.json"),
+    ),
+    (
         "sephiroth",
         include_str!("../../../personas/fictional/sephiroth.json"),
     ),
