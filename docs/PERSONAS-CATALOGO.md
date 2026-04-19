@@ -98,14 +98,15 @@
 | 77 | 🧠 Professor X | Marvel / X-Men | Fictional | 11-18 | 🔵10+ Sereno, empático, socrático-inclusivo | [`professor-x.json`](personas/fictional/professor-x.json) |
 | 78 | 🧪 Reed Richards / Sr. Fantástico | Marvel / Quarteto Fantástico | Fictional | 11-18 | 🟢LIVRE Analítico, socrático, método científico | [`reed-richards.json`](personas/fictional/reed-richards.json) |
 | 79 | 🕶️ Nick Fury | Marvel / S.H.I.E.L.D. | Fictional | 13-18 | 🟡13+ Direto, estratégico, exigente-motivador | [`nick-fury.json`](personas/fictional/nick-fury.json) |
+| 80 | 🏹 Hawkeye / Gavião Arqueiro | Marvel / MCU / Vingadores | Fictional | 11-18 | 🟢LIVRE Prático, sarcástico, underdog motivador | [`hawkeye.json`](personas/fictional/hawkeye.json) |
 ---
 
 ## 📊 Estatísticas
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **79** |
-| Fictional | 58 |
+| Total de personas prontas | **80** |
+| Fictional | 59 |
 | Real | 21 |
 | Universos cobertos | 52 |
 | Backlog pendente | ~142 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
@@ -117,7 +118,7 @@
 | Universo | Personas Disponíveis |
 |----------|---------------------|
 | Naruto | Jiraiya Sensei, Kakashi |
-| Marvel / MCU | Spider-Man, Iron Man, Captain America, Black Panther, Doctor Strange, Thor, Hulk |
+| Marvel / MCU | Spider-Man, Iron Man, Captain America, Black Panther, Doctor Strange, Thor, Hulk, Hawkeye |
 | Marvel / X-Men | Wolverine, Professor X |
 | Marvel / Quarteto Fantástico | Reed Richards / Sr. Fantástico |
 | Marvel / S.H.I.E.L.D. | Nick Fury |
@@ -222,6 +223,7 @@
 | Medroso-Corajoso | Luigi, Tai |
 | Empolgado / Divulgador | Sacani |
 | Tático / Sarcástico | Geralt, Leon |
+| Prático / Sarcástico / Underdog Motivador | Hawkeye |
 | Científico / Juventude | Rebecca |
 | Força / Coração | Tifa, Chris |
 | Musical / Inspiradora | Rumi |
@@ -242,7 +244,7 @@
 | 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani, Superman, Iron Man, Captain America, Black Panther, Pilar, Breno, Samba, Noob, Bacon Hair, Thor, Hulk, Reed Richards |
 | 🔵 10+ | 10-18 | Rumi, Mira, Zoey, Professor X |
 | 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa, Doctor Strange, Big Boss, Raiden, Bayonetta, Kefka, Sephiroth, Wolverine, Nick Fury |
-| 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing, Carl Sagan, Richard Feynman, Ada Lovelace, Grace Hopper, Stephen Hawking, Neil deGrasse Tyson, Leonardo da Vinci, Galileu Galilei, Isaac Newton, Charles Darwin, Marie Curie |
+| 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing, Carl Sagan, Richard Feynman, Ada Lovelace, Grace Hopper, Stephen Hawking, Neil deGrasse Tyson, Leonardo da Vinci, Galileu Galilei, Isaac Newton, Charles Darwin, Marie Curie, Hawkeye |
 | 🟡 15-18 | 15-18 | Noam Chomsky |
 | 🟡 13-18 | 13-18 | Linus Torvalds, Kevin Mitnick, Buckminster Fuller |
 | 🟠 16+ | 13-18 | Kratos, Ezio, Geralt, Leon, Claire, Chris |
@@ -257,7 +259,7 @@
 | Precisa de disciplina | 🪓 Kratos, 🦇 Batman, 👑 Albedo, 💪 Chris, 🛡️ Captain America, 🐾 Black Panther, 🎖️ Big Boss, 🌙 Sephiroth, 🕶️ Nick Fury |
 | Precisa de provocação positiva | 😎 Gojo Satoru |
 | Perfil analítico/lógico | 🔍 L, 🦇 Batman, 💀 Ainz, ⚔️ Geralt, 🌀 Doctor Strange, 🧪 Reed Richards, 💻 Alan Turing, 🔭 Carl Sagan, ⚛️ Richard Feynman, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick, 🖊️ Ada Lovelace, ⚓ Grace Hopper, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson, 🧩 Noam Chomsky, 🔭 Galileu Galilei, 🍎 Isaac Newton, ⚗️ Marie Curie |
-| Precisa construir autoconfiança | 🔮 Bayonetta, ⚡ Raiden, 🛡️ Naofumi |
+| Precisa construir autoconfiança | 🔮 Bayonetta, ⚡ Raiden, 🛡️ Naofumi, 🏹 Hawkeye |
 | Perfil filosófico / pensamento crítico avançado | 🃏 Kefka, 🔍 L, 🌀 Doctor Strange, 🧩 Noam Chomsky |
 | Perfil criativo/TDAH | 💥 Jinx, ⛏️ Steve, ⚡ Ash, 🦁 Tai, 🌌 Neil deGrasse Tyson |
 | Precisa de energia/motivação | 💥 Goku, 🏴‍☠️ Luffy, 🚀 Sacani, 💪 Chris, ⚡ Ash, 🦸 Superman, 🛡️ Captain America, 🔭 Carl Sagan, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson, ⚡ Thor |
@@ -277,8 +279,8 @@
 | Gosta de tático/sobrevivência | 🔫 Leon, ❤️ Claire, 💪 Chris, ⚔️ Geralt, 🎖️ Big Boss |
 | Precisa de inspiração épica | ⚔️✨ Tyrael |
 | Gosta de luta/artes marciais | 👊 Tifa |
-| Persistência / Nunca desistir | ⚡ Ash, 💪 Chris, 🦁 Tai, 🛡️ Captain America, 🚀 Elon Musk, ⚓ Grace Hopper, 🔭 Stephen Hawking, ⚗️ Marie Curie, ⚡ Thor |
-| Baixa autoestima | 🛡️ Naofumi, 💚 Luigi, 🗡️ Raphtalia, 👊 Tifa, ⚡ Raiden, 🧠 Professor X |
+| Persistência / Nunca desistir | ⚡ Ash, 💪 Chris, 🦁 Tai, 🛡️ Captain America, 🚀 Elon Musk, ⚓ Grace Hopper, 🔭 Stephen Hawking, ⚗️ Marie Curie, ⚡ Thor, 🏹 Hawkeye |
+| Baixa autoestima | 🛡️ Naofumi, 💚 Luigi, 🗡️ Raphtalia, 👊 Tifa, ⚡ Raiden, 🧠 Professor X, 🏹 Hawkeye |
 | Gosta de K-Pop/música/dança | 🎤 Rumi, 💃 Mira, 🎤 Zoey |
 | Gosta de aventura/viagem/culturas | 🌍 Pilar, 🎯 Breno, 🐱 Samba, 🐢 Charles Darwin |
 | Gosta de Roblox/construção | 💛 Noob, 🧑 Bacon Hair |
