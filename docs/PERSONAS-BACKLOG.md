@@ -29,17 +29,17 @@
 | 7 | Hulk | Marvel | ✅ |
 | 8 | Wolverine | Marvel | ✅ |
 | 9 | Professor X | Marvel | ✅ |
-| 10 | Reed Richards / Sr. Fantástico | Marvel | ⬜ |
-| 11 | Nick Fury | Marvel | ⬜ |
-| 12 | Hawkeye / Gavião Arqueiro | Marvel | ⬜ |
-| 13 | Black Widow / Viúva Negra | Marvel | ⬜ |
-| 14 | Deadpool / Mercenário Tagarela | Marvel | ⬜ ⭐ |
-| 15 | Moon Knight / Cavaleiro da Lua | Marvel | ⬜ |
-| 16 | Daredevil / Demolidor | Marvel | ⬜ |
-| 17 | Ghost Rider / Motoqueiro Fantasma | Marvel | ⬜ |
-| 18 | Silver Surfer / Surfista Prateado | Marvel | ⬜ |
-| 19 | Scarlet Witch / Feiticeira Escarlate | Marvel | ⬜ |
-| 20 | Vision / Visão | Marvel | ⬜ |
+| 10 | Reed Richards / Sr. Fantástico | Marvel | ✅ |
+| 11 | Nick Fury | Marvel | ✅ |
+| 12 | Hawkeye / Gavião Arqueiro | Marvel | ✅ |
+| 13 | Black Widow / Viúva Negra | Marvel | ✅ |
+| 14 | Deadpool / Mercenário Tagarela | Marvel | ✅ |
+| 15 | Moon Knight / Cavaleiro da Lua | Marvel | ✅ |
+| 16 | Daredevil / Demolidor | Marvel | ✅ |
+| 17 | Ghost Rider / Motoqueiro Fantasma | Marvel | ✅ |
+| 18 | Silver Surfer / Surfista Prateado | Marvel | ✅ |
+| 19 | Scarlet Witch / Feiticeira Escarlate | Marvel | ✅ |
+| 20 | Vision / Visão | Marvel | ✅ |
 
 ---
 
@@ -335,8 +335,8 @@
 | Lote 6 — Diário de Pilar | 3 |
 | Lote 6 — Roblox | 2 |
 | **Total** | **218** |
-| **Já criadas** | **76** |
-| **Pendentes** | **142** |
+| **Já criadas** | **87** |
+| **Pendentes** | **131** |
 
 ---
 

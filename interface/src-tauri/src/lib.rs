@@ -73,6 +73,10 @@ pub const PERSONAS_EMBEDDED: &[(&str, &str)] = &[
         include_str!("../../../personas/fictional/black-panther.json"),
     ),
     (
+        "black-widow",
+        include_str!("../../../personas/fictional/black-widow.json"),
+    ),
+    (
         "breno",
         include_str!("../../../personas/fictional/breno.json"),
     ),
@@ -91,6 +95,10 @@ pub const PERSONAS_EMBEDDED: &[(&str, &str)] = &[
     (
         "cloud-strife",
         include_str!("../../../personas/fictional/cloud-strife.json"),
+    ),
+    (
+        "daredevil",
+        include_str!("../../../personas/fictional/daredevil.json"),
     ),
     (
         "deadpool",
@@ -117,12 +125,20 @@ pub const PERSONAS_EMBEDDED: &[(&str, &str)] = &[
         include_str!("../../../personas/fictional/geralt.json"),
     ),
     (
+        "ghost-rider",
+        include_str!("../../../personas/fictional/ghost-rider.json"),
+    ),
+    (
         "gojo-satoru",
         include_str!("../../../personas/fictional/gojo-satoru.json"),
     ),
     (
         "goku",
         include_str!("../../../personas/fictional/goku.json"),
+    ),
+    (
+        "hawkeye",
+        include_str!("../../../personas/fictional/hawkeye.json"),
     ),
     (
         "hulk",
@@ -185,12 +201,20 @@ pub const PERSONAS_EMBEDDED: &[(&str, &str)] = &[
         include_str!("../../../personas/fictional/mira.json"),
     ),
     (
+        "moon-knight",
+        include_str!("../../../personas/fictional/moon-knight.json"),
+    ),
+    (
         "naofumi",
         include_str!("../../../personas/fictional/naofumi.json"),
     ),
     (
         "naruto",
         include_str!("../../../personas/fictional/naruto.json"),
+    ),
+    (
+        "nick-fury",
+        include_str!("../../../personas/fictional/nick-fury.json"),
     ),
     (
         "noob-roblox",
@@ -217,6 +241,10 @@ pub const PERSONAS_EMBEDDED: &[(&str, &str)] = &[
         include_str!("../../../personas/fictional/rebecca-chambers.json"),
     ),
     (
+        "reed-richards",
+        include_str!("../../../personas/fictional/reed-richards.json"),
+    ),
+    (
         "rumi",
         include_str!("../../../personas/fictional/rumi.json"),
     ),
@@ -225,8 +253,16 @@ pub const PERSONAS_EMBEDDED: &[(&str, &str)] = &[
         include_str!("../../../personas/fictional/samba.json"),
     ),
     (
+        "scarlet-witch",
+        include_str!("../../../personas/fictional/scarlet-witch.json"),
+    ),
+    (
         "sephiroth",
         include_str!("../../../personas/fictional/sephiroth.json"),
+    ),
+    (
+        "silver-surfer",
+        include_str!("../../../personas/fictional/silver-surfer.json"),
     ),
     (
         "spider-man",
@@ -263,6 +299,10 @@ pub const PERSONAS_EMBEDDED: &[(&str, &str)] = &[
     (
         "tyrael",
         include_str!("../../../personas/fictional/tyrael.json"),
+    ),
+    (
+        "vision",
+        include_str!("../../../personas/fictional/vision.json"),
     ),
     (
         "voljin",
