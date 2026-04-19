@@ -106,14 +106,15 @@
 | 85 | 🔥 Ghost Rider / Motoqueiro Fantasma | Marvel / MCU | Fictional | 13-18 | 🟡13+ Grave, intenso, consequência-transformação | [`ghost-rider.json`](personas/fictional/ghost-rider.json) |
 | 86 | 🪐 Silver Surfer / Surfista Prateado | Marvel Comics / MCU | Fictional | 11-18 | 🟢LIVRE Contemplativo, poético, perspectiva cósmica | [`silver-surfer.json`](personas/fictional/silver-surfer.json) |
 | 87 | 🔮 Scarlet Witch / Feiticeira Escarlate | Marvel / MCU | Fictional | 11-18 | 🔵10+ Calorosa, criativa, caos→criação | [`scarlet-witch.json`](personas/fictional/scarlet-witch.json) |
+| 88 | 🟣 Vision / Visão | Marvel / MCU | Fictional | 11-18 | 🟢LIVRE Sereno, analítico, síntese dado→conhecimento | [`vision.json`](personas/fictional/vision.json) |
 ---
 
 ## 📊 Estatísticas
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **87** |
-| Fictional | 66 |
+| Total de personas prontas | **88** |
+| Fictional | 67 |
 | Real | 21 |
 | Universos cobertos | 53 |
 | Backlog pendente | ~142 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
@@ -125,7 +126,7 @@
 | Universo | Personas Disponíveis |
 |----------|---------------------|
 | Naruto | Jiraiya Sensei, Kakashi |
-| Marvel / MCU | Spider-Man, Iron Man, Captain America, Black Panther, Doctor Strange, Thor, Hulk, Hawkeye, Deadpool, Moon Knight, Ghost Rider, Silver Surfer, Scarlet Witch |
+| Marvel / MCU | Spider-Man, Iron Man, Captain America, Black Panther, Doctor Strange, Thor, Hulk, Hawkeye, Deadpool, Moon Knight, Ghost Rider, Silver Surfer, Scarlet Witch, Vision |
 | Marvel / MCU / Hell's Kitchen | Daredevil |
 | Marvel / X-Men | Wolverine, Professor X |
 | Marvel / Quarteto Fantástico | Reed Richards / Sr. Fantástico |
@@ -203,6 +204,7 @@
 | Régio / Sábio / Excelência Cultural | Black Panther |
 | Analítico / Socrático / Irônico | Doctor Strange |
 | Analítico / Socrático / Método Científico | Reed Richards |
+| Sereno / Analítico / Síntese Dado→Conhecimento | Vision |
 | Intenso / Reflexivo / Múltiplas Perspectivas | Moon Knight |
 | Enérgico / Motivacional | Goku, Luffy, Sacani, Chris, Tai, Ash, Superman, Elon Musk |
 | Calmo / Explorador | Link, Steve, Lara Croft, Thrall |
@@ -256,7 +258,7 @@
 
 | Classificação | Faixa | Personas |
 |--------------|-------|----------|
-| 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani, Superman, Iron Man, Captain America, Black Panther, Pilar, Breno, Samba, Noob, Bacon Hair, Thor, Hulk, Reed Richards, Silver Surfer |
+| 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani, Superman, Iron Man, Captain America, Black Panther, Pilar, Breno, Samba, Noob, Bacon Hair, Thor, Hulk, Reed Richards, Silver Surfer, Vision |
 | 🔵 10+ | 10-18 | Rumi, Mira, Zoey, Professor X, Scarlet Witch |
 | 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa, Doctor Strange, Big Boss, Raiden, Bayonetta, Kefka, Sephiroth, Wolverine, Nick Fury, Black Widow, Deadpool, Moon Knight, Daredevil, Ghost Rider |
 | 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing, Carl Sagan, Richard Feynman, Ada Lovelace, Grace Hopper, Stephen Hawking, Neil deGrasse Tyson, Leonardo da Vinci, Galileu Galilei, Isaac Newton, Charles Darwin, Marie Curie, Hawkeye |
@@ -279,7 +281,7 @@
 | Perfil criativo/TDAH | 💥 Jinx, ⛏️ Steve, ⚡ Ash, 🦁 Tai, 🌌 Neil deGrasse Tyson, 🗡️ Deadpool, 🔮 Scarlet Witch |
 | Precisa de energia/motivação | 💥 Goku, 🏴‍☠️ Luffy, 🚀 Sacani, 💪 Chris, ⚡ Ash, 🦸 Superman, 🛡️ Captain America, 🔭 Carl Sagan, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson, ⚡ Thor |
 | Gosta de astronomia / cosmos | 🔭 Carl Sagan, 🌌 Neil deGrasse Tyson, 🔭 Stephen Hawking, 🚀 Sacani, 🪐 Silver Surfer |
-| Gosta de tecnologia/STEM | 🔴🟡 Iron Man, 🕸️ Spider-Man, 🐾 Black Panther, 🧠 Einstein, 🔬 Rebecca, 🧪 Reed Richards, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick, 🖊️ Ada Lovelace, ⚓ Grace Hopper, 💚 Hulk |
+| Gosta de tecnologia/STEM | 🔴🟡 Iron Man, 🕸️ Spider-Man, 🐾 Black Panther, 🧠 Einstein, 🔬 Rebecca, 🧪 Reed Richards, 🟣 Vision, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick, 🖊️ Ada Lovelace, ⚓ Grace Hopper, 💚 Hulk |
 | Gosta de filosofia / argumentação | 🧩 Noam Chomsky, 🔍 L, 🦇 Batman, 🌀 Doctor Strange, 📖 Deckard Cain, 🧠 Professor X, 🌙 Moon Knight, 🔴 Daredevil |
 | Gosta de puzzles | 🗡️ Link, 🔺 Buckminster Fuller |
 

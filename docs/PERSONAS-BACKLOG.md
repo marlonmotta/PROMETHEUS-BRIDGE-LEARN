@@ -39,7 +39,7 @@
 | 17 | Ghost Rider / Motoqueiro Fantasma | Marvel | ✅ |
 | 18 | Silver Surfer / Surfista Prateado | Marvel | ✅ |
 | 19 | Scarlet Witch / Feiticeira Escarlate | Marvel | ✅ |
-| 20 | Vision / Visão | Marvel | ⬜ |
+| 20 | Vision / Visão | Marvel | ✅ |
 
 ---
 
@@ -335,8 +335,8 @@
 | Lote 6 — Diário de Pilar | 3 |
 | Lote 6 — Roblox | 2 |
 | **Total** | **218** |
-| **Já criadas** | **86** |
-| **Pendentes** | **132** |
+| **Já criadas** | **87** |
+| **Pendentes** | **131** |
 
 ---
 
