@@ -104,14 +104,15 @@
 | 83 | 🌙 Moon Knight / Cavaleiro da Lua | Marvel / MCU | Fictional | 13-18 | 🟡13+ Intenso, reflexivo, múltiplas perspectivas | [`moon-knight.json`](personas/fictional/moon-knight.json) |
 | 84 | 🔴 Daredevil / Demolidor | Marvel / MCU / Hell's Kitchen | Fictional | 13-18 | 🟡13+ Firme, ético, advogado-defensor | [`daredevil.json`](personas/fictional/daredevil.json) |
 | 85 | 🔥 Ghost Rider / Motoqueiro Fantasma | Marvel / MCU | Fictional | 13-18 | 🟡13+ Grave, intenso, consequência-transformação | [`ghost-rider.json`](personas/fictional/ghost-rider.json) |
+| 86 | 🪐 Silver Surfer / Surfista Prateado | Marvel Comics / MCU | Fictional | 11-18 | 🟢LIVRE Contemplativo, poético, perspectiva cósmica | [`silver-surfer.json`](personas/fictional/silver-surfer.json) |
 ---
 
 ## 📊 Estatísticas
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **85** |
-| Fictional | 64 |
+| Total de personas prontas | **86** |
+| Fictional | 65 |
 | Real | 21 |
 | Universos cobertos | 53 |
 | Backlog pendente | ~142 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
@@ -123,7 +124,7 @@
 | Universo | Personas Disponíveis |
 |----------|---------------------|
 | Naruto | Jiraiya Sensei, Kakashi |
-| Marvel / MCU | Spider-Man, Iron Man, Captain America, Black Panther, Doctor Strange, Thor, Hulk, Hawkeye, Deadpool, Moon Knight, Ghost Rider |
+| Marvel / MCU | Spider-Man, Iron Man, Captain America, Black Panther, Doctor Strange, Thor, Hulk, Hawkeye, Deadpool, Moon Knight, Ghost Rider, Silver Surfer |
 | Marvel / MCU / Hell's Kitchen | Daredevil |
 | Marvel / X-Men | Wolverine, Professor X |
 | Marvel / Quarteto Fantástico | Reed Richards / Sr. Fantástico |
@@ -211,6 +212,7 @@
 | Apaixonado / Visionário | Nikola Tesla |
 | Lógico / Preciso | Alan Turing |
 | Contemplativo / Poético | Carl Sagan |
+| Contemplativo / Poético / Perspectiva Cósmica | Silver Surfer |
 | Contemplativo / Bem-humorado / Cósmico | Stephen Hawking |
 | Explosivo / Cósmico / Cultura Pop | Neil deGrasse Tyson |
 | Preciso / Socrático / Analítico | Noam Chomsky |
@@ -252,7 +254,7 @@
 
 | Classificação | Faixa | Personas |
 |--------------|-------|----------|
-| 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani, Superman, Iron Man, Captain America, Black Panther, Pilar, Breno, Samba, Noob, Bacon Hair, Thor, Hulk, Reed Richards |
+| 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani, Superman, Iron Man, Captain America, Black Panther, Pilar, Breno, Samba, Noob, Bacon Hair, Thor, Hulk, Reed Richards, Silver Surfer |
 | 🔵 10+ | 10-18 | Rumi, Mira, Zoey, Professor X |
 | 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa, Doctor Strange, Big Boss, Raiden, Bayonetta, Kefka, Sephiroth, Wolverine, Nick Fury, Black Widow, Deadpool, Moon Knight, Daredevil, Ghost Rider |
 | 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing, Carl Sagan, Richard Feynman, Ada Lovelace, Grace Hopper, Stephen Hawking, Neil deGrasse Tyson, Leonardo da Vinci, Galileu Galilei, Isaac Newton, Charles Darwin, Marie Curie, Hawkeye |
@@ -274,6 +276,7 @@
 | Perfil filosófico / pensamento crítico avançado | 🃏 Kefka, 🔍 L, 🌀 Doctor Strange, 🧩 Noam Chomsky |
 | Perfil criativo/TDAH | 💥 Jinx, ⛏️ Steve, ⚡ Ash, 🦁 Tai, 🌌 Neil deGrasse Tyson, 🗡️ Deadpool |
 | Precisa de energia/motivação | 💥 Goku, 🏴‍☠️ Luffy, 🚀 Sacani, 💪 Chris, ⚡ Ash, 🦸 Superman, 🛡️ Captain America, 🔭 Carl Sagan, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson, ⚡ Thor |
+| Gosta de astronomia / cosmos | 🔭 Carl Sagan, 🌌 Neil deGrasse Tyson, 🔭 Stephen Hawking, 🚀 Sacani, 🪐 Silver Surfer |
 | Gosta de tecnologia/STEM | 🔴🟡 Iron Man, 🕸️ Spider-Man, 🐾 Black Panther, 🧠 Einstein, 🔬 Rebecca, 🧪 Reed Richards, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick, 🖊️ Ada Lovelace, ⚓ Grace Hopper, 💚 Hulk |
 | Gosta de filosofia / argumentação | 🧩 Noam Chomsky, 🔍 L, 🦇 Batman, 🌀 Doctor Strange, 📖 Deckard Cain, 🧠 Professor X, 🌙 Moon Knight, 🔴 Daredevil |
 | Gosta de puzzles | 🗡️ Link, 🔺 Buckminster Fuller |
