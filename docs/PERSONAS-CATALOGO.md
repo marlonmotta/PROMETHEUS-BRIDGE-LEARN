@@ -103,14 +103,15 @@
 | 82 | 🗡️ Deadpool / Mercenário Tagarela | Marvel Comics / MCU | Fictional | 13-18 | 🟡13+ Cômico, irreverente, quebra 4ª parede | [`deadpool.json`](personas/fictional/deadpool.json) |
 | 83 | 🌙 Moon Knight / Cavaleiro da Lua | Marvel / MCU | Fictional | 13-18 | 🟡13+ Intenso, reflexivo, múltiplas perspectivas | [`moon-knight.json`](personas/fictional/moon-knight.json) |
 | 84 | 🔴 Daredevil / Demolidor | Marvel / MCU / Hell's Kitchen | Fictional | 13-18 | 🟡13+ Firme, ético, advogado-defensor | [`daredevil.json`](personas/fictional/daredevil.json) |
+| 85 | 🔥 Ghost Rider / Motoqueiro Fantasma | Marvel / MCU | Fictional | 13-18 | 🟡13+ Grave, intenso, consequência-transformação | [`ghost-rider.json`](personas/fictional/ghost-rider.json) |
 ---
 
 ## 📊 Estatísticas
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **84** |
-| Fictional | 63 |
+| Total de personas prontas | **85** |
+| Fictional | 64 |
 | Real | 21 |
 | Universos cobertos | 53 |
 | Backlog pendente | ~142 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
@@ -122,7 +123,7 @@
 | Universo | Personas Disponíveis |
 |----------|---------------------|
 | Naruto | Jiraiya Sensei, Kakashi |
-| Marvel / MCU | Spider-Man, Iron Man, Captain America, Black Panther, Doctor Strange, Thor, Hulk, Hawkeye, Deadpool, Moon Knight |
+| Marvel / MCU | Spider-Man, Iron Man, Captain America, Black Panther, Doctor Strange, Thor, Hulk, Hawkeye, Deadpool, Moon Knight, Ghost Rider |
 | Marvel / MCU / Hell's Kitchen | Daredevil |
 | Marvel / X-Men | Wolverine, Professor X |
 | Marvel / Quarteto Fantástico | Reed Richards / Sr. Fantástico |
@@ -194,6 +195,7 @@
 | Sereno / Empático / Socrático-Inclusivo | Professor X |
 | Grave / Filosófico-Militar | Big Boss |
 | Direto / Estratégico / Exigente-Motivador | Nick Fury |
+| Grave / Intenso / Consequência-Transformação | Ghost Rider |
 | Determinado / Evolutivo / Filosófico-Ação | Raiden |
 | Inspirador / Honesto / Tático | Captain America |
 | Régio / Sábio / Excelência Cultural | Black Panther |
@@ -252,7 +254,7 @@
 |--------------|-------|----------|
 | 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani, Superman, Iron Man, Captain America, Black Panther, Pilar, Breno, Samba, Noob, Bacon Hair, Thor, Hulk, Reed Richards |
 | 🔵 10+ | 10-18 | Rumi, Mira, Zoey, Professor X |
-| 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa, Doctor Strange, Big Boss, Raiden, Bayonetta, Kefka, Sephiroth, Wolverine, Nick Fury, Black Widow, Deadpool, Moon Knight, Daredevil |
+| 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa, Doctor Strange, Big Boss, Raiden, Bayonetta, Kefka, Sephiroth, Wolverine, Nick Fury, Black Widow, Deadpool, Moon Knight, Daredevil, Ghost Rider |
 | 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing, Carl Sagan, Richard Feynman, Ada Lovelace, Grace Hopper, Stephen Hawking, Neil deGrasse Tyson, Leonardo da Vinci, Galileu Galilei, Isaac Newton, Charles Darwin, Marie Curie, Hawkeye |
 | 🟡 15-18 | 15-18 | Noam Chomsky |
 | 🟡 13-18 | 13-18 | Linus Torvalds, Kevin Mitnick, Buckminster Fuller |
@@ -277,7 +279,7 @@
 | Gosta de puzzles | 🗡️ Link, 🔺 Buckminster Fuller |
 
 | Gosta de história | 🗡️ Ezio, 🗺️ Lara Croft, 🛡️ Captain America, 🐾 Black Panther, 🔮 Vol'jin, 📖 Deckard Cain, 🎨 Leonardo da Vinci, 🔭 Galileu Galilei, 🍎 Isaac Newton, 🐢 Charles Darwin, 🐺 Wolverine, 🌙 Moon Knight |
-| Gosta de ciência | 🧠 Einstein, 🕸️ Spider-Man, 🚀 Sacani, 🔬 Rebecca, 🔴🟡 Iron Man, 🌀 Doctor Strange, 🧪 Reed Richards, 🚀 Elon Musk, ⚡ Tesla, 🔭 Carl Sagan, ⚛️ Richard Feynman, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson, 🎨 Leonardo da Vinci, 🔭 Galileu Galilei, 🍎 Isaac Newton, 🐢 Charles Darwin, ⚗️ Marie Curie |
+| Gosta de ciência | 🧠 Einstein, 🕸️ Spider-Man, 🚀 Sacani, 🔬 Rebecca, 🔴🟡 Iron Man, 🌀 Doctor Strange, 🧪 Reed Richards, 🔥 Ghost Rider, 🚀 Elon Musk, ⚡ Tesla, 🔭 Carl Sagan, ⚛️ Richard Feynman, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson, 🎨 Leonardo da Vinci, 🔭 Galileu Galilei, 🍎 Isaac Newton, 🐢 Charles Darwin, ⚗️ Marie Curie |
 | Gosta de design / criatividade | 🍎 Steve Jobs, 💥 Jinx, 🔴🟡 Iron Man, 🔺 Buckminster Fuller, 🎨 Leonardo da Vinci, 🔮 Bayonetta |
 | Gosta de tecnologia/engenharia | 🚀 Elon Musk, 🔴🟡 Iron Man, 🍎 Steve Jobs, ⚡ Nikola Tesla, 💻 Alan Turing, ⚛️ Richard Feynman, 🐧 Linus Torvalds, ⚓ Grace Hopper, 🔺 Buckminster Fuller |
 | Sofreu bullying/exclusão | 🛡️ Naofumi, 💚 Luigi, 🌪️ Thrall, 🐺 Wolverine, 🧠 Professor X |
