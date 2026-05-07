@@ -56,7 +56,8 @@
 | 35 | ⚡ Ash Ketchum | Pokémon | Fictional | 6-14 | 🟢LIVRE Ultra animado, persistente | [`ash-ketchum.json`](personas/fictional/ash-ketchum.json) |
 | 36 | 🦁 Tai Kamiya | Digimon | Fictional | 6-14 | 🟢LIVRE Corajoso, líder, energético | [`tai-kamiya.json`](personas/fictional/tai-kamiya.json) |
 | 37 | 🦸 Superman | DC Comics | Fictional | Todos | 🟢LIVRE Inspirador, esperançoso, protetor | [`superman.json`](personas/fictional/superman.json) |
-| 38 | 🔴🟡 Iron Man | Marvel / MCU | Fictional | 11-14 | 🟢LIVRE Confiante, espirituoso, mentor tech | [`iron-man.json`](personas/fictional/iron-man.json) |
+| 38 | 🛡️ Wonder Woman | DC Comics | Fictional | 11-18 | 🟢LIVRE Calorosa, firme, guerreira-diplomata | [`wonder-woman.json`](personas/fictional/wonder-woman.json) |
+| 39 | 🔴🟡 Iron Man | Marvel / MCU | Fictional | 11-14 | 🟢LIVRE Confiante, espirituoso, mentor tech | [`iron-man.json`](personas/fictional/iron-man.json) |
 | 66 | 🛡️ Captain America | Marvel / MCU | Fictional | 11-18 | 🟢LIVRE Inspirador, honesto, líder tático | [`captain-america.json`](personas/fictional/captain-america.json) |
 | 67 | 🐾 Black Panther | Marvel / MCU | Fictional | 11-18 | 🟢LIVRE Régio, sábio, excelência cultural | [`black-panther.json`](personas/fictional/black-panther.json) |
 | 68 | 🌀 Doctor Strange | Marvel / MCU | Fictional | 13-18 | 🟢LIVRE Analítico, socrático, multidimensional | [`doctor-strange.json`](personas/fictional/doctor-strange.json) |
@@ -113,10 +114,10 @@
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **88** |
-| Fictional | 67 |
+| Total de personas prontas | **89** |
+| Fictional | 68 |
 | Real | 21 |
-| Universos cobertos | 53 |
+| Universos cobertos | 54 |
 | Backlog pendente | ~142 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
 
 ---
@@ -131,7 +132,7 @@
 | Marvel / X-Men | Wolverine, Professor X |
 | Marvel / Quarteto Fantástico | Reed Richards / Sr. Fantástico |
 | Marvel / S.H.I.E.L.D. | Nick Fury, Black Widow |
-| DC Comics | Batman, Superman |
+| DC Comics | Batman, Superman, Wonder Woman |
 | Dragon Ball | Goku |
 | Minecraft | Steve |
 | One Piece | Luffy |
@@ -243,6 +244,7 @@
 | Prático / Sarcástico / Underdog Motivador | Hawkeye |
 | Científico / Juventude | Rebecca |
 | Força / Coração | Tifa, Chris |
+| Guerreira / Calorosa / Diplomata | Wonder Woman |
 | Musical / Inspiradora | Rumi |
 | Elegante / Precisa | Mira |
 | Energética / Criativa / Rapper | Zoey |
@@ -258,10 +260,10 @@
 
 | Classificação | Faixa | Personas |
 |--------------|-------|----------|
-| 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani, Superman, Iron Man, Captain America, Black Panther, Pilar, Breno, Samba, Noob, Bacon Hair, Thor, Hulk, Reed Richards, Silver Surfer, Vision |
+| 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani, Superman, Wonder Woman, Iron Man, Captain America, Black Panther, Pilar, Breno, Samba, Noob, Bacon Hair, Thor, Hulk, Reed Richards, Silver Surfer, Vision |
 | 🔵 10+ | 10-18 | Rumi, Mira, Zoey, Professor X, Scarlet Witch |
 | 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa, Doctor Strange, Big Boss, Raiden, Bayonetta, Kefka, Sephiroth, Wolverine, Nick Fury, Black Widow, Deadpool, Moon Knight, Daredevil, Ghost Rider |
-| 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing, Carl Sagan, Richard Feynman, Ada Lovelace, Grace Hopper, Stephen Hawking, Neil deGrasse Tyson, Leonardo da Vinci, Galileu Galilei, Isaac Newton, Charles Darwin, Marie Curie, Hawkeye |
+| 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing, Carl Sagan, Richard Feynman, Ada Lovelace, Grace Hopper, Stephen Hawking, Neil deGrasse Tyson, Leonardo da Vinci, Galileu Galilei, Isaac Newton, Charles Darwin, Marie Curie, Hawkeye, Wonder Woman |
 | 🟡 15-18 | 15-18 | Noam Chomsky |
 | 🟡 13-18 | 13-18 | Linus Torvalds, Kevin Mitnick, Buckminster Fuller |
 | 🟠 16+ | 13-18 | Kratos, Ezio, Geralt, Leon, Claire, Chris |
@@ -273,7 +275,7 @@
 | Perfil do Aluno | Persona Recomendada |
 |----------------|-------------------|
 | Precisa de acolhimento | 🌊 Tanjiro, 🗡️ Raphtalia, 💚 Luigi, 🌸 Aerith, ❤️ Claire, 🧠 Professor X, 🔮 Scarlet Witch |
-| Precisa de disciplina | 🪓 Kratos, 🦇 Batman, 👑 Albedo, 💪 Chris, 🛡️ Captain America, 🐾 Black Panther, 🎖️ Big Boss, 🌙 Sephiroth, 🕶️ Nick Fury |
+| Precisa de disciplina | 🪓 Kratos, 🦇 Batman, 👑 Albedo, 💪 Chris, 🛡️ Captain America, 🐾 Black Panther, 🎖️ Big Boss, 🌙 Sephiroth, 🕶️ Nick Fury, 🛡️ Wonder Woman |
 | Precisa de provocação positiva | 😎 Gojo Satoru, 🗡️ Deadpool |
 | Perfil analítico/lógico | 🔍 L, 🦇 Batman, 💀 Ainz, ⚔️ Geralt, 🌀 Doctor Strange, 🧪 Reed Richards, 🕷️ Black Widow, 💻 Alan Turing, 🔭 Carl Sagan, ⚛️ Richard Feynman, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick, 🖊️ Ada Lovelace, ⚓ Grace Hopper, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson, 🧩 Noam Chomsky, 🔭 Galileu Galilei, 🍎 Isaac Newton, ⚗️ Marie Curie |
 | Precisa construir autoconfiança | 🔮 Bayonetta, ⚡ Raiden, 🛡️ Naofumi, 🏹 Hawkeye, 🔴 Daredevil |
@@ -285,11 +287,11 @@
 | Gosta de filosofia / argumentação | 🧩 Noam Chomsky, 🔍 L, 🦇 Batman, 🌀 Doctor Strange, 📖 Deckard Cain, 🧠 Professor X, 🌙 Moon Knight, 🔴 Daredevil |
 | Gosta de puzzles | 🗡️ Link, 🔺 Buckminster Fuller |
 
-| Gosta de história | 🗡️ Ezio, 🗺️ Lara Croft, 🛡️ Captain America, 🐾 Black Panther, 🔮 Vol'jin, 📖 Deckard Cain, 🎨 Leonardo da Vinci, 🔭 Galileu Galilei, 🍎 Isaac Newton, 🐢 Charles Darwin, 🐺 Wolverine, 🌙 Moon Knight |
+| Gosta de história | 🗡️ Ezio, 🗺️ Lara Croft, 🛡️ Captain America, 🐾 Black Panther, 🔮 Vol'jin, 📖 Deckard Cain, 🎨 Leonardo da Vinci, 🔭 Galileu Galilei, 🍎 Isaac Newton, 🐢 Charles Darwin, 🐺 Wolverine, 🌙 Moon Knight, 🛡️ Wonder Woman |
 | Gosta de ciência | 🧠 Einstein, 🕸️ Spider-Man, 🚀 Sacani, 🔬 Rebecca, 🔴🟡 Iron Man, 🌀 Doctor Strange, 🧪 Reed Richards, 🔥 Ghost Rider, 🚀 Elon Musk, ⚡ Tesla, 🔭 Carl Sagan, ⚛️ Richard Feynman, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson, 🎨 Leonardo da Vinci, 🔭 Galileu Galilei, 🍎 Isaac Newton, 🐢 Charles Darwin, ⚗️ Marie Curie |
 | Gosta de design / criatividade | 🍎 Steve Jobs, 💥 Jinx, 🔴🟡 Iron Man, 🔺 Buckminster Fuller, 🎨 Leonardo da Vinci, 🔮 Bayonetta |
 | Gosta de tecnologia/engenharia | 🚀 Elon Musk, 🔴🟡 Iron Man, 🍎 Steve Jobs, ⚡ Nikola Tesla, 💻 Alan Turing, ⚛️ Richard Feynman, 🐧 Linus Torvalds, ⚓ Grace Hopper, 🔺 Buckminster Fuller |
-| Sofreu bullying/exclusão | 🛡️ Naofumi, 💚 Luigi, 🌪️ Thrall, 🐺 Wolverine, 🧠 Professor X |
+| Sofreu bullying/exclusão | 🛡️ Naofumi, 💚 Luigi, 🌪️ Thrall, 🐺 Wolverine, 🧠 Professor X, 🛡️ Wonder Woman |
 | Tem ansiedade | 💚 Luigi, 🗡️ Raphtalia, 🌸 Aerith, 🌊 Tanjiro, 🔮 Scarlet Witch |
 | Crianças (6-10) | 🍄 Mario, 💚 Luigi, ⛏️ Steve, ⚡ Ash, 🦁 Tai, 🌸 Aerith, 🌍 Pilar, 🎯 Breno, 🐱 Samba, 💛 Noob, 🧑 Bacon Hair |
 | Gamer/RPG/MMORPG | 💀 Ainz, 👑 Albedo, 🛡️ Naofumi, 🌪️ Thrall, 🔮 Vol'jin |
@@ -298,7 +300,7 @@
 | Precisa de inspiração épica | ⚔️✨ Tyrael |
 | Gosta de luta/artes marciais | 👊 Tifa |
 | Persistência / Nunca desistir | ⚡ Ash, 💪 Chris, 🦁 Tai, 🛡️ Captain America, 🚀 Elon Musk, ⚓ Grace Hopper, 🔭 Stephen Hawking, ⚗️ Marie Curie, ⚡ Thor, 🏹 Hawkeye |
-| Baixa autoestima | 🛡️ Naofumi, 💚 Luigi, 🗡️ Raphtalia, 👊 Tifa, ⚡ Raiden, 🧠 Professor X, 🏹 Hawkeye |
+| Baixa autoestima | 🛡️ Naofumi, 💚 Luigi, 🗡️ Raphtalia, 👊 Tifa, ⚡ Raiden, 🧠 Professor X, 🏹 Hawkeye, 🛡️ Wonder Woman |
 | Gosta de K-Pop/música/dança | 🎤 Rumi, 💃 Mira, 🎤 Zoey |
 | Gosta de aventura/viagem/culturas | 🌍 Pilar, 🎯 Breno, 🐱 Samba, 🐢 Charles Darwin |
 | Gosta de Roblox/construção | 💛 Noob, 🧑 Bacon Hair |
