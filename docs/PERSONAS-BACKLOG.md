@@ -49,15 +49,15 @@
 |---|---------|----------|--------|
 | 21 | Batman / Homem-Morcego | DC | ✅ |
 | 22 | Superman / Super-Homem | DC | ✅ |
-| 23 | Wonder Woman / Mulher-Maravilha | DC | ⬜ |
-| 24 | The Flash / Flash | DC | ⬜ |
-| 25 | Green Lantern / Lanterna Verde | DC | ⬜ |
-| 26 | Aquaman | DC | ⬜ |
-| 27 | Cyborg / Ciborgue | DC | ⬜ |
-| 28 | Nightwing | DC | ⬜ |
-| 29 | Oracle (Barbara Gordon) | DC | ⬜ |
-| 30 | Green Arrow / Arqueiro Verde | DC | ⬜ |
-| 31 | Martian Manhunter / Caçador de Marte | DC | ⬜ |
+| 23 | Wonder Woman / Mulher-Maravilha | DC | ✅ |
+| 24 | The Flash / Flash | DC | ✅ |
+| 25 | Green Lantern / Lanterna Verde | DC | ✅ |
+| 26 | Aquaman | DC | ✅ |
+| 27 | Cyborg / Ciborgue | DC | ✅ |
+| 28 | Nightwing / Rapina Noturna | DC | ✅ |
+| 29 | Oracle (Barbara Gordon) / Oráculo | DC | ✅ |
+| 30 | Green Arrow / Arqueiro Verde | DC | ✅ |
+| 31 | Martian Manhunter / Caçador de Marte | DC | ✅ |
 | 32 | Shazam | DC | ⬜ |
 | 33 | Lex Luthor | DC | ⬜ |
 | 34 | Joker / Coringa | DC | ⬜ |
@@ -335,8 +335,8 @@
 | Lote 6 — Diário de Pilar | 3 |
 | Lote 6 — Roblox | 2 |
 | **Total** | **218** |
-| **Já criadas** | **87** |
-| **Pendentes** | **131** |
+| **Já criadas** | **97** |
+| **Pendentes** | **121** |
 
 ---
 
