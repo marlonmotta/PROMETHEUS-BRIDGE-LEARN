@@ -133,6 +133,10 @@ pub const PERSONAS_EMBEDDED: &[(&str, &str)] = &[
         include_str!("../../../personas/fictional/gojo-satoru.json"),
     ),
     (
+        "green-lantern",
+        include_str!("../../../personas/fictional/green-lantern.json"),
+    ),
+    (
         "goku",
         include_str!("../../../personas/fictional/goku.json"),
     ),
