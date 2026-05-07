@@ -50,7 +50,7 @@
 | 21 | Batman / Homem-Morcego | DC | ✅ |
 | 22 | Superman / Super-Homem | DC | ✅ |
 | 23 | Wonder Woman / Mulher-Maravilha | DC | ✅ |
-| 24 | The Flash / Flash | DC | ⬜ |
+| 24 | The Flash / Flash | DC | ✅ |
 | 25 | Green Lantern / Lanterna Verde | DC | ⬜ |
 | 26 | Aquaman | DC | ⬜ |
 | 27 | Cyborg / Ciborgue | DC | ⬜ |
@@ -335,8 +335,8 @@
 | Lote 6 — Diário de Pilar | 3 |
 | Lote 6 — Roblox | 2 |
 | **Total** | **218** |
-| **Já criadas** | **88** |
-| **Pendentes** | **130** |
+| **Já criadas** | **89** |
+| **Pendentes** | **129** |
 
 ---
 
