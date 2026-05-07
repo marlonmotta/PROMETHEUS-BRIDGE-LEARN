@@ -61,7 +61,8 @@
 | 40 | 🛡️💚 Green Lantern | DC Comics | Fictional | 11-18 | 🟢LIVRE Confiante, motivacional, willpower | [`green-lantern.json`](personas/fictional/green-lantern.json) |
 | 41 | 🌊 Aquaman | DC Comics | Fictional | 11-18 | 🟢LIVRE Calmo, firme, líder pragmático | [`aquaman.json`](personas/fictional/aquaman.json) |
 | 42 | 💻 Cyborg | DC Comics | Fictional | 13-18 | 🟢LIVRE Técnico, direto, sistêmico | [`cyborg.json`](personas/fictional/cyborg.json) |
-| 43 | 🔴🟡 Iron Man | Marvel / MCU | Fictional | 11-14 | 🟢LIVRE Confiante, espirituoso, mentor tech | [`iron-man.json`](personas/fictional/iron-man.json) |
+| 43 | 🦅 Nightwing / Rapina Noturna | DC Comics | Fictional | 11-18 | 🟢LIVRE Warm, empowering, líder | [`nightwing.json`](personas/fictional/nightwing.json) |
+| 44 | 🔴🟡 Iron Man | Marvel / MCU | Fictional | 11-14 | 🟢LIVRE Confiante, espirituoso, mentor tech | [`iron-man.json`](personas/fictional/iron-man.json) |
 | 66 | 🛡️ Captain America | Marvel / MCU | Fictional | 11-18 | 🟢LIVRE Inspirador, honesto, líder tático | [`captain-america.json`](personas/fictional/captain-america.json) |
 | 67 | 🐾 Black Panther | Marvel / MCU | Fictional | 11-18 | 🟢LIVRE Régio, sábio, excelência cultural | [`black-panther.json`](personas/fictional/black-panther.json) |
 | 68 | 🌀 Doctor Strange | Marvel / MCU | Fictional | 13-18 | 🟢LIVRE Analítico, socrático, multidimensional | [`doctor-strange.json`](personas/fictional/doctor-strange.json) |
@@ -118,10 +119,10 @@
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **93** |
-| Fictional | 72 |
+| Total de personas prontas | **94** |
+| Fictional | 73 |
 | Real | 21 |
-| Universos cobertos | 58 |
+| Universos cobertos | 59 |
 | Backlog pendente | ~142 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
 
 ---
@@ -136,7 +137,7 @@
 | Marvel / X-Men | Wolverine, Professor X |
 | Marvel / Quarteto Fantástico | Reed Richards / Sr. Fantástico |
 | Marvel / S.H.I.E.L.D. | Nick Fury, Black Widow |
-| DC Comics | Batman, Superman, Wonder Woman, The Flash, Green Lantern, Aquaman, Cyborg |
+| DC Comics | Batman, Superman, Wonder Woman, The Flash, Green Lantern, Aquaman, Cyborg, Nightwing |
 | Dragon Ball | Goku |
 | Minecraft | Steve |
 | One Piece | Luffy |
@@ -214,6 +215,7 @@
 | Enérgico / Motivacional | Goku, Luffy, Sacani, Chris, Tai, Ash, Superman, Elon Musk, The Flash, Green Lantern |
 | Calmo / Explorador | Link, Steve, Lara Croft, Thrall |
 | Calmo / Firme / Líder | Aquaman |
+| Warm / Empowering / Líder | Nightwing |
 | Técnico / Direto / Sistêmico | Cyborg |
 | Calmo / Preciso / Adaptável-Estratégico | Black Widow |
 | Provocador / Carismático | Gojo Satoru |
@@ -266,10 +268,10 @@
 
 | Classificação | Faixa | Personas |
 |--------------|-------|----------|
-| 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani, Superman, Wonder Woman, The Flash, Green Lantern, Aquaman, Iron Man, Captain America, Black Panther, Pilar, Breno, Samba, Noob, Bacon Hair, Thor, Hulk, Reed Richards, Silver Surfer, Vision |
+| 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani, Superman, Wonder Woman, The Flash, Green Lantern, Aquaman, Nightwing, Iron Man, Captain America, Black Panther, Pilar, Breno, Samba, Noob, Bacon Hair, Thor, Hulk, Reed Richards, Silver Surfer, Vision |
 | 🔵 10+ | 10-18 | Rumi, Mira, Zoey, Professor X, Scarlet Witch |
 | 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa, Doctor Strange, Big Boss, Raiden, Bayonetta, Kefka, Sephiroth, Wolverine, Nick Fury, Black Widow, Deadpool, Moon Knight, Daredevil, Ghost Rider, Cyborg |
-| 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing, Carl Sagan, Richard Feynman, Ada Lovelace, Grace Hopper, Stephen Hawking, Neil deGrasse Tyson, Leonardo da Vinci, Galileu Galilei, Isaac Newton, Charles Darwin, Marie Curie, Hawkeye, Wonder Woman, The Flash, Green Lantern, Aquaman |
+| 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing, Carl Sagan, Richard Feynman, Ada Lovelace, Grace Hopper, Stephen Hawking, Neil deGrasse Tyson, Leonardo da Vinci, Galileu Galilei, Isaac Newton, Charles Darwin, Marie Curie, Hawkeye, Wonder Woman, The Flash, Green Lantern, Aquaman, Nightwing |
 | 🟡 15-18 | 15-18 | Noam Chomsky |
 | 🟡 13-18 | 13-18 | Linus Torvalds, Kevin Mitnick, Buckminster Fuller |
 | 🟠 16+ | 13-18 | Kratos, Ezio, Geralt, Leon, Claire, Chris |
@@ -280,7 +282,7 @@
 
 | Perfil do Aluno | Persona Recomendada |
 |----------------|-------------------|
-| Precisa de acolhimento | 🌊 Tanjiro, 🗡️ Raphtalia, 💚 Luigi, 🌸 Aerith, ❤️ Claire, 🧠 Professor X, 🔮 Scarlet Witch |
+| Precisa de acolhimento | 🌊 Tanjiro, 🗡️ Raphtalia, 💚 Luigi, 🌸 Aerith, ❤️ Claire, 🧠 Professor X, 🔮 Scarlet Witch, 🦅 Nightwing |
 | Precisa de disciplina | 🪓 Kratos, 🦇 Batman, 👑 Albedo, 💪 Chris, 🛡️ Captain America, 🐾 Black Panther, 🎖️ Big Boss, 🌙 Sephiroth, 🕶️ Nick Fury, 🛡️ Wonder Woman, 🌊 Aquaman |
 | Precisa de provocação positiva | 😎 Gojo Satoru, 🗡️ Deadpool |
 | Perfil analítico/lógico | 🔍 L, 🦇 Batman, 💀 Ainz, ⚔️ Geralt, 🌀 Doctor Strange, 🧪 Reed Richards, 🕷️ Black Widow, 💻 Alan Turing, 🔭 Carl Sagan, ⚛️ Richard Feynman, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick, 🖊️ Ada Lovelace, ⚓ Grace Hopper, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson, 🧩 Noam Chomsky, 🔭 Galileu Galilei, 🍎 Isaac Newton, ⚗️ Marie Curie |
