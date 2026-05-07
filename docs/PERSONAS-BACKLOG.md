@@ -52,7 +52,7 @@
 | 23 | Wonder Woman / Mulher-Maravilha | DC | ✅ |
 | 24 | The Flash / Flash | DC | ✅ |
 | 25 | Green Lantern / Lanterna Verde | DC | ✅ |
-| 26 | Aquaman | DC | ⬜ |
+| 26 | Aquaman | DC | ✅ |
 | 27 | Cyborg / Ciborgue | DC | ⬜ |
 | 28 | Nightwing | DC | ⬜ |
 | 29 | Oracle (Barbara Gordon) | DC | ⬜ |
@@ -335,8 +335,8 @@
 | Lote 6 — Diário de Pilar | 3 |
 | Lote 6 — Roblox | 2 |
 | **Total** | **218** |
-| **Já criadas** | **90** |
-| **Pendentes** | **128** |
+| **Já criadas** | **91** |
+| **Pendentes** | **127** |
 
 ---
 
