@@ -56,7 +56,7 @@
 | 27 | Cyborg / Ciborgue | DC | ✅ |
 | 28 | Nightwing / Rapina Noturna | DC | ✅ |
 | 29 | Oracle (Barbara Gordon) / Oráculo | DC | ✅ |
-| 30 | Green Arrow / Arqueiro Verde | DC | ⬜ |
+| 30 | Green Arrow / Arqueiro Verde | DC | ✅ |
 | 31 | Martian Manhunter / Caçador de Marte | DC | ⬜ |
 | 32 | Shazam | DC | ⬜ |
 | 33 | Lex Luthor | DC | ⬜ |
@@ -335,8 +335,8 @@
 | Lote 6 — Diário de Pilar | 3 |
 | Lote 6 — Roblox | 2 |
 | **Total** | **218** |
-| **Já criadas** | **94** |
-| **Pendentes** | **124** |
+| **Já criadas** | **95** |
+| **Pendentes** | **123** |
 
 ---
 

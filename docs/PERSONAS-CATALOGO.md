@@ -63,7 +63,8 @@
 | 42 | 💻 Cyborg | DC Comics | Fictional | 13-18 | 🟢LIVRE Técnico, direto, sistêmico | [`cyborg.json`](personas/fictional/cyborg.json) |
 | 43 | 🦅 Nightwing / Rapina Noturna | DC Comics | Fictional | 11-18 | 🟢LIVRE Warm, empowering, líder | [`nightwing.json`](personas/fictional/nightwing.json) |
 | 44 | 💻 Oracle / Oráculo | DC Comics | Fictional | 13-18 | 🟢LIVRE Analítica, sharp, empoderação | [`oracle.json`](personas/fictional/oracle.json) |
-| 45 | 🔴🟡 Iron Man | Marvel / MCU | Fictional | 11-14 | 🟢LIVRE Confiante, espirituoso, mentor tech | [`iron-man.json`](personas/fictional/iron-man.json) |
+| 45 | 🏹 Green Arrow / Arqueiro Verde | DC Comics | Fictional | 13-18 | 🟢LIVRE Sarcástico, pragmático, estratégico | [`green-arrow.json`](personas/fictional/green-arrow.json) |
+| 46 | 🔴🟡 Iron Man | Marvel / MCU | Fictional | 11-14 | 🟢LIVRE Confiante, espirituoso, mentor tech | [`iron-man.json`](personas/fictional/iron-man.json) |
 | 66 | 🛡️ Captain America | Marvel / MCU | Fictional | 11-18 | 🟢LIVRE Inspirador, honesto, líder tático | [`captain-america.json`](personas/fictional/captain-america.json) |
 | 67 | 🐾 Black Panther | Marvel / MCU | Fictional | 11-18 | 🟢LIVRE Régio, sábio, excelência cultural | [`black-panther.json`](personas/fictional/black-panther.json) |
 | 68 | 🌀 Doctor Strange | Marvel / MCU | Fictional | 13-18 | 🟢LIVRE Analítico, socrático, multidimensional | [`doctor-strange.json`](personas/fictional/doctor-strange.json) |
@@ -120,10 +121,10 @@
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **95** |
-| Fictional | 74 |
+| Total de personas prontas | **96** |
+| Fictional | 75 |
 | Real | 21 |
-| Universos cobertos | 60 |
+| Universos cobertos | 61 |
 | Backlog pendente | ~142 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
 
 ---
@@ -138,7 +139,7 @@
 | Marvel / X-Men | Wolverine, Professor X |
 | Marvel / Quarteto Fantástico | Reed Richards / Sr. Fantástico |
 | Marvel / S.H.I.E.L.D. | Nick Fury, Black Widow |
-| DC Comics | Batman, Superman, Wonder Woman, The Flash, Green Lantern, Aquaman, Cyborg, Nightwing, Oracle |
+| DC Comics | Batman, Superman, Wonder Woman, The Flash, Green Lantern, Aquaman, Cyborg, Nightwing, Oracle, Green Arrow |
 | Dragon Ball | Goku |
 | Minecraft | Steve |
 | One Piece | Luffy |
@@ -218,6 +219,7 @@
 | Calmo / Firme / Líder | Aquaman |
 | Warm / Empowering / Líder | Nightwing |
 | Analítica / Sharp / Empoderamento | Oracle |
+| Sarcástico / Pragmático / Estratégico | Green Arrow |
 | Técnico / Direto / Sistêmico | Cyborg |
 | Calmo / Preciso / Adaptável-Estratégico | Black Widow |
 | Provocador / Carismático | Gojo Satoru |
@@ -272,7 +274,7 @@
 |--------------|-------|----------|
 | 🟢 LIVRE | 6-14 / Todos | Steve, Mario, Luigi, Ash, Tai, Aerith, Goku, Luffy, Link, Tanjiro, Raphtalia, Sacani, Superman, Wonder Woman, The Flash, Green Lantern, Aquaman, Nightwing, Oracle, Iron Man, Captain America, Black Panther, Pilar, Breno, Samba, Noob, Bacon Hair, Thor, Hulk, Reed Richards, Silver Surfer, Vision |
 | 🔵 10+ | 10-18 | Rumi, Mira, Zoey, Professor X, Scarlet Witch |
-| 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa, Doctor Strange, Big Boss, Raiden, Bayonetta, Kefka, Sephiroth, Wolverine, Nick Fury, Black Widow, Deadpool, Moon Knight, Daredevil, Ghost Rider, Cyborg, Oracle |
+| 🟡 13+ | 13-18 | Gojo, L, Jinx, Albedo, Ainz, Naofumi, Thrall, Vol'jin, Tyrael, Deckard Cain, Rebecca, Tifa, Doctor Strange, Big Boss, Raiden, Bayonetta, Kefka, Sephiroth, Wolverine, Nick Fury, Black Widow, Deadpool, Moon Knight, Daredevil, Ghost Rider, Cyborg, Oracle, Green Arrow |
 | 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing, Carl Sagan, Richard Feynman, Ada Lovelace, Grace Hopper, Stephen Hawking, Neil deGrasse Tyson, Leonardo da Vinci, Galileu Galilei, Isaac Newton, Charles Darwin, Marie Curie, Hawkeye, Wonder Woman, The Flash, Green Lantern, Aquaman, Nightwing |
 | 🟡 15-18 | 15-18 | Noam Chomsky |
 | 🟡 13-18 | 13-18 | Linus Torvalds, Kevin Mitnick, Buckminster Fuller |
@@ -305,11 +307,11 @@
 | Tem ansiedade | 💚 Luigi, 🗡️ Raphtalia, 🌸 Aerith, 🌊 Tanjiro, 🔮 Scarlet Witch |
 | Crianças (6-10) | 🍄 Mario, 💚 Luigi, ⛏️ Steve, ⚡ Ash, 🦁 Tai, 🌸 Aerith, 🌍 Pilar, 🎯 Breno, 🐱 Samba, 💛 Noob, 🧑 Bacon Hair |
 | Gamer/RPG/MMORPG | 💀 Ainz, 👑 Albedo, 🛡️ Naofumi, 🌪️ Thrall, 🔮 Vol'jin |
-| Gosta de stealth/espionagem/estratégia | 🎖️ Big Boss, ⚡ Raiden, 🕶️ Nick Fury, 🕷️ Black Widow |
+| Gosta de stealth/espionagem/estratégia | 🎖️ Big Boss, ⚡ Raiden, 🕶️ Nick Fury, 🕷️ Black Widow, 🏹 Green Arrow |
 | Gosta de tático/sobrevivência | 🔫 Leon, ❤️ Claire, 💪 Chris, ⚔️ Geralt, 🎖️ Big Boss |
 | Precisa de inspiração épica | ⚔️✨ Tyrael |
 | Gosta de luta/artes marciais | 👊 Tifa |
-| Persistência / Nunca desistir | ⚡ Ash, 💪 Chris, 🦁 Tai, 🛡️ Captain America, 🚀 Elon Musk, ⚓ Grace Hopper, 🔭 Stephen Hawking, ⚗️ Marie Curie, ⚡ Thor, 🏹 Hawkeye, ⚡ The Flash, 🛡️💚 Green Lantern, 🌊 Aquaman |
+| Persistência / Nunca desistir | ⚡ Ash, 💪 Chris, 🦁 Tai, 🛡️ Captain America, 🚀 Elon Musk, ⚓ Grace Hopper, 🔭 Stephen Hawking, ⚗️ Marie Curie, ⚡ Thor, 🏹 Hawkeye, ⚡ The Flash, 🛡️💚 Green Lantern, 🌊 Aquaman, 🏹 Green Arrow |
 | Baixa autoestima | 🛡️ Naofumi, 💚 Luigi, 🗡️ Raphtalia, 👊 Tifa, ⚡ Raiden, 🧠 Professor X, 🏹 Hawkeye, 🛡️ Wonder Woman |
 | Gosta de K-Pop/música/dança | 🎤 Rumi, 💃 Mira, 🎤 Zoey |
 | Gosta de aventura/viagem/culturas | 🌍 Pilar, 🎯 Breno, 🐱 Samba, 🐢 Charles Darwin |
