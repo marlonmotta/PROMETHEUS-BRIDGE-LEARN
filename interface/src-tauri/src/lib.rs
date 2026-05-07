@@ -237,6 +237,10 @@ pub const PERSONAS_EMBEDDED: &[(&str, &str)] = &[
         include_str!("../../../personas/fictional/noob-roblox.json"),
     ),
     (
+        "oracle",
+        include_str!("../../../personas/fictional/oracle.json"),
+    ),
+    (
         "pilar",
         include_str!("../../../personas/fictional/pilar.json"),
     ),
