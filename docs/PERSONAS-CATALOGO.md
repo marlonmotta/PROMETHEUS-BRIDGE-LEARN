@@ -67,6 +67,7 @@
 | 46 | 🌌 Martian Manhunter / Caçador de Marte | DC Comics | Fictional | 11-18 | 🟢LIVRE Calmo, contemplativo, empático | [`martian-manhunter.json`](personas/fictional/martian-manhunter.json) |
 | 47 | ⚡ Shazam | DC Comics | Fictional | Todos | 🟢LIVRE Enthusiastic, wise, heroic energy | [`shazam.json`](personas/fictional/shazam.json) |
 | 48 | 🧠 Lex Luthor | DC Comics | Fictional | 13-18 | 🟡13+ Arrogant, brilliant, strategic | [`lex-luthor.json`](personas/fictional/lex-luthor.json) |
+| 49 | 🃏 Joker / Coringa (Análise) | DC Comics | Fictional | 15-18 | 🟠16+ Dark ironic, critical thinking | [`joker.json`](personas/fictional/joker.json) |
 | 47 | 🔴🟡 Iron Man | Marvel / MCU | Fictional | 11-14 | 🟢LIVRE Confiante, espirituoso, mentor tech | [`iron-man.json`](personas/fictional/iron-man.json) |
 | 66 | 🛡️ Captain America | Marvel / MCU | Fictional | 11-18 | 🟢LIVRE Inspirador, honesto, líder tático | [`captain-america.json`](personas/fictional/captain-america.json) |
 | 67 | 🐾 Black Panther | Marvel / MCU | Fictional | 11-18 | 🟢LIVRE Régio, sábio, excelência cultural | [`black-panther.json`](personas/fictional/black-panther.json) |
@@ -124,8 +125,8 @@
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **99** |
-| Fictional | 78 |
+| Total de personas prontas | **100** |
+| Fictional | 79 |
 | Real | 21 |
 | Universos cobertos | 61 |
 | Backlog pendente | ~142 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
@@ -142,7 +143,7 @@
 | Marvel / X-Men | Wolverine, Professor X |
 | Marvel / Quarteto Fantástico | Reed Richards / Sr. Fantástico |
 | Marvel / S.H.I.E.L.D. | Nick Fury, Black Widow |
-| DC Comics | Batman, Superman, Wonder Woman, The Flash, Green Lantern, Aquaman, Cyborg, Nightwing, Oracle, Green Arrow, Martian Manhunter, Shazam, Lex Luthor |
+| DC Comics | Batman, Superman, Wonder Woman, The Flash, Green Lantern, Aquaman, Cyborg, Nightwing, Oracle, Green Arrow, Martian Manhunter, Shazam, Lex Luthor, Joker |
 | Dragon Ball | Goku |
 | Minecraft | Steve |
 | One Piece | Luffy |
@@ -282,7 +283,7 @@
 | 🟡 11-18 | 11-18 | Jiraiya, Spider-Man, Batman, Kakashi, Einstein, Lara Croft, Thrall, Deckard Cain, Elon Musk, Steve Jobs, Nikola Tesla, Alan Turing, Carl Sagan, Richard Feynman, Ada Lovelace, Grace Hopper, Stephen Hawking, Neil deGrasse Tyson, Leonardo da Vinci, Galileu Galilei, Isaac Newton, Charles Darwin, Marie Curie, Martian Manhunter, Hawkeye, Wonder Woman, The Flash, Green Lantern, Aquaman, Nightwing |
 | 🟡 15-18 | 15-18 | Noam Chomsky |
 | 🟡 13-18 | 13-18 | Linus Torvalds, Kevin Mitnick, Buckminster Fuller |
-| 🟠 16+ | 13-18 | Kratos, Ezio, Geralt, Leon, Claire, Chris |
+| 🟠 16+ | 15-18 | Kratos, Ezio, Geralt, Leon, Claire, Chris, Joker |
 
 ---
 
@@ -295,12 +296,12 @@
 | Precisa de provocação positiva | 😎 Gojo Satoru, 🗡️ Deadpool |
 | Perfil analítico/lógico | 🔍 L, 🦇 Batman, 💀 Ainz, ⚔️ Geralt, 🌀 Doctor Strange, 🧪 Reed Richards, 🕷️ Black Widow, 💻 Alan Turing, 🔭 Carl Sagan, ⚛️ Richard Feynman, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick, 🖊️ Ada Lovelace, ⚓ Grace Hopper, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson, 🧩 Noam Chomsky, 🔭 Galileu Galilei, 🍎 Isaac Newton, ⚗️ Marie Curie, 🧠 Lex Luthor |
 | Precisa construir autoconfiança | 🔮 Bayonetta, ⚡ Raiden, 🛡️ Naofumi, 🏹 Hawkeye, 🔴 Daredevil, ⚡ The Flash, 🛡️💚 Green Lantern, 💻 Cyborg |
-| Perfil filosófico / pensamento crítico avançado | 🃏 Kefka, 🔍 L, 🌀 Doctor Strange, 🧩 Noam Chomsky |
+| Perfil filosófico / pensamento crítico avançado | 🃏 Joker, 🔍 L, 🌀 Doctor Strange, 🧩 Noam Chomsky |
 | Perfil criativo/TDAH | 💥 Jinx, ⛏️ Steve, ⚡ Ash, 🦁 Tai, 🌌 Neil deGrasse Tyson, 🗡️ Deadpool, 🔮 Scarlet Witch |
 | Precisa de energia/motivação | 💥 Goku, 🏴‍☠️ Luffy, 🚀 Sacani, 💪 Chris, ⚡ Ash, 🦸 Superman, 🛡️ Captain America, 🔭 Carl Sagan, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson, ⚡ Thor, ⚡ The Flash, ⚡ Shazam |
 | Gosta de astronomia / cosmos | 🔭 Carl Sagan, 🌌 Neil deGrasse Tyson, 🔭 Stephen Hawking, 🚀 Sacani, 🪐 Silver Surfer |
 | Gosta de tecnologia/STEM | 🔴🟡 Iron Man, 🕸️ Spider-Man, 🐾 Black Panther, 🧠 Einstein, 🔬 Rebecca, 🧪 Reed Richards, 🟣 Vision, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick, 🖊️ Ada Lovelace, ⚓ Grace Hopper, 💚 Hulk, 💻 Cyborg |
-| Gosta de filosofia / argumentação | 🧩 Noam Chomsky, 🔍 L, 🦇 Batman, 🌀 Doctor Strange, 📖 Deckard Cain, 🧠 Professor X, 🌙 Moon Knight, 🔴 Daredevil |
+| Gosta de filosofia / argumentação | 🃏 Joker, 🧩 Noam Chomsky, 🔍 L, 🦇 Batman, 🌀 Doctor Strange, 📖 Deckard Cain, 🧠 Professor X, 🌙 Moon Knight, 🔴 Daredevil |
 | Gosta de puzzles | 🗡️ Link, 🔺 Buckminster Fuller |
 
 | Gosta de história | 🗡️ Ezio, 🗺️ Lara Croft, 🛡️ Captain America, 🐾 Black Panther, 🔮 Vol'jin, 📖 Deckard Cain, 🎨 Leonardo da Vinci, 🔭 Galileu Galilei, 🍎 Isaac Newton, 🐢 Charles Darwin, 🐺 Wolverine, 🌙 Moon Knight, 🛡️ Wonder Woman, 🌊 Aquaman |
