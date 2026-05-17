@@ -70,6 +70,7 @@
 | 49 | 🃏 Joker / Coringa (Análise) | DC Comics | Fictional | 15-18 | 🟠16+ Dark ironic, critical thinking | [`joker.json`](personas/fictional/joker.json) |
 | 50 | 🐱 Catwoman / Mulher-Gato | DC Comics | Fictional | 13-18 | 🟡13+ Sarcastic, independent, stealth | [`catwoman.json`](personas/fictional/catwoman.json) |
 | 51 | ❓ Riddler / Charada | DC Comics | Fictional | 11-18 | 🔵10+ Theatrical, competitive, puzzles | [`riddler.json`](personas/fictional/riddler.json) |
+| 52 | 🪞 Two-Face / Duas-Caras | DC Comics | Fictional | 13-18 | 🟡13+ Duality, moral balance, split personality | [`two-face.json`](personas/fictional/two-face.json) |
 | 47 | 🔴🟡 Iron Man | Marvel / MCU | Fictional | 11-14 | 🟢LIVRE Confiante, espirituoso, mentor tech | [`iron-man.json`](personas/fictional/iron-man.json) |
 | 66 | 🛡️ Captain America | Marvel / MCU | Fictional | 11-18 | 🟢LIVRE Inspirador, honesto, líder tático | [`captain-america.json`](personas/fictional/captain-america.json) |
 | 67 | 🐾 Black Panther | Marvel / MCU | Fictional | 11-18 | 🟢LIVRE Régio, sábio, excelência cultural | [`black-panther.json`](personas/fictional/black-panther.json) |
@@ -127,8 +128,8 @@
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **102** |
-| Fictional | 81 |
+| Total de personas prontas | **103** |
+| Fictional | 82 |
 | Real | 21 |
 | Universos cobertos | 61 |
 | Backlog pendente | ~142 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
@@ -145,7 +146,7 @@
 | Marvel / X-Men | Wolverine, Professor X |
 | Marvel / Quarteto Fantástico | Reed Richards / Sr. Fantástico |
 | Marvel / S.H.I.E.L.D. | Nick Fury, Black Widow |
-| DC Comics | Batman, Superman, Wonder Woman, The Flash, Green Lantern, Aquaman, Cyborg, Nightwing, Oracle, Green Arrow, Martian Manhunter, Shazam, Lex Luthor, Joker, Catwoman, Riddler |
+| DC Comics | Batman, Superman, Wonder Woman, The Flash, Green Lantern, Aquaman, Cyborg, Nightwing, Oracle, Green Arrow, Martian Manhunter, Shazam, Lex Luthor, Joker, Catwoman, Riddler, Two-Face |
 | Dragon Ball | Goku |
 | Minecraft | Steve |
 | One Piece | Luffy |
@@ -298,7 +299,7 @@
 | Precisa de provocação positiva | 😎 Gojo Satoru, 🗡️ Deadpool |
 | Perfil analítico/lógico | 🔍 L, 🦇 Batman, 💀 Ainz, ⚔️ Geralt, 🌀 Doctor Strange, 🧪 Reed Richards, 🕷️ Black Widow, 💻 Alan Turing, 🔭 Carl Sagan, ⚛️ Richard Feynman, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick, 🖊️ Ada Lovelace, ⚓ Grace Hopper, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson, 🧩 Noam Chomsky, 🔭 Galileu Galilei, 🍎 Isaac Newton, ⚗️ Marie Curie, 🧠 Lex Luthor |
 | Precisa construir autoconfiança | 🔮 Bayonetta, ⚡ Raiden, 🛡️ Naofumi, 🏹 Hawkeye, 🔴 Daredevil, ⚡ The Flash, 🛡️💚 Green Lantern, 💻 Cyborg |
-| Perfil filosófico / pensamento crítico avançado | 🃏 Joker, 🔍 L, 🌀 Doctor Strange, 🧩 Noam Chomsky |
+| Perfil filosófico / pensamento crítico avançado | 🪞 Two-Face, 🃏 Joker, 🔍 L, 🌀 Doctor Strange, 🧩 Noam Chomsky |
 | Perfil criativo/TDAH | 💥 Jinx, ⛏️ Steve, ⚡ Ash, 🦁 Tai, 🌌 Neil deGrasse Tyson, 🗡️ Deadpool, 🔮 Scarlet Witch |
 | Precisa de energia/motivação | 💥 Goku, 🏴‍☠️ Luffy, 🚀 Sacani, 💪 Chris, ⚡ Ash, 🦸 Superman, 🛡️ Captain America, 🔭 Carl Sagan, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson, ⚡ Thor, ⚡ The Flash, ⚡ Shazam |
 | Gosta de astronomia / cosmos | 🔭 Carl Sagan, 🌌 Neil deGrasse Tyson, 🔭 Stephen Hawking, 🚀 Sacani, 🪐 Silver Surfer |
