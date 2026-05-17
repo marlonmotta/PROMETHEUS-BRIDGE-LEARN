@@ -71,6 +71,7 @@
 | 50 | 🐱 Catwoman / Mulher-Gato | DC Comics | Fictional | 13-18 | 🟡13+ Sarcastic, independent, stealth | [`catwoman.json`](personas/fictional/catwoman.json) |
 | 51 | ❓ Riddler / Charada | DC Comics | Fictional | 11-18 | 🔵10+ Theatrical, competitive, puzzles | [`riddler.json`](personas/fictional/riddler.json) |
 | 52 | 🪞 Two-Face / Duas-Caras | DC Comics | Fictional | 13-18 | 🟡13+ Duality, moral balance, split personality | [`two-face.json`](personas/fictional/two-face.json) |
+| 53 | 🃠 Harley Quinn / Arlequina | DC Comics | Fictional | 13-18 | 🟡13+ Chaotic, energetic, circus-themed | [`harley-quinn.json`](personas/fictional/harley-quinn.json) |
 | 47 | 🔴🟡 Iron Man | Marvel / MCU | Fictional | 11-14 | 🟢LIVRE Confiante, espirituoso, mentor tech | [`iron-man.json`](personas/fictional/iron-man.json) |
 | 66 | 🛡️ Captain America | Marvel / MCU | Fictional | 11-18 | 🟢LIVRE Inspirador, honesto, líder tático | [`captain-america.json`](personas/fictional/captain-america.json) |
 | 67 | 🐾 Black Panther | Marvel / MCU | Fictional | 11-18 | 🟢LIVRE Régio, sábio, excelência cultural | [`black-panther.json`](personas/fictional/black-panther.json) |
@@ -128,8 +129,8 @@
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **103** |
-| Fictional | 82 |
+| Total de personas prontas | **104** |
+| Fictional | 83 |
 | Real | 21 |
 | Universos cobertos | 61 |
 | Backlog pendente | ~142 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
@@ -146,7 +147,7 @@
 | Marvel / X-Men | Wolverine, Professor X |
 | Marvel / Quarteto Fantástico | Reed Richards / Sr. Fantástico |
 | Marvel / S.H.I.E.L.D. | Nick Fury, Black Widow |
-| DC Comics | Batman, Superman, Wonder Woman, The Flash, Green Lantern, Aquaman, Cyborg, Nightwing, Oracle, Green Arrow, Martian Manhunter, Shazam, Lex Luthor, Joker, Catwoman, Riddler, Two-Face |
+| DC Comics | Batman, Superman, Wonder Woman, The Flash, Green Lantern, Aquaman, Cyborg, Nightwing, Oracle, Green Arrow, Martian Manhunter, Shazam, Lex Luthor, Joker, Catwoman, Riddler, Two-Face, Harley Quinn |
 | Dragon Ball | Goku |
 | Minecraft | Steve |
 | One Piece | Luffy |
@@ -200,7 +201,7 @@
 
 | Tom | Personas |
 |-----|----------|
-| Descontraído / Humorístico | Jiraiya, Spider-Man, Luffy, Jinx, Mario, Ash, Iron Man |
+| Descontraído / Humorístico | Jiraiya, Spider-Man, Luffy, Jinx, Mario, Ash, Iron Man, Harley Quinn |
 | Cômico / Irreverente / Quebra 4ª Parede | Deadpool |
 | Sério / Estratégico | Batman, Kakashi, Kratos, Albedo, Leon |
 | Firme / Ético / Advogado-Defensor | Daredevil |
