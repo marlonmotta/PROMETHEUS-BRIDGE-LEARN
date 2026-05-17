@@ -69,6 +69,7 @@
 | 48 | 🧠 Lex Luthor | DC Comics | Fictional | 13-18 | 🟡13+ Arrogant, brilliant, strategic | [`lex-luthor.json`](personas/fictional/lex-luthor.json) |
 | 49 | 🃏 Joker / Coringa (Análise) | DC Comics | Fictional | 15-18 | 🟠16+ Dark ironic, critical thinking | [`joker.json`](personas/fictional/joker.json) |
 | 50 | 🐱 Catwoman / Mulher-Gato | DC Comics | Fictional | 13-18 | 🟡13+ Sarcastic, independent, stealth | [`catwoman.json`](personas/fictional/catwoman.json) |
+| 51 | ❓ Riddler / Charada | DC Comics | Fictional | 11-18 | 🔵10+ Theatrical, competitive, puzzles | [`riddler.json`](personas/fictional/riddler.json) |
 | 47 | 🔴🟡 Iron Man | Marvel / MCU | Fictional | 11-14 | 🟢LIVRE Confiante, espirituoso, mentor tech | [`iron-man.json`](personas/fictional/iron-man.json) |
 | 66 | 🛡️ Captain America | Marvel / MCU | Fictional | 11-18 | 🟢LIVRE Inspirador, honesto, líder tático | [`captain-america.json`](personas/fictional/captain-america.json) |
 | 67 | 🐾 Black Panther | Marvel / MCU | Fictional | 11-18 | 🟢LIVRE Régio, sábio, excelência cultural | [`black-panther.json`](personas/fictional/black-panther.json) |
@@ -126,8 +127,8 @@
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **101** |
-| Fictional | 80 |
+| Total de personas prontas | **102** |
+| Fictional | 81 |
 | Real | 21 |
 | Universos cobertos | 61 |
 | Backlog pendente | ~142 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
@@ -144,7 +145,7 @@
 | Marvel / X-Men | Wolverine, Professor X |
 | Marvel / Quarteto Fantástico | Reed Richards / Sr. Fantástico |
 | Marvel / S.H.I.E.L.D. | Nick Fury, Black Widow |
-| DC Comics | Batman, Superman, Wonder Woman, The Flash, Green Lantern, Aquaman, Cyborg, Nightwing, Oracle, Green Arrow, Martian Manhunter, Shazam, Lex Luthor, Joker, Catwoman |
+| DC Comics | Batman, Superman, Wonder Woman, The Flash, Green Lantern, Aquaman, Cyborg, Nightwing, Oracle, Green Arrow, Martian Manhunter, Shazam, Lex Luthor, Joker, Catwoman, Riddler |
 | Dragon Ball | Goku |
 | Minecraft | Steve |
 | One Piece | Luffy |
@@ -303,7 +304,7 @@
 | Gosta de astronomia / cosmos | 🔭 Carl Sagan, 🌌 Neil deGrasse Tyson, 🔭 Stephen Hawking, 🚀 Sacani, 🪐 Silver Surfer |
 | Gosta de tecnologia/STEM | 🔴🟡 Iron Man, 🕸️ Spider-Man, 🐾 Black Panther, 🧠 Einstein, 🔬 Rebecca, 🧪 Reed Richards, 🟣 Vision, 🐧 Linus Torvalds, 🕵️ Kevin Mitnick, 🖊️ Ada Lovelace, ⚓ Grace Hopper, 💚 Hulk, 💻 Cyborg |
 | Gosta de filosofia / argumentação | 🃏 Joker, 🧩 Noam Chomsky, 🔍 L, 🦇 Batman, 🌀 Doctor Strange, 📖 Deckard Cain, 🧠 Professor X, 🌙 Moon Knight, 🔴 Daredevil |
-| Gosta de puzzles | 🗡️ Link, 🔺 Buckminster Fuller |
+| Gosta de puzzles | ❓ Riddler, 🔺 Buckminster Fuller |
 
 | Gosta de história | 🗡️ Ezio, 🗺️ Lara Croft, 🛡️ Captain America, 🐾 Black Panther, 🔮 Vol'jin, 📖 Deckard Cain, 🎨 Leonardo da Vinci, 🔭 Galileu Galilei, 🍎 Isaac Newton, 🐢 Charles Darwin, 🐺 Wolverine, 🌙 Moon Knight, 🛡️ Wonder Woman, 🌊 Aquaman |
 | Gosta de ciência | 🧠 Einstein, 🕸️ Spider-Man, 🚀 Sacani, 🔬 Rebecca, 🔴🟡 Iron Man, 🌀 Doctor Strange, 🧪 Reed Richards, 🔥 Ghost Rider, 🚀 Elon Musk, ⚡ Tesla, 🔭 Carl Sagan, ⚛️ Richard Feynman, 🔭 Stephen Hawking, 🌌 Neil deGrasse Tyson, 🎨 Leonardo da Vinci, 🔭 Galileu Galilei, 🍎 Isaac Newton, 🐢 Charles Darwin, ⚗️ Marie Curie, ⚡ The Flash, 🛡️💚 Green Lantern |
