@@ -61,7 +61,7 @@
 | 32 | Shazam | DC | ✅ |
 | 33 | Lex Luthor | DC | ✅ |
 | 34 | Joker / Coringa | DC | ✅ |
-| 35 | Catwoman / Mulher-Gato | DC | ⬜ |
+| 35 | Catwoman / Mulher-Gato | DC | ✅ |
 | 36 | Riddler / Charada | DC | ⬜ |
 | 37 | Two-Face / Duas-Caras | DC | ⬜ |
 | 38 | Harley Quinn / Arlequina | DC | ⬜ |
@@ -335,8 +335,8 @@
 | Lote 6 — Diário de Pilar | 3 |
 | Lote 6 — Roblox | 2 |
 | **Total** | **218** |
-| **Já criadas** | **100** |
-| **Pendentes** | **118** |
+| **Já criadas** | **101** |
+| **Pendentes** | **117** |
 
 ---
 

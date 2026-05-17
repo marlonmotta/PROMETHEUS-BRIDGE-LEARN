@@ -68,6 +68,7 @@
 | 47 | ⚡ Shazam | DC Comics | Fictional | Todos | 🟢LIVRE Enthusiastic, wise, heroic energy | [`shazam.json`](personas/fictional/shazam.json) |
 | 48 | 🧠 Lex Luthor | DC Comics | Fictional | 13-18 | 🟡13+ Arrogant, brilliant, strategic | [`lex-luthor.json`](personas/fictional/lex-luthor.json) |
 | 49 | 🃏 Joker / Coringa (Análise) | DC Comics | Fictional | 15-18 | 🟠16+ Dark ironic, critical thinking | [`joker.json`](personas/fictional/joker.json) |
+| 50 | 🐱 Catwoman / Mulher-Gato | DC Comics | Fictional | 13-18 | 🟡13+ Sarcastic, independent, stealth | [`catwoman.json`](personas/fictional/catwoman.json) |
 | 47 | 🔴🟡 Iron Man | Marvel / MCU | Fictional | 11-14 | 🟢LIVRE Confiante, espirituoso, mentor tech | [`iron-man.json`](personas/fictional/iron-man.json) |
 | 66 | 🛡️ Captain America | Marvel / MCU | Fictional | 11-18 | 🟢LIVRE Inspirador, honesto, líder tático | [`captain-america.json`](personas/fictional/captain-america.json) |
 | 67 | 🐾 Black Panther | Marvel / MCU | Fictional | 11-18 | 🟢LIVRE Régio, sábio, excelência cultural | [`black-panther.json`](personas/fictional/black-panther.json) |
@@ -125,8 +126,8 @@
 
 | Métrica | Valor |
 |---------|-------|
-| Total de personas prontas | **100** |
-| Fictional | 79 |
+| Total de personas prontas | **101** |
+| Fictional | 80 |
 | Real | 21 |
 | Universos cobertos | 61 |
 | Backlog pendente | ~142 (ver [PERSONAS-BACKLOG.md](PERSONAS-BACKLOG.md)) |
@@ -143,7 +144,7 @@
 | Marvel / X-Men | Wolverine, Professor X |
 | Marvel / Quarteto Fantástico | Reed Richards / Sr. Fantástico |
 | Marvel / S.H.I.E.L.D. | Nick Fury, Black Widow |
-| DC Comics | Batman, Superman, Wonder Woman, The Flash, Green Lantern, Aquaman, Cyborg, Nightwing, Oracle, Green Arrow, Martian Manhunter, Shazam, Lex Luthor, Joker |
+| DC Comics | Batman, Superman, Wonder Woman, The Flash, Green Lantern, Aquaman, Cyborg, Nightwing, Oracle, Green Arrow, Martian Manhunter, Shazam, Lex Luthor, Joker, Catwoman |
 | Dragon Ball | Goku |
 | Minecraft | Steve |
 | One Piece | Luffy |
@@ -312,7 +313,7 @@
 | Tem ansiedade | 💚 Luigi, 🗡️ Raphtalia, 🌸 Aerith, 🌊 Tanjiro, 🔮 Scarlet Witch |
 | Crianças (6-10) | 🍄 Mario, 💚 Luigi, ⛏️ Steve, ⚡ Ash, 🦁 Tai, 🌸 Aerith, 🌍 Pilar, 🎯 Breno, 🐱 Samba, 💛 Noob, 🧑 Bacon Hair |
 | Gamer/RPG/MMORPG | 💀 Ainz, 👑 Albedo, 🛡️ Naofumi, 🌪️ Thrall, 🔮 Vol'jin |
-| Gosta de stealth/espionagem/estratégia | 🎖️ Big Boss, ⚡ Raiden, 🕶️ Nick Fury, 🕷️ Black Widow, 🏹 Green Arrow |
+| Gosta de stealth/espionagem/estratégia | 🎖️ Big Boss, ⚡ Raiden, 🕶️ Nick Fury, 🕷️ Black Widow, 🏹 Green Arrow, 🐱 Catwoman |
 | Gosta de tático/sobrevivência | 🔫 Leon, ❤️ Claire, 💪 Chris, ⚔️ Geralt, 🎖️ Big Boss |
 | Precisa de inspiração épica | ⚔️✨ Tyrael |
 | Gosta de luta/artes marciais | 👊 Tifa |
