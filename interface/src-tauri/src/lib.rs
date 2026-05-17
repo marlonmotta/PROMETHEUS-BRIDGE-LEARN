@@ -197,6 +197,10 @@ pub const PERSONAS_EMBEDDED: &[(&str, &str)] = &[
         include_str!("../../../personas/fictional/leon-kennedy.json"),
     ),
     (
+        "lex-luthor",
+        include_str!("../../../personas/fictional/lex-luthor.json"),
+    ),
+    (
         "link",
         include_str!("../../../personas/fictional/link.json"),
     ),

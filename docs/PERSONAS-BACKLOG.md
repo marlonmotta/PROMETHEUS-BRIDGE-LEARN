@@ -59,7 +59,7 @@
 | 30 | Green Arrow / Arqueiro Verde | DC | ✅ |
 | 31 | Martian Manhunter / Caçador de Marte | DC | ✅ |
 | 32 | Shazam | DC | ✅ |
-| 33 | Lex Luthor | DC | ⬜ |
+| 33 | Lex Luthor | DC | ✅ |
 | 34 | Joker / Coringa | DC | ⬜ |
 | 35 | Catwoman / Mulher-Gato | DC | ⬜ |
 | 36 | Riddler / Charada | DC | ⬜ |
@@ -335,8 +335,8 @@
 | Lote 6 — Diário de Pilar | 3 |
 | Lote 6 — Roblox | 2 |
 | **Total** | **218** |
-| **Já criadas** | **98** |
-| **Pendentes** | **120** |
+| **Já criadas** | **99** |
+| **Pendentes** | **119** |
 
 ---
 
